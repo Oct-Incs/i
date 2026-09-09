@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+
+  <ThingDef ParentName="LeatherBase">
+    <defName>Leather_CaveLurker</defName>
+    <label>lurkerhide</label>
+    <description>ケイブ・ラーカーから剥いだ厚く丈夫な毛皮。他の革と同様、あらゆる革製装備のクラフト素材として使用できる。防刃性と保温性に優れる。\n\nA thick, tough hide taken from a cave lurker. Usable in any leather crafting recipe like other leathers, it offers above-average protection and insulation.</description>
+    <graphicData>
+      <texPath>Things/Item/Resource/Leather/Leather_CaveLurker</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <statBases>
+      <MarketValue>3.6</MarketValue>
+      <Mass>0.1</Mass>
+      <Flammability>0.6</Flammability>
+    </statBases>
+    <stuffProps>
+      <color>(64, 50, 46)</color>
+      <statFactors>
+        <ArmorRating_Sharp>1.35</ArmorRating_Sharp>
+        <ArmorRating_Blunt>1.10</ArmorRating_Blunt>
+        <Insulation_Cold>1.25</Insulation_Cold>
+      </statFactors>
+    </stuffProps>
+  </ThingDef>
+
+</Defs>

@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+
+  <ThingDef ParentName="AnimalThingBase">
+    <defName>CaveLurker</defName>
+    <label>cave lurker</label>
+    <description>洞窟や岩山の割れ目に潜み、夜になると獲物を求めて地上に現れる大型の捕食獣。鋭い牙と俊敏な脚を持ち、単独で獲物を待ち伏せる。日中の直射日光を嫌い、暗がりや地下で最も力を発揮する。傷を負わせると激しく興奮し、マンハンター化しやすい危険な生物として知られる。\n\nA large predator that hides in caves and rocky crevices, emerging at night to hunt. Fast and sharp-toothed, it prefers to ambush lone prey. It avoids direct sunlight, fighting best in darkness or underground. Wounding one risks provoking a manhunter frenzy.</description>
+    <statBases>
+      <MoveSpeed>5.4</MoveSpeed>
+      <ComfyTemperatureMin>-20</ComfyTemperatureMin>
+      <ComfyTemperatureMax>32</ComfyTemperatureMax>
+      <ArmorRating_Sharp>0.12</ArmorRating_Sharp>
+      <ArmorRating_Blunt>0.08</ArmorRating_Blunt>
+    </statBases>
+    <race>
+      <body>QuadrupedAnimalWithPawsAndTail</body>
+      <baseBodySize>1.1</baseBodySize>
+      <baseHealthScale>1.25</baseHealthScale>
+      <baseHungerRate>0.65</baseHungerRate>
+      <foodType>CarnivoreAnimal</foodType>
+      <predator>true</predator>
+      <maxPreyBodySize>1.4</maxPreyBodySize>
+      <leatherDef>Leather_CaveLurker</leatherDef>
+      <meatDef>Meat_Wolf</meatDef>
+      <manhunterOnDamageChance>0.40</manhunterOnDamageChance>
+      <manhunterOnTameFailChance>0.25</manhunterOnTameFailChance>
+      <wildness>0.90</wildness>
+      <trainability>None</trainability>
+      <herdAnimal>false</herdAnimal>
+      <packAnimal>false</packAnimal>
+      <canBePredatorPrey>true</canBePredatorPrey>
+      <hasGenders>true</hasGenders>
+      <lifeExpectancy>11</lifeExpectancy>
+      <lifeStageAges>
+        <li>
+          <def>AnimalBaby</def>
+          <minAge>0</minAge>
+        </li>
+        <li>
+          <def>AnimalJuvenile</def>
+          <minAge>0.3</minAge>
+        </li>
+        <li>
+          <def>AnimalAdult</def>
+          <minAge>0.8</minAge>
+        </li>
+      </lifeStageAges>
+    </race>
+    <tools>
+      <li>
+        <label>tooth</label>
+        <capacities>
+          <li>Bite</li>
+        </capacities>
+        <power>9</power>
+        <cooldownTime>2.0</cooldownTime>
+        <linkedBodyPartsGroup>Teeth</linkedBodyPartsGroup>
+      </li>
+      <li>
+        <label>front claw</label>
+        <capacities>
+          <li>Scratch</li>
+        </capacities>
+        <power>7</power>
+        <cooldownTime>1.7</cooldownTime>
+        <linkedBodyPartsGroup>FrontLeftLeg</linkedBodyPartsGroup>
+      </li>
+      <li>
+        <label>front claw</label>
+        <capacities>
+          <li>Scratch</li>
+        </capacities>
+        <power>7</power>
+        <cooldownTime>1.7</cooldownTime>
+        <linkedBodyPartsGroup>FrontRightLeg</linkedBodyPartsGroup>
+        <chanceFactor>0.7</chanceFactor>
+      </li>
+    </tools>
+    <graphicData>
+      <texPath>Things/Pawn/Animal/CaveLurker/CaveLurker</texPath>
+      <graphicClass>Graphic_Multi</graphicClass>
+      <drawSize>1.6</drawSize>
+      <shadowData>
+        <volume>(0.5, 0.4, 0.3)</volume>
+      </shadowData>
+    </graphicData>
+    <thingCategories>
+      <li>Animals</li>
+    </thingCategories>
+  </ThingDef>
+
+</Defs>

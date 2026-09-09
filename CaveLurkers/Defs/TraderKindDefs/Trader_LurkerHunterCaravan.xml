@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+
+  <TraderKindDef>
+    <defName>LurkerHunterCaravanTrader</defName>
+    <label>lurker hunter caravan</label>
+    <commonality>1</commonality>
+    <stockGenerators>
+      <li Class="StockGenerator_Category">
+        <categories>
+          <li>Leathers</li>
+        </categories>
+        <countRange>20~60</countRange>
+      </li>
+      <li Class="StockGenerator_Category">
+        <categories>
+          <li>MeatRaw</li>
+        </categories>
+        <countRange>10~30</countRange>
+      </li>
+      <li Class="StockGenerator_Category">
+        <categories>
+          <li>ApparelArmor</li>
+        </categories>
+        <countRange>1~4</countRange>
+      </li>
+      <li Class="StockGenerator_Category">
+        <categories>
+          <li>Apparel</li>
+        </categories>
+        <countRange>1~4</countRange>
+      </li>
+    </stockGenerators>
+  </TraderKindDef>
+
+</Defs>

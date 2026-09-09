@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+
+  <FactionDef>
+    <defName>LurkerHunterClan</defName>
+    <label>lurker hunter clan</label>
+    <pawnSingular>lurker hunter</pawnSingular>
+    <pawnsPlural>lurker hunters</pawnsPlural>
+    <categoryTag>Tribal</categoryTag>
+    <fixedName>洞窟ハンター団</fixedName>
+    <description>ケイブ・ラーカーを狩り、その毛皮をまとって暮らす中立の狩猟部族。滅多にプレイヤーを攻撃せず、来訪者や交易キャラバンとして姿を見せる。</description>
+    <settlementGenerationWeight>8</settlementGenerationWeight>
+    <requiredCountAtGameStart>1</requiredCountAtGameStart>
+    <listOrderPriority>40</listOrderPriority>
+    <permanentEnemy>false</permanentEnemy>
+    <humanlikeFaction>true</humanlikeFaction>
+    <techLevel>Neolithic</techLevel>
+    <basicMemberKind>LurkerHunter</basicMemberKind>
+    <settlementNameMaker>NamerFactionTribal</settlementNameMaker>
+    <factionIconPath>World/FactionIcons/LurkerHunterClan</factionIconPath>
+    <canSiege>false</canSiege>
+    <canStageAttacks>false</canStageAttacks>
+    <autoFlee>true</autoFlee>
+    <mustStartOneEnemy>false</mustStartOneEnemy>
+    <caravanTraderKinds>
+      <li>LurkerHunterCaravanTrader</li>
+    </caravanTraderKinds>
+    <visitorTraderKinds>
+      <li>LurkerHunterCaravanTrader</li>
+    </visitorTraderKinds>
+    <colorSpectrum>
+      <li>(0.35,0.30,0.20)</li>
+      <li>(0.20,0.35,0.25)</li>
+    </colorSpectrum>
+    <pawnGroupMakers>
+      <li>
+        <kindDef>Settlement</kindDef>
+        <options>
+          <LurkerHunter>100</LurkerHunter>
+        </options>
+      </li>
+      <li>
+        <kindDef>Peaceful</kindDef>
+        <options>
+          <LurkerHunter>100</LurkerHunter>
+        </options>
+      </li>
+      <li>
+        <kindDef>Combat</kindDef>
+        <options>
+          <LurkerHunter>100</LurkerHunter>
+        </options>
+      </li>
+    </pawnGroupMakers>
+  </FactionDef>
+
+</Defs>

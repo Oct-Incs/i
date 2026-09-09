@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+
+  <!-- Adds CaveLurker to the wild-animal spawn tables of several vanilla
+       biomes so it appears as a naturally occurring predator. Each
+       operation is wrapped in a conditional so a missing biome (e.g. from
+       a different mod set) is skipped instead of causing a patch error. -->
+
+  <Operation Class="PatchOperationConditional">
+    <xpath>Defs/BiomeDef[defName="TemperateForest"]/animalCommonalities</xpath>
+    <match Class="PatchOperationAdd">
+      <xpath>Defs/BiomeDef[defName="TemperateForest"]/animalCommonalities</xpath>
+      <value>
+        <li>
+          <animal>CaveLurker</animal>
+          <commonality>0.6</commonality>
+        </li>
+      </value>
+    </match>
+  </Operation>
+
+  <Operation Class="PatchOperationConditional">
+    <xpath>Defs/BiomeDef[defName="TemperateSwamp"]/animalCommonalities</xpath>
+    <match Class="PatchOperationAdd">
+      <xpath>Defs/BiomeDef[defName="TemperateSwamp"]/animalCommonalities</xpath>
+      <value>
+        <li>
+          <animal>CaveLurker</animal>
+          <commonality>0.6</commonality>
+        </li>
+      </value>
+    </match>
+  </Operation>
+
+  <Operation Class="PatchOperationConditional">
+    <xpath>Defs/BiomeDef[defName="BorealForest"]/animalCommonalities</xpath>
+    <match Class="PatchOperationAdd">
+      <xpath>Defs/BiomeDef[defName="BorealForest"]/animalCommonalities</xpath>
+      <value>
+        <li>
+          <animal>CaveLurker</animal>
+          <commonality>1.2</commonality>
+        </li>
+      </value>
+    </match>
+  </Operation>
+
+  <Operation Class="PatchOperationConditional">
+    <xpath>Defs/BiomeDef[defName="Tundra"]/animalCommonalities</xpath>
+    <match Class="PatchOperationAdd">
+      <xpath>Defs/BiomeDef[defName="Tundra"]/animalCommonalities</xpath>
+      <value>
+        <li>
+          <animal>CaveLurker</animal>
+          <commonality>1.2</commonality>
+        </li>
+      </value>
+    </match>
+  </Operation>
+
+  <Operation Class="PatchOperationConditional">
+    <xpath>Defs/BiomeDef[defName="AridShrubland"]/animalCommonalities</xpath>
+    <match Class="PatchOperationAdd">
+      <xpath>Defs/BiomeDef[defName="AridShrubland"]/animalCommonalities</xpath>
+      <value>
+        <li>
+          <animal>CaveLurker</animal>
+          <commonality>0.7</commonality>
+        </li>
+      </value>
+    </match>
+  </Operation>
+
+  <Operation Class="PatchOperationConditional">
+    <xpath>Defs/BiomeDef[defName="Desert"]/animalCommonalities</xpath>
+    <match Class="PatchOperationAdd">
+      <xpath>Defs/BiomeDef[defName="Desert"]/animalCommonalities</xpath>
+      <value>
+        <li>
+          <animal>CaveLurker</animal>
+          <commonality>0.5</commonality>
+        </li>
+      </value>
+    </match>
+  </Operation>
+
+  <Operation Class="PatchOperationConditional">
+    <xpath>Defs/BiomeDef[defName="ExtremeDesert"]/animalCommonalities</xpath>
+    <match Class="PatchOperationAdd">
+      <xpath>Defs/BiomeDef[defName="ExtremeDesert"]/animalCommonalities</xpath>
+      <value>
+        <li>
+          <animal>CaveLurker</animal>
+          <commonality>0.8</commonality>
+        </li>
+      </value>
+    </match>
+  </Operation>
+
+  <Operation Class="PatchOperationConditional">
+    <xpath>Defs/BiomeDef[defName="TropicalRainforest"]/animalCommonalities</xpath>
+    <match Class="PatchOperationAdd">
+      <xpath>Defs/BiomeDef[defName="TropicalRainforest"]/animalCommonalities</xpath>
+      <value>
+        <li>
+          <animal>CaveLurker</animal>
+          <commonality>0.5</commonality>
+        </li>
+      </value>
+    </match>
+  </Operation>
+
+  <Operation Class="PatchOperationConditional">
+    <xpath>Defs/BiomeDef[defName="TropicalSwamp"]/animalCommonalities</xpath>
+    <match Class="PatchOperationAdd">
+      <xpath>Defs/BiomeDef[defName="TropicalSwamp"]/animalCommonalities</xpath>
+      <value>
+        <li>
+          <animal>CaveLurker</animal>
+          <commonality>0.5</commonality>
+        </li>
+      </value>
+    </match>
+  </Operation>
+
+</Patch>
