@@ -1,0 +1,178 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+
+  <!-- ============================================================
+       生の毛皮 (raw fur/hair) - 剥ぎ取っただけの未加工の素材。
+       各獣を解体すると入手できる。そのままではStuffとして使えず、
+       Defs/RecipeDefs/Recipes_TanHides.xml のレシピで加工すると
+       建材/防具素材になる「革」を生産できる。
+       ============================================================ -->
+
+  <ThingDef ParentName="ResourceBase">
+    <defName>RawFur_AncientBeast</defName>
+    <label>ancient beast bristle</label>
+    <description>マンモスやニホンオオカミなど、古代種の獣から剥いだ剛毛。そのままでは扱いにくいが、なめして加工すれば頑丈な厚革になる。\n\nCoarse bristle-hide stripped from an ancient-type beast such as a mammoth or Japanese wolf. Raw and unwieldy, but tanning it yields tough "ancient beast hide".</description>
+    <thingClass>ThingWithComps</thingClass>
+    <category>Item</category>
+    <resourceReadoutPriority>Middle</resourceReadoutPriority>
+    <useHitPoints>true</useHitPoints>
+    <selectable>true</selectable>
+    <altitudeLayer>Item</altitudeLayer>
+    <stackLimit>75</stackLimit>
+    <rotatable>false</rotatable>
+    <pathCost>15</pathCost>
+    <drawGUIOverlay>true</drawGUIOverlay>
+    <alwaysHaulable>true</alwaysHaulable>
+    <statBases>
+      <MaxHitPoints>50</MaxHitPoints>
+      <MarketValue>4.2</MarketValue>
+      <Mass>0.10</Mass>
+      <Flammability>0.6</Flammability>
+    </statBases>
+    <graphicData>
+      <texPath>Things/Item/Resource/Leather/RawFur_AncientBeast</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <thingCategories>
+      <li>AnimalProductRaw</li>
+    </thingCategories>
+  </ThingDef>
+
+  <ThingDef ParentName="ResourceBase">
+    <defName>RawFur_RareSpecies</defName>
+    <label>radiant fur of a rare species</label>
+    <description>猫又や妖狐、鬼人、竜人といった稀種から剥ぎ取った、うっすらと輝く毛皮。妖しい気配を纏っており、加工すると独特の光沢を持つ革になる。\n\nA faintly luminous pelt taken from a rare yokai-like species (nekomata, youko, oni, dragonkin). Carries a strange presence, and tans into a hide with a distinctive sheen.</description>
+    <thingClass>ThingWithComps</thingClass>
+    <category>Item</category>
+    <resourceReadoutPriority>Middle</resourceReadoutPriority>
+    <useHitPoints>true</useHitPoints>
+    <selectable>true</selectable>
+    <altitudeLayer>Item</altitudeLayer>
+    <stackLimit>75</stackLimit>
+    <rotatable>false</rotatable>
+    <pathCost>15</pathCost>
+    <drawGUIOverlay>true</drawGUIOverlay>
+    <alwaysHaulable>true</alwaysHaulable>
+    <statBases>
+      <MaxHitPoints>50</MaxHitPoints>
+      <MarketValue>9.0</MarketValue>
+      <Mass>0.08</Mass>
+      <Flammability>0.5</Flammability>
+    </statBases>
+    <graphicData>
+      <texPath>Things/Item/Resource/Leather/RawFur_RareSpecies</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <thingCategories>
+      <li>AnimalProductRaw</li>
+    </thingCategories>
+  </ThingDef>
+
+  <ThingDef ParentName="ResourceBase">
+    <defName>RawFur_Adamantite</defName>
+    <label>sky steel tuft</label>
+    <description>アダマンタイトの体表から剥がれ落ちた金属質の体毛「スカイスチール」。軽いのに驚くほど硬く、精錬すればアダマンタイトの硬革として防具に使える。\n\nA metallic tuft shed from an adamantite beast's hide, known as "sky steel". Surprisingly hard for its light weight; refining it produces adamantite hardhide for armor.</description>
+    <thingClass>ThingWithComps</thingClass>
+    <category>Item</category>
+    <resourceReadoutPriority>Middle</resourceReadoutPriority>
+    <useHitPoints>true</useHitPoints>
+    <selectable>true</selectable>
+    <altitudeLayer>Item</altitudeLayer>
+    <stackLimit>75</stackLimit>
+    <rotatable>false</rotatable>
+    <pathCost>15</pathCost>
+    <drawGUIOverlay>true</drawGUIOverlay>
+    <alwaysHaulable>true</alwaysHaulable>
+    <statBases>
+      <MaxHitPoints>80</MaxHitPoints>
+      <MarketValue>22</MarketValue>
+      <Mass>0.15</Mass>
+      <Flammability>0.0</Flammability>
+    </statBases>
+    <graphicData>
+      <texPath>Things/Item/Resource/Leather/RawFur_Adamantite</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <thingCategories>
+      <li>AnimalProductRaw</li>
+    </thingCategories>
+  </ThingDef>
+
+  <!-- ============================================================
+       加工革 (tanned/processed hide) - Stuff として通常の革製レシピ
+       全てに使用可能。
+       ============================================================ -->
+
+  <ThingDef ParentName="LeatherBase">
+    <defName>Leather_AncientBeast</defName>
+    <label>ancient beast hide</label>
+    <description>古代種の剛毛をなめして仕上げた厚革。分厚く保温性に優れ、他の革と同様にあらゆる革製装備のクラフト素材として使える。\n\nAncient beast bristle, tanned into a thick hide. Warmer and tougher than common leather, and usable in any leather crafting recipe like other leathers.</description>
+    <graphicData>
+      <texPath>Things/Item/Resource/Leather/Leather_AncientBeast</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <statBases>
+      <MarketValue>7.5</MarketValue>
+      <Mass>0.10</Mass>
+      <Flammability>0.6</Flammability>
+    </statBases>
+    <stuffProps>
+      <color>(70, 56, 40)</color>
+      <statFactors>
+        <ArmorRating_Sharp>1.30</ArmorRating_Sharp>
+        <ArmorRating_Blunt>1.15</ArmorRating_Blunt>
+        <Insulation_Cold>1.35</Insulation_Cold>
+      </statFactors>
+    </stuffProps>
+  </ThingDef>
+
+  <ThingDef ParentName="LeatherBase">
+    <defName>Leather_RareSpecies</defName>
+    <label>radiant hide</label>
+    <description>稀種の輝毛を加工した、淡く光沢を放つ革。軽量ながら並の革より頑丈で、美しい仕上がりを持つ。\n\nA hide processed from the radiant fur of a rare species, keeping a faint sheen. Lighter than common leather yet tougher, and pleasing to look at.</description>
+    <graphicData>
+      <texPath>Things/Item/Resource/Leather/Leather_RareSpecies</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <statBases>
+      <MarketValue>15</MarketValue>
+      <Mass>0.08</Mass>
+      <Flammability>0.4</Flammability>
+    </statBases>
+    <stuffProps>
+      <color>(150, 120, 200)</color>
+      <statFactors>
+        <ArmorRating_Sharp>1.45</ArmorRating_Sharp>
+        <ArmorRating_Blunt>1.20</ArmorRating_Blunt>
+        <Insulation_Cold>1.10</Insulation_Cold>
+        <Beauty>1.5</Beauty>
+      </statFactors>
+    </stuffProps>
+  </ThingDef>
+
+  <ThingDef ParentName="LeatherBase">
+    <defName>Leather_Adamantite</defName>
+    <label>adamantite hardhide</label>
+    <description>スカイスチールを精錬して仕上げた硬革。金属のような硬さを持ちながら革として加工でき、最高クラスの防御力を誇る。\n\nSky steel tufts refined into a hardened hide. Metal-hard yet still workable as leather, offering top-tier protection.</description>
+    <graphicData>
+      <texPath>Things/Item/Resource/Leather/Leather_Adamantite</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <statBases>
+      <MarketValue>38</MarketValue>
+      <Mass>0.15</Mass>
+      <Flammability>0.0</Flammability>
+    </statBases>
+    <stuffProps>
+      <color>(150, 165, 180)</color>
+      <statFactors>
+        <ArmorRating_Sharp>1.90</ArmorRating_Sharp>
+        <ArmorRating_Blunt>1.60</ArmorRating_Blunt>
+        <ArmorRating_Heat>1.40</ArmorRating_Heat>
+        <Insulation_Cold>1.20</Insulation_Cold>
+        <Mass>1.30</Mass>
+      </statFactors>
+    </stuffProps>
+  </ThingDef>
+
+</Defs>

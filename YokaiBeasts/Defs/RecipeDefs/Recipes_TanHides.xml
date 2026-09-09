@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+
+  <RecipeDef>
+    <defName>TanAncientBeastHide</defName>
+    <label>tan ancient beast hide</label>
+    <description>古代種の剛毛をなめして厚革に加工する。\n\nTan ancient beast bristle into a thick hide.</description>
+    <jobString>Tanning ancient beast hide.</jobString>
+    <workAmount>400</workAmount>
+    <effectWorking>Tailor</effectWorking>
+    <soundWorking>Recipe_Tailor</soundWorking>
+    <workSkill>Crafting</workSkill>
+    <ingredients>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>RawFur_AncientBeast</li>
+          </thingDefs>
+        </filter>
+        <count>2</count>
+      </li>
+    </ingredients>
+    <fixedIngredientFilter>
+      <thingDefs>
+        <li>RawFur_AncientBeast</li>
+      </thingDefs>
+    </fixedIngredientFilter>
+    <products>
+      <Leather_AncientBeast>1</Leather_AncientBeast>
+    </products>
+    <recipeUsers>
+      <li>TableTailor</li>
+      <li>CraftingSpot</li>
+    </recipeUsers>
+  </RecipeDef>
+
+  <RecipeDef>
+    <defName>TanRareSpeciesHide</defName>
+    <label>tan radiant hide</label>
+    <description>稀種の輝毛をなめして輝きを保ったまま革に加工する。\n\nTan the radiant fur of a rare species into hide while preserving its sheen.</description>
+    <jobString>Tanning radiant hide.</jobString>
+    <workAmount>500</workAmount>
+    <effectWorking>Tailor</effectWorking>
+    <soundWorking>Recipe_Tailor</soundWorking>
+    <workSkill>Crafting</workSkill>
+    <ingredients>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>RawFur_RareSpecies</li>
+          </thingDefs>
+        </filter>
+        <count>2</count>
+      </li>
+    </ingredients>
+    <fixedIngredientFilter>
+      <thingDefs>
+        <li>RawFur_RareSpecies</li>
+      </thingDefs>
+    </fixedIngredientFilter>
+    <products>
+      <Leather_RareSpecies>1</Leather_RareSpecies>
+    </products>
+    <recipeUsers>
+      <li>TableTailor</li>
+      <li>CraftingSpot</li>
+    </recipeUsers>
+  </RecipeDef>
+
+  <RecipeDef>
+    <defName>RefineAdamantiteHide</defName>
+    <label>refine adamantite hardhide</label>
+    <description>スカイスチールを精錬し、金属のように硬い革に仕上げる。\n\nRefine sky steel tufts into a metal-hard hide.</description>
+    <jobString>Refining adamantite hardhide.</jobString>
+    <workAmount>800</workAmount>
+    <effectWorking>Tailor</effectWorking>
+    <soundWorking>Recipe_Tailor</soundWorking>
+    <workSkill>Crafting</workSkill>
+    <ingredients>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>RawFur_Adamantite</li>
+          </thingDefs>
+        </filter>
+        <count>2</count>
+      </li>
+    </ingredients>
+    <fixedIngredientFilter>
+      <thingDefs>
+        <li>RawFur_Adamantite</li>
+      </thingDefs>
+    </fixedIngredientFilter>
+    <products>
+      <Leather_Adamantite>1</Leather_Adamantite>
+    </products>
+    <recipeUsers>
+      <li>TableTailor</li>
+      <li>CraftingSpot</li>
+    </recipeUsers>
+  </RecipeDef>
+
+</Defs>

@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+
+  <ThingDef ParentName="MeatBase">
+    <defName>Meat_Mammoth</defName>
+    <label>mammoth meat</label>
+    <description>マンモスの肉。並の家畜肉より脂が乗っており、量も多い。\n\nMeat from a mammoth. Richer and more plentiful than ordinary livestock meat.</description>
+    <statBases>
+      <MarketValue>2.4</MarketValue>
+    </statBases>
+  </ThingDef>
+
+  <ThingDef ParentName="MeatBase">
+    <defName>Meat_JapaneseWolf</defName>
+    <label>Japanese wolf meat</label>
+    <description>ニホンオオカミの肉。野生の獣肉らしい引き締まった味わい。\n\nMeat from a Japanese wolf. Lean and gamey, as expected of a wild predator.</description>
+    <statBases>
+      <MarketValue>1.7</MarketValue>
+    </statBases>
+  </ThingDef>
+
+  <ThingDef ParentName="MeatBase">
+    <defName>Meat_Adamantite</defName>
+    <label>adamantite flesh</label>
+    <description>アダマンタイトの肉。金属質の獣でありながら食用可能な肉を持つ、不思議な生物の残滓。ほのかに金属じみた味がする。\n\nFlesh from an adamantite beast. Strange remains of a metallic creature that nonetheless yields edible meat, with a faint metallic tang.</description>
+    <statBases>
+      <MarketValue>2.0</MarketValue>
+    </statBases>
+  </ThingDef>
+
+</Defs>

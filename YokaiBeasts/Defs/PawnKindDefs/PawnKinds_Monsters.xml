@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+
+  <PawnKindDef>
+    <defName>JapaneseWolf</defName>
+    <label>Japanese wolf</label>
+    <race>JapaneseWolf</race>
+    <combatPower>70</combatPower>
+    <canArriveManhunter>true</canArriveManhunter>
+    <lifeStages>
+      <li><bodyGraphicData><texPath>Things/Pawn/Animal/JapaneseWolf/JapaneseWolf</texPath><graphicClass>Graphic_Multi</graphicClass><drawSize>0.8</drawSize></bodyGraphicData></li>
+      <li><bodyGraphicData><texPath>Things/Pawn/Animal/JapaneseWolf/JapaneseWolf</texPath><graphicClass>Graphic_Multi</graphicClass><drawSize>1.1</drawSize></bodyGraphicData></li>
+      <li><bodyGraphicData><texPath>Things/Pawn/Animal/JapaneseWolf/JapaneseWolf</texPath><graphicClass>Graphic_Multi</graphicClass><drawSize>1.4</drawSize></bodyGraphicData></li>
+    </lifeStages>
+  </PawnKindDef>
+
+  <PawnKindDef>
+    <defName>Mammoth</defName>
+    <label>mammoth</label>
+    <race>Mammoth</race>
+    <combatPower>180</combatPower>
+    <canArriveManhunter>true</canArriveManhunter>
+    <lifeStages>
+      <li><bodyGraphicData><texPath>Things/Pawn/Animal/Mammoth/Mammoth</texPath><graphicClass>Graphic_Multi</graphicClass><drawSize>1.6</drawSize></bodyGraphicData></li>
+      <li><bodyGraphicData><texPath>Things/Pawn/Animal/Mammoth/Mammoth</texPath><graphicClass>Graphic_Multi</graphicClass><drawSize>2.4</drawSize></bodyGraphicData></li>
+      <li><bodyGraphicData><texPath>Things/Pawn/Animal/Mammoth/Mammoth</texPath><graphicClass>Graphic_Multi</graphicClass><drawSize>3.2</drawSize></bodyGraphicData></li>
+    </lifeStages>
+  </PawnKindDef>
+
+  <PawnKindDef>
+    <defName>AdamantiteBeast</defName>
+    <label>adamantite beast</label>
+    <race>AdamantiteBeast</race>
+    <combatPower>260</combatPower>
+    <canArriveManhunter>true</canArriveManhunter>
+    <lifeStages>
+      <li><bodyGraphicData><texPath>Things/Pawn/Animal/AdamantiteBeast/AdamantiteBeast</texPath><graphicClass>Graphic_Multi</graphicClass><drawSize>1.3</drawSize></bodyGraphicData></li>
+      <li><bodyGraphicData><texPath>Things/Pawn/Animal/AdamantiteBeast/AdamantiteBeast</texPath><graphicClass>Graphic_Multi</graphicClass><drawSize>1.9</drawSize></bodyGraphicData></li>
+      <li><bodyGraphicData><texPath>Things/Pawn/Animal/AdamantiteBeast/AdamantiteBeast</texPath><graphicClass>Graphic_Multi</graphicClass><drawSize>2.4</drawSize></bodyGraphicData></li>
+    </lifeStages>
+  </PawnKindDef>
+
+  <PawnKindDef>
+    <defName>Nekomata</defName>
+    <label>nekomata</label>
+    <race>Nekomata</race>
+    <combatPower>85</combatPower>
+    <canArriveManhunter>true</canArriveManhunter>
+    <lifeStages>
+      <li><bodyGraphicData><texPath>Things/Pawn/Animal/Nekomata/Nekomata</texPath><graphicClass>Graphic_Multi</graphicClass><drawSize>0.8</drawSize></bodyGraphicData></li>
+      <li><bodyGraphicData><texPath>Things/Pawn/Animal/Nekomata/Nekomata</texPath><graphicClass>Graphic_Multi</graphicClass><drawSize>1.05</drawSize></bodyGraphicData></li>
+      <li><bodyGraphicData><texPath>Things/Pawn/Animal/Nekomata/Nekomata</texPath><graphicClass>Graphic_Multi</graphicClass><drawSize>1.3</drawSize></bodyGraphicData></li>
+    </lifeStages>
+  </PawnKindDef>
+
+  <PawnKindDef>
+    <defName>Youko</defName>
+    <label>youko</label>
+    <race>Youko</race>
+    <combatPower>80</combatPower>
+    <canArriveManhunter>true</canArriveManhunter>
+    <lifeStages>
+      <li><bodyGraphicData><texPath>Things/Pawn/Animal/Youko/Youko</texPath><graphicClass>Graphic_Multi</graphicClass><drawSize>0.8</drawSize></bodyGraphicData></li>
+      <li><bodyGraphicData><texPath>Things/Pawn/Animal/Youko/Youko</texPath><graphicClass>Graphic_Multi</graphicClass><drawSize>1.05</drawSize></bodyGraphicData></li>
+      <li><bodyGraphicData><texPath>Things/Pawn/Animal/Youko/Youko</texPath><graphicClass>Graphic_Multi</graphicClass><drawSize>1.3</drawSize></bodyGraphicData></li>
+    </lifeStages>
+  </PawnKindDef>
+
+  <PawnKindDef>
+    <defName>Oni</defName>
+    <label>oni</label>
+    <race>Oni</race>
+    <combatPower>150</combatPower>
+    <canArriveManhunter>true</canArriveManhunter>
+    <lifeStages>
+      <li><bodyGraphicData><texPath>Things/Pawn/Animal/Oni/Oni</texPath><graphicClass>Graphic_Multi</graphicClass><drawSize>1.2</drawSize></bodyGraphicData></li>
+      <li><bodyGraphicData><texPath>Things/Pawn/Animal/Oni/Oni</texPath><graphicClass>Graphic_Multi</graphicClass><drawSize>1.6</drawSize></bodyGraphicData></li>
+      <li><bodyGraphicData><texPath>Things/Pawn/Animal/Oni/Oni</texPath><graphicClass>Graphic_Multi</graphicClass><drawSize>2.0</drawSize></bodyGraphicData></li>
+    </lifeStages>
+  </PawnKindDef>
+
+  <PawnKindDef>
+    <defName>Dragonkin</defName>
+    <label>dragonkin</label>
+    <race>Dragonkin</race>
+    <combatPower>200</combatPower>
+    <canArriveManhunter>true</canArriveManhunter>
+    <lifeStages>
+      <li><bodyGraphicData><texPath>Things/Pawn/Animal/Dragonkin/Dragonkin</texPath><graphicClass>Graphic_Multi</graphicClass><drawSize>1.1</drawSize></bodyGraphicData></li>
+      <li><bodyGraphicData><texPath>Things/Pawn/Animal/Dragonkin/Dragonkin</texPath><graphicClass>Graphic_Multi</graphicClass><drawSize>1.5</drawSize></bodyGraphicData></li>
+      <li><bodyGraphicData><texPath>Things/Pawn/Animal/Dragonkin/Dragonkin</texPath><graphicClass>Graphic_Multi</graphicClass><drawSize>1.9</drawSize></bodyGraphicData></li>
+    </lifeStages>
+  </PawnKindDef>
+
+</Defs>

@@ -1,0 +1,217 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+
+  <!-- ============================================================
+       ニホンオオカミ (Japanese Wolf) - 森に群れる俊敏な捕食獣
+       ============================================================ -->
+  <ThingDef ParentName="AnimalThingBase">
+    <defName>JapaneseWolf</defName>
+    <label>Japanese wolf</label>
+    <description>森林地帯に小さな群れで生息する、俊敏で狡猾な狼。単独の獲物には容赦なく襲いかかる。傷を負わせると仲間ごと激昂することがある。\n\nA lean, cunning wolf that roams temperate and boreal forests in small packs. Ruthless against lone prey, and prone to provoking the whole pack if wounded.</description>
+    <statBases>
+      <MoveSpeed>5.2</MoveSpeed>
+      <ComfyTemperatureMin>-30</ComfyTemperatureMin>
+      <ComfyTemperatureMax>28</ComfyTemperatureMax>
+      <ArmorRating_Sharp>0.05</ArmorRating_Sharp>
+    </statBases>
+    <race>
+      <body>QuadrupedAnimalWithPawsAndTail</body>
+      <baseBodySize>1.0</baseBodySize>
+      <baseHealthScale>1.0</baseHealthScale>
+      <baseHungerRate>0.55</baseHungerRate>
+      <foodType>CarnivoreAnimal</foodType>
+      <predator>true</predator>
+      <maxPreyBodySize>1.2</maxPreyBodySize>
+      <leatherDef>RawFur_AncientBeast</leatherDef>
+      <meatDef>Meat_JapaneseWolf</meatDef>
+      <manhunterOnDamageChance>0.35</manhunterOnDamageChance>
+      <manhunterOnTameFailChance>0.20</manhunterOnTameFailChance>
+      <wildness>0.95</wildness>
+      <trainability>None</trainability>
+      <herdAnimal>true</herdAnimal>
+      <maxWithSameParentInGrid>2</maxWithSameParentInGrid>
+      <canBePredatorPrey>true</canBePredatorPrey>
+      <hasGenders>true</hasGenders>
+      <lifeExpectancy>11</lifeExpectancy>
+      <lifeStageAges>
+        <li><def>AnimalBaby</def><minAge>0</minAge></li>
+        <li><def>AnimalJuvenile</def><minAge>0.3</minAge></li>
+        <li><def>AnimalAdult</def><minAge>0.8</minAge></li>
+      </lifeStageAges>
+    </race>
+    <tools>
+      <li>
+        <label>tooth</label>
+        <capacities><li>Bite</li></capacities>
+        <power>9</power>
+        <cooldownTime>2.0</cooldownTime>
+        <linkedBodyPartsGroup>Teeth</linkedBodyPartsGroup>
+      </li>
+      <li>
+        <label>front claw</label>
+        <capacities><li>Scratch</li></capacities>
+        <power>6</power>
+        <cooldownTime>1.7</cooldownTime>
+        <linkedBodyPartsGroup>FrontLeftLeg</linkedBodyPartsGroup>
+      </li>
+      <li>
+        <label>front claw</label>
+        <capacities><li>Scratch</li></capacities>
+        <power>6</power>
+        <cooldownTime>1.7</cooldownTime>
+        <linkedBodyPartsGroup>FrontRightLeg</linkedBodyPartsGroup>
+        <chanceFactor>0.7</chanceFactor>
+      </li>
+    </tools>
+    <graphicData>
+      <texPath>Things/Pawn/Animal/JapaneseWolf/JapaneseWolf</texPath>
+      <graphicClass>Graphic_Multi</graphicClass>
+      <drawSize>1.4</drawSize>
+      <shadowData><volume>(0.4, 0.4, 0.3)</volume></shadowData>
+    </graphicData>
+    <thingCategories><li>Animals</li></thingCategories>
+  </ThingDef>
+
+  <!-- ============================================================
+       マンモス (Mammoth) - 荒野を歩く古代種の巨獣
+       ============================================================ -->
+  <ThingDef ParentName="AnimalThingBase">
+    <defName>Mammoth</defName>
+    <label>mammoth</label>
+    <description>凍土や針葉樹林を闊歩する、古代種の巨大な獣。普段は穏やかだが、一度激昂すると巨体で全てを踏み潰す災害と化す。\n\nA colossal ancient-type beast that roams tundra and boreal forests. Normally placid, but a wounded mammoth becomes a rampaging disaster that tramples everything in its path.</description>
+    <statBases>
+      <MoveSpeed>4.2</MoveSpeed>
+      <ComfyTemperatureMin>-45</ComfyTemperatureMin>
+      <ComfyTemperatureMax>25</ComfyTemperatureMax>
+      <ArmorRating_Sharp>0.10</ArmorRating_Sharp>
+      <ArmorRating_Blunt>0.15</ArmorRating_Blunt>
+    </statBases>
+    <race>
+      <body>QuadrupedAnimalWithPawsAndTail</body>
+      <baseBodySize>3.0</baseBodySize>
+      <baseHealthScale>3.2</baseHealthScale>
+      <baseHungerRate>1.4</baseHungerRate>
+      <foodType>VegetarianAnimal</foodType>
+      <predator>false</predator>
+      <leatherDef>RawFur_AncientBeast</leatherDef>
+      <meatDef>Meat_Mammoth</meatDef>
+      <manhunterOnDamageChance>0.5</manhunterOnDamageChance>
+      <manhunterOnTameFailChance>0.3</manhunterOnTameFailChance>
+      <wildness>0.9</wildness>
+      <trainability>None</trainability>
+      <herdAnimal>false</herdAnimal>
+      <canBePredatorPrey>true</canBePredatorPrey>
+      <hasGenders>true</hasGenders>
+      <lifeExpectancy>14</lifeExpectancy>
+      <lifeStageAges>
+        <li><def>AnimalBaby</def><minAge>0</minAge></li>
+        <li><def>AnimalJuvenile</def><minAge>0.2</minAge></li>
+        <li><def>AnimalAdult</def><minAge>0.7</minAge></li>
+      </lifeStageAges>
+    </race>
+    <tools>
+      <li>
+        <label>tusk</label>
+        <capacities><li>Stab</li></capacities>
+        <power>15</power>
+        <cooldownTime>2.2</cooldownTime>
+        <linkedBodyPartsGroup>Teeth</linkedBodyPartsGroup>
+      </li>
+      <li>
+        <label>trample</label>
+        <capacities><li>Blunt</li></capacities>
+        <power>20</power>
+        <cooldownTime>2.6</cooldownTime>
+        <linkedBodyPartsGroup>FrontLeftLeg</linkedBodyPartsGroup>
+      </li>
+      <li>
+        <label>trample</label>
+        <capacities><li>Blunt</li></capacities>
+        <power>20</power>
+        <cooldownTime>2.6</cooldownTime>
+        <linkedBodyPartsGroup>FrontRightLeg</linkedBodyPartsGroup>
+        <chanceFactor>0.7</chanceFactor>
+      </li>
+    </tools>
+    <graphicData>
+      <texPath>Things/Pawn/Animal/Mammoth/Mammoth</texPath>
+      <graphicClass>Graphic_Multi</graphicClass>
+      <drawSize>3.2</drawSize>
+      <shadowData><volume>(1.1, 0.6, 0.8)</volume></shadowData>
+    </graphicData>
+    <thingCategories><li>Animals</li></thingCategories>
+  </ThingDef>
+
+  <!-- ============================================================
+       アダマンタイト (Adamantite Beast) - 生きた金属を纏う頂点捕食者
+       ============================================================ -->
+  <ThingDef ParentName="AnimalThingBase">
+    <defName>AdamantiteBeast</defName>
+    <label>adamantite beast</label>
+    <description>体表が金属質の毛「スカイスチール」で覆われた、極めて稀な頂点捕食者。荒野の奥地でごく稀にしか目撃されない。刃も鈍器も通しにくい体は、生半可な武装では太刀打ちできない。\n\nAn extremely rare apex predator whose hide is covered in a metallic fur known as sky steel. Sighted only rarely in the deep wilds, its body shrugs off blade and blunt weapon alike - a serious threat to anyone poorly armed.</description>
+    <statBases>
+      <MoveSpeed>4.0</MoveSpeed>
+      <ComfyTemperatureMin>-40</ComfyTemperatureMin>
+      <ComfyTemperatureMax>45</ComfyTemperatureMax>
+      <ArmorRating_Sharp>0.55</ArmorRating_Sharp>
+      <ArmorRating_Blunt>0.45</ArmorRating_Blunt>
+      <ArmorRating_Heat>0.35</ArmorRating_Heat>
+    </statBases>
+    <race>
+      <body>QuadrupedAnimalWithPawsAndTail</body>
+      <baseBodySize>2.2</baseBodySize>
+      <baseHealthScale>2.6</baseHealthScale>
+      <baseHungerRate>0.9</baseHungerRate>
+      <foodType>CarnivoreAnimal</foodType>
+      <predator>true</predator>
+      <maxPreyBodySize>3.0</maxPreyBodySize>
+      <leatherDef>RawFur_Adamantite</leatherDef>
+      <meatDef>Meat_Adamantite</meatDef>
+      <manhunterOnDamageChance>0.30</manhunterOnDamageChance>
+      <manhunterOnTameFailChance>0.4</manhunterOnTameFailChance>
+      <wildness>1.0</wildness>
+      <trainability>None</trainability>
+      <herdAnimal>false</herdAnimal>
+      <canBePredatorPrey>true</canBePredatorPrey>
+      <hasGenders>true</hasGenders>
+      <lifeExpectancy>20</lifeExpectancy>
+      <lifeStageAges>
+        <li><def>AnimalBaby</def><minAge>0</minAge></li>
+        <li><def>AnimalJuvenile</def><minAge>0.2</minAge></li>
+        <li><def>AnimalAdult</def><minAge>0.6</minAge></li>
+      </lifeStageAges>
+    </race>
+    <tools>
+      <li>
+        <label>metal fang</label>
+        <capacities><li>Bite</li></capacities>
+        <power>16</power>
+        <cooldownTime>2.0</cooldownTime>
+        <linkedBodyPartsGroup>Teeth</linkedBodyPartsGroup>
+      </li>
+      <li>
+        <label>steel claw</label>
+        <capacities><li>Scratch</li></capacities>
+        <power>14</power>
+        <cooldownTime>1.8</cooldownTime>
+        <linkedBodyPartsGroup>FrontLeftLeg</linkedBodyPartsGroup>
+      </li>
+      <li>
+        <label>steel claw</label>
+        <capacities><li>Scratch</li></capacities>
+        <power>14</power>
+        <cooldownTime>1.8</cooldownTime>
+        <linkedBodyPartsGroup>FrontRightLeg</linkedBodyPartsGroup>
+        <chanceFactor>0.7</chanceFactor>
+      </li>
+    </tools>
+    <graphicData>
+      <texPath>Things/Pawn/Animal/AdamantiteBeast/AdamantiteBeast</texPath>
+      <graphicClass>Graphic_Multi</graphicClass>
+      <drawSize>2.4</drawSize>
+      <shadowData><volume>(0.8, 0.5, 0.6)</volume></shadowData>
+    </graphicData>
+    <thingCategories><li>Animals</li></thingCategories>
+  </ThingDef>
+
+</Defs>
