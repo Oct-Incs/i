@@ -1,31 +1,106 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Defs>
 
-  <ThingDef ParentName="MeatBase">
-    <defName>Meat_Mammoth</defName>
+  <!-- ParentName="OrganicProductBase" is the vanilla abstract used for raw
+       meat items (confirmed against a currently-maintained 1.6 animal mod).
+       There is no shared "MeatBase" abstract, so the usual meat fields
+       (ingestible/rottable/nutrition/thingCategories) are defined here
+       directly, matching vanilla raw meat behavior. -->
+
+  <ThingDef ParentName="OrganicProductBase">
+    <defName>YB_Meat_Mammoth</defName>
     <label>mammoth meat</label>
     <description>マンモスの肉。並の家畜肉より脂が乗っており、量も多い。\n\nMeat from a mammoth. Richer and more plentiful than ordinary livestock meat.</description>
+    <graphicData>
+      <texPath>Things/Item/Resource/Meat/YB_Meat_Mammoth</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
     <statBases>
+      <Nutrition>0.05</Nutrition>
+      <Flammability>0.5</Flammability>
+      <FoodPoisonChanceFixedHuman>0.02</FoodPoisonChanceFixedHuman>
+      <Mass>0.05</Mass>
       <MarketValue>2.4</MarketValue>
     </statBases>
+    <ingestible>
+      <foodType>Meat</foodType>
+      <preferability>DesperateOnly</preferability>
+      <ingestEffect>EatMeat</ingestEffect>
+      <ingestSound>RawMeat_Eat</ingestSound>
+    </ingestible>
+    <comps>
+      <li Class="CompProperties_Rottable">
+        <daysToRotStart>4</daysToRotStart>
+        <rotDestroys>true</rotDestroys>
+      </li>
+    </comps>
+    <thingCategories>
+      <li>MeatRaw</li>
+    </thingCategories>
   </ThingDef>
 
-  <ThingDef ParentName="MeatBase">
-    <defName>Meat_JapaneseWolf</defName>
+  <ThingDef ParentName="OrganicProductBase">
+    <defName>YB_Meat_JapaneseWolf</defName>
     <label>Japanese wolf meat</label>
     <description>ニホンオオカミの肉。野生の獣肉らしい引き締まった味わい。\n\nMeat from a Japanese wolf. Lean and gamey, as expected of a wild predator.</description>
+    <graphicData>
+      <texPath>Things/Item/Resource/Meat/YB_Meat_JapaneseWolf</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
     <statBases>
+      <Nutrition>0.05</Nutrition>
+      <Flammability>0.5</Flammability>
+      <FoodPoisonChanceFixedHuman>0.02</FoodPoisonChanceFixedHuman>
+      <Mass>0.05</Mass>
       <MarketValue>1.7</MarketValue>
     </statBases>
+    <ingestible>
+      <foodType>Meat</foodType>
+      <preferability>DesperateOnly</preferability>
+      <ingestEffect>EatMeat</ingestEffect>
+      <ingestSound>RawMeat_Eat</ingestSound>
+    </ingestible>
+    <comps>
+      <li Class="CompProperties_Rottable">
+        <daysToRotStart>4</daysToRotStart>
+        <rotDestroys>true</rotDestroys>
+      </li>
+    </comps>
+    <thingCategories>
+      <li>MeatRaw</li>
+    </thingCategories>
   </ThingDef>
 
-  <ThingDef ParentName="MeatBase">
-    <defName>Meat_Adamantite</defName>
+  <ThingDef ParentName="OrganicProductBase">
+    <defName>YB_Meat_Adamantite</defName>
     <label>adamantite flesh</label>
     <description>アダマンタイトの肉。金属質の獣でありながら食用可能な肉を持つ、不思議な生物の残滓。ほのかに金属じみた味がする。\n\nFlesh from an adamantite beast. Strange remains of a metallic creature that nonetheless yields edible meat, with a faint metallic tang.</description>
+    <graphicData>
+      <texPath>Things/Item/Resource/Meat/YB_Meat_Adamantite</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
     <statBases>
+      <Nutrition>0.05</Nutrition>
+      <Flammability>0.0</Flammability>
+      <FoodPoisonChanceFixedHuman>0.02</FoodPoisonChanceFixedHuman>
+      <Mass>0.05</Mass>
       <MarketValue>2.0</MarketValue>
     </statBases>
+    <ingestible>
+      <foodType>Meat</foodType>
+      <preferability>DesperateOnly</preferability>
+      <ingestEffect>EatMeat</ingestEffect>
+      <ingestSound>RawMeat_Eat</ingestSound>
+    </ingestible>
+    <comps>
+      <li Class="CompProperties_Rottable">
+        <daysToRotStart>6</daysToRotStart>
+        <rotDestroys>true</rotDestroys>
+      </li>
+    </comps>
+    <thingCategories>
+      <li>MeatRaw</li>
+    </thingCategories>
   </ThingDef>
 
 </Defs>

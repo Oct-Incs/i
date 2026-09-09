@@ -2,10 +2,10 @@
 <Defs>
 
   <!-- ============================================================
-       猫又 (Nekomata) - 森に潜む俊敏な化け猫
+       猫又 (YB_Nekomata) - 森に潜む俊敏な化け猫
        ============================================================ -->
   <ThingDef ParentName="AnimalThingBase">
-    <defName>Nekomata</defName>
+    <defName>YB_Nekomata</defName>
     <label>nekomata</label>
     <description>年経て妖力を得た猫が変じた化け物。二又に分かれた尾を持ち、木々の間を音もなく駆け抜けて獲物に飛びかかる。人里近くの森でごく稀に目撃される。\n\nA cat that has lived long enough to gain supernatural power and transform into a monster, marked by its forked tail. It darts silently through the trees before pouncing on prey, rarely glimpsed in forests near settlements.</description>
     <statBases>
@@ -13,6 +13,7 @@
       <ComfyTemperatureMin>-20</ComfyTemperatureMin>
       <ComfyTemperatureMax>35</ComfyTemperatureMax>
       <ArmorRating_Sharp>0.08</ArmorRating_Sharp>
+      <Wildness>1.0</Wildness>
     </statBases>
     <race>
       <body>Human</body>
@@ -22,11 +23,10 @@
       <foodType>CarnivoreAnimal</foodType>
       <predator>true</predator>
       <maxPreyBodySize>1.2</maxPreyBodySize>
-      <leatherDef>RawFur_RareSpecies</leatherDef>
+      <leatherDef>YB_RawFur_RareSpecies</leatherDef>
       <meatDef>Meat_Human</meatDef>
       <manhunterOnDamageChance>0.30</manhunterOnDamageChance>
       <manhunterOnTameFailChance>0.35</manhunterOnTameFailChance>
-      <wildness>1.0</wildness>
       <trainability>None</trainability>
       <herdAnimal>false</herdAnimal>
       <canBePredatorPrey>true</canBePredatorPrey>
@@ -55,7 +55,7 @@
       </li>
     </tools>
     <graphicData>
-      <texPath>Things/Pawn/Animal/Nekomata/Nekomata</texPath>
+      <texPath>Things/Pawn/Animal/YB_Nekomata/YB_Nekomata</texPath>
       <graphicClass>Graphic_Multi</graphicClass>
       <drawSize>1.3</drawSize>
       <shadowData><volume>(0.35, 0.4, 0.25)</volume></shadowData>
@@ -64,10 +64,10 @@
   </ThingDef>
 
   <!-- ============================================================
-       妖狐 (Youko) - 荒野を駆ける狡猾な化け狐
+       妖狐 (YB_Youko) - 荒野を駆ける狡猾な化け狐
        ============================================================ -->
   <ThingDef ParentName="AnimalThingBase">
-    <defName>Youko</defName>
+    <defName>YB_Youko</defName>
     <label>youko</label>
     <description>妖力を得て人のように立つ化け狐。豊かな尾を持ち、あらゆる獣の中でも屈指の速さで駆け回る。狡猾に獲物との間合いを詰め、隙を見て牙を突き立てる。\n\nA fox that gained supernatural power and now stands upright like a person, with a magnificent tail. Among the fastest of all beasts, it cunningly closes the distance on prey before striking.</description>
     <statBases>
@@ -75,6 +75,7 @@
       <ComfyTemperatureMin>-15</ComfyTemperatureMin>
       <ComfyTemperatureMax>40</ComfyTemperatureMax>
       <ArmorRating_Sharp>0.05</ArmorRating_Sharp>
+      <Wildness>1.0</Wildness>
     </statBases>
     <race>
       <body>Human</body>
@@ -84,11 +85,10 @@
       <foodType>OmnivoreAnimal</foodType>
       <predator>true</predator>
       <maxPreyBodySize>1.0</maxPreyBodySize>
-      <leatherDef>RawFur_RareSpecies</leatherDef>
+      <leatherDef>YB_RawFur_RareSpecies</leatherDef>
       <meatDef>Meat_Human</meatDef>
       <manhunterOnDamageChance>0.25</manhunterOnDamageChance>
       <manhunterOnTameFailChance>0.35</manhunterOnTameFailChance>
-      <wildness>1.0</wildness>
       <trainability>None</trainability>
       <herdAnimal>false</herdAnimal>
       <canBePredatorPrey>true</canBePredatorPrey>
@@ -117,7 +117,7 @@
       </li>
     </tools>
     <graphicData>
-      <texPath>Things/Pawn/Animal/Youko/Youko</texPath>
+      <texPath>Things/Pawn/Animal/YB_Youko/YB_Youko</texPath>
       <graphicClass>Graphic_Multi</graphicClass>
       <drawSize>1.3</drawSize>
       <shadowData><volume>(0.35, 0.4, 0.25)</volume></shadowData>
@@ -126,10 +126,10 @@
   </ThingDef>
 
   <!-- ============================================================
-       鬼人 (Oni) - 山野に潜む剛力の巨人
+       鬼人 (YB_Oni) - 山野に潜む剛力の巨人
        ============================================================ -->
   <ThingDef ParentName="AnimalThingBase">
-    <defName>Oni</defName>
+    <defName>YB_Oni</defName>
     <label>oni</label>
     <description>人よりも遥かに大きく、赤黒い肌と角を持つ怪力の巨人。武器を使わずとも、その拳だけで人体を容易く粉砕する。山間の荒れ地に単独で棲み、滅多に人前に姿を現さない。\n\nA hulking, horned giant far larger than any person, with dark reddish skin. Its bare fists can crush a body with ease. It lives alone in rugged mountainous wastes and is rarely seen.</description>
     <statBases>
@@ -138,6 +138,7 @@
       <ComfyTemperatureMax>38</ComfyTemperatureMax>
       <ArmorRating_Sharp>0.20</ArmorRating_Sharp>
       <ArmorRating_Blunt>0.20</ArmorRating_Blunt>
+      <Wildness>1.0</Wildness>
     </statBases>
     <race>
       <body>Human</body>
@@ -147,11 +148,10 @@
       <foodType>OmnivoreAnimal</foodType>
       <predator>true</predator>
       <maxPreyBodySize>2.2</maxPreyBodySize>
-      <leatherDef>RawFur_RareSpecies</leatherDef>
+      <leatherDef>YB_RawFur_RareSpecies</leatherDef>
       <meatDef>Meat_Human</meatDef>
       <manhunterOnDamageChance>0.35</manhunterOnDamageChance>
       <manhunterOnTameFailChance>0.45</manhunterOnTameFailChance>
-      <wildness>1.0</wildness>
       <trainability>None</trainability>
       <herdAnimal>false</herdAnimal>
       <canBePredatorPrey>true</canBePredatorPrey>
@@ -180,7 +180,7 @@
       </li>
     </tools>
     <graphicData>
-      <texPath>Things/Pawn/Animal/Oni/Oni</texPath>
+      <texPath>Things/Pawn/Animal/YB_Oni/YB_Oni</texPath>
       <graphicClass>Graphic_Multi</graphicClass>
       <drawSize>2.0</drawSize>
       <shadowData><volume>(0.55, 0.5, 0.4)</volume></shadowData>
@@ -189,10 +189,10 @@
   </ThingDef>
 
   <!-- ============================================================
-       竜人 (Dragonkin) - 秘境に稀に現れる竜の血を引く者
+       竜人 (YB_Dragonkin) - 秘境に稀に現れる竜の血を引く者
        ============================================================ -->
   <ThingDef ParentName="AnimalThingBase">
-    <defName>Dragonkin</defName>
+    <defName>YB_Dragonkin</defName>
     <label>dragonkin</label>
     <description>竜の血を引くと伝えられる、鱗に覆われた人型の存在。あらゆる秘境にごく稀に現れ、鋭い鉤爪と厚い鱗で並の武装を寄せ付けない。目撃例が極めて少ない伝説的な脅威。\n\nA scaled, humanoid being said to carry the blood of dragons. Rarely encountered in remote wilds anywhere, its sharp talons and thick scales shrug off ordinary weapons - a legendary threat few have lived to describe in detail.</description>
     <statBases>
@@ -202,6 +202,7 @@
       <ArmorRating_Sharp>0.30</ArmorRating_Sharp>
       <ArmorRating_Blunt>0.20</ArmorRating_Blunt>
       <ArmorRating_Heat>0.50</ArmorRating_Heat>
+      <Wildness>1.0</Wildness>
     </statBases>
     <race>
       <body>Human</body>
@@ -211,11 +212,10 @@
       <foodType>CarnivoreAnimal</foodType>
       <predator>true</predator>
       <maxPreyBodySize>2.0</maxPreyBodySize>
-      <leatherDef>RawFur_RareSpecies</leatherDef>
+      <leatherDef>YB_RawFur_RareSpecies</leatherDef>
       <meatDef>Meat_Human</meatDef>
       <manhunterOnDamageChance>0.25</manhunterOnDamageChance>
       <manhunterOnTameFailChance>0.5</manhunterOnTameFailChance>
-      <wildness>1.0</wildness>
       <trainability>None</trainability>
       <herdAnimal>false</herdAnimal>
       <canBePredatorPrey>true</canBePredatorPrey>
@@ -244,7 +244,7 @@
       </li>
     </tools>
     <graphicData>
-      <texPath>Things/Pawn/Animal/Dragonkin/Dragonkin</texPath>
+      <texPath>Things/Pawn/Animal/YB_Dragonkin/YB_Dragonkin</texPath>
       <graphicClass>Graphic_Multi</graphicClass>
       <drawSize>1.9</drawSize>
       <shadowData><volume>(0.5, 0.5, 0.4)</volume></shadowData>
