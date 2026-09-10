@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+
+  <!-- ============================================================
+       卵生 (oviparous reproduction) 個体用の卵。
+       未受精卵はそのまま食料/売却用アイテム。受精卵は CompProperties_Hatcher
+       により一定日数で対応する PawnKindDef の幼体として孵化する。
+       ============================================================ -->
+
+  <!-- ================ Adamantite Beast ================ -->
+
+  <ThingDef ParentName="EggFertBase">
+    <defName>JP_Egg_AdamantiteFert</defName>
+    <label>adamantite egg (fert.)</label>
+    <description>アダマンタイトの受精卵。表面は金属質でひんやりと硬い。うまくいけばアダマンタイトの幼体が孵化する。\n\nA fertilized adamantite beast egg. Its shell is cool and metallically hard. Given time, it should hatch into a young adamantite beast.</description>
+    <tradeability>None</tradeability>
+    <statBases>
+      <MarketValue>18</MarketValue>
+      <Mass>1.2</Mass>
+    </statBases>
+    <graphicData>
+      <texPath>Things/Item/Resource/Egg/JP_Egg_Adamantite</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <color>(150, 165, 180)</color>
+    </graphicData>
+    <comps>
+      <li Class="CompProperties_Hatcher">
+        <hatcherDaystoHatch>18</hatcherDaystoHatch>
+        <hatcherPawn>JP_AdamantiteBeast</hatcherPawn>
+      </li>
+    </comps>
+  </ThingDef>
+
+  <ThingDef ParentName="EggUnfertBase">
+    <defName>JP_Egg_AdamantiteUnfert</defName>
+    <label>adamantite egg (unfert.)</label>
+    <description>アダマンタイトの未受精卵。孵化はしないが、食用・売却用として扱える。\n\nAn unfertilized adamantite beast egg. It won't hatch, but can be eaten or sold.</description>
+    <graphicData>
+      <texPath>Things/Item/Resource/Egg/JP_Egg_Adamantite</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <color>(150, 165, 180)</color>
+    </graphicData>
+    <tradeability>Sellable</tradeability>
+    <statBases>
+      <MarketValue>18</MarketValue>
+      <Mass>1.2</Mass>
+    </statBases>
+  </ThingDef>
+
+  <!-- ================ Meganeura ================ -->
+
+  <ThingDef ParentName="EggFertBase">
+    <defName>JP_Egg_MeganeuraFert</defName>
+    <label>meganeura egg (fert.)</label>
+    <description>メガネウラの受精卵。水辺の近くに産みつけられる。うまくいけばメガネウラの幼体が孵化する。\n\nA fertilized meganeura egg, laid near water. Given time, it should hatch into a young meganeura.</description>
+    <tradeability>None</tradeability>
+    <statBases>
+      <MarketValue>6</MarketValue>
+      <Mass>0.15</Mass>
+    </statBases>
+    <graphicData>
+      <texPath>Things/Item/Resource/Egg/JP_Egg_Meganeura</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <color>(90, 130, 100)</color>
+    </graphicData>
+    <comps>
+      <li Class="CompProperties_Hatcher">
+        <hatcherDaystoHatch>6</hatcherDaystoHatch>
+        <hatcherPawn>JP_Meganeura</hatcherPawn>
+      </li>
+    </comps>
+  </ThingDef>
+
+  <ThingDef ParentName="EggUnfertBase">
+    <defName>JP_Egg_MeganeuraUnfert</defName>
+    <label>meganeura egg (unfert.)</label>
+    <description>メガネウラの未受精卵。孵化はしないが、食用・売却用として扱える。\n\nAn unfertilized meganeura egg. It won't hatch, but can be eaten or sold.</description>
+    <graphicData>
+      <texPath>Things/Item/Resource/Egg/JP_Egg_Meganeura</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <color>(90, 130, 100)</color>
+    </graphicData>
+    <tradeability>Sellable</tradeability>
+    <statBases>
+      <MarketValue>6</MarketValue>
+      <Mass>0.15</Mass>
+    </statBases>
+  </ThingDef>
+
+  <!-- ================ Titanoptera ================ -->
+
+  <ThingDef ParentName="EggFertBase">
+    <defName>JP_Egg_TitanopteraFert</defName>
+    <label>titanoptera egg (fert.)</label>
+    <description>ティタノプテラの受精卵。硬い殻に覆われている。うまくいけばティタノプテラの幼体が孵化する。\n\nA fertilized titanoptera egg with a hard shell. Given time, it should hatch into a young titanoptera.</description>
+    <tradeability>None</tradeability>
+    <statBases>
+      <MarketValue>9</MarketValue>
+      <Mass>0.4</Mass>
+    </statBases>
+    <graphicData>
+      <texPath>Things/Item/Resource/Egg/JP_Egg_Titanoptera</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <color>(120, 100, 60)</color>
+    </graphicData>
+    <comps>
+      <li Class="CompProperties_Hatcher">
+        <hatcherDaystoHatch>10</hatcherDaystoHatch>
+        <hatcherPawn>JP_Titanoptera</hatcherPawn>
+      </li>
+    </comps>
+  </ThingDef>
+
+  <ThingDef ParentName="EggUnfertBase">
+    <defName>JP_Egg_TitanopteraUnfert</defName>
+    <label>titanoptera egg (unfert.)</label>
+    <description>ティタノプテラの未受精卵。孵化はしないが、食用・売却用として扱える。\n\nAn unfertilized titanoptera egg. It won't hatch, but can be eaten or sold.</description>
+    <graphicData>
+      <texPath>Things/Item/Resource/Egg/JP_Egg_Titanoptera</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <color>(120, 100, 60)</color>
+    </graphicData>
+    <tradeability>Sellable</tradeability>
+    <statBases>
+      <MarketValue>9</MarketValue>
+      <Mass>0.4</Mass>
+    </statBases>
+  </ThingDef>
+
+</Defs>

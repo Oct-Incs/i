@@ -1,0 +1,532 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+
+  <!-- ============================================================
+       猫又 (Nekomata) - 森に潜む俊敏な化け猫。特殊能力: 移動が速い
+       ============================================================ -->
+  <ThingDef ParentName="AnimalThingBase">
+    <defName>JP_Nekomata</defName>
+    <label>nekomata</label>
+    <description>年経て妖力を得た猫が変じた化け物。二又に分かれた尾を持ち、木々の間を音もなく駆け抜けて獲物に飛びかかる。人里近くの森でごく稀に目撃される。\n\nA cat that has lived long enough to gain supernatural power and transform into a monster, marked by its forked tail. It darts silently through the trees before pouncing on prey, rarely glimpsed in forests near settlements.</description>
+    <statBases>
+      <MoveSpeed>5.8</MoveSpeed>
+      <ComfyTemperatureMin>-20</ComfyTemperatureMin>
+      <ComfyTemperatureMax>35</ComfyTemperatureMax>
+      <ArmorRating_Sharp>0.08</ArmorRating_Sharp>
+      <Wildness>1.0</Wildness>
+    </statBases>
+    <race>
+      <body>Human</body>
+      <baseBodySize>0.9</baseBodySize>
+      <baseHealthScale>1.0</baseHealthScale>
+      <baseHungerRate>0.6</baseHungerRate>
+      <foodType>CarnivoreAnimal</foodType>
+      <predator>true</predator>
+      <maxPreyBodySize>1.2</maxPreyBodySize>
+      <leatherDef>JP_Leather_RareSpecies</leatherDef>
+      <meatDef>Meat_Human</meatDef>
+      <manhunterOnDamageChance>0.30</manhunterOnDamageChance>
+      <manhunterOnTameFailChance>0.35</manhunterOnTameFailChance>
+      <trainability>None</trainability>
+      <herdAnimal>false</herdAnimal>
+      <canBePredatorPrey>true</canBePredatorPrey>
+      <hasGenders>true</hasGenders>
+      <lifeExpectancy>25</lifeExpectancy>
+      <lifeStageAges>
+        <li><def>AnimalBaby</def><minAge>0</minAge></li>
+        <li><def>AnimalJuvenile</def><minAge>0.25</minAge></li>
+        <li><def>AnimalAdult</def><minAge>0.7</minAge></li>
+      </lifeStageAges>
+    </race>
+    <comps>
+      <li Class="CompProperties_Shearable">
+        <woolDef>JP_Wool_RareSpecies</woolDef>
+        <shearIntervalDays>12</shearIntervalDays>
+        <woolAmount>25</woolAmount>
+      </li>
+    </comps>
+    <tools>
+      <li>
+        <label>left claw</label>
+        <capacities><li>Scratch</li></capacities>
+        <power>8</power>
+        <cooldownTime>1.6</cooldownTime>
+        <linkedBodyPartsGroup>LeftHand</linkedBodyPartsGroup>
+      </li>
+      <li>
+        <label>right claw</label>
+        <capacities><li>Scratch</li></capacities>
+        <power>8</power>
+        <cooldownTime>1.6</cooldownTime>
+        <linkedBodyPartsGroup>RightHand</linkedBodyPartsGroup>
+      </li>
+    </tools>
+    <graphicData>
+      <texPath>Things/Pawn/Animal/JP_Nekomata/JP_Nekomata</texPath>
+      <graphicClass>Graphic_Multi</graphicClass>
+      <drawSize>1.3</drawSize>
+      <shadowData><volume>(0.35, 0.4, 0.25)</volume></shadowData>
+    </graphicData>
+    <thingCategories><li>Animals</li></thingCategories>
+  </ThingDef>
+
+  <!-- ============================================================
+       妖狐 (Youko) - 荒野を駆ける狡猾な化け狐。特殊能力: 火
+       ============================================================ -->
+  <ThingDef ParentName="AnimalThingBase">
+    <defName>JP_Youko</defName>
+    <label>youko</label>
+    <description>妖力を得て人のように立つ化け狐。豊かな尾を持ち、あらゆる獣の中でも屈指の速さで駆け回る。爪には妖しい炎を纏い、触れた者を焼く。\n\nA fox that gained supernatural power and now stands upright like a person, with a magnificent tail. Among the fastest of all beasts. Its claws are wreathed in eerie flame that burns whatever they touch.</description>
+    <statBases>
+      <MoveSpeed>5.6</MoveSpeed>
+      <ComfyTemperatureMin>-15</ComfyTemperatureMin>
+      <ComfyTemperatureMax>45</ComfyTemperatureMax>
+      <ArmorRating_Sharp>0.05</ArmorRating_Sharp>
+      <ArmorRating_Heat>0.35</ArmorRating_Heat>
+      <Wildness>1.0</Wildness>
+    </statBases>
+    <race>
+      <body>Human</body>
+      <baseBodySize>0.85</baseBodySize>
+      <baseHealthScale>0.9</baseHealthScale>
+      <baseHungerRate>0.6</baseHungerRate>
+      <foodType>OmnivoreAnimal</foodType>
+      <predator>true</predator>
+      <maxPreyBodySize>1.0</maxPreyBodySize>
+      <leatherDef>JP_Leather_RareSpecies</leatherDef>
+      <meatDef>Meat_Human</meatDef>
+      <manhunterOnDamageChance>0.25</manhunterOnDamageChance>
+      <manhunterOnTameFailChance>0.35</manhunterOnTameFailChance>
+      <trainability>None</trainability>
+      <herdAnimal>false</herdAnimal>
+      <canBePredatorPrey>true</canBePredatorPrey>
+      <hasGenders>true</hasGenders>
+      <lifeExpectancy>25</lifeExpectancy>
+      <lifeStageAges>
+        <li><def>AnimalBaby</def><minAge>0</minAge></li>
+        <li><def>AnimalJuvenile</def><minAge>0.25</minAge></li>
+        <li><def>AnimalAdult</def><minAge>0.7</minAge></li>
+      </lifeStageAges>
+    </race>
+    <comps>
+      <li Class="CompProperties_Shearable">
+        <woolDef>JP_Wool_RareSpecies</woolDef>
+        <shearIntervalDays>12</shearIntervalDays>
+        <woolAmount>22</woolAmount>
+      </li>
+    </comps>
+    <tools>
+      <li>
+        <label>left claw</label>
+        <capacities><li>Scratch</li></capacities>
+        <power>7</power>
+        <cooldownTime>1.5</cooldownTime>
+        <linkedBodyPartsGroup>LeftHand</linkedBodyPartsGroup>
+        <extraMeleeDamages>
+          <li><def>Burn</def><amount>4</amount></li>
+        </extraMeleeDamages>
+      </li>
+      <li>
+        <label>right claw</label>
+        <capacities><li>Scratch</li></capacities>
+        <power>7</power>
+        <cooldownTime>1.5</cooldownTime>
+        <linkedBodyPartsGroup>RightHand</linkedBodyPartsGroup>
+        <extraMeleeDamages>
+          <li><def>Burn</def><amount>4</amount></li>
+        </extraMeleeDamages>
+      </li>
+    </tools>
+    <graphicData>
+      <texPath>Things/Pawn/Animal/JP_Youko/JP_Youko</texPath>
+      <graphicClass>Graphic_Multi</graphicClass>
+      <drawSize>1.3</drawSize>
+      <shadowData><volume>(0.35, 0.4, 0.25)</volume></shadowData>
+    </graphicData>
+    <thingCategories><li>Animals</li></thingCategories>
+  </ThingDef>
+
+  <!-- ============================================================
+       雪女 (Yukionna) - 雪原に現れる冷気を纏う女性の姿の妖怪。特殊能力: 冷気
+       ============================================================ -->
+  <ThingDef ParentName="AnimalThingBase">
+    <defName>JP_Yukionna</defName>
+    <label>yukionna</label>
+    <description>雪原や吹雪の中に現れる、冷気を纏った女性の姿をした妖怪。触れた者の体温を瞬く間に奪う。極寒でも平然としているが、暖かい場所を嫌う。\n\nA yokai in the shape of a woman, wreathed in cold, that appears in snowfields and blizzards. Her touch drains warmth from the body in an instant. Utterly at ease in extreme cold, but she avoids warm places.</description>
+    <statBases>
+      <MoveSpeed>4.8</MoveSpeed>
+      <ComfyTemperatureMin>-60</ComfyTemperatureMin>
+      <ComfyTemperatureMax>18</ComfyTemperatureMax>
+      <ArmorRating_Sharp>0.05</ArmorRating_Sharp>
+      <ArmorRating_Heat>-0.20</ArmorRating_Heat>
+      <Wildness>1.0</Wildness>
+    </statBases>
+    <race>
+      <body>Human</body>
+      <baseBodySize>0.9</baseBodySize>
+      <baseHealthScale>1.0</baseHealthScale>
+      <baseHungerRate>0.5</baseHungerRate>
+      <foodType>CarnivoreAnimal</foodType>
+      <predator>true</predator>
+      <maxPreyBodySize>1.2</maxPreyBodySize>
+      <leatherDef>JP_Leather_RareSpecies</leatherDef>
+      <meatDef>Meat_Human</meatDef>
+      <manhunterOnDamageChance>0.25</manhunterOnDamageChance>
+      <manhunterOnTameFailChance>0.35</manhunterOnTameFailChance>
+      <trainability>None</trainability>
+      <herdAnimal>false</herdAnimal>
+      <canBePredatorPrey>true</canBePredatorPrey>
+      <hasGenders>true</hasGenders>
+      <lifeExpectancy>25</lifeExpectancy>
+      <lifeStageAges>
+        <li><def>AnimalBaby</def><minAge>0</minAge></li>
+        <li><def>AnimalJuvenile</def><minAge>0.25</minAge></li>
+        <li><def>AnimalAdult</def><minAge>0.7</minAge></li>
+      </lifeStageAges>
+    </race>
+    <comps>
+      <li Class="CompProperties_Shearable">
+        <woolDef>JP_Wool_RareSpecies</woolDef>
+        <shearIntervalDays>12</shearIntervalDays>
+        <woolAmount>22</woolAmount>
+      </li>
+    </comps>
+    <tools>
+      <li>
+        <label>left hand</label>
+        <capacities><li>Scratch</li></capacities>
+        <power>7</power>
+        <cooldownTime>1.6</cooldownTime>
+        <linkedBodyPartsGroup>LeftHand</linkedBodyPartsGroup>
+        <extraMeleeDamages>
+          <li><def>Frostbite</def><amount>5</amount></li>
+        </extraMeleeDamages>
+      </li>
+      <li>
+        <label>right hand</label>
+        <capacities><li>Scratch</li></capacities>
+        <power>7</power>
+        <cooldownTime>1.6</cooldownTime>
+        <linkedBodyPartsGroup>RightHand</linkedBodyPartsGroup>
+        <extraMeleeDamages>
+          <li><def>Frostbite</def><amount>5</amount></li>
+        </extraMeleeDamages>
+      </li>
+    </tools>
+    <graphicData>
+      <texPath>Things/Pawn/Animal/JP_Yukionna/JP_Yukionna</texPath>
+      <graphicClass>Graphic_Multi</graphicClass>
+      <drawSize>1.3</drawSize>
+      <shadowData><volume>(0.35, 0.4, 0.25)</volume></shadowData>
+    </graphicData>
+    <thingCategories><li>Animals</li></thingCategories>
+  </ThingDef>
+
+  <!-- ============================================================
+       座敷童 (Zashikiwarashi) - 家に富をもたらすと伝わる子供の姿の精霊。
+       特殊能力: テイムすると稀に銀を生産する。非好戦的でほぼ無害。
+       ============================================================ -->
+  <ThingDef ParentName="AnimalThingBase">
+    <defName>JP_Zashikiwarashi</defName>
+    <label>zashikiwarashi</label>
+    <description>古い家に住み着き、富をもたらすと伝わる子供の姿の精霊。ほとんど戦う力を持たないが、いたずら好きで人前にふらりと現れる。テイムして懐かせると、ごく稀に銀を生み出すという。\n\nA child-shaped spirit said to bring fortune to the old house it dwells in. It has almost no fighting ability and is mischievous, sometimes wandering into view. If tamed, it is said to occasionally produce silver.</description>
+    <statBases>
+      <MoveSpeed>5.0</MoveSpeed>
+      <ComfyTemperatureMin>-20</ComfyTemperatureMin>
+      <ComfyTemperatureMax>35</ComfyTemperatureMax>
+      <Wildness>1.0</Wildness>
+    </statBases>
+    <race>
+      <body>Human</body>
+      <baseBodySize>0.5</baseBodySize>
+      <baseHealthScale>0.6</baseHealthScale>
+      <baseHungerRate>0.35</baseHungerRate>
+      <foodType>OmnivoreAnimal</foodType>
+      <predator>false</predator>
+      <leatherDef>JP_Leather_RareSpecies</leatherDef>
+      <meatDef>Meat_Human</meatDef>
+      <manhunterOnDamageChance>0.10</manhunterOnDamageChance>
+      <manhunterOnTameFailChance>0.15</manhunterOnTameFailChance>
+      <trainability>None</trainability>
+      <herdAnimal>false</herdAnimal>
+      <canBePredatorPrey>true</canBePredatorPrey>
+      <hasGenders>true</hasGenders>
+      <lifeExpectancy>25</lifeExpectancy>
+      <lifeStageAges>
+        <li><def>AnimalBaby</def><minAge>0</minAge></li>
+        <li><def>AnimalJuvenile</def><minAge>0.25</minAge></li>
+        <li><def>AnimalAdult</def><minAge>0.7</minAge></li>
+      </lifeStageAges>
+    </race>
+    <comps>
+      <li Class="CompProperties_Shearable">
+        <woolDef>JP_Wool_RareSpecies</woolDef>
+        <shearIntervalDays>12</shearIntervalDays>
+        <woolAmount>15</woolAmount>
+      </li>
+      <!-- "稀に銀を生産する" - Milkable comp repurposed to yield Silver on a
+           long interval. Independent of the mating/pregnancy system, so it
+           does not affect normal reproduction. Requires the animal to be
+           tamed, matching the requested behavior. -->
+      <li Class="CompProperties_Milkable">
+        <milkDef>Silver</milkDef>
+        <milkIntervalDays>20</milkIntervalDays>
+        <milkAmount>8</milkAmount>
+      </li>
+    </comps>
+    <tools>
+      <li>
+        <label>left slap</label>
+        <capacities><li>Blunt</li></capacities>
+        <power>3</power>
+        <cooldownTime>2.0</cooldownTime>
+        <linkedBodyPartsGroup>LeftHand</linkedBodyPartsGroup>
+      </li>
+      <li>
+        <label>right slap</label>
+        <capacities><li>Blunt</li></capacities>
+        <power>3</power>
+        <cooldownTime>2.0</cooldownTime>
+        <linkedBodyPartsGroup>RightHand</linkedBodyPartsGroup>
+      </li>
+    </tools>
+    <graphicData>
+      <texPath>Things/Pawn/Animal/JP_Zashikiwarashi/JP_Zashikiwarashi</texPath>
+      <graphicClass>Graphic_Multi</graphicClass>
+      <drawSize>0.9</drawSize>
+      <shadowData><volume>(0.3, 0.35, 0.2)</volume></shadowData>
+    </graphicData>
+    <thingCategories><li>Animals</li></thingCategories>
+  </ThingDef>
+
+  <!-- ============================================================
+       天狗 (Tengu) - 山中に住む、卓越した力を持つとされる妖怪。
+       特殊能力: 超能力(素のXMLでは能動的なアビリティは実装不可のため、
+       高い戦闘技術・警戒心として表現)
+       ============================================================ -->
+  <ThingDef ParentName="AnimalThingBase">
+    <defName>JP_Tengu</defName>
+    <label>tengu</label>
+    <description>山中の霊域に住むとされる、鋭い嘴と翼を持つ妖怪。並外れた身のこなしと不思議な力を持つと伝わるが、その神通力の全ては人には計り知れない。\n\nA yokai said to dwell in sacred mountains, with a sharp beak and wings. Legend holds it possesses extraordinary agility and mysterious powers beyond human understanding.</description>
+    <statBases>
+      <MoveSpeed>5.4</MoveSpeed>
+      <ComfyTemperatureMin>-30</ComfyTemperatureMin>
+      <ComfyTemperatureMax>35</ComfyTemperatureMax>
+      <ArmorRating_Sharp>0.15</ArmorRating_Sharp>
+      <PsychicSensitivity>1.5</PsychicSensitivity>
+      <Wildness>1.0</Wildness>
+    </statBases>
+    <race>
+      <body>Human</body>
+      <baseBodySize>1.1</baseBodySize>
+      <baseHealthScale>1.2</baseHealthScale>
+      <baseHungerRate>0.65</baseHungerRate>
+      <foodType>OmnivoreAnimal</foodType>
+      <predator>true</predator>
+      <maxPreyBodySize>1.4</maxPreyBodySize>
+      <leatherDef>JP_Leather_RareSpecies</leatherDef>
+      <meatDef>Meat_Human</meatDef>
+      <manhunterOnDamageChance>0.20</manhunterOnDamageChance>
+      <manhunterOnTameFailChance>0.4</manhunterOnTameFailChance>
+      <trainability>None</trainability>
+      <herdAnimal>false</herdAnimal>
+      <canBePredatorPrey>true</canBePredatorPrey>
+      <hasGenders>true</hasGenders>
+      <lifeExpectancy>30</lifeExpectancy>
+      <lifeStageAges>
+        <li><def>AnimalBaby</def><minAge>0</minAge></li>
+        <li><def>AnimalJuvenile</def><minAge>0.2</minAge></li>
+        <li><def>AnimalAdult</def><minAge>0.6</minAge></li>
+      </lifeStageAges>
+    </race>
+    <comps>
+      <li Class="CompProperties_Shearable">
+        <woolDef>JP_Wool_RareSpecies</woolDef>
+        <shearIntervalDays>12</shearIntervalDays>
+        <woolAmount>25</woolAmount>
+      </li>
+    </comps>
+    <tools>
+      <li>
+        <label>left talon</label>
+        <capacities><li>Scratch</li></capacities>
+        <power>9</power>
+        <cooldownTime>1.5</cooldownTime>
+        <linkedBodyPartsGroup>LeftHand</linkedBodyPartsGroup>
+      </li>
+      <li>
+        <label>right talon</label>
+        <capacities><li>Scratch</li></capacities>
+        <power>9</power>
+        <cooldownTime>1.5</cooldownTime>
+        <linkedBodyPartsGroup>RightHand</linkedBodyPartsGroup>
+      </li>
+    </tools>
+    <graphicData>
+      <texPath>Things/Pawn/Animal/JP_Tengu/JP_Tengu</texPath>
+      <graphicClass>Graphic_Multi</graphicClass>
+      <drawSize>1.5</drawSize>
+      <shadowData><volume>(0.4, 0.45, 0.3)</volume></shadowData>
+    </graphicData>
+    <thingCategories><li>Animals</li></thingCategories>
+  </ThingDef>
+
+  <!-- ============================================================
+       鬼人 (Oni) - 山野に潜む剛力の巨人。特殊能力: 強打(気絶効果)
+       ============================================================ -->
+  <ThingDef ParentName="AnimalThingBase">
+    <defName>JP_Oni</defName>
+    <label>oni</label>
+    <description>人よりも遥かに大きく、赤黒い肌と角を持つ怪力の巨人。武器を使わずとも、その拳だけで人体を容易く粉砕する。強打を受けた者はしばしば気を失う。山間の荒れ地に単独で棲み、滅多に人前に姿を現さない。\n\nA hulking, horned giant far larger than any person, with dark reddish skin. Its bare fists can crush a body with ease, and a solid hit often knocks the target senseless. It lives alone in rugged mountainous wastes and is rarely seen.</description>
+    <statBases>
+      <MoveSpeed>4.6</MoveSpeed>
+      <ComfyTemperatureMin>-25</ComfyTemperatureMin>
+      <ComfyTemperatureMax>38</ComfyTemperatureMax>
+      <ArmorRating_Sharp>0.20</ArmorRating_Sharp>
+      <ArmorRating_Blunt>0.20</ArmorRating_Blunt>
+      <Wildness>1.0</Wildness>
+    </statBases>
+    <race>
+      <body>Human</body>
+      <baseBodySize>1.8</baseBodySize>
+      <baseHealthScale>2.0</baseHealthScale>
+      <baseHungerRate>1.1</baseHungerRate>
+      <foodType>OmnivoreAnimal</foodType>
+      <predator>true</predator>
+      <maxPreyBodySize>2.2</maxPreyBodySize>
+      <leatherDef>JP_Leather_RareSpecies</leatherDef>
+      <meatDef>Meat_Human</meatDef>
+      <manhunterOnDamageChance>0.35</manhunterOnDamageChance>
+      <manhunterOnTameFailChance>0.45</manhunterOnTameFailChance>
+      <trainability>None</trainability>
+      <herdAnimal>false</herdAnimal>
+      <canBePredatorPrey>true</canBePredatorPrey>
+      <hasGenders>true</hasGenders>
+      <lifeExpectancy>30</lifeExpectancy>
+      <lifeStageAges>
+        <li><def>AnimalBaby</def><minAge>0</minAge></li>
+        <li><def>AnimalJuvenile</def><minAge>0.2</minAge></li>
+        <li><def>AnimalAdult</def><minAge>0.6</minAge></li>
+      </lifeStageAges>
+    </race>
+    <comps>
+      <li Class="CompProperties_Shearable">
+        <woolDef>JP_Wool_RareSpecies</woolDef>
+        <shearIntervalDays>12</shearIntervalDays>
+        <woolAmount>30</woolAmount>
+      </li>
+    </comps>
+    <tools>
+      <li>
+        <label>left fist</label>
+        <capacities><li>Blunt</li></capacities>
+        <power>14</power>
+        <cooldownTime>2.0</cooldownTime>
+        <linkedBodyPartsGroup>LeftHand</linkedBodyPartsGroup>
+        <surpriseAttack>
+          <extraMeleeDamages>
+            <li><def>Stun</def><amount>20</amount></li>
+          </extraMeleeDamages>
+        </surpriseAttack>
+      </li>
+      <li>
+        <label>right fist</label>
+        <capacities><li>Blunt</li></capacities>
+        <power>14</power>
+        <cooldownTime>2.0</cooldownTime>
+        <linkedBodyPartsGroup>RightHand</linkedBodyPartsGroup>
+        <surpriseAttack>
+          <extraMeleeDamages>
+            <li><def>Stun</def><amount>20</amount></li>
+          </extraMeleeDamages>
+        </surpriseAttack>
+      </li>
+    </tools>
+    <graphicData>
+      <texPath>Things/Pawn/Animal/JP_Oni/JP_Oni</texPath>
+      <graphicClass>Graphic_Multi</graphicClass>
+      <drawSize>2.0</drawSize>
+      <shadowData><volume>(0.55, 0.5, 0.4)</volume></shadowData>
+    </graphicData>
+    <thingCategories><li>Animals</li></thingCategories>
+  </ThingDef>
+
+  <!-- ============================================================
+       竜人 (Dragonkin) - 秘境に稀に現れる竜の血を引く者。
+       特殊能力: 火、移動が速い
+       ============================================================ -->
+  <ThingDef ParentName="AnimalThingBase">
+    <defName>JP_Dragonkin</defName>
+    <label>dragonkin</label>
+    <description>竜の血を引くと伝えられる、鱗に覆われた人型の存在。あらゆる秘境にごく稀に現れ、鋭い鉤爪と厚い鱗で並の武装を寄せ付けない。爪には炎を纏い、俊敏に飛びかかる。目撃例が極めて少ない伝説的な脅威。\n\nA scaled, humanoid being said to carry the blood of dragons. Rarely encountered in remote wilds anywhere, its sharp talons and thick scales shrug off ordinary weapons, and it strikes swiftly with claws wreathed in flame - a legendary threat few have lived to describe in detail.</description>
+    <statBases>
+      <MoveSpeed>5.8</MoveSpeed>
+      <ComfyTemperatureMin>-30</ComfyTemperatureMin>
+      <ComfyTemperatureMax>45</ComfyTemperatureMax>
+      <ArmorRating_Sharp>0.30</ArmorRating_Sharp>
+      <ArmorRating_Blunt>0.20</ArmorRating_Blunt>
+      <ArmorRating_Heat>0.50</ArmorRating_Heat>
+      <Wildness>1.0</Wildness>
+    </statBases>
+    <race>
+      <body>Human</body>
+      <baseBodySize>1.6</baseBodySize>
+      <baseHealthScale>2.2</baseHealthScale>
+      <baseHungerRate>0.9</baseHungerRate>
+      <foodType>CarnivoreAnimal</foodType>
+      <predator>true</predator>
+      <maxPreyBodySize>2.0</maxPreyBodySize>
+      <leatherDef>JP_Leather_RareSpecies</leatherDef>
+      <meatDef>Meat_Human</meatDef>
+      <manhunterOnDamageChance>0.25</manhunterOnDamageChance>
+      <manhunterOnTameFailChance>0.5</manhunterOnTameFailChance>
+      <trainability>None</trainability>
+      <herdAnimal>false</herdAnimal>
+      <canBePredatorPrey>true</canBePredatorPrey>
+      <hasGenders>true</hasGenders>
+      <lifeExpectancy>40</lifeExpectancy>
+      <lifeStageAges>
+        <li><def>AnimalBaby</def><minAge>0</minAge></li>
+        <li><def>AnimalJuvenile</def><minAge>0.15</minAge></li>
+        <li><def>AnimalAdult</def><minAge>0.5</minAge></li>
+      </lifeStageAges>
+    </race>
+    <comps>
+      <li Class="CompProperties_Shearable">
+        <woolDef>JP_Wool_RareSpecies</woolDef>
+        <shearIntervalDays>12</shearIntervalDays>
+        <woolAmount>28</woolAmount>
+      </li>
+    </comps>
+    <tools>
+      <li>
+        <label>left talon</label>
+        <capacities><li>Scratch</li></capacities>
+        <power>12</power>
+        <cooldownTime>1.9</cooldownTime>
+        <linkedBodyPartsGroup>LeftHand</linkedBodyPartsGroup>
+        <extraMeleeDamages>
+          <li><def>Burn</def><amount>5</amount></li>
+        </extraMeleeDamages>
+      </li>
+      <li>
+        <label>right talon</label>
+        <capacities><li>Scratch</li></capacities>
+        <power>12</power>
+        <cooldownTime>1.9</cooldownTime>
+        <linkedBodyPartsGroup>RightHand</linkedBodyPartsGroup>
+        <extraMeleeDamages>
+          <li><def>Burn</def><amount>5</amount></li>
+        </extraMeleeDamages>
+      </li>
+    </tools>
+    <graphicData>
+      <texPath>Things/Pawn/Animal/JP_Dragonkin/JP_Dragonkin</texPath>
+      <graphicClass>Graphic_Multi</graphicClass>
+      <drawSize>1.9</drawSize>
+      <shadowData><volume>(0.5, 0.5, 0.4)</volume></shadowData>
+    </graphicData>
+    <thingCategories><li>Animals</li></thingCategories>
+  </ThingDef>
+
+</Defs>

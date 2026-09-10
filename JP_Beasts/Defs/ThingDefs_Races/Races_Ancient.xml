@@ -1,0 +1,559 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+
+  <!-- ============================================================
+       ニホンオオカミ (Japanese Wolf) - 森に群れる俊敏な捕食獣。
+       特殊能力: 移動が速い、大型 / 妊娠条件: 通常の交配
+       ============================================================ -->
+  <ThingDef ParentName="AnimalThingBase">
+    <defName>JP_JapaneseWolf</defName>
+    <label>Japanese wolf</label>
+    <description>森林地帯に小さな群れで生息する、俊敏で狡猾な大型の狼。単独の獲物には容赦なく襲いかかる。傷を負わせると仲間ごと激昂することがある。\n\nA lean, cunning, sizeable wolf that roams temperate and boreal forests in small packs. Ruthless against lone prey, and prone to provoking the whole pack if wounded.</description>
+    <statBases>
+      <MoveSpeed>5.4</MoveSpeed>
+      <ComfyTemperatureMin>-30</ComfyTemperatureMin>
+      <ComfyTemperatureMax>28</ComfyTemperatureMax>
+      <ArmorRating_Sharp>0.05</ArmorRating_Sharp>
+      <Wildness>0.95</Wildness>
+    </statBases>
+    <race>
+      <body>QuadrupedAnimalWithPawsAndTail</body>
+      <baseBodySize>1.3</baseBodySize>
+      <baseHealthScale>1.2</baseHealthScale>
+      <baseHungerRate>0.6</baseHungerRate>
+      <foodType>CarnivoreAnimal</foodType>
+      <predator>true</predator>
+      <maxPreyBodySize>1.4</maxPreyBodySize>
+      <leatherDef>JP_Leather_AncientBeast</leatherDef>
+      <meatDef>JP_Meat_JapaneseWolf</meatDef>
+      <manhunterOnDamageChance>0.35</manhunterOnDamageChance>
+      <manhunterOnTameFailChance>0.20</manhunterOnTameFailChance>
+      <trainability>None</trainability>
+      <herdAnimal>true</herdAnimal>
+      <canBePredatorPrey>true</canBePredatorPrey>
+      <hasGenders>true</hasGenders>
+      <lifeExpectancy>11</lifeExpectancy>
+      <lifeStageAges>
+        <li><def>AnimalBaby</def><minAge>0</minAge></li>
+        <li><def>AnimalJuvenile</def><minAge>0.3</minAge></li>
+        <li><def>AnimalAdult</def><minAge>0.8</minAge></li>
+      </lifeStageAges>
+    </race>
+    <comps>
+      <li Class="CompProperties_Shearable">
+        <woolDef>JP_Wool_AncientBeast</woolDef>
+        <shearIntervalDays>10</shearIntervalDays>
+        <woolAmount>20</woolAmount>
+      </li>
+    </comps>
+    <tools>
+      <li>
+        <label>tooth</label>
+        <capacities><li>Bite</li></capacities>
+        <power>9</power>
+        <cooldownTime>2.0</cooldownTime>
+        <linkedBodyPartsGroup>Teeth</linkedBodyPartsGroup>
+      </li>
+      <li>
+        <label>front claw</label>
+        <capacities><li>Scratch</li></capacities>
+        <power>6</power>
+        <cooldownTime>1.7</cooldownTime>
+        <linkedBodyPartsGroup>FrontLeftLeg</linkedBodyPartsGroup>
+      </li>
+      <li>
+        <label>front claw</label>
+        <capacities><li>Scratch</li></capacities>
+        <power>6</power>
+        <cooldownTime>1.7</cooldownTime>
+        <linkedBodyPartsGroup>FrontRightLeg</linkedBodyPartsGroup>
+        <chanceFactor>0.7</chanceFactor>
+      </li>
+    </tools>
+    <graphicData>
+      <texPath>Things/Pawn/Animal/JP_JapaneseWolf/JP_JapaneseWolf</texPath>
+      <graphicClass>Graphic_Multi</graphicClass>
+      <drawSize>1.6</drawSize>
+      <shadowData><volume>(0.45, 0.4, 0.3)</volume></shadowData>
+    </graphicData>
+    <thingCategories><li>Animals</li></thingCategories>
+  </ThingDef>
+
+  <!-- ============================================================
+       エゾオオカミ (Ezo Wolf) - ニホンオオカミよりも大柄な北方の狼。
+       特殊能力: 移動が速い、大型 / 妊娠条件: 通常の交配
+       ============================================================ -->
+  <ThingDef ParentName="AnimalThingBase">
+    <defName>JP_EzoWolf</defName>
+    <label>Ezo wolf</label>
+    <description>北方の針葉樹林や凍土に生息する、ニホンオオカミよりも一回り大きく力強い狼。厳しい寒さに適応しており、群れで大型の獲物にも挑む。\n\nA wolf found in northern boreal forests and tundra, larger and stronger than the Japanese wolf. Well adapted to harsh cold, it hunts even large prey in packs.</description>
+    <statBases>
+      <MoveSpeed>5.5</MoveSpeed>
+      <ComfyTemperatureMin>-40</ComfyTemperatureMin>
+      <ComfyTemperatureMax>25</ComfyTemperatureMax>
+      <ArmorRating_Sharp>0.07</ArmorRating_Sharp>
+      <Wildness>0.95</Wildness>
+    </statBases>
+    <race>
+      <body>QuadrupedAnimalWithPawsAndTail</body>
+      <baseBodySize>1.5</baseBodySize>
+      <baseHealthScale>1.4</baseHealthScale>
+      <baseHungerRate>0.65</baseHungerRate>
+      <foodType>CarnivoreAnimal</foodType>
+      <predator>true</predator>
+      <maxPreyBodySize>1.6</maxPreyBodySize>
+      <leatherDef>JP_Leather_AncientBeast</leatherDef>
+      <meatDef>JP_Meat_EzoWolf</meatDef>
+      <manhunterOnDamageChance>0.35</manhunterOnDamageChance>
+      <manhunterOnTameFailChance>0.20</manhunterOnTameFailChance>
+      <trainability>None</trainability>
+      <herdAnimal>true</herdAnimal>
+      <canBePredatorPrey>true</canBePredatorPrey>
+      <hasGenders>true</hasGenders>
+      <lifeExpectancy>12</lifeExpectancy>
+      <lifeStageAges>
+        <li><def>AnimalBaby</def><minAge>0</minAge></li>
+        <li><def>AnimalJuvenile</def><minAge>0.3</minAge></li>
+        <li><def>AnimalAdult</def><minAge>0.8</minAge></li>
+      </lifeStageAges>
+    </race>
+    <comps>
+      <li Class="CompProperties_Shearable">
+        <woolDef>JP_Wool_AncientBeast</woolDef>
+        <shearIntervalDays>10</shearIntervalDays>
+        <woolAmount>26</woolAmount>
+      </li>
+    </comps>
+    <tools>
+      <li>
+        <label>tooth</label>
+        <capacities><li>Bite</li></capacities>
+        <power>10</power>
+        <cooldownTime>2.0</cooldownTime>
+        <linkedBodyPartsGroup>Teeth</linkedBodyPartsGroup>
+      </li>
+      <li>
+        <label>front claw</label>
+        <capacities><li>Scratch</li></capacities>
+        <power>7</power>
+        <cooldownTime>1.7</cooldownTime>
+        <linkedBodyPartsGroup>FrontLeftLeg</linkedBodyPartsGroup>
+      </li>
+      <li>
+        <label>front claw</label>
+        <capacities><li>Scratch</li></capacities>
+        <power>7</power>
+        <cooldownTime>1.7</cooldownTime>
+        <linkedBodyPartsGroup>FrontRightLeg</linkedBodyPartsGroup>
+        <chanceFactor>0.7</chanceFactor>
+      </li>
+    </tools>
+    <graphicData>
+      <texPath>Things/Pawn/Animal/JP_EzoWolf/JP_EzoWolf</texPath>
+      <graphicClass>Graphic_Multi</graphicClass>
+      <drawSize>1.75</drawSize>
+      <shadowData><volume>(0.5, 0.4, 0.3)</volume></shadowData>
+    </graphicData>
+    <thingCategories><li>Animals</li></thingCategories>
+  </ThingDef>
+
+  <!-- ============================================================
+       マンモス (Mammoth) - 荒野を歩く古代種の巨獣。
+       特殊能力: 移動が遅い、超大型 / 妊娠条件: 通常の交配
+       ============================================================ -->
+  <ThingDef ParentName="AnimalThingBase">
+    <defName>JP_Mammoth</defName>
+    <label>mammoth</label>
+    <description>凍土や針葉樹林を闊歩する、古代種の超大型の獣。普段は穏やかだが、一度激昂すると巨体で全てを踏み潰す災害と化す。\n\nA colossal ancient-type beast that roams tundra and boreal forests. Normally placid, but a wounded mammoth becomes a rampaging disaster that tramples everything in its path.</description>
+    <statBases>
+      <MoveSpeed>3.8</MoveSpeed>
+      <ComfyTemperatureMin>-45</ComfyTemperatureMin>
+      <ComfyTemperatureMax>25</ComfyTemperatureMax>
+      <ArmorRating_Sharp>0.10</ArmorRating_Sharp>
+      <ArmorRating_Blunt>0.15</ArmorRating_Blunt>
+      <Wildness>0.9</Wildness>
+    </statBases>
+    <race>
+      <body>QuadrupedAnimalWithPawsAndTail</body>
+      <baseBodySize>3.4</baseBodySize>
+      <baseHealthScale>3.4</baseHealthScale>
+      <baseHungerRate>1.5</baseHungerRate>
+      <foodType>VegetarianAnimal</foodType>
+      <predator>false</predator>
+      <leatherDef>JP_Leather_AncientBeast</leatherDef>
+      <meatDef>JP_Meat_Mammoth</meatDef>
+      <manhunterOnDamageChance>0.5</manhunterOnDamageChance>
+      <manhunterOnTameFailChance>0.3</manhunterOnTameFailChance>
+      <trainability>None</trainability>
+      <herdAnimal>false</herdAnimal>
+      <canBePredatorPrey>true</canBePredatorPrey>
+      <hasGenders>true</hasGenders>
+      <lifeExpectancy>14</lifeExpectancy>
+      <lifeStageAges>
+        <li><def>AnimalBaby</def><minAge>0</minAge></li>
+        <li><def>AnimalJuvenile</def><minAge>0.2</minAge></li>
+        <li><def>AnimalAdult</def><minAge>0.7</minAge></li>
+      </lifeStageAges>
+    </race>
+    <comps>
+      <li Class="CompProperties_Shearable">
+        <woolDef>JP_Wool_AncientBeast</woolDef>
+        <shearIntervalDays>10</shearIntervalDays>
+        <woolAmount>65</woolAmount>
+      </li>
+    </comps>
+    <tools>
+      <li>
+        <label>tusk</label>
+        <capacities><li>Stab</li></capacities>
+        <power>16</power>
+        <cooldownTime>2.2</cooldownTime>
+        <linkedBodyPartsGroup>Teeth</linkedBodyPartsGroup>
+      </li>
+      <li>
+        <label>trample</label>
+        <capacities><li>Blunt</li></capacities>
+        <power>22</power>
+        <cooldownTime>2.6</cooldownTime>
+        <linkedBodyPartsGroup>FrontLeftLeg</linkedBodyPartsGroup>
+      </li>
+      <li>
+        <label>trample</label>
+        <capacities><li>Blunt</li></capacities>
+        <power>22</power>
+        <cooldownTime>2.6</cooldownTime>
+        <linkedBodyPartsGroup>FrontRightLeg</linkedBodyPartsGroup>
+        <chanceFactor>0.7</chanceFactor>
+      </li>
+    </tools>
+    <graphicData>
+      <texPath>Things/Pawn/Animal/JP_Mammoth/JP_Mammoth</texPath>
+      <graphicClass>Graphic_Multi</graphicClass>
+      <drawSize>3.4</drawSize>
+      <shadowData><volume>(1.2, 0.6, 0.9)</volume></shadowData>
+    </graphicData>
+    <thingCategories><li>Animals</li></thingCategories>
+  </ThingDef>
+
+  <!-- ============================================================
+       マゾタイロス (Mazotairos) - 分厚い装甲を持つ古代種の陸獣。
+       (詳細指定なしのため推測で補完: 重装甲の草食性巨獣)
+       特殊能力: 硬い / 妊娠条件: 通常の交配
+       ============================================================ -->
+  <ThingDef ParentName="AnimalThingBase">
+    <defName>JP_Mazotairos</defName>
+    <label>mazotairos</label>
+    <description>分厚い骨質の装甲に覆われた、古代種の大型獣。動きは鈍いが並の攻撃をものともせず、追い詰められると角で突進する。\n\nA large ancient-type beast covered in thick, bony armor plates. Slow-moving but shrugs off ordinary attacks, and charges with its horn when cornered.</description>
+    <statBases>
+      <MoveSpeed>4.2</MoveSpeed>
+      <ComfyTemperatureMin>-20</ComfyTemperatureMin>
+      <ComfyTemperatureMax>40</ComfyTemperatureMax>
+      <ArmorRating_Sharp>0.35</ArmorRating_Sharp>
+      <ArmorRating_Blunt>0.30</ArmorRating_Blunt>
+      <Wildness>0.9</Wildness>
+    </statBases>
+    <race>
+      <body>QuadrupedAnimalWithPawsAndTail</body>
+      <baseBodySize>2.6</baseBodySize>
+      <baseHealthScale>2.6</baseHealthScale>
+      <baseHungerRate>1.1</baseHungerRate>
+      <foodType>OmnivoreAnimal</foodType>
+      <predator>false</predator>
+      <leatherDef>JP_Leather_AncientBeast</leatherDef>
+      <meatDef>JP_Meat_Mazotairos</meatDef>
+      <manhunterOnDamageChance>0.4</manhunterOnDamageChance>
+      <manhunterOnTameFailChance>0.3</manhunterOnTameFailChance>
+      <trainability>None</trainability>
+      <herdAnimal>false</herdAnimal>
+      <canBePredatorPrey>true</canBePredatorPrey>
+      <hasGenders>true</hasGenders>
+      <lifeExpectancy>16</lifeExpectancy>
+      <lifeStageAges>
+        <li><def>AnimalBaby</def><minAge>0</minAge></li>
+        <li><def>AnimalJuvenile</def><minAge>0.2</minAge></li>
+        <li><def>AnimalAdult</def><minAge>0.7</minAge></li>
+      </lifeStageAges>
+    </race>
+    <comps>
+      <li Class="CompProperties_Shearable">
+        <woolDef>JP_Wool_AncientBeast</woolDef>
+        <shearIntervalDays>10</shearIntervalDays>
+        <woolAmount>40</woolAmount>
+      </li>
+    </comps>
+    <tools>
+      <li>
+        <label>horn</label>
+        <capacities><li>Stab</li></capacities>
+        <power>14</power>
+        <cooldownTime>2.2</cooldownTime>
+        <linkedBodyPartsGroup>Teeth</linkedBodyPartsGroup>
+      </li>
+      <li>
+        <label>trample</label>
+        <capacities><li>Blunt</li></capacities>
+        <power>16</power>
+        <cooldownTime>2.4</cooldownTime>
+        <linkedBodyPartsGroup>FrontLeftLeg</linkedBodyPartsGroup>
+      </li>
+      <li>
+        <label>trample</label>
+        <capacities><li>Blunt</li></capacities>
+        <power>16</power>
+        <cooldownTime>2.4</cooldownTime>
+        <linkedBodyPartsGroup>FrontRightLeg</linkedBodyPartsGroup>
+        <chanceFactor>0.7</chanceFactor>
+      </li>
+    </tools>
+    <graphicData>
+      <texPath>Things/Pawn/Animal/JP_Mazotairos/JP_Mazotairos</texPath>
+      <graphicClass>Graphic_Multi</graphicClass>
+      <drawSize>2.8</drawSize>
+      <shadowData><volume>(0.9, 0.5, 0.7)</volume></shadowData>
+    </graphicData>
+    <thingCategories><li>Animals</li></thingCategories>
+  </ThingDef>
+
+  <!-- ============================================================
+       アダマンタイト (Adamantite Beast) - 生きた金属を纏う頂点捕食者。
+       特殊能力: 硬い、移動が遅い、超大型 / 妊娠条件: 卵生
+       ============================================================ -->
+  <ThingDef ParentName="AnimalThingBase">
+    <defName>JP_AdamantiteBeast</defName>
+    <label>adamantite beast</label>
+    <description>体表が金属質の毛「スカイスチール」で覆われた、極めて稀な超大型の頂点捕食者。荒野の奥地でごく稀にしか目撃されない。動きは鈍重だが、刃も鈍器も通しにくい体は、生半可な武装では太刀打ちできない。卵で殖える。\n\nAn extremely rare, colossal apex predator whose hide is covered in a metallic fur known as sky steel. Sighted only rarely in the deep wilds. Slow and ponderous, but its body shrugs off blade and blunt weapon alike - a serious threat to anyone poorly armed. Reproduces by laying eggs.</description>
+    <statBases>
+      <MoveSpeed>3.6</MoveSpeed>
+      <ComfyTemperatureMin>-40</ComfyTemperatureMin>
+      <ComfyTemperatureMax>45</ComfyTemperatureMax>
+      <ArmorRating_Sharp>0.55</ArmorRating_Sharp>
+      <ArmorRating_Blunt>0.45</ArmorRating_Blunt>
+      <ArmorRating_Heat>0.35</ArmorRating_Heat>
+      <Wildness>1.0</Wildness>
+    </statBases>
+    <race>
+      <body>QuadrupedAnimalWithPawsAndTail</body>
+      <baseBodySize>3.2</baseBodySize>
+      <baseHealthScale>3.2</baseHealthScale>
+      <baseHungerRate>1.0</baseHungerRate>
+      <foodType>CarnivoreAnimal</foodType>
+      <predator>true</predator>
+      <maxPreyBodySize>3.5</maxPreyBodySize>
+      <leatherDef>JP_Leather_Adamantite</leatherDef>
+      <meatDef>JP_Meat_Adamantite</meatDef>
+      <manhunterOnDamageChance>0.30</manhunterOnDamageChance>
+      <manhunterOnTameFailChance>0.4</manhunterOnTameFailChance>
+      <trainability>None</trainability>
+      <herdAnimal>false</herdAnimal>
+      <canBePredatorPrey>true</canBePredatorPrey>
+      <hasGenders>true</hasGenders>
+      <lifeExpectancy>25</lifeExpectancy>
+      <lifeStageAges>
+        <li><def>AnimalBaby</def><minAge>0</minAge></li>
+        <li><def>AnimalJuvenile</def><minAge>0.2</minAge></li>
+        <li><def>AnimalAdult</def><minAge>0.6</minAge></li>
+      </lifeStageAges>
+    </race>
+    <comps>
+      <li Class="CompProperties_Shearable">
+        <woolDef>JP_Wool_Adamantite</woolDef>
+        <shearIntervalDays>14</shearIntervalDays>
+        <woolAmount>10</woolAmount>
+      </li>
+      <li Class="CompProperties_EggLayer">
+        <eggFertilizedDef>JP_Egg_AdamantiteFert</eggFertilizedDef>
+        <eggUnfertilizedDef>JP_Egg_AdamantiteUnfert</eggUnfertilizedDef>
+        <eggFertilizationCountMax>1</eggFertilizationCountMax>
+        <eggLayIntervalDays>20</eggLayIntervalDays>
+        <eggProgressUnfertilizedMax>0.5</eggProgressUnfertilizedMax>
+        <eggCountRange>1</eggCountRange>
+      </li>
+    </comps>
+    <tools>
+      <li>
+        <label>metal fang</label>
+        <capacities><li>Bite</li></capacities>
+        <power>18</power>
+        <cooldownTime>2.0</cooldownTime>
+        <linkedBodyPartsGroup>Teeth</linkedBodyPartsGroup>
+      </li>
+      <li>
+        <label>steel claw</label>
+        <capacities><li>Scratch</li></capacities>
+        <power>16</power>
+        <cooldownTime>1.8</cooldownTime>
+        <linkedBodyPartsGroup>FrontLeftLeg</linkedBodyPartsGroup>
+      </li>
+      <li>
+        <label>steel claw</label>
+        <capacities><li>Scratch</li></capacities>
+        <power>16</power>
+        <cooldownTime>1.8</cooldownTime>
+        <linkedBodyPartsGroup>FrontRightLeg</linkedBodyPartsGroup>
+        <chanceFactor>0.7</chanceFactor>
+      </li>
+    </tools>
+    <graphicData>
+      <texPath>Things/Pawn/Animal/JP_AdamantiteBeast/JP_AdamantiteBeast</texPath>
+      <graphicClass>Graphic_Multi</graphicClass>
+      <drawSize>3.0</drawSize>
+      <shadowData><volume>(1.0, 0.5, 0.7)</volume></shadowData>
+    </graphicData>
+    <thingCategories><li>Animals</li></thingCategories>
+  </ThingDef>
+
+  <!-- ============================================================
+       メガネウラ (Meganeura) - 水辺を飛び回る古代種の巨大トンボ。
+       特殊能力: 移動が速い(飛行)、小型・脆弱 / 妊娠条件: 卵生
+       ============================================================ -->
+  <ThingDef ParentName="AnimalThingBase">
+    <defName>JP_Meganeura</defName>
+    <label>meganeura</label>
+    <description>翼を広げると人の腕ほどにもなる、古代種の巨大なトンボ。水辺を素早く飛び回り、小さな獲物を捕らえる。体は小さく脆いが、その速さゆえに捕えるのは難しい。卵で殖える。\n\nA giant ancient dragonfly whose wingspan can rival a person's arm. It darts swiftly over wetlands, snatching small prey. Small and fragile, but its speed makes it hard to catch. Reproduces by laying eggs.</description>
+    <statBases>
+      <MoveSpeed>6.5</MoveSpeed>
+      <ComfyTemperatureMin>0</ComfyTemperatureMin>
+      <ComfyTemperatureMax>45</ComfyTemperatureMax>
+      <Wildness>0.95</Wildness>
+    </statBases>
+    <race>
+      <body>QuadrupedAnimalWithPawsAndTail</body>
+      <baseBodySize>0.3</baseBodySize>
+      <baseHealthScale>0.4</baseHealthScale>
+      <baseHungerRate>0.3</baseHungerRate>
+      <foodType>CarnivoreAnimal</foodType>
+      <predator>true</predator>
+      <maxPreyBodySize>0.3</maxPreyBodySize>
+      <leatherDef>JP_Chitin_Ancient</leatherDef>
+      <meatDef>JP_Meat_Meganeura</meatDef>
+      <manhunterOnDamageChance>0.10</manhunterOnDamageChance>
+      <manhunterOnTameFailChance>0.2</manhunterOnTameFailChance>
+      <trainability>None</trainability>
+      <herdAnimal>false</herdAnimal>
+      <canBePredatorPrey>true</canBePredatorPrey>
+      <hasGenders>true</hasGenders>
+      <lifeExpectancy>4</lifeExpectancy>
+      <lifeStageAges>
+        <li><def>AnimalBaby</def><minAge>0</minAge></li>
+        <li><def>AnimalJuvenile</def><minAge>0.15</minAge></li>
+        <li><def>AnimalAdult</def><minAge>0.4</minAge></li>
+      </lifeStageAges>
+    </race>
+    <comps>
+      <li Class="CompProperties_EggLayer">
+        <eggFertilizedDef>JP_Egg_MeganeuraFert</eggFertilizedDef>
+        <eggUnfertilizedDef>JP_Egg_MeganeuraUnfert</eggUnfertilizedDef>
+        <eggFertilizationCountMax>2</eggFertilizationCountMax>
+        <eggLayIntervalDays>5</eggLayIntervalDays>
+        <eggProgressUnfertilizedMax>0.5</eggProgressUnfertilizedMax>
+        <eggCountRange>1~3</eggCountRange>
+      </li>
+    </comps>
+    <tools>
+      <li>
+        <label>bite</label>
+        <capacities><li>Bite</li></capacities>
+        <power>5</power>
+        <cooldownTime>1.4</cooldownTime>
+        <linkedBodyPartsGroup>Teeth</linkedBodyPartsGroup>
+      </li>
+      <li>
+        <label>leg spines</label>
+        <capacities><li>Scratch</li></capacities>
+        <power>4</power>
+        <cooldownTime>1.4</cooldownTime>
+        <linkedBodyPartsGroup>FrontLeftLeg</linkedBodyPartsGroup>
+        <chanceFactor>0.6</chanceFactor>
+      </li>
+    </tools>
+    <graphicData>
+      <texPath>Things/Pawn/Animal/JP_Meganeura/JP_Meganeura</texPath>
+      <graphicClass>Graphic_Multi</graphicClass>
+      <drawSize>0.7</drawSize>
+      <shadowData><volume>(0.2, 0.3, 0.15)</volume></shadowData>
+    </graphicData>
+    <thingCategories><li>Animals</li></thingCategories>
+  </ThingDef>
+
+  <!-- ============================================================
+       ティタノプテラ (Titanoptera) - 地を這う古代種の巨大な肉食昆虫。
+       特殊能力: 攻撃的な待ち伏せ型捕食者 / 妊娠条件: 卵生
+       ============================================================ -->
+  <ThingDef ParentName="AnimalThingBase">
+    <defName>JP_Titanoptera</defName>
+    <label>titanoptera</label>
+    <description>鋭い鋸状の前肢を持つ、古代種の巨大な肉食昆虫。物陰に潜んで獲物を待ち伏せ、一瞬で切り裂く。メガネウラよりも遥かに攻撃的で危険。卵で殖える。\n\nA giant ancient predatory insect with serrated forelimbs. It lies in ambush before shredding its prey in an instant - far more aggressive and dangerous than the meganeura. Reproduces by laying eggs.</description>
+    <statBases>
+      <MoveSpeed>5.2</MoveSpeed>
+      <ComfyTemperatureMin>-10</ComfyTemperatureMin>
+      <ComfyTemperatureMax>45</ComfyTemperatureMax>
+      <ArmorRating_Sharp>0.15</ArmorRating_Sharp>
+      <Wildness>0.95</Wildness>
+    </statBases>
+    <race>
+      <body>QuadrupedAnimalWithPawsAndTail</body>
+      <baseBodySize>1.4</baseBodySize>
+      <baseHealthScale>1.6</baseHealthScale>
+      <baseHungerRate>0.8</baseHungerRate>
+      <foodType>CarnivoreAnimal</foodType>
+      <predator>true</predator>
+      <maxPreyBodySize>1.6</maxPreyBodySize>
+      <leatherDef>JP_Chitin_Ancient</leatherDef>
+      <meatDef>JP_Meat_Titanoptera</meatDef>
+      <manhunterOnDamageChance>0.30</manhunterOnDamageChance>
+      <manhunterOnTameFailChance>0.35</manhunterOnTameFailChance>
+      <trainability>None</trainability>
+      <herdAnimal>false</herdAnimal>
+      <canBePredatorPrey>true</canBePredatorPrey>
+      <hasGenders>true</hasGenders>
+      <lifeExpectancy>8</lifeExpectancy>
+      <lifeStageAges>
+        <li><def>AnimalBaby</def><minAge>0</minAge></li>
+        <li><def>AnimalJuvenile</def><minAge>0.2</minAge></li>
+        <li><def>AnimalAdult</def><minAge>0.5</minAge></li>
+      </lifeStageAges>
+    </race>
+    <comps>
+      <li Class="CompProperties_EggLayer">
+        <eggFertilizedDef>JP_Egg_TitanopteraFert</eggFertilizedDef>
+        <eggUnfertilizedDef>JP_Egg_TitanopteraUnfert</eggUnfertilizedDef>
+        <eggFertilizationCountMax>1</eggFertilizationCountMax>
+        <eggLayIntervalDays>10</eggLayIntervalDays>
+        <eggProgressUnfertilizedMax>0.5</eggProgressUnfertilizedMax>
+        <eggCountRange>1~2</eggCountRange>
+      </li>
+    </comps>
+    <tools>
+      <li>
+        <label>mandible bite</label>
+        <capacities><li>Bite</li></capacities>
+        <power>11</power>
+        <cooldownTime>1.7</cooldownTime>
+        <linkedBodyPartsGroup>Teeth</linkedBodyPartsGroup>
+      </li>
+      <li>
+        <label>raptorial claw</label>
+        <capacities><li>Scratch</li></capacities>
+        <power>9</power>
+        <cooldownTime>1.6</cooldownTime>
+        <linkedBodyPartsGroup>FrontLeftLeg</linkedBodyPartsGroup>
+      </li>
+      <li>
+        <label>raptorial claw</label>
+        <capacities><li>Scratch</li></capacities>
+        <power>9</power>
+        <cooldownTime>1.6</cooldownTime>
+        <linkedBodyPartsGroup>FrontRightLeg</linkedBodyPartsGroup>
+        <chanceFactor>0.7</chanceFactor>
+      </li>
+    </tools>
+    <graphicData>
+      <texPath>Things/Pawn/Animal/JP_Titanoptera/JP_Titanoptera</texPath>
+      <graphicClass>Graphic_Multi</graphicClass>
+      <drawSize>1.5</drawSize>
+      <shadowData><volume>(0.45, 0.4, 0.3)</volume></shadowData>
+    </graphicData>
+    <thingCategories><li>Animals</li></thingCategories>
+  </ThingDef>
+
+</Defs>

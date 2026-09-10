@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ModMetaData>
+  <name>JP Beasts - 和ノ獣譚</name>
+  <author>base</author>
+  <packageId>base.jpbeasts</packageId>
+  <supportedVersions>
+    <li>1.6</li>
+  </supportedVersions>
+  <description>自然発生する敵生物を14種追加するMODです。「妖怪」系(人型)と「古代種」系(獣・虫型)の2系統、マップの様々なバイオームに野生動物として出現します。
+
+【妖怪タイプ】猫又・妖狐・雪女・座敷童・天狗・鬼人・竜人
+【古代種タイプ】アダマンタイト・マンモス・ニホンオオカミ・エゾオオカミ・メガネウラ・マゾタイロス・ティタノプテラ
+
+- 毛(Wool): テイムして懐かせた個体を定期的に毛刈りすることで入手
+- 革・肉: 屠殺した死体から入手(通常の動物と同じ)
+- 一部の古代種(アダマンタイト/メガネウラ/ティタノプテラ)は卵生で、受精卵を孵化させて繁殖します
+- 座敷童はテイムすると、ごく稀に銀を産出します(Milkableコンポーネントを転用した実験的機能)
+- 妖狐・竜人は爪に炎を、雪女は爪に冷気をまとい、通常のScratch/Bite/Blunt攻撃に追加ダメージを与えます
+
+キャラクター(NPCファクション)は含まれていません。純粋に野生の敵生物のみを追加するMODです。
+
+【実装できなかった点(XML単体の制約)】
+- 「異性の人間キャラクターに世話をされた場合に高確率で妊娠する」という交配ボーナスは、専用のインタラクション/Hediffシステムが必要でC#アセンブリなしには実装できません。通常の同種交配のみ機能します。
+- 天狗の「超能力」は、能動的に発動できるアビリティとしての実装はできません(Royalty/Anomalyのアビリティシステムを使うにはC#が必要)。ステータス面での味付けに留めています。
+
+--- English ---
+Adds 14 naturally-spawning hostile creatures (7 yokai-type humanoids, 7 ancient-type beasts/insects) as wild animals across several vanilla biomes. Wool is obtained by shearing a tamed individual; leather and meat by butchering. Some ancient-type creatures (Adamantite Beast, Meganeura, Titanoptera) reproduce via eggs. Zashikiwarashi rarely produces silver when tamed (an experimental repurposing of the Milkable comp). Youko/Dragonkin claws carry fire damage, Yukionna's carry frost damage.
+
+This mod adds no NPC faction/characters - it is a pure wildlife/monster content mod. XML-only (no assembly/DLL). See the description above for two features that could not be implemented without a C# assembly (human-caretaker pregnancy bonus, active Tengu psychic ability) - both are documented in the README.
+
+Note: art included is placeholder (auto-generated) and can be freely replaced by re-texturing the files under /Textures.</description>
+  <url>https://claude.ai/code</url>
+</ModMetaData>
