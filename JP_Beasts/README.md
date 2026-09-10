@@ -92,6 +92,31 @@ RimWorldのXMLで安全に実装できる範囲で対応しています:
 組み合わせはファイルを参照してください。テスト時は開発者モードの「Spawn pawn」機能で即座に呼び出せます
 (検索欄に `JP_` と入力すると全14種が絞り込めます)。
 
+## MOD互換性 (Alpha Animals との併用について)
+
+[Alpha Animals](https://steamcommunity.com/sharedfiles/filedetails/?id=1541721856)(作者: Sarg Bjornson、
+packageId `sarg.alphaanimals`、1.5/1.6対応、Harmony + Vanilla Expanded Framework 依存)との併用を想定して
+以下の点を確認・対応しています。
+
+- **defName衝突なし**: JP_Beastsは全defNameに `JP_` を、Alpha Animalsは `AA_` をプレフィックスしているため、
+  種族・素材・レシピいずれも名前が衝突しません。
+- **継承元Abstractが共通**: 両MODとも同じバニラの `AnimalThingBase` / `WoolBase` / `LeatherBase` /
+  `OrganicProductBase` / `EggFertBase` / `EggUnfertBase` を継承しています(実際、本MODの1.6対応フィールド名
+  ―`Wildness`のStat化、`MeatBase`が存在しない件、`CompProperties_Shearable`/`Milkable`/`EggLayer`の
+  正確なフィールド名―は、稼働実績のあるAlpha Animalsの実装を参照して検証しました)。そのため技術的な
+  衝突リスクはありません。
+- **バイオーム出現パッチは加算方式**: 両MODとも `PatchOperationAdd` で `animalCommonalities` に追記する
+  だけなので、ロード順に関係なく安全に積み重なります。`About.xml` に `sarg.alphaanimals` への
+  `loadAfter` ヒントを追加していますが、Alpha Animalsをインストールしていなくても問題なく動作します
+  (未インストールなら単に無視されます)。
+- **素材の相互運用性**: `JP_Wool_*` / `JP_Leather_*` / `JP_Chitin_Ancient` は通常のStuffアイテムなので、
+  Alpha Animals側が追加する防具・衣服レシピでもそのまま素材として選択できます(逆にAlpha Animals側の
+  革/毛皮もJP_Beastsに関係するレシピで使えます)。
+- **バランス面の注意**: Alpha Animalsは非常に多くの動物(約100種)を低頻度で追加するため、併用すると
+  マップ上の野生動物の絶対数・密度が上がります。JP_Beastsのレア個体(アダマンタイト・竜人など)の希少感を
+  より際立たせたい場合は、`Patches/Patch_BiomeWildSpawn.xml` の該当 `<commonality>` 値をさらに下げる
+  ことをおすすめします(現状の値のままでも動作上の問題はありません)。
+
 ## ファイル構成
 
 ```
