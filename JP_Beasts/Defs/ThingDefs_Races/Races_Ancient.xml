@@ -28,7 +28,7 @@
       <meatDef>JP_Meat_JapaneseWolf</meatDef>
       <manhunterOnDamageChance>0.35</manhunterOnDamageChance>
       <manhunterOnTameFailChance>0.20</manhunterOnTameFailChance>
-      <trainability>None</trainability>
+      <trainability>Intermediate</trainability>
       <herdAnimal>true</herdAnimal>
       <canBePredatorPrey>true</canBePredatorPrey>
       <hasGenders>true</hasGenders>
@@ -106,7 +106,7 @@
       <meatDef>JP_Meat_EzoWolf</meatDef>
       <manhunterOnDamageChance>0.35</manhunterOnDamageChance>
       <manhunterOnTameFailChance>0.20</manhunterOnTameFailChance>
-      <trainability>None</trainability>
+      <trainability>Intermediate</trainability>
       <herdAnimal>true</herdAnimal>
       <canBePredatorPrey>true</canBePredatorPrey>
       <hasGenders>true</hasGenders>
@@ -184,7 +184,7 @@
       <meatDef>JP_Meat_Mammoth</meatDef>
       <manhunterOnDamageChance>0.5</manhunterOnDamageChance>
       <manhunterOnTameFailChance>0.3</manhunterOnTameFailChance>
-      <trainability>None</trainability>
+      <trainability>Intermediate</trainability>
       <herdAnimal>false</herdAnimal>
       <canBePredatorPrey>true</canBePredatorPrey>
       <hasGenders>true</hasGenders>
@@ -263,7 +263,7 @@
       <meatDef>JP_Meat_Mazotairos</meatDef>
       <manhunterOnDamageChance>0.4</manhunterOnDamageChance>
       <manhunterOnTameFailChance>0.3</manhunterOnTameFailChance>
-      <trainability>None</trainability>
+      <trainability>Intermediate</trainability>
       <herdAnimal>false</herdAnimal>
       <canBePredatorPrey>true</canBePredatorPrey>
       <hasGenders>true</hasGenders>
@@ -343,7 +343,7 @@
       <meatDef>JP_Meat_Adamantite</meatDef>
       <manhunterOnDamageChance>0.30</manhunterOnDamageChance>
       <manhunterOnTameFailChance>0.4</manhunterOnTameFailChance>
-      <trainability>None</trainability>
+      <trainability>Intermediate</trainability>
       <herdAnimal>false</herdAnimal>
       <canBePredatorPrey>true</canBePredatorPrey>
       <hasGenders>true</hasGenders>
@@ -428,7 +428,7 @@
       <meatDef>JP_Meat_Meganeura</meatDef>
       <manhunterOnDamageChance>0.10</manhunterOnDamageChance>
       <manhunterOnTameFailChance>0.2</manhunterOnTameFailChance>
-      <trainability>None</trainability>
+      <trainability>Intermediate</trainability>
       <herdAnimal>false</herdAnimal>
       <canBePredatorPrey>true</canBePredatorPrey>
       <hasGenders>true</hasGenders>
@@ -502,7 +502,7 @@
       <meatDef>JP_Meat_Titanoptera</meatDef>
       <manhunterOnDamageChance>0.30</manhunterOnDamageChance>
       <manhunterOnTameFailChance>0.35</manhunterOnTameFailChance>
-      <trainability>None</trainability>
+      <trainability>Intermediate</trainability>
       <herdAnimal>false</herdAnimal>
       <canBePredatorPrey>true</canBePredatorPrey>
       <hasGenders>true</hasGenders>

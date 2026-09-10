@@ -27,7 +27,7 @@
       <meatDef>Meat_Human</meatDef>
       <manhunterOnDamageChance>0.30</manhunterOnDamageChance>
       <manhunterOnTameFailChance>0.35</manhunterOnTameFailChance>
-      <trainability>None</trainability>
+      <trainability>Intermediate</trainability>
       <herdAnimal>false</herdAnimal>
       <canBePredatorPrey>true</canBePredatorPrey>
       <hasGenders>true</hasGenders>
@@ -97,7 +97,7 @@
       <meatDef>Meat_Human</meatDef>
       <manhunterOnDamageChance>0.25</manhunterOnDamageChance>
       <manhunterOnTameFailChance>0.35</manhunterOnTameFailChance>
-      <trainability>None</trainability>
+      <trainability>Intermediate</trainability>
       <herdAnimal>false</herdAnimal>
       <canBePredatorPrey>true</canBePredatorPrey>
       <hasGenders>true</hasGenders>
@@ -173,7 +173,7 @@
       <meatDef>Meat_Human</meatDef>
       <manhunterOnDamageChance>0.25</manhunterOnDamageChance>
       <manhunterOnTameFailChance>0.35</manhunterOnTameFailChance>
-      <trainability>None</trainability>
+      <trainability>Intermediate</trainability>
       <herdAnimal>false</herdAnimal>
       <canBePredatorPrey>true</canBePredatorPrey>
       <hasGenders>true</hasGenders>
@@ -247,7 +247,7 @@
       <meatDef>Meat_Human</meatDef>
       <manhunterOnDamageChance>0.10</manhunterOnDamageChance>
       <manhunterOnTameFailChance>0.15</manhunterOnTameFailChance>
-      <trainability>None</trainability>
+      <trainability>Intermediate</trainability>
       <herdAnimal>false</herdAnimal>
       <canBePredatorPrey>true</canBePredatorPrey>
       <hasGenders>true</hasGenders>
@@ -328,7 +328,7 @@
       <meatDef>Meat_Human</meatDef>
       <manhunterOnDamageChance>0.20</manhunterOnDamageChance>
       <manhunterOnTameFailChance>0.4</manhunterOnTameFailChance>
-      <trainability>None</trainability>
+      <trainability>Intermediate</trainability>
       <herdAnimal>false</herdAnimal>
       <canBePredatorPrey>true</canBePredatorPrey>
       <hasGenders>true</hasGenders>
@@ -398,7 +398,7 @@
       <meatDef>Meat_Human</meatDef>
       <manhunterOnDamageChance>0.35</manhunterOnDamageChance>
       <manhunterOnTameFailChance>0.45</manhunterOnTameFailChance>
-      <trainability>None</trainability>
+      <trainability>Intermediate</trainability>
       <herdAnimal>false</herdAnimal>
       <canBePredatorPrey>true</canBePredatorPrey>
       <hasGenders>true</hasGenders>
@@ -480,7 +480,7 @@
       <meatDef>Meat_Human</meatDef>
       <manhunterOnDamageChance>0.25</manhunterOnDamageChance>
       <manhunterOnTameFailChance>0.5</manhunterOnTameFailChance>
-      <trainability>None</trainability>
+      <trainability>Intermediate</trainability>
       <herdAnimal>false</herdAnimal>
       <canBePredatorPrey>true</canBePredatorPrey>
       <hasGenders>true</hasGenders>
