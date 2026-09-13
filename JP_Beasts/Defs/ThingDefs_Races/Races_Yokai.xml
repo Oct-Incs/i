@@ -529,4 +529,86 @@
     <thingCategories><li>Animals</li></thingCategories>
   </ThingDef>
 
+  <!-- ============================================================
+       女郎蜘蛛 (Jorogumo) - 美しい女性に化けると伝わる蜘蛛の妖怪。
+       肉は虫肉(バニラの昆虫種と共通)に統一。特殊能力: 毒牙
+       ============================================================ -->
+  <ThingDef ParentName="AnimalThingBase">
+    <defName>JP_Jorogumo</defName>
+    <label>jorogumo</label>
+    <description>年老いた大蜘蛛が変じたと伝わる妖怪。美しい女性の姿を借りて獲物を油断させ、隙を見て毒牙を突き立てる。その正体ゆえか、屠殺すれば人間ではなく虫のような肉と体液が残る。\n\nA yokai said to be an aged spider transformed. It lures prey close by taking the shape of a beautiful woman, then strikes with venomous fangs the moment its guard is down. Butchering one leaves behind insect-like flesh and fluids rather than anything human, betraying its true nature.</description>
+    <statBases>
+      <MoveSpeed>5.2</MoveSpeed>
+      <ComfyTemperatureMin>-10</ComfyTemperatureMin>
+      <ComfyTemperatureMax>40</ComfyTemperatureMax>
+      <ArmorRating_Sharp>0.10</ArmorRating_Sharp>
+      <Wildness>1.0</Wildness>
+    </statBases>
+    <race>
+      <body>Human</body>
+      <baseBodySize>0.95</baseBodySize>
+      <baseHealthScale>1.0</baseHealthScale>
+      <baseHungerRate>0.55</baseHungerRate>
+      <foodType>CarnivoreAnimal</foodType>
+      <predator>true</predator>
+      <maxPreyBodySize>1.2</maxPreyBodySize>
+      <leatherDef>JP_Leather_RareSpecies</leatherDef>
+      <fleshType>Insectoid</fleshType>
+      <meatLabel>insect meat</meatLabel>
+      <meatColor>(60,68,39)</meatColor>
+      <manhunterOnDamageChance>0.30</manhunterOnDamageChance>
+      <manhunterOnTameFailChance>0.40</manhunterOnTameFailChance>
+      <trainability>Intermediate</trainability>
+      <herdAnimal>false</herdAnimal>
+      <canBePredatorPrey>true</canBePredatorPrey>
+      <hasGenders>true</hasGenders>
+      <lifeExpectancy>25</lifeExpectancy>
+      <lifeStageAges>
+        <li><def>AnimalBaby</def><minAge>0</minAge></li>
+        <li><def>AnimalJuvenile</def><minAge>0.25</minAge></li>
+        <li><def>AnimalAdult</def><minAge>0.7</minAge></li>
+      </lifeStageAges>
+    </race>
+    <comps>
+      <li Class="CompProperties_Shearable">
+        <woolDef>JP_Wool_RareSpecies</woolDef>
+        <shearIntervalDays>12</shearIntervalDays>
+        <woolAmount>24</woolAmount>
+      </li>
+    </comps>
+    <tools>
+      <li>
+        <label>venomous bite</label>
+        <capacities><li>Bite</li></capacities>
+        <power>8</power>
+        <cooldownTime>1.7</cooldownTime>
+        <linkedBodyPartsGroup>Teeth</linkedBodyPartsGroup>
+        <extraMeleeDamages>
+          <li><def>ToxicBite</def><amount>5</amount></li>
+        </extraMeleeDamages>
+      </li>
+      <li>
+        <label>left claw</label>
+        <capacities><li>Scratch</li></capacities>
+        <power>6</power>
+        <cooldownTime>1.6</cooldownTime>
+        <linkedBodyPartsGroup>LeftHand</linkedBodyPartsGroup>
+      </li>
+      <li>
+        <label>right claw</label>
+        <capacities><li>Scratch</li></capacities>
+        <power>6</power>
+        <cooldownTime>1.6</cooldownTime>
+        <linkedBodyPartsGroup>RightHand</linkedBodyPartsGroup>
+      </li>
+    </tools>
+    <graphicData>
+      <texPath>Things/Pawn/Animal/JP_Jorogumo/JP_Jorogumo</texPath>
+      <graphicClass>Graphic_Multi</graphicClass>
+      <drawSize>1.3</drawSize>
+      <shadowData><volume>(0.35, 0.4, 0.25)</volume></shadowData>
+    </graphicData>
+    <thingCategories><li>Animals</li></thingCategories>
+  </ThingDef>
+
 </Defs>

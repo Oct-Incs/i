@@ -136,38 +136,6 @@
   </ThingDef>
 
   <ThingDef ParentName="OrganicProductBase">
-    <defName>JP_Meat_Meganeura</defName>
-    <label>meganeura meat</label>
-    <description>メガネウラの肉。淡白で量は少ない。\n\nMeat from a meganeura. Bland and sparse in quantity.</description>
-    <graphicData>
-      <texPath>Things/Item/Resource/Meat/JP_Meat_Meganeura</texPath>
-      <graphicClass>Graphic_Single</graphicClass>
-    </graphicData>
-    <statBases>
-      <Nutrition>0.05</Nutrition>
-      <Flammability>0.5</Flammability>
-      <FoodPoisonChanceFixedHuman>0.03</FoodPoisonChanceFixedHuman>
-      <Mass>0.05</Mass>
-      <MarketValue>1.3</MarketValue>
-    </statBases>
-    <ingestible>
-      <foodType>Meat</foodType>
-      <preferability>DesperateOnly</preferability>
-      <ingestEffect>EatMeat</ingestEffect>
-      <ingestSound>RawMeat_Eat</ingestSound>
-    </ingestible>
-    <comps>
-      <li Class="CompProperties_Rottable">
-        <daysToRotStart>3</daysToRotStart>
-        <rotDestroys>true</rotDestroys>
-      </li>
-    </comps>
-    <thingCategories>
-      <li>MeatRaw</li>
-    </thingCategories>
-  </ThingDef>
-
-  <ThingDef ParentName="OrganicProductBase">
     <defName>JP_Meat_Mazotairos</defName>
     <label>mazotairos meat</label>
     <description>マゾタイロスの肉。硬く筋張っているが、量は非常に多い。\n\nMeat from a mazotairos. Tough and sinewy, but very plentiful.</description>
@@ -200,19 +168,19 @@
   </ThingDef>
 
   <ThingDef ParentName="OrganicProductBase">
-    <defName>JP_Meat_Titanoptera</defName>
-    <label>titanoptera meat</label>
-    <description>ティタノプテラの肉。弾力があり独特の風味を持つ。\n\nMeat from a titanoptera. Springy in texture with a distinctive flavor.</description>
+    <defName>JP_Meat_WoollyRhino</defName>
+    <label>woolly rhino meat</label>
+    <description>ケナガサイの肉。脂が厚く、非常食にすれば長く持つ。\n\nMeat from a woolly rhinoceros. Thickly marbled with fat; keeps well as emergency rations.</description>
     <graphicData>
-      <texPath>Things/Item/Resource/Meat/JP_Meat_Titanoptera</texPath>
+      <texPath>Things/Item/Resource/Meat/JP_Meat_WoollyRhino</texPath>
       <graphicClass>Graphic_Single</graphicClass>
     </graphicData>
     <statBases>
       <Nutrition>0.05</Nutrition>
       <Flammability>0.5</Flammability>
-      <FoodPoisonChanceFixedHuman>0.03</FoodPoisonChanceFixedHuman>
+      <FoodPoisonChanceFixedHuman>0.02</FoodPoisonChanceFixedHuman>
       <Mass>0.05</Mass>
-      <MarketValue>1.6</MarketValue>
+      <MarketValue>2.0</MarketValue>
     </statBases>
     <ingestible>
       <foodType>Meat</foodType>
@@ -222,7 +190,71 @@
     </ingestible>
     <comps>
       <li Class="CompProperties_Rottable">
-        <daysToRotStart>3</daysToRotStart>
+        <daysToRotStart>4</daysToRotStart>
+        <rotDestroys>true</rotDestroys>
+      </li>
+    </comps>
+    <thingCategories>
+      <li>MeatRaw</li>
+    </thingCategories>
+  </ThingDef>
+
+  <ThingDef ParentName="OrganicProductBase">
+    <defName>JP_Meat_IrishElk</defName>
+    <label>Irish elk meat</label>
+    <description>オオツノジカの肉。臭みが少なく食べやすい赤身肉。\n\nMeat from an Irish elk. Lean red meat with little gaminess, easy to eat.</description>
+    <graphicData>
+      <texPath>Things/Item/Resource/Meat/JP_Meat_IrishElk</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <statBases>
+      <Nutrition>0.05</Nutrition>
+      <Flammability>0.5</Flammability>
+      <FoodPoisonChanceFixedHuman>0.02</FoodPoisonChanceFixedHuman>
+      <Mass>0.05</Mass>
+      <MarketValue>1.8</MarketValue>
+    </statBases>
+    <ingestible>
+      <foodType>Meat</foodType>
+      <preferability>DesperateOnly</preferability>
+      <ingestEffect>EatMeat</ingestEffect>
+      <ingestSound>RawMeat_Eat</ingestSound>
+    </ingestible>
+    <comps>
+      <li Class="CompProperties_Rottable">
+        <daysToRotStart>4</daysToRotStart>
+        <rotDestroys>true</rotDestroys>
+      </li>
+    </comps>
+    <thingCategories>
+      <li>MeatRaw</li>
+    </thingCategories>
+  </ThingDef>
+
+  <ThingDef ParentName="OrganicProductBase">
+    <defName>JP_Meat_Smilodon</defName>
+    <label>smilodon meat</label>
+    <description>サーベルタイガーの肉。捕食者の肉らしく硬めだが、量はそれなりに多い。\n\nMeat from a smilodon. Tougher than herbivore meat, as expected of a predator, but reasonably plentiful.</description>
+    <graphicData>
+      <texPath>Things/Item/Resource/Meat/JP_Meat_Smilodon</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <statBases>
+      <Nutrition>0.05</Nutrition>
+      <Flammability>0.5</Flammability>
+      <FoodPoisonChanceFixedHuman>0.02</FoodPoisonChanceFixedHuman>
+      <Mass>0.05</Mass>
+      <MarketValue>1.9</MarketValue>
+    </statBases>
+    <ingestible>
+      <foodType>Meat</foodType>
+      <preferability>DesperateOnly</preferability>
+      <ingestEffect>EatMeat</ingestEffect>
+      <ingestSound>RawMeat_Eat</ingestSound>
+    </ingestible>
+    <comps>
+      <li Class="CompProperties_Rottable">
+        <daysToRotStart>4</daysToRotStart>
         <rotDestroys>true</rotDestroys>
       </li>
     </comps>

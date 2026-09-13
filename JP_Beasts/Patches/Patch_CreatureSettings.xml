@@ -9,6 +9,7 @@
          2) 基本肉量 MeatAmount タグの数値  - 屠殺で得られる肉の基礎量
          3) 基本革量 LeatherAmount タグの数値 - 屠殺で得られる革の基礎量
          4) 基本毛量 woolAmount タグの数値  - テイム後の毛刈りで得られる毛の量
+         5) 見た目の大きさ drawSize タグの数値 - 成体になったときの描画サイズ
 
        【出現を完全にOFFにしたい場合】
        対象モンスターの「出現頻度」ブロック全体(見出しコメントから
@@ -18,13 +19,19 @@
 
        【数値だけ変えたい場合】
        各タグの数値部分だけを書き換えて保存すれば、次回ゲーム起動時から
-       反映されます。値は他MODとの相対的な重みなので上限はありません。
-       自由に増減してください。
+       反映されます。commonality/MeatAmount/LeatherAmount/woolAmountは
+       他MODとの相対的な重みなので上限はありません。自由に増減してください。
 
        【肉/革の仕組みについて】
        MeatAmount/LeatherAmount は「体格1.0あたりの基礎量」で、実際の量は
        個体の体格(baseBodySize)を掛けた値になります(体格はDefs/ThingDefs_Races/
        内で定義・バニラのAnimalThingBaseの既定値は肉90・革30相当)。
+
+       【見た目の大きさについて】
+       drawSize は成体(3段階のライフステージのうち最後の段階)の描画倍率です。
+       1.0がおおよそ人間1体分の大きさに相当します。幼体・若齢個体の大きさは
+       PawnKindDefs側に元々定義された比率のまま変わりません。個体の当たり判定
+       や戦闘力には影響しない、純粋な見た目のみの調整項目です。
        ============================================================ -->
 
   <!-- ==================== ニホンオオカミ (JP_JapaneseWolf) - 出現頻度 ==================== -->
@@ -71,6 +78,15 @@
     </match>
   </Operation>
 
+  <!-- 見た目の大きさ(成体): ニホンオオカミ -->
+  <Operation Class="PatchOperationConditional">
+    <xpath>Defs/PawnKindDef[defName="JP_JapaneseWolf"]/lifeStages/li[3]/bodyGraphicData/drawSize</xpath>
+    <match Class="PatchOperationReplace">
+      <xpath>Defs/PawnKindDef[defName="JP_JapaneseWolf"]/lifeStages/li[3]/bodyGraphicData/drawSize</xpath>
+      <value><drawSize>1.6</drawSize></value>
+    </match>
+  </Operation>
+
   <!-- ==================== エゾオオカミ (JP_EzoWolf) - 出現頻度 ==================== -->
   <Operation Class="PatchOperationConditional">
     <xpath>Defs/BiomeDef[defName="BorealForest"]/animalCommonalities</xpath>
@@ -105,6 +121,15 @@
     <match Class="PatchOperationReplace">
       <xpath>Defs/ThingDef[defName="JP_EzoWolf"]/comps/li[@Class="CompProperties_Shearable"]/woolAmount</xpath>
       <value><woolAmount>26</woolAmount></value>
+    </match>
+  </Operation>
+
+  <!-- 見た目の大きさ(成体): エゾオオカミ -->
+  <Operation Class="PatchOperationConditional">
+    <xpath>Defs/PawnKindDef[defName="JP_EzoWolf"]/lifeStages/li[3]/bodyGraphicData/drawSize</xpath>
+    <match Class="PatchOperationReplace">
+      <xpath>Defs/PawnKindDef[defName="JP_EzoWolf"]/lifeStages/li[3]/bodyGraphicData/drawSize</xpath>
+      <value><drawSize>1.75</drawSize></value>
     </match>
   </Operation>
 
@@ -152,6 +177,15 @@
     </match>
   </Operation>
 
+  <!-- 見た目の大きさ(成体): マンモス -->
+  <Operation Class="PatchOperationConditional">
+    <xpath>Defs/PawnKindDef[defName="JP_Mammoth"]/lifeStages/li[3]/bodyGraphicData/drawSize</xpath>
+    <match Class="PatchOperationReplace">
+      <xpath>Defs/PawnKindDef[defName="JP_Mammoth"]/lifeStages/li[3]/bodyGraphicData/drawSize</xpath>
+      <value><drawSize>3.4</drawSize></value>
+    </match>
+  </Operation>
+
   <!-- ==================== マゾタイロス (JP_Mazotairos) - 出現頻度 ==================== -->
   <Operation Class="PatchOperationConditional">
     <xpath>Defs/BiomeDef[defName="AridShrubland"]/animalCommonalities</xpath>
@@ -196,6 +230,15 @@
     </match>
   </Operation>
 
+  <!-- 見た目の大きさ(成体): マゾタイロス -->
+  <Operation Class="PatchOperationConditional">
+    <xpath>Defs/PawnKindDef[defName="JP_Mazotairos"]/lifeStages/li[3]/bodyGraphicData/drawSize</xpath>
+    <match Class="PatchOperationReplace">
+      <xpath>Defs/PawnKindDef[defName="JP_Mazotairos"]/lifeStages/li[3]/bodyGraphicData/drawSize</xpath>
+      <value><drawSize>2.8</drawSize></value>
+    </match>
+  </Operation>
+
   <!-- ==================== アダマンタイト (JP_AdamantiteBeast) - 出現頻度 ==================== -->
   <Operation Class="PatchOperationConditional">
     <xpath>Defs/BiomeDef[defName="ExtremeDesert"]/animalCommonalities</xpath>
@@ -230,6 +273,167 @@
     <match Class="PatchOperationReplace">
       <xpath>Defs/ThingDef[defName="JP_AdamantiteBeast"]/comps/li[@Class="CompProperties_Shearable"]/woolAmount</xpath>
       <value><woolAmount>10</woolAmount></value>
+    </match>
+  </Operation>
+
+  <!-- 見た目の大きさ(成体): アダマンタイト -->
+  <Operation Class="PatchOperationConditional">
+    <xpath>Defs/PawnKindDef[defName="JP_AdamantiteBeast"]/lifeStages/li[3]/bodyGraphicData/drawSize</xpath>
+    <match Class="PatchOperationReplace">
+      <xpath>Defs/PawnKindDef[defName="JP_AdamantiteBeast"]/lifeStages/li[3]/bodyGraphicData/drawSize</xpath>
+      <value><drawSize>3</drawSize></value>
+    </match>
+  </Operation>
+
+  <!-- ==================== ケナガサイ (JP_WoollyRhino) - 出現頻度 ==================== -->
+  <Operation Class="PatchOperationConditional">
+    <xpath>Defs/BiomeDef[defName="Tundra"]/animalCommonalities</xpath>
+    <match Class="PatchOperationAdd">
+      <xpath>Defs/BiomeDef[defName="Tundra"]/animalCommonalities</xpath>
+      <value><li><animal>JP_WoollyRhino</animal><commonality>2.4</commonality></li></value>
+    </match>
+  </Operation>
+  <Operation Class="PatchOperationConditional">
+    <xpath>Defs/BiomeDef[defName="BorealForest"]/animalCommonalities</xpath>
+    <match Class="PatchOperationAdd">
+      <xpath>Defs/BiomeDef[defName="BorealForest"]/animalCommonalities</xpath>
+      <value><li><animal>JP_WoollyRhino</animal><commonality>1.6</commonality></li></value>
+    </match>
+  </Operation>
+
+  <!-- 基本肉量・革量: ケナガサイ -->
+  <Operation Class="PatchOperationConditional">
+    <xpath>Defs/ThingDef[defName="JP_WoollyRhino"]/statBases</xpath>
+    <match Class="PatchOperationAdd">
+      <xpath>Defs/ThingDef[defName="JP_WoollyRhino"]/statBases</xpath>
+      <value>
+        <MeatAmount>95</MeatAmount>
+        <LeatherAmount>38</LeatherAmount>
+      </value>
+    </match>
+  </Operation>
+
+  <!-- 基本毛量(テイム後の毛刈り): ケナガサイ -->
+  <Operation Class="PatchOperationConditional">
+    <xpath>Defs/ThingDef[defName="JP_WoollyRhino"]/comps/li[@Class="CompProperties_Shearable"]/woolAmount</xpath>
+    <match Class="PatchOperationReplace">
+      <xpath>Defs/ThingDef[defName="JP_WoollyRhino"]/comps/li[@Class="CompProperties_Shearable"]/woolAmount</xpath>
+      <value><woolAmount>55</woolAmount></value>
+    </match>
+  </Operation>
+
+  <!-- 見た目の大きさ(成体): ケナガサイ -->
+  <Operation Class="PatchOperationConditional">
+    <xpath>Defs/PawnKindDef[defName="JP_WoollyRhino"]/lifeStages/li[3]/bodyGraphicData/drawSize</xpath>
+    <match Class="PatchOperationReplace">
+      <xpath>Defs/PawnKindDef[defName="JP_WoollyRhino"]/lifeStages/li[3]/bodyGraphicData/drawSize</xpath>
+      <value><drawSize>2.4</drawSize></value>
+    </match>
+  </Operation>
+
+  <!-- ==================== オオツノジカ (JP_IrishElk) - 出現頻度 ==================== -->
+  <Operation Class="PatchOperationConditional">
+    <xpath>Defs/BiomeDef[defName="TemperateForest"]/animalCommonalities</xpath>
+    <match Class="PatchOperationAdd">
+      <xpath>Defs/BiomeDef[defName="TemperateForest"]/animalCommonalities</xpath>
+      <value><li><animal>JP_IrishElk</animal><commonality>2.4</commonality></li></value>
+    </match>
+  </Operation>
+  <Operation Class="PatchOperationConditional">
+    <xpath>Defs/BiomeDef[defName="BorealForest"]/animalCommonalities</xpath>
+    <match Class="PatchOperationAdd">
+      <xpath>Defs/BiomeDef[defName="BorealForest"]/animalCommonalities</xpath>
+      <value><li><animal>JP_IrishElk</animal><commonality>2</commonality></li></value>
+    </match>
+  </Operation>
+  <Operation Class="PatchOperationConditional">
+    <xpath>Defs/BiomeDef[defName="Tundra"]/animalCommonalities</xpath>
+    <match Class="PatchOperationAdd">
+      <xpath>Defs/BiomeDef[defName="Tundra"]/animalCommonalities</xpath>
+      <value><li><animal>JP_IrishElk</animal><commonality>1.2</commonality></li></value>
+    </match>
+  </Operation>
+
+  <!-- 基本肉量・革量: オオツノジカ -->
+  <Operation Class="PatchOperationConditional">
+    <xpath>Defs/ThingDef[defName="JP_IrishElk"]/statBases</xpath>
+    <match Class="PatchOperationAdd">
+      <xpath>Defs/ThingDef[defName="JP_IrishElk"]/statBases</xpath>
+      <value>
+        <MeatAmount>75</MeatAmount>
+        <LeatherAmount>26</LeatherAmount>
+      </value>
+    </match>
+  </Operation>
+
+  <!-- 基本毛量(テイム後の毛刈り): オオツノジカ -->
+  <Operation Class="PatchOperationConditional">
+    <xpath>Defs/ThingDef[defName="JP_IrishElk"]/comps/li[@Class="CompProperties_Shearable"]/woolAmount</xpath>
+    <match Class="PatchOperationReplace">
+      <xpath>Defs/ThingDef[defName="JP_IrishElk"]/comps/li[@Class="CompProperties_Shearable"]/woolAmount</xpath>
+      <value><woolAmount>30</woolAmount></value>
+    </match>
+  </Operation>
+
+  <!-- 見た目の大きさ(成体): オオツノジカ -->
+  <Operation Class="PatchOperationConditional">
+    <xpath>Defs/PawnKindDef[defName="JP_IrishElk"]/lifeStages/li[3]/bodyGraphicData/drawSize</xpath>
+    <match Class="PatchOperationReplace">
+      <xpath>Defs/PawnKindDef[defName="JP_IrishElk"]/lifeStages/li[3]/bodyGraphicData/drawSize</xpath>
+      <value><drawSize>1.7</drawSize></value>
+    </match>
+  </Operation>
+
+  <!-- ==================== サーベルタイガー (JP_Smilodon) - 出現頻度 ==================== -->
+  <Operation Class="PatchOperationConditional">
+    <xpath>Defs/BiomeDef[defName="AridShrubland"]/animalCommonalities</xpath>
+    <match Class="PatchOperationAdd">
+      <xpath>Defs/BiomeDef[defName="AridShrubland"]/animalCommonalities</xpath>
+      <value><li><animal>JP_Smilodon</animal><commonality>1.2</commonality></li></value>
+    </match>
+  </Operation>
+  <Operation Class="PatchOperationConditional">
+    <xpath>Defs/BiomeDef[defName="TemperateForest"]/animalCommonalities</xpath>
+    <match Class="PatchOperationAdd">
+      <xpath>Defs/BiomeDef[defName="TemperateForest"]/animalCommonalities</xpath>
+      <value><li><animal>JP_Smilodon</animal><commonality>1</commonality></li></value>
+    </match>
+  </Operation>
+  <Operation Class="PatchOperationConditional">
+    <xpath>Defs/BiomeDef[defName="Desert"]/animalCommonalities</xpath>
+    <match Class="PatchOperationAdd">
+      <xpath>Defs/BiomeDef[defName="Desert"]/animalCommonalities</xpath>
+      <value><li><animal>JP_Smilodon</animal><commonality>1</commonality></li></value>
+    </match>
+  </Operation>
+
+  <!-- 基本肉量・革量: サーベルタイガー -->
+  <Operation Class="PatchOperationConditional">
+    <xpath>Defs/ThingDef[defName="JP_Smilodon"]/statBases</xpath>
+    <match Class="PatchOperationAdd">
+      <xpath>Defs/ThingDef[defName="JP_Smilodon"]/statBases</xpath>
+      <value>
+        <MeatAmount>70</MeatAmount>
+        <LeatherAmount>24</LeatherAmount>
+      </value>
+    </match>
+  </Operation>
+
+  <!-- 基本毛量(テイム後の毛刈り): サーベルタイガー -->
+  <Operation Class="PatchOperationConditional">
+    <xpath>Defs/ThingDef[defName="JP_Smilodon"]/comps/li[@Class="CompProperties_Shearable"]/woolAmount</xpath>
+    <match Class="PatchOperationReplace">
+      <xpath>Defs/ThingDef[defName="JP_Smilodon"]/comps/li[@Class="CompProperties_Shearable"]/woolAmount</xpath>
+      <value><woolAmount>24</woolAmount></value>
+    </match>
+  </Operation>
+
+  <!-- 見た目の大きさ(成体): サーベルタイガー -->
+  <Operation Class="PatchOperationConditional">
+    <xpath>Defs/PawnKindDef[defName="JP_Smilodon"]/lifeStages/li[3]/bodyGraphicData/drawSize</xpath>
+    <match Class="PatchOperationReplace">
+      <xpath>Defs/PawnKindDef[defName="JP_Smilodon"]/lifeStages/li[3]/bodyGraphicData/drawSize</xpath>
+      <value><drawSize>1.6</drawSize></value>
     </match>
   </Operation>
 
@@ -268,6 +472,15 @@
     </match>
   </Operation>
 
+  <!-- 見た目の大きさ(成体): メガネウラ -->
+  <Operation Class="PatchOperationConditional">
+    <xpath>Defs/PawnKindDef[defName="JP_Meganeura"]/lifeStages/li[3]/bodyGraphicData/drawSize</xpath>
+    <match Class="PatchOperationReplace">
+      <xpath>Defs/PawnKindDef[defName="JP_Meganeura"]/lifeStages/li[3]/bodyGraphicData/drawSize</xpath>
+      <value><drawSize>0.7</drawSize></value>
+    </match>
+  </Operation>
+
   <!-- ==================== ティタノプテラ (JP_Titanoptera) - 出現頻度 ==================== -->
   <Operation Class="PatchOperationConditional">
     <xpath>Defs/BiomeDef[defName="TropicalRainforest"]/animalCommonalities</xpath>
@@ -300,6 +513,235 @@
         <MeatAmount>65</MeatAmount>
         <LeatherAmount>22</LeatherAmount>
       </value>
+    </match>
+  </Operation>
+
+  <!-- 見た目の大きさ(成体): ティタノプテラ -->
+  <Operation Class="PatchOperationConditional">
+    <xpath>Defs/PawnKindDef[defName="JP_Titanoptera"]/lifeStages/li[3]/bodyGraphicData/drawSize</xpath>
+    <match Class="PatchOperationReplace">
+      <xpath>Defs/PawnKindDef[defName="JP_Titanoptera"]/lifeStages/li[3]/bodyGraphicData/drawSize</xpath>
+      <value><drawSize>1.5</drawSize></value>
+    </match>
+  </Operation>
+
+  <!-- ==================== アースロプレウラ (JP_Arthropleura) - 出現頻度 ==================== -->
+  <Operation Class="PatchOperationConditional">
+    <xpath>Defs/BiomeDef[defName="TropicalRainforest"]/animalCommonalities</xpath>
+    <match Class="PatchOperationAdd">
+      <xpath>Defs/BiomeDef[defName="TropicalRainforest"]/animalCommonalities</xpath>
+      <value><li><animal>JP_Arthropleura</animal><commonality>1.2</commonality></li></value>
+    </match>
+  </Operation>
+  <Operation Class="PatchOperationConditional">
+    <xpath>Defs/BiomeDef[defName="TemperateForest"]/animalCommonalities</xpath>
+    <match Class="PatchOperationAdd">
+      <xpath>Defs/BiomeDef[defName="TemperateForest"]/animalCommonalities</xpath>
+      <value><li><animal>JP_Arthropleura</animal><commonality>1</commonality></li></value>
+    </match>
+  </Operation>
+  <Operation Class="PatchOperationConditional">
+    <xpath>Defs/BiomeDef[defName="TemperateSwamp"]/animalCommonalities</xpath>
+    <match Class="PatchOperationAdd">
+      <xpath>Defs/BiomeDef[defName="TemperateSwamp"]/animalCommonalities</xpath>
+      <value><li><animal>JP_Arthropleura</animal><commonality>1</commonality></li></value>
+    </match>
+  </Operation>
+
+  <!-- 基本肉量・革量: アースロプレウラ -->
+  <Operation Class="PatchOperationConditional">
+    <xpath>Defs/ThingDef[defName="JP_Arthropleura"]/statBases</xpath>
+    <match Class="PatchOperationAdd">
+      <xpath>Defs/ThingDef[defName="JP_Arthropleura"]/statBases</xpath>
+      <value>
+        <MeatAmount>65</MeatAmount>
+        <LeatherAmount>25</LeatherAmount>
+      </value>
+    </match>
+  </Operation>
+
+  <!-- 見た目の大きさ(成体): アースロプレウラ -->
+  <Operation Class="PatchOperationConditional">
+    <xpath>Defs/PawnKindDef[defName="JP_Arthropleura"]/lifeStages/li[3]/bodyGraphicData/drawSize</xpath>
+    <match Class="PatchOperationReplace">
+      <xpath>Defs/PawnKindDef[defName="JP_Arthropleura"]/lifeStages/li[3]/bodyGraphicData/drawSize</xpath>
+      <value><drawSize>1.9</drawSize></value>
+    </match>
+  </Operation>
+
+  <!-- ==================== プルモノスコルピウス (JP_Pulmonoscorpius) - 出現頻度 ==================== -->
+  <Operation Class="PatchOperationConditional">
+    <xpath>Defs/BiomeDef[defName="AridShrubland"]/animalCommonalities</xpath>
+    <match Class="PatchOperationAdd">
+      <xpath>Defs/BiomeDef[defName="AridShrubland"]/animalCommonalities</xpath>
+      <value><li><animal>JP_Pulmonoscorpius</animal><commonality>1</commonality></li></value>
+    </match>
+  </Operation>
+  <Operation Class="PatchOperationConditional">
+    <xpath>Defs/BiomeDef[defName="Desert"]/animalCommonalities</xpath>
+    <match Class="PatchOperationAdd">
+      <xpath>Defs/BiomeDef[defName="Desert"]/animalCommonalities</xpath>
+      <value><li><animal>JP_Pulmonoscorpius</animal><commonality>1.2</commonality></li></value>
+    </match>
+  </Operation>
+  <Operation Class="PatchOperationConditional">
+    <xpath>Defs/BiomeDef[defName="ExtremeDesert"]/animalCommonalities</xpath>
+    <match Class="PatchOperationAdd">
+      <xpath>Defs/BiomeDef[defName="ExtremeDesert"]/animalCommonalities</xpath>
+      <value><li><animal>JP_Pulmonoscorpius</animal><commonality>0.8</commonality></li></value>
+    </match>
+  </Operation>
+
+  <!-- 基本肉量・革量: プルモノスコルピウス -->
+  <Operation Class="PatchOperationConditional">
+    <xpath>Defs/ThingDef[defName="JP_Pulmonoscorpius"]/statBases</xpath>
+    <match Class="PatchOperationAdd">
+      <xpath>Defs/ThingDef[defName="JP_Pulmonoscorpius"]/statBases</xpath>
+      <value>
+        <MeatAmount>60</MeatAmount>
+        <LeatherAmount>22</LeatherAmount>
+      </value>
+    </match>
+  </Operation>
+
+  <!-- 見た目の大きさ(成体): プルモノスコルピウス -->
+  <Operation Class="PatchOperationConditional">
+    <xpath>Defs/PawnKindDef[defName="JP_Pulmonoscorpius"]/lifeStages/li[3]/bodyGraphicData/drawSize</xpath>
+    <match Class="PatchOperationReplace">
+      <xpath>Defs/PawnKindDef[defName="JP_Pulmonoscorpius"]/lifeStages/li[3]/bodyGraphicData/drawSize</xpath>
+      <value><drawSize>1.7</drawSize></value>
+    </match>
+  </Operation>
+
+  <!-- ==================== メガラクネ (JP_Megarachne) - 出現頻度 ==================== -->
+  <Operation Class="PatchOperationConditional">
+    <xpath>Defs/BiomeDef[defName="TropicalRainforest"]/animalCommonalities</xpath>
+    <match Class="PatchOperationAdd">
+      <xpath>Defs/BiomeDef[defName="TropicalRainforest"]/animalCommonalities</xpath>
+      <value><li><animal>JP_Megarachne</animal><commonality>1</commonality></li></value>
+    </match>
+  </Operation>
+  <Operation Class="PatchOperationConditional">
+    <xpath>Defs/BiomeDef[defName="TemperateForest"]/animalCommonalities</xpath>
+    <match Class="PatchOperationAdd">
+      <xpath>Defs/BiomeDef[defName="TemperateForest"]/animalCommonalities</xpath>
+      <value><li><animal>JP_Megarachne</animal><commonality>0.8</commonality></li></value>
+    </match>
+  </Operation>
+
+  <!-- 基本肉量・革量: メガラクネ -->
+  <Operation Class="PatchOperationConditional">
+    <xpath>Defs/ThingDef[defName="JP_Megarachne"]/statBases</xpath>
+    <match Class="PatchOperationAdd">
+      <xpath>Defs/ThingDef[defName="JP_Megarachne"]/statBases</xpath>
+      <value>
+        <MeatAmount>55</MeatAmount>
+        <LeatherAmount>18</LeatherAmount>
+      </value>
+    </match>
+  </Operation>
+
+  <!-- 見た目の大きさ(成体): メガラクネ -->
+  <Operation Class="PatchOperationConditional">
+    <xpath>Defs/PawnKindDef[defName="JP_Megarachne"]/lifeStages/li[3]/bodyGraphicData/drawSize</xpath>
+    <match Class="PatchOperationReplace">
+      <xpath>Defs/PawnKindDef[defName="JP_Megarachne"]/lifeStages/li[3]/bodyGraphicData/drawSize</xpath>
+      <value><drawSize>1.3</drawSize></value>
+    </match>
+  </Operation>
+
+  <!-- ==================== タイタノミルマ (JP_Titanomyrma) - 出現頻度 ==================== -->
+  <Operation Class="PatchOperationConditional">
+    <xpath>Defs/BiomeDef[defName="TropicalRainforest"]/animalCommonalities</xpath>
+    <match Class="PatchOperationAdd">
+      <xpath>Defs/BiomeDef[defName="TropicalRainforest"]/animalCommonalities</xpath>
+      <value><li><animal>JP_Titanomyrma</animal><commonality>1.6</commonality></li></value>
+    </match>
+  </Operation>
+  <Operation Class="PatchOperationConditional">
+    <xpath>Defs/BiomeDef[defName="TropicalSwamp"]/animalCommonalities</xpath>
+    <match Class="PatchOperationAdd">
+      <xpath>Defs/BiomeDef[defName="TropicalSwamp"]/animalCommonalities</xpath>
+      <value><li><animal>JP_Titanomyrma</animal><commonality>1.4</commonality></li></value>
+    </match>
+  </Operation>
+  <Operation Class="PatchOperationConditional">
+    <xpath>Defs/BiomeDef[defName="AridShrubland"]/animalCommonalities</xpath>
+    <match Class="PatchOperationAdd">
+      <xpath>Defs/BiomeDef[defName="AridShrubland"]/animalCommonalities</xpath>
+      <value><li><animal>JP_Titanomyrma</animal><commonality>1</commonality></li></value>
+    </match>
+  </Operation>
+
+  <!-- 基本肉量・革量: タイタノミルマ -->
+  <Operation Class="PatchOperationConditional">
+    <xpath>Defs/ThingDef[defName="JP_Titanomyrma"]/statBases</xpath>
+    <match Class="PatchOperationAdd">
+      <xpath>Defs/ThingDef[defName="JP_Titanomyrma"]/statBases</xpath>
+      <value>
+        <MeatAmount>35</MeatAmount>
+        <LeatherAmount>12</LeatherAmount>
+      </value>
+    </match>
+  </Operation>
+
+  <!-- 見た目の大きさ(成体): タイタノミルマ -->
+  <Operation Class="PatchOperationConditional">
+    <xpath>Defs/PawnKindDef[defName="JP_Titanomyrma"]/lifeStages/li[3]/bodyGraphicData/drawSize</xpath>
+    <match Class="PatchOperationReplace">
+      <xpath>Defs/PawnKindDef[defName="JP_Titanomyrma"]/lifeStages/li[3]/bodyGraphicData/drawSize</xpath>
+      <value><drawSize>0.9</drawSize></value>
+    </match>
+  </Operation>
+
+  <!-- ==================== アーキミラクリス (JP_Archimylacris) - 出現頻度 ==================== -->
+  <Operation Class="PatchOperationConditional">
+    <xpath>Defs/BiomeDef[defName="TemperateForest"]/animalCommonalities</xpath>
+    <match Class="PatchOperationAdd">
+      <xpath>Defs/BiomeDef[defName="TemperateForest"]/animalCommonalities</xpath>
+      <value><li><animal>JP_Archimylacris</animal><commonality>2</commonality></li></value>
+    </match>
+  </Operation>
+  <Operation Class="PatchOperationConditional">
+    <xpath>Defs/BiomeDef[defName="TemperateSwamp"]/animalCommonalities</xpath>
+    <match Class="PatchOperationAdd">
+      <xpath>Defs/BiomeDef[defName="TemperateSwamp"]/animalCommonalities</xpath>
+      <value><li><animal>JP_Archimylacris</animal><commonality>1.8</commonality></li></value>
+    </match>
+  </Operation>
+  <Operation Class="PatchOperationConditional">
+    <xpath>Defs/BiomeDef[defName="TropicalRainforest"]/animalCommonalities</xpath>
+    <match Class="PatchOperationAdd">
+      <xpath>Defs/BiomeDef[defName="TropicalRainforest"]/animalCommonalities</xpath>
+      <value><li><animal>JP_Archimylacris</animal><commonality>2</commonality></li></value>
+    </match>
+  </Operation>
+  <Operation Class="PatchOperationConditional">
+    <xpath>Defs/BiomeDef[defName="TropicalSwamp"]/animalCommonalities</xpath>
+    <match Class="PatchOperationAdd">
+      <xpath>Defs/BiomeDef[defName="TropicalSwamp"]/animalCommonalities</xpath>
+      <value><li><animal>JP_Archimylacris</animal><commonality>1.8</commonality></li></value>
+    </match>
+  </Operation>
+
+  <!-- 基本肉量・革量: アーキミラクリス -->
+  <Operation Class="PatchOperationConditional">
+    <xpath>Defs/ThingDef[defName="JP_Archimylacris"]/statBases</xpath>
+    <match Class="PatchOperationAdd">
+      <xpath>Defs/ThingDef[defName="JP_Archimylacris"]/statBases</xpath>
+      <value>
+        <MeatAmount>20</MeatAmount>
+        <LeatherAmount>8</LeatherAmount>
+      </value>
+    </match>
+  </Operation>
+
+  <!-- 見た目の大きさ(成体): アーキミラクリス -->
+  <Operation Class="PatchOperationConditional">
+    <xpath>Defs/PawnKindDef[defName="JP_Archimylacris"]/lifeStages/li[3]/bodyGraphicData/drawSize</xpath>
+    <match Class="PatchOperationReplace">
+      <xpath>Defs/PawnKindDef[defName="JP_Archimylacris"]/lifeStages/li[3]/bodyGraphicData/drawSize</xpath>
+      <value><drawSize>0.6</drawSize></value>
     </match>
   </Operation>
 
@@ -347,6 +789,15 @@
     </match>
   </Operation>
 
+  <!-- 見た目の大きさ(成体): 猫又 -->
+  <Operation Class="PatchOperationConditional">
+    <xpath>Defs/PawnKindDef[defName="JP_Nekomata"]/lifeStages/li[3]/bodyGraphicData/drawSize</xpath>
+    <match Class="PatchOperationReplace">
+      <xpath>Defs/PawnKindDef[defName="JP_Nekomata"]/lifeStages/li[3]/bodyGraphicData/drawSize</xpath>
+      <value><drawSize>1.3</drawSize></value>
+    </match>
+  </Operation>
+
   <!-- ==================== 妖狐 (JP_Youko) - 出現頻度 ==================== -->
   <Operation Class="PatchOperationConditional">
     <xpath>Defs/BiomeDef[defName="TemperateForest"]/animalCommonalities</xpath>
@@ -391,6 +842,15 @@
     </match>
   </Operation>
 
+  <!-- 見た目の大きさ(成体): 妖狐 -->
+  <Operation Class="PatchOperationConditional">
+    <xpath>Defs/PawnKindDef[defName="JP_Youko"]/lifeStages/li[3]/bodyGraphicData/drawSize</xpath>
+    <match Class="PatchOperationReplace">
+      <xpath>Defs/PawnKindDef[defName="JP_Youko"]/lifeStages/li[3]/bodyGraphicData/drawSize</xpath>
+      <value><drawSize>1.3</drawSize></value>
+    </match>
+  </Operation>
+
   <!-- ==================== 雪女 (JP_Yukionna) - 出現頻度 ==================== -->
   <Operation Class="PatchOperationConditional">
     <xpath>Defs/BiomeDef[defName="Tundra"]/animalCommonalities</xpath>
@@ -428,6 +888,15 @@
     </match>
   </Operation>
 
+  <!-- 見た目の大きさ(成体): 雪女 -->
+  <Operation Class="PatchOperationConditional">
+    <xpath>Defs/PawnKindDef[defName="JP_Yukionna"]/lifeStages/li[3]/bodyGraphicData/drawSize</xpath>
+    <match Class="PatchOperationReplace">
+      <xpath>Defs/PawnKindDef[defName="JP_Yukionna"]/lifeStages/li[3]/bodyGraphicData/drawSize</xpath>
+      <value><drawSize>1.3</drawSize></value>
+    </match>
+  </Operation>
+
   <!-- ==================== 座敷童 (JP_Zashikiwarashi) - 出現頻度 ==================== -->
   <Operation Class="PatchOperationConditional">
     <xpath>Defs/BiomeDef[defName="TemperateForest"]/animalCommonalities</xpath>
@@ -462,6 +931,15 @@
     <match Class="PatchOperationReplace">
       <xpath>Defs/ThingDef[defName="JP_Zashikiwarashi"]/comps/li[@Class="CompProperties_Shearable"]/woolAmount</xpath>
       <value><woolAmount>15</woolAmount></value>
+    </match>
+  </Operation>
+
+  <!-- 見た目の大きさ(成体): 座敷童 -->
+  <Operation Class="PatchOperationConditional">
+    <xpath>Defs/PawnKindDef[defName="JP_Zashikiwarashi"]/lifeStages/li[3]/bodyGraphicData/drawSize</xpath>
+    <match Class="PatchOperationReplace">
+      <xpath>Defs/PawnKindDef[defName="JP_Zashikiwarashi"]/lifeStages/li[3]/bodyGraphicData/drawSize</xpath>
+      <value><drawSize>0.9</drawSize></value>
     </match>
   </Operation>
 
@@ -509,6 +987,15 @@
     </match>
   </Operation>
 
+  <!-- 見た目の大きさ(成体): 天狗 -->
+  <Operation Class="PatchOperationConditional">
+    <xpath>Defs/PawnKindDef[defName="JP_Tengu"]/lifeStages/li[3]/bodyGraphicData/drawSize</xpath>
+    <match Class="PatchOperationReplace">
+      <xpath>Defs/PawnKindDef[defName="JP_Tengu"]/lifeStages/li[3]/bodyGraphicData/drawSize</xpath>
+      <value><drawSize>1.5</drawSize></value>
+    </match>
+  </Operation>
+
   <!-- ==================== 鬼人 (JP_Oni) - 出現頻度 ==================== -->
   <Operation Class="PatchOperationConditional">
     <xpath>Defs/BiomeDef[defName="AridShrubland"]/animalCommonalities</xpath>
@@ -550,6 +1037,15 @@
     <match Class="PatchOperationReplace">
       <xpath>Defs/ThingDef[defName="JP_Oni"]/comps/li[@Class="CompProperties_Shearable"]/woolAmount</xpath>
       <value><woolAmount>30</woolAmount></value>
+    </match>
+  </Operation>
+
+  <!-- 見た目の大きさ(成体): 鬼人 -->
+  <Operation Class="PatchOperationConditional">
+    <xpath>Defs/PawnKindDef[defName="JP_Oni"]/lifeStages/li[3]/bodyGraphicData/drawSize</xpath>
+    <match Class="PatchOperationReplace">
+      <xpath>Defs/PawnKindDef[defName="JP_Oni"]/lifeStages/li[3]/bodyGraphicData/drawSize</xpath>
+      <value><drawSize>2</drawSize></value>
     </match>
   </Operation>
 
@@ -604,178 +1100,65 @@
     </match>
   </Operation>
 
-  <!-- ==================== アースロプレウラ (JP_Arthropleura) - 出現頻度 ==================== -->
+  <!-- 見た目の大きさ(成体): 竜人 -->
   <Operation Class="PatchOperationConditional">
-    <xpath>Defs/BiomeDef[defName="TropicalRainforest"]/animalCommonalities</xpath>
-    <match Class="PatchOperationAdd">
-      <xpath>Defs/BiomeDef[defName="TropicalRainforest"]/animalCommonalities</xpath>
-      <value><li><animal>JP_Arthropleura</animal><commonality>1.2</commonality></li></value>
+    <xpath>Defs/PawnKindDef[defName="JP_Dragonkin"]/lifeStages/li[3]/bodyGraphicData/drawSize</xpath>
+    <match Class="PatchOperationReplace">
+      <xpath>Defs/PawnKindDef[defName="JP_Dragonkin"]/lifeStages/li[3]/bodyGraphicData/drawSize</xpath>
+      <value><drawSize>1.9</drawSize></value>
     </match>
   </Operation>
+
+  <!-- ==================== 女郎蜘蛛 (JP_Jorogumo) - 出現頻度 ==================== -->
   <Operation Class="PatchOperationConditional">
     <xpath>Defs/BiomeDef[defName="TemperateForest"]/animalCommonalities</xpath>
     <match Class="PatchOperationAdd">
       <xpath>Defs/BiomeDef[defName="TemperateForest"]/animalCommonalities</xpath>
-      <value><li><animal>JP_Arthropleura</animal><commonality>1</commonality></li></value>
+      <value><li><animal>JP_Jorogumo</animal><commonality>0.8</commonality></li></value>
+    </match>
+  </Operation>
+  <Operation Class="PatchOperationConditional">
+    <xpath>Defs/BiomeDef[defName="TropicalRainforest"]/animalCommonalities</xpath>
+    <match Class="PatchOperationAdd">
+      <xpath>Defs/BiomeDef[defName="TropicalRainforest"]/animalCommonalities</xpath>
+      <value><li><animal>JP_Jorogumo</animal><commonality>0.8</commonality></li></value>
     </match>
   </Operation>
   <Operation Class="PatchOperationConditional">
     <xpath>Defs/BiomeDef[defName="TemperateSwamp"]/animalCommonalities</xpath>
     <match Class="PatchOperationAdd">
       <xpath>Defs/BiomeDef[defName="TemperateSwamp"]/animalCommonalities</xpath>
-      <value><li><animal>JP_Arthropleura</animal><commonality>1</commonality></li></value>
+      <value><li><animal>JP_Jorogumo</animal><commonality>0.6</commonality></li></value>
     </match>
   </Operation>
 
-  <!-- 基本肉量・革量: アースロプレウラ -->
+  <!-- 基本肉量・革量: 女郎蜘蛛 -->
   <Operation Class="PatchOperationConditional">
-    <xpath>Defs/ThingDef[defName="JP_Arthropleura"]/statBases</xpath>
+    <xpath>Defs/ThingDef[defName="JP_Jorogumo"]/statBases</xpath>
     <match Class="PatchOperationAdd">
-      <xpath>Defs/ThingDef[defName="JP_Arthropleura"]/statBases</xpath>
-      <value>
-        <MeatAmount>65</MeatAmount>
-        <LeatherAmount>25</LeatherAmount>
-      </value>
-    </match>
-  </Operation>
-
-  <!-- ==================== プルモノスコルピウス (JP_Pulmonoscorpius) - 出現頻度 ==================== -->
-  <Operation Class="PatchOperationConditional">
-    <xpath>Defs/BiomeDef[defName="AridShrubland"]/animalCommonalities</xpath>
-    <match Class="PatchOperationAdd">
-      <xpath>Defs/BiomeDef[defName="AridShrubland"]/animalCommonalities</xpath>
-      <value><li><animal>JP_Pulmonoscorpius</animal><commonality>1</commonality></li></value>
-    </match>
-  </Operation>
-  <Operation Class="PatchOperationConditional">
-    <xpath>Defs/BiomeDef[defName="Desert"]/animalCommonalities</xpath>
-    <match Class="PatchOperationAdd">
-      <xpath>Defs/BiomeDef[defName="Desert"]/animalCommonalities</xpath>
-      <value><li><animal>JP_Pulmonoscorpius</animal><commonality>1.2</commonality></li></value>
-    </match>
-  </Operation>
-  <Operation Class="PatchOperationConditional">
-    <xpath>Defs/BiomeDef[defName="ExtremeDesert"]/animalCommonalities</xpath>
-    <match Class="PatchOperationAdd">
-      <xpath>Defs/BiomeDef[defName="ExtremeDesert"]/animalCommonalities</xpath>
-      <value><li><animal>JP_Pulmonoscorpius</animal><commonality>0.8</commonality></li></value>
-    </match>
-  </Operation>
-
-  <!-- 基本肉量・革量: プルモノスコルピウス -->
-  <Operation Class="PatchOperationConditional">
-    <xpath>Defs/ThingDef[defName="JP_Pulmonoscorpius"]/statBases</xpath>
-    <match Class="PatchOperationAdd">
-      <xpath>Defs/ThingDef[defName="JP_Pulmonoscorpius"]/statBases</xpath>
-      <value>
-        <MeatAmount>60</MeatAmount>
-        <LeatherAmount>22</LeatherAmount>
-      </value>
-    </match>
-  </Operation>
-
-  <!-- ==================== メガラクネ (JP_Megarachne) - 出現頻度 ==================== -->
-  <Operation Class="PatchOperationConditional">
-    <xpath>Defs/BiomeDef[defName="TropicalRainforest"]/animalCommonalities</xpath>
-    <match Class="PatchOperationAdd">
-      <xpath>Defs/BiomeDef[defName="TropicalRainforest"]/animalCommonalities</xpath>
-      <value><li><animal>JP_Megarachne</animal><commonality>1</commonality></li></value>
-    </match>
-  </Operation>
-  <Operation Class="PatchOperationConditional">
-    <xpath>Defs/BiomeDef[defName="TemperateForest"]/animalCommonalities</xpath>
-    <match Class="PatchOperationAdd">
-      <xpath>Defs/BiomeDef[defName="TemperateForest"]/animalCommonalities</xpath>
-      <value><li><animal>JP_Megarachne</animal><commonality>0.8</commonality></li></value>
-    </match>
-  </Operation>
-
-  <!-- 基本肉量・革量: メガラクネ -->
-  <Operation Class="PatchOperationConditional">
-    <xpath>Defs/ThingDef[defName="JP_Megarachne"]/statBases</xpath>
-    <match Class="PatchOperationAdd">
-      <xpath>Defs/ThingDef[defName="JP_Megarachne"]/statBases</xpath>
+      <xpath>Defs/ThingDef[defName="JP_Jorogumo"]/statBases</xpath>
       <value>
         <MeatAmount>55</MeatAmount>
-        <LeatherAmount>18</LeatherAmount>
+        <LeatherAmount>24</LeatherAmount>
       </value>
     </match>
   </Operation>
 
-  <!-- ==================== タイタノミルマ (JP_Titanomyrma) - 出現頻度 ==================== -->
+  <!-- 基本毛量(テイム後の毛刈り): 女郎蜘蛛 -->
   <Operation Class="PatchOperationConditional">
-    <xpath>Defs/BiomeDef[defName="TropicalRainforest"]/animalCommonalities</xpath>
-    <match Class="PatchOperationAdd">
-      <xpath>Defs/BiomeDef[defName="TropicalRainforest"]/animalCommonalities</xpath>
-      <value><li><animal>JP_Titanomyrma</animal><commonality>1.6</commonality></li></value>
-    </match>
-  </Operation>
-  <Operation Class="PatchOperationConditional">
-    <xpath>Defs/BiomeDef[defName="TropicalSwamp"]/animalCommonalities</xpath>
-    <match Class="PatchOperationAdd">
-      <xpath>Defs/BiomeDef[defName="TropicalSwamp"]/animalCommonalities</xpath>
-      <value><li><animal>JP_Titanomyrma</animal><commonality>1.4</commonality></li></value>
-    </match>
-  </Operation>
-  <Operation Class="PatchOperationConditional">
-    <xpath>Defs/BiomeDef[defName="AridShrubland"]/animalCommonalities</xpath>
-    <match Class="PatchOperationAdd">
-      <xpath>Defs/BiomeDef[defName="AridShrubland"]/animalCommonalities</xpath>
-      <value><li><animal>JP_Titanomyrma</animal><commonality>1</commonality></li></value>
+    <xpath>Defs/ThingDef[defName="JP_Jorogumo"]/comps/li[@Class="CompProperties_Shearable"]/woolAmount</xpath>
+    <match Class="PatchOperationReplace">
+      <xpath>Defs/ThingDef[defName="JP_Jorogumo"]/comps/li[@Class="CompProperties_Shearable"]/woolAmount</xpath>
+      <value><woolAmount>24</woolAmount></value>
     </match>
   </Operation>
 
-  <!-- 基本肉量・革量: タイタノミルマ -->
+  <!-- 見た目の大きさ(成体): 女郎蜘蛛 -->
   <Operation Class="PatchOperationConditional">
-    <xpath>Defs/ThingDef[defName="JP_Titanomyrma"]/statBases</xpath>
-    <match Class="PatchOperationAdd">
-      <xpath>Defs/ThingDef[defName="JP_Titanomyrma"]/statBases</xpath>
-      <value>
-        <MeatAmount>35</MeatAmount>
-        <LeatherAmount>12</LeatherAmount>
-      </value>
-    </match>
-  </Operation>
-
-  <!-- ==================== アーキミラクリス (JP_Archimylacris) - 出現頻度 ==================== -->
-  <Operation Class="PatchOperationConditional">
-    <xpath>Defs/BiomeDef[defName="TemperateForest"]/animalCommonalities</xpath>
-    <match Class="PatchOperationAdd">
-      <xpath>Defs/BiomeDef[defName="TemperateForest"]/animalCommonalities</xpath>
-      <value><li><animal>JP_Archimylacris</animal><commonality>2</commonality></li></value>
-    </match>
-  </Operation>
-  <Operation Class="PatchOperationConditional">
-    <xpath>Defs/BiomeDef[defName="TemperateSwamp"]/animalCommonalities</xpath>
-    <match Class="PatchOperationAdd">
-      <xpath>Defs/BiomeDef[defName="TemperateSwamp"]/animalCommonalities</xpath>
-      <value><li><animal>JP_Archimylacris</animal><commonality>1.8</commonality></li></value>
-    </match>
-  </Operation>
-  <Operation Class="PatchOperationConditional">
-    <xpath>Defs/BiomeDef[defName="TropicalRainforest"]/animalCommonalities</xpath>
-    <match Class="PatchOperationAdd">
-      <xpath>Defs/BiomeDef[defName="TropicalRainforest"]/animalCommonalities</xpath>
-      <value><li><animal>JP_Archimylacris</animal><commonality>2</commonality></li></value>
-    </match>
-  </Operation>
-  <Operation Class="PatchOperationConditional">
-    <xpath>Defs/BiomeDef[defName="TropicalSwamp"]/animalCommonalities</xpath>
-    <match Class="PatchOperationAdd">
-      <xpath>Defs/BiomeDef[defName="TropicalSwamp"]/animalCommonalities</xpath>
-      <value><li><animal>JP_Archimylacris</animal><commonality>1.8</commonality></li></value>
-    </match>
-  </Operation>
-
-  <!-- 基本肉量・革量: アーキミラクリス -->
-  <Operation Class="PatchOperationConditional">
-    <xpath>Defs/ThingDef[defName="JP_Archimylacris"]/statBases</xpath>
-    <match Class="PatchOperationAdd">
-      <xpath>Defs/ThingDef[defName="JP_Archimylacris"]/statBases</xpath>
-      <value>
-        <MeatAmount>20</MeatAmount>
-        <LeatherAmount>8</LeatherAmount>
-      </value>
+    <xpath>Defs/PawnKindDef[defName="JP_Jorogumo"]/lifeStages/li[3]/bodyGraphicData/drawSize</xpath>
+    <match Class="PatchOperationReplace">
+      <xpath>Defs/PawnKindDef[defName="JP_Jorogumo"]/lifeStages/li[3]/bodyGraphicData/drawSize</xpath>
+      <value><drawSize>1.3</drawSize></value>
     </match>
   </Operation>
 

@@ -425,7 +425,9 @@
       <predator>true</predator>
       <maxPreyBodySize>0.3</maxPreyBodySize>
       <leatherDef>JP_Chitin_Ancient</leatherDef>
-      <meatDef>JP_Meat_Meganeura</meatDef>
+      <fleshType>Insectoid</fleshType>
+      <meatLabel>insect meat</meatLabel>
+      <meatColor>(60,68,39)</meatColor>
       <manhunterOnDamageChance>0.10</manhunterOnDamageChance>
       <manhunterOnTameFailChance>0.2</manhunterOnTameFailChance>
       <trainability>Intermediate</trainability>
@@ -499,7 +501,9 @@
       <predator>true</predator>
       <maxPreyBodySize>1.6</maxPreyBodySize>
       <leatherDef>JP_Chitin_Ancient</leatherDef>
-      <meatDef>JP_Meat_Titanoptera</meatDef>
+      <fleshType>Insectoid</fleshType>
+      <meatLabel>insect meat</meatLabel>
+      <meatColor>(60,68,39)</meatColor>
       <manhunterOnDamageChance>0.30</manhunterOnDamageChance>
       <manhunterOnTameFailChance>0.35</manhunterOnTameFailChance>
       <trainability>Intermediate</trainability>

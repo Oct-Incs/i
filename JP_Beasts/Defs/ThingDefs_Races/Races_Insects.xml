@@ -25,7 +25,9 @@
       <foodType>VegetarianAnimal</foodType>
       <predator>false</predator>
       <leatherDef>JP_Chitin_Ancient</leatherDef>
-      <meatDef>JP_Meat_Arthropleura</meatDef>
+      <fleshType>Insectoid</fleshType>
+      <meatLabel>insect meat</meatLabel>
+      <meatColor>(60,68,39)</meatColor>
       <manhunterOnDamageChance>0.30</manhunterOnDamageChance>
       <manhunterOnTameFailChance>0.25</manhunterOnTameFailChance>
       <trainability>Intermediate</trainability>
@@ -106,7 +108,9 @@
       <predator>true</predator>
       <maxPreyBodySize>1.8</maxPreyBodySize>
       <leatherDef>JP_Chitin_Ancient</leatherDef>
-      <meatDef>JP_Meat_Pulmonoscorpius</meatDef>
+      <fleshType>Insectoid</fleshType>
+      <meatLabel>insect meat</meatLabel>
+      <meatColor>(60,68,39)</meatColor>
       <manhunterOnDamageChance>0.30</manhunterOnDamageChance>
       <manhunterOnTameFailChance>0.35</manhunterOnTameFailChance>
       <trainability>Intermediate</trainability>
@@ -190,7 +194,9 @@
       <predator>true</predator>
       <maxPreyBodySize>1.4</maxPreyBodySize>
       <leatherDef>JP_Chitin_Ancient</leatherDef>
-      <meatDef>JP_Meat_Megarachne</meatDef>
+      <fleshType>Insectoid</fleshType>
+      <meatLabel>insect meat</meatLabel>
+      <meatColor>(60,68,39)</meatColor>
       <manhunterOnDamageChance>0.25</manhunterOnDamageChance>
       <manhunterOnTameFailChance>0.30</manhunterOnTameFailChance>
       <trainability>Intermediate</trainability>
@@ -271,7 +277,9 @@
       <predator>true</predator>
       <maxPreyBodySize>0.8</maxPreyBodySize>
       <leatherDef>JP_Chitin_Ancient</leatherDef>
-      <meatDef>JP_Meat_Titanomyrma</meatDef>
+      <fleshType>Insectoid</fleshType>
+      <meatLabel>insect meat</meatLabel>
+      <meatColor>(60,68,39)</meatColor>
       <manhunterOnDamageChance>0.30</manhunterOnDamageChance>
       <manhunterOnTameFailChance>0.25</manhunterOnTameFailChance>
       <trainability>Intermediate</trainability>
@@ -335,7 +343,9 @@
       <foodType>OmnivoreAnimal</foodType>
       <predator>false</predator>
       <leatherDef>JP_Chitin_Ancient</leatherDef>
-      <meatDef>JP_Meat_Archimylacris</meatDef>
+      <fleshType>Insectoid</fleshType>
+      <meatLabel>insect meat</meatLabel>
+      <meatColor>(60,68,39)</meatColor>
       <manhunterOnDamageChance>0.05</manhunterOnDamageChance>
       <manhunterOnTameFailChance>0.15</manhunterOnTameFailChance>
       <trainability>Intermediate</trainability>

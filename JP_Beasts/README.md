@@ -1,35 +1,40 @@
 # JP Beasts — 和ノ獣譚 (RimWorld MOD)
 
-RimWorld **1.6** 向けの XML-only MOD です。自然発生する敵生物(野生の危険生物)を **19種** 追加します。
+RimWorld **1.6** 向けの XML-only MOD です。自然発生する敵生物(野生の危険生物)を **23種** 追加します。
 「妖怪」系(人型)と「古代種」系(獣・虫型)の2系統。NPCファクション/キャラクターは追加しません。
 
-全19種とも `trainability: Intermediate` に設定しており、**テイム(手懐け)が可能**です。テイムの難易度は
+全23種とも `trainability: Intermediate` に設定しており、**テイム(手懐け)が可能**です。テイムの難易度は
 `Wildness` や `manhunterOnTameFailChance` の値で個体ごとに変わるため、アダマンタイトや竜人のような
 危険な個体はテイムに失敗しやすく、失敗するとマンハンター化するリスクがあります。
 
 ## ★ 設定シート (`Patches/Patch_CreatureSettings.xml`) について
 
-**出現頻度・基本肉量・基本革量・基本毛量は、すべて `Patches/Patch_CreatureSettings.xml` 1ファイルに
-集約されています。** バランス調整はこのファイルだけを編集すれば完結します(`Defs/` 側のファイルを
-触る必要はありません)。
+**出現頻度・基本肉量・基本革量・基本毛量・見た目の大きさ(drawSize)は、すべて
+`Patches/Patch_CreatureSettings.xml` 1ファイルに集約されています。** バランス調整はこのファイルだけを
+編集すれば完結します(`Defs/` 側のファイルを触る必要はありません)。
 
 - ファイルの冒頭に日本語で使い方コメントがあります。
 - モンスターごとに見出しコメントで区切られたブロックがあり、各ブロックの中に
   `<commonality>数値</commonality>`(出現頻度) / `<MeatAmount>数値</MeatAmount>`(基本肉量) /
   `<LeatherAmount>数値</LeatherAmount>`(基本革量) / `<woolAmount>数値</woolAmount>`(基本毛量、
-  昆虫種は毛がないため項目なし)が並んでいます。数値を書き換えて保存するだけで、次回起動時から反映されます。
+  昆虫種は毛がないため項目なし) / `<drawSize>数値</drawSize>`(成体になったときの見た目の大きさ)が
+  並んでいます。数値を書き換えて保存するだけで、次回起動時から反映されます。
 - **特定のモンスターの自然出現を完全にOFFにしたい場合**は、そのモンスターの「出現頻度」ブロック
   全体(見出しコメントから次の見出しコメントの手前まで)を削除するか、XMLコメントで囲んでください。
   それだけで自然スポーンしなくなります(テイム・繁殖は引き続き可能です)。
 - 値はあくまで「他MODも含めた相対的な重み」なので上限はありません。Alpha Animals等の大型動物MODと
   併用していて出現が薄いと感じる場合は、遠慮なく大きな値にしてください。
+- `drawSize` は成体(3段階あるライフステージのうち最後の段階)の描画倍率です。1.0がおおよそ人間1体分の
+  大きさに相当します。幼体・若齢個体の大きさは `PawnKindDefs` 側に元々定義された比率のまま変わりません。
+  当たり判定や戦闘力には影響しない、純粋に見た目だけの調整項目です。「ニホンオオカミやマンモスが
+  想定より小さい」といった場合は、この値を大きくしてください。
 
 この方式はRimWorldのXMLパッチ機能(`PatchOperationAdd`/`PatchOperationReplace`)を使った、いわゆる
 「設定シート」パターンです。C#製のMOD設定画面(ゲーム内でスライダーを動かす方式)ではありませんが、
 1つのテキストファイルを開いて数値を書き換えるだけで済むという点では同じ目的を達成しています。
 (ゲーム内リアルタイム設定画面はC#アセンブリが必須のため、XML-onlyという本MODの方針上は実装していません)
 
-## 追加される生物 (19種)
+## 追加される生物 (23種)
 
 ### 妖怪タイプ (人型・`body: Human` を流用)
 
@@ -40,6 +45,7 @@ RimWorld **1.6** 向けの XML-only MOD です。自然発生する敵生物(野
 | 天狗 | `JP_Tengu` | 超能力(※注1、ステータスのみ) | 110 |
 | 妖狐 | `JP_Youko` | 火(爪にBurn追加ダメージ) | 90 |
 | 雪女 | `JP_Yukionna` | 冷気(爪にFrostbite追加ダメージ) | 90 |
+| 女郎蜘蛛 | `JP_Jorogumo` | 毒(牙にToxicBite追加ダメージ)、肉は虫肉(※注4) | 95 |
 | 猫又 | `JP_Nekomata` | 移動が速い | 85 |
 | 座敷童 | `JP_Zashikiwarashi` | テイムすると稀に銀を産出(※注2) | 20 |
 
@@ -48,21 +54,24 @@ RimWorld **1.6** 向けの XML-only MOD です。自然発生する敵生物(野
 | 生物 | defName | 特殊能力 | combatPower |
 |---|---|---|---|
 | アダマンタイト | `JP_AdamantiteBeast` | 硬い、移動が遅い、超大型、卵生 | 280 |
+| サーベルタイガー | `JP_Smilodon` | 移動が速い、強力な牙(実在の絶滅古代哺乳類)(※注5) | 150 |
 | マンモス | `JP_Mammoth` | 移動が遅い、超大型 | 190 |
 | マゾタイロス | `JP_Mazotairos` | 硬い(重装甲)(※注3) | 175 |
+| ケナガサイ | `JP_WoollyRhino` | 硬い、厚い体毛(実在の絶滅古代哺乳類)(※注5) | 140 |
 | エゾオオカミ | `JP_EzoWolf` | 移動が速い、大型 | 100 |
 | ニホンオオカミ | `JP_JapaneseWolf` | 移動が速い、大型 | 80 |
+| オオツノジカ | `JP_IrishElk` | 移動が速い、群れ(実在の絶滅古代哺乳類)(※注5) | 70 |
 
-### 古代種タイプ - 虫 (chitin系、毛なし。全て卵生)
+### 古代種タイプ - 虫 (chitin系、毛なし。全て卵生。肉はバニラ標準の虫肉に統一(※注4))
 
 | 生物 | defName | 特殊能力 | combatPower |
 |---|---|---|---|
 | プルモノスコルピウス | `JP_Pulmonoscorpius` | 毒針(Stab攻撃にToxicBite追加ダメージ)(※注3) | 140 |
-| メガラクネ | `JP_Megarachne` | 森に潜む待ち伏せ型捕食者(※注3) | 110 |
-| アースロプレウラ | `JP_Arthropleura` | 硬い(重装甲)、鈍重(※注3) | 90 |
 | ティタノプテラ | `JP_Titanoptera` | 攻撃的な待ち伏せ型(※注3) | 130 |
-| メガネウラ | `JP_Meganeura` | 飛行(高速)、小型・脆弱(※注3) | 25 |
+| アースロプレウラ | `JP_Arthropleura` | 硬い(重装甲)、鈍重(※注3) | 90 |
+| メガラクネ | `JP_Megarachne` | 森に潜む待ち伏せ型捕食者(※注3) | 110 |
 | タイタノミルマ | `JP_Titanomyrma` | 群れ(herdAnimal)で行動(※注3) | 55 |
+| メガネウラ | `JP_Meganeura` | 飛行(高速)、小型・脆弱(※注3) | 25 |
 | アーキミラクリス | `JP_Archimylacris` | 高速で逃走、繁殖力が非常に強い(※注3) | 20 |
 
 (※注1) 天狗の「超能力」: 能動的に発動できるアビリティとしての実装は、Royalty/Anomalyのアビリティシステムか
@@ -79,39 +88,49 @@ RimWorld **1.6** 向けの XML-only MOD です。自然発生する敵生物(野
 メガラクネ=実在の巨大な蜘蛛型古生物がモチーフ、タイタノミルマ=実在の巨大アリ属がモチーフ、
 アーキミラクリス=実在の巨大ゴキブリ属がモチーフ)。
 
+(※注4) 女郎蜘蛛・古代の虫型7種(メガネウラ/ティタノプテラ/プルモノスコルピウス/メガラクネ/
+アースロプレウラ/タイタノミルマ/アーキミラクリス)は、専用の `meatDef` を持たず `<meatDef>` タグ自体を
+省略しています。これによりバニラの標準の生肉アイテム(メガスパイダー等バニラの昆虫種と全く同じ実体)が
+使われ、`<fleshType>Insectoid</fleshType>` と `<meatLabel>insect meat</meatLabel>` の指定でラベル・分類だけ
+「虫肉」として扱われます(バニラのメガスパイダー/メガスカラブ/スペロピードと同じ仕組みです)。
+
+(※注5) ケナガサイ・オオツノジカ・サーベルタイガーは、氷河期に実在したが現在は絶滅した古代哺乳類が
+モチーフです。素材(毛・革)は他の古代種(獣)と同じ系統(`JP_Wool_AncientBeast`/`JP_Leather_AncientBeast`)
+を共有します。
+
 ## 毛・革・肉の入手方法
 
 - **毛 (Wool)**: `CompProperties_Shearable` により、**テイムして懐かせた個体を定期的に毛刈り**することで入手。
   生きた個体からのみ得られ、死体からは得られません(昆虫種は毛なし)。
 - **革 (Leather)**: 種族の `leatherDef` として設定。**屠殺 (butcher)** した死体から入手。通常の革と同様、
   あらゆる革製レシピにそのまま使用可能。
-- **肉 (Meat)**: 種族の `meatDef` として設定。**屠殺**した死体から入手。
+- **肉 (Meat)**: 種族ごとに `meatDef` (専用アイテム) か、`meatDef` を省略してバニラの標準の生肉を
+  そのまま使うか、のどちらかです(下表を参照)。**屠殺**した死体から入手。
 
-毛・革は種族ごとではなく、以下の系統で共有されます:
+毛・革・肉は種族ごとではなく、以下の系統で統一・共有されます:
 
-| 系統 | 対象生物 | 毛 (Wool) | 革 (Leather) |
-|---|---|---|---|
-| 古代種(獣) | マンモス/ニホンオオカミ/エゾオオカミ/マゾタイロス | `JP_Wool_AncientBeast`(古代種の剛毛) | `JP_Leather_AncientBeast`(古代種の厚革) |
-| 稀種 | 猫又/妖狐/雪女/座敷童/天狗/鬼人/竜人 | `JP_Wool_RareSpecies`(稀種の輝毛) | `JP_Leather_RareSpecies`(稀種の輝革) |
-| アダマンタイト | アダマンタイト | `JP_Wool_Adamantite`(スカイスチール) | `JP_Leather_Adamantite`(アダマンタイトの硬革) |
-| 古代虫 | メガネウラ/ティタノプテラ/プルモノスコルピウス/メガラクネ/アースロプレウラ/タイタノミルマ/アーキミラクリス(毛なし) | - | `JP_Chitin_Ancient`(古代虫の甲殻) |
-
-肉は生物ごとに個別です(全12種、専用のMeat ThingDefを持ちます)。妖怪タイプ7種は全てバニラの
-`Meat_Human`(人肉)を共有します。
+| 系統 | 対象生物 | 毛 (Wool) | 革 (Leather) | 肉 (Meat) |
+|---|---|---|---|---|
+| 古代種(獣) | マンモス/ニホンオオカミ/エゾオオカミ/マゾタイロス/ケナガサイ/オオツノジカ/サーベルタイガー | `JP_Wool_AncientBeast`(古代種の剛毛) | `JP_Leather_AncientBeast`(古代種の厚革) | 各生物専用(7種、専用のMeat ThingDefを持つ) |
+| 妖怪(人型) | 猫又/妖狐/雪女/座敷童/天狗/鬼人/竜人 | `JP_Wool_RareSpecies`(稀種の輝毛) | `JP_Leather_RareSpecies`(稀種の輝革) | バニラ `Meat_Human`(人肉)で統一 |
+| 女郎蜘蛛 | 女郎蜘蛛(妖怪タイプだが正体は蜘蛛) | `JP_Wool_RareSpecies`(稀種の輝毛) | `JP_Leather_RareSpecies`(稀種の輝革) | バニラ標準の虫肉で統一(下記) |
+| アダマンタイト | アダマンタイト | `JP_Wool_Adamantite`(スカイスチール) | `JP_Leather_Adamantite`(アダマンタイトの硬革) | 専用(`JP_Meat_Adamantite`) |
+| 古代虫 | メガネウラ/ティタノプテラ/プルモノスコルピウス/メガラクネ/アースロプレウラ/タイタノミルマ/アーキミラクリス(毛なし) | - | `JP_Chitin_Ancient`(古代虫の甲殻) | バニラ標準の虫肉で統一(専用のMeat ThingDefは持たない、注4参照) |
 
 各生物の実際の肉量・革量・毛量は **設定シート(`Patches/Patch_CreatureSettings.xml`)で一括管理**しています
 (前述)。`MeatAmount`/`LeatherAmount` は「体格1.0あたりの基礎量」で、実際の産出量は個体の体格
-(`baseBodySize`、`Defs/ThingDefs_Races/` 内で定義)を掛けた値になります。
+(`baseBodySize`、`Defs/ThingDefs_Races/` 内で定義)を掛けた値になります。虫肉統一の対象でも、この
+`MeatAmount` の値自体はその生物専用に設定シートで個別調整できます(アイテムの種類は共通でも、量は
+生物ごとに違う、という扱いです)。
 
 ## 妊娠条件(繁殖)
 
-- **妖怪タイプ7種 + 獣タイプ5種(マンモス/ニホンオオカミ/エゾオオカミ/マゾタイロス)**: `通常の交配`
-  (`hasGenders: true` によるバニラの通常繁殖)で子供が生まれます。「異性の人間キャラクターに世話をされた
-  場合に高確率で妊娠する」というボーナス条件はXML単体では実装できないため、**通常の同種交配のみ**が
-  機能します。
-- **虫タイプ7種(アダマンタイトを含む) + アダマンタイト**: `卵生`。`CompProperties_EggLayer` +
-  `CompProperties_Hatcher` による本物の孵化システムです。受精卵(`JP_Egg_*Fert`)は一定日数で孵化、
-  未受精卵(`JP_Egg_*Unfert`)は食用・売却用アイテムになります。
+- **妖怪タイプ8種 + 獣タイプ8種**: `通常の交配`(`hasGenders: true` によるバニラの通常繁殖)で子供が
+  生まれます。「異性の人間キャラクターに世話をされた場合に高確率で妊娠する」というボーナス条件はXML単体
+  では実装できないため、**通常の同種交配のみ**が機能します。
+- **虫タイプ7種 + アダマンタイト**: `卵生`。`CompProperties_EggLayer` + `CompProperties_Hatcher` による
+  本物の孵化システムです。受精卵(`JP_Egg_*Fert`)は一定日数で孵化、未受精卵(`JP_Egg_*Unfert`)は
+  食用・売却用アイテムになります。
 
 ## 火・冷気・毒・強打などの特殊能力について
 
@@ -119,15 +138,16 @@ RimWorldのXMLで安全に実装できる範囲で対応しています:
 
 - **火 (妖狐・竜人)**: 爪の攻撃に `extraMeleeDamages` で `Burn`(火傷)ダメージを追加。
 - **冷気 (雪女)**: 爪の攻撃に `extraMeleeDamages` で `Frostbite`(凍傷)ダメージを追加。
-- **毒 (プルモノスコルピウス)**: 毒針の攻撃に `extraMeleeDamages` で `ToxicBite`(毒)ダメージを追加。
+- **毒 (プルモノスコルピウス・女郎蜘蛛)**: 毒針/毒牙の攻撃に `extraMeleeDamages` で `ToxicBite`(毒)
+  ダメージを追加。
 - **強打 (鬼人)**: 拳の初撃(`surpriseAttack`)に `Stun`(気絶)ダメージを追加。
 - **移動が速い/遅い、大型/超大型、硬い**: `MoveSpeed` / `baseBodySize` / `ArmorRating_*` ステータスの調整。
 - **超能力 (天狗)**: 能動的なアビリティとしては未実装です(前述の注1)。
 
-## 自然出現バイオーム・出現頻度
+## 自然出現バイオーム・出現頻度・見た目の大きさ
 
 `Patches/Patch_CreatureSettings.xml` に集約されています(前述の「設定シート」を参照)。
-テスト時は開発者モードの「Spawn pawn」機能で即座に呼び出せます(検索欄に `JP_` と入力すると全19種が
+テスト時は開発者モードの「Spawn pawn」機能で即座に呼び出せます(検索欄に `JP_` と入力すると全23種が
 絞り込めます)。
 
 ## MOD互換性 (Alpha Animals との併用について)
@@ -141,8 +161,9 @@ packageId `sarg.alphaanimals`、1.5/1.6対応、Harmony + Vanilla Expanded Frame
 - **継承元Abstractが共通**: 両MODとも同じバニラの `AnimalThingBase` / `WoolBase` / `LeatherBase` /
   `OrganicProductBase` / `EggFertBase` / `EggUnfertBase` を継承しています(本MODの1.6対応フィールド名
   ―`Wildness`のStat化、`MeatBase`が存在しない件、`MeatAmount`/`LeatherAmount`がstatBases上のstatである件、
-  `CompProperties_Shearable`/`Milkable`/`EggLayer`の正確なフィールド名―は、稼働実績のあるAlpha Animalsの
-  実装を参照して検証しました)。そのため技術的な衝突リスクはありません。
+  `CompProperties_Shearable`/`Milkable`/`EggLayer`の正確なフィールド名、虫肉が専用ThingDefではなく
+  `fleshType`+`meatLabel`によるラベル分けだけである件―は、稼働実績のあるAlpha Animalsの実装を参照して
+  検証しました)。そのため技術的な衝突リスクはありません。
 - **バイオーム出現パッチは加算方式**: 両MODとも `PatchOperationAdd` で `animalCommonalities` に追記する
   だけなので、ロード順に関係なく安全に積み重なります。`About.xml` に `sarg.alphaanimals` への
   `loadAfter` ヒントを追加していますが、Alpha Animalsをインストールしていなくても問題なく動作します
@@ -165,6 +186,17 @@ packageId `sarg.alphaanimals`、1.5/1.6対応、Harmony + Vanilla Expanded Frame
   RimWorldの野生動物補充は「日」単位でゆっくり進む仕組みのため、ゲーム内でまだ半日〜1日も経っていない
   段階では1体も出現しないのは珍しくありません。数日プレイしても全く出ない場合は、設定シートの
   `commonality` 値をさらに引き上げてください。
+- **モンスターの見た目が想定より小さい/大きい**
+  設定シートの該当ブロック内、`<!-- 見た目の大きさ(成体): ○○ -->` の直後にある `<drawSize>` の数値を
+  増減してください(前述)。
+- **妖怪の革を追加してから、バニラの人皮(Leather_Human)のテクスチャまで変わって見える件について**
+  このMOD内のファイルを総点検しましたが、`Leather_Human` というファイル名・defNameへの参照は
+  `Defs/` `Patches/` `Textures/` のどこにも存在せず、本MODが持つ画像ファイルは全て `JP_` から始まる
+  独自の名前・独自のパスに配置されています(`JP_Leather_RareSpecies.png` 等、バニラのパスとは重複しません)。
+  そのため、本MODの中に直接の原因は見当たりませんでした。他MOD側がバニラの `Leather_Human` の
+  テクスチャパスと同じ場所に上書き画像を配置しているか、ゲーム内キャッシュ/アイコン一覧のUI描画上の
+  問題である可能性が考えられます。もし再現するようであれば、①本MOD単体のみを有効化した状態でも
+  同じ現象が起きるか、②他にどのMODを併用しているか、を教えてください。
 
 ## ファイル構成
 
@@ -175,20 +207,25 @@ JP_Beasts/
 │   └── Preview.png
 ├── Defs/
 │   ├── ThingDefs_Races/
-│   │   ├── Races_Ancient.xml            … 古代種(獣)5種
-│   │   ├── Races_Insects.xml            … 古代種(虫)5種(新規追加分)
-│   │   └── Races_Yokai.xml              … 妖怪7種
+│   │   ├── Races_Ancient.xml            … 古代種(獣)5種 + 古代種(虫)2種
+│   │   ├── Races_AncientMammals.xml     … 古代種(獣)追加3種(実在の絶滅哺乳類)
+│   │   ├── Races_Insects.xml            … 古代種(虫)追加5種
+│   │   └── Races_Yokai.xml              … 妖怪8種(女郎蜘蛛を含む)
 │   ├── ThingDefs_Items/
 │   │   ├── Materials.xml                … 毛(Wool)・革(Leather)・甲殻(Chitin)
-│   │   ├── Meats.xml / Meats_Insects.xml       … 専用の肉(獣7種/虫5種)
-│   │   └── Eggs.xml / Eggs_Insects.xml         … 卵生種の受精卵/未受精卵
+│   │   ├── Meats.xml                    … 専用の肉(獣8種+アダマンタイト)
+│   │   └── Eggs.xml / Eggs_Insects.xml  … 卵生種の受精卵/未受精卵
 │   └── PawnKindDefs/
-│       ├── PawnKinds_Monsters.xml       … 14種の個体設定
-│       └── PawnKinds_Insects.xml        … 新規昆虫5種の個体設定
+│       ├── PawnKinds_Monsters.xml       … 妖怪8種+獣5種の個体設定
+│       ├── PawnKinds_AncientMammals.xml … 獣追加3種の個体設定
+│       └── PawnKinds_Insects.xml        … 昆虫5種の個体設定
 ├── Patches/
-│   └── Patch_CreatureSettings.xml       … ★設定シート(出現頻度・肉量・革量・毛量を一括管理)
+│   └── Patch_CreatureSettings.xml       … ★設定シート(出現頻度・肉量・革量・毛量・見た目の大きさを一括管理)
 └── Textures/                             … プレースホルダー画像
 ```
+
+昆虫種(古代虫7種+女郎蜘蛛)は専用のMeat ThingDefを持たないため、`Meats.xml` には登場しません
+(バニラ標準の生肉をそのまま使うため)。
 
 ## インストール方法
 
@@ -200,9 +237,8 @@ JP_Beasts/
 
 `Textures/` 以下の画像はすべて Pillow で自動生成した簡易シルエットです。差し替える場合は同じファイル名・
 フォルダ構成のまま上書きしてください(画像の解像度はゲーム内の見た目の大きさに影響しません。大きさは
-各種族の `drawSize` で制御されます)。今回追加した5種の昆虫(`JP_Arthropleura` / `JP_Pulmonoscorpius` /
-`JP_Megarachne` / `JP_Titanomyrma` / `JP_Archimylacris`)もプレースホルダー画像のままなので、必要に
-応じて差し替えてください。
+設定シートの `drawSize` で制御されます)。今回追加した4種(`JP_WoollyRhino` / `JP_IrishElk` /
+`JP_Smilodon` / `JP_Jorogumo`)もプレースホルダー画像のままなので、必要に応じて差し替えてください。
 
 ## 既知の制約
 
@@ -210,7 +246,7 @@ JP_Beasts/
 - 天狗の超能力・座敷童の銀産出は上記の通り近似実装/実験的実装です。
 - 「異性の人間による世話での妊娠ボーナス」はC#アセンブリが必要なため未実装です。
 - マゾタイロス・メガネウラ・ティタノプテラ・プルモノスコルピウス・メガラクネ・タイタノミルマ・
-  アーキミラクリスは詳細未指定のため推測で設定を補完しています。
+  アーキミラクリス・女郎蜘蛛は詳細未指定のため推測で設定を補完しています。
 - 設定シート(`Patch_CreatureSettings.xml`)はゲーム内リアルタイム設定画面ではなく、テキストファイルを
   編集して保存し、ゲームを再起動することで反映される方式です(Alpha Animals等のC#製MODにある
   「ゲーム内オプション画面」とは仕組みが異なりますが、1ファイルで一括管理できる点は同じ目的を

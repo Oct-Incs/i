@@ -1,0 +1,237 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+
+  <!-- ============================================================
+       ケナガサイ (Woolly Rhino) - 極寒に適応した実在の絶滅古代哺乳類。
+       特殊能力: 硬い、厚い体毛 / 妊娠条件: 通常の交配
+       ============================================================ -->
+  <ThingDef ParentName="AnimalThingBase">
+    <defName>JP_WoollyRhino</defName>
+    <label>woolly rhino</label>
+    <description>分厚い体毛と湾曲した角を持つ、極寒の凍土に適応した実在の絶滅古代哺乳類。気性は荒くないが、身の危険を感じると角での突進で反撃する。厚い体毛は良質な紡績素材になる。\n\nA real, now-extinct ice-age mammal covered in thick fur, with a curved horn, well adapted to frozen tundra. Not naturally aggressive, but charges with its horn when it feels threatened. Its dense coat yields fine textile material.</description>
+    <statBases>
+      <MoveSpeed>4.0</MoveSpeed>
+      <ComfyTemperatureMin>-45</ComfyTemperatureMin>
+      <ComfyTemperatureMax>25</ComfyTemperatureMax>
+      <ArmorRating_Sharp>0.25</ArmorRating_Sharp>
+      <ArmorRating_Blunt>0.20</ArmorRating_Blunt>
+      <Wildness>0.9</Wildness>
+    </statBases>
+    <race>
+      <body>QuadrupedAnimalWithPawsAndTail</body>
+      <baseBodySize>2.4</baseBodySize>
+      <baseHealthScale>2.4</baseHealthScale>
+      <baseHungerRate>1.0</baseHungerRate>
+      <foodType>VegetarianAnimal</foodType>
+      <predator>false</predator>
+      <leatherDef>JP_Leather_AncientBeast</leatherDef>
+      <meatDef>JP_Meat_WoollyRhino</meatDef>
+      <manhunterOnDamageChance>0.40</manhunterOnDamageChance>
+      <manhunterOnTameFailChance>0.25</manhunterOnTameFailChance>
+      <trainability>Intermediate</trainability>
+      <herdAnimal>false</herdAnimal>
+      <canBePredatorPrey>true</canBePredatorPrey>
+      <hasGenders>true</hasGenders>
+      <lifeExpectancy>18</lifeExpectancy>
+      <lifeStageAges>
+        <li><def>AnimalBaby</def><minAge>0</minAge></li>
+        <li><def>AnimalJuvenile</def><minAge>0.2</minAge></li>
+        <li><def>AnimalAdult</def><minAge>0.7</minAge></li>
+      </lifeStageAges>
+    </race>
+    <comps>
+      <li Class="CompProperties_Shearable">
+        <woolDef>JP_Wool_AncientBeast</woolDef>
+        <shearIntervalDays>10</shearIntervalDays>
+        <woolAmount>55</woolAmount>
+      </li>
+    </comps>
+    <tools>
+      <li>
+        <label>horn</label>
+        <capacities><li>Stab</li></capacities>
+        <power>15</power>
+        <cooldownTime>2.2</cooldownTime>
+        <linkedBodyPartsGroup>Teeth</linkedBodyPartsGroup>
+      </li>
+      <li>
+        <label>trample</label>
+        <capacities><li>Blunt</li></capacities>
+        <power>14</power>
+        <cooldownTime>2.4</cooldownTime>
+        <linkedBodyPartsGroup>FrontLeftLeg</linkedBodyPartsGroup>
+      </li>
+      <li>
+        <label>trample</label>
+        <capacities><li>Blunt</li></capacities>
+        <power>14</power>
+        <cooldownTime>2.4</cooldownTime>
+        <linkedBodyPartsGroup>FrontRightLeg</linkedBodyPartsGroup>
+        <chanceFactor>0.7</chanceFactor>
+      </li>
+    </tools>
+    <graphicData>
+      <texPath>Things/Pawn/Animal/JP_WoollyRhino/JP_WoollyRhino</texPath>
+      <graphicClass>Graphic_Multi</graphicClass>
+      <drawSize>2.4</drawSize>
+      <shadowData><volume>(0.8, 0.5, 0.6)</volume></shadowData>
+    </graphicData>
+    <thingCategories><li>Animals</li></thingCategories>
+  </ThingDef>
+
+  <!-- ============================================================
+       オオツノジカ (Irish Elk) - 巨大な角を持つ実在の絶滅古代哺乳類。
+       特殊能力: 移動が速い / 妊娠条件: 通常の交配
+       ============================================================ -->
+  <ThingDef ParentName="AnimalThingBase">
+    <defName>JP_IrishElk</defName>
+    <label>Irish elk</label>
+    <description>翼を広げたような巨大な角を持つ、実在の絶滅古代哺乳類。普段は温和な草食獣だが、繁殖期のオスは気性が荒くなり、巨大な角で相手を突き飛ばす。森林や凍土を群れで移動する。\n\nA real, now-extinct ice-age deer with vast, wing-like antlers. Normally a mild-mannered herbivore, but males grow aggressive during the rut, using their huge antlers to shove opponents aside. Moves in herds through forests and tundra.</description>
+    <statBases>
+      <MoveSpeed>5.6</MoveSpeed>
+      <ComfyTemperatureMin>-35</ComfyTemperatureMin>
+      <ComfyTemperatureMax>30</ComfyTemperatureMax>
+      <ArmorRating_Sharp>0.03</ArmorRating_Sharp>
+      <Wildness>0.95</Wildness>
+    </statBases>
+    <race>
+      <body>QuadrupedAnimalWithPawsAndTail</body>
+      <baseBodySize>1.6</baseBodySize>
+      <baseHealthScale>1.3</baseHealthScale>
+      <baseHungerRate>0.7</baseHungerRate>
+      <foodType>VegetarianAnimal</foodType>
+      <predator>false</predator>
+      <leatherDef>JP_Leather_AncientBeast</leatherDef>
+      <meatDef>JP_Meat_IrishElk</meatDef>
+      <manhunterOnDamageChance>0.30</manhunterOnDamageChance>
+      <manhunterOnTameFailChance>0.20</manhunterOnTameFailChance>
+      <trainability>Intermediate</trainability>
+      <herdAnimal>true</herdAnimal>
+      <canBePredatorPrey>true</canBePredatorPrey>
+      <hasGenders>true</hasGenders>
+      <lifeExpectancy>13</lifeExpectancy>
+      <lifeStageAges>
+        <li><def>AnimalBaby</def><minAge>0</minAge></li>
+        <li><def>AnimalJuvenile</def><minAge>0.25</minAge></li>
+        <li><def>AnimalAdult</def><minAge>0.7</minAge></li>
+      </lifeStageAges>
+    </race>
+    <comps>
+      <li Class="CompProperties_Shearable">
+        <woolDef>JP_Wool_AncientBeast</woolDef>
+        <shearIntervalDays>10</shearIntervalDays>
+        <woolAmount>30</woolAmount>
+      </li>
+    </comps>
+    <tools>
+      <li>
+        <label>antler</label>
+        <capacities><li>Stab</li></capacities>
+        <power>13</power>
+        <cooldownTime>2.1</cooldownTime>
+        <linkedBodyPartsGroup>Teeth</linkedBodyPartsGroup>
+      </li>
+      <li>
+        <label>kick</label>
+        <capacities><li>Blunt</li></capacities>
+        <power>8</power>
+        <cooldownTime>1.8</cooldownTime>
+        <linkedBodyPartsGroup>FrontLeftLeg</linkedBodyPartsGroup>
+      </li>
+      <li>
+        <label>kick</label>
+        <capacities><li>Blunt</li></capacities>
+        <power>8</power>
+        <cooldownTime>1.8</cooldownTime>
+        <linkedBodyPartsGroup>FrontRightLeg</linkedBodyPartsGroup>
+        <chanceFactor>0.7</chanceFactor>
+      </li>
+    </tools>
+    <graphicData>
+      <texPath>Things/Pawn/Animal/JP_IrishElk/JP_IrishElk</texPath>
+      <graphicClass>Graphic_Multi</graphicClass>
+      <drawSize>1.7</drawSize>
+      <shadowData><volume>(0.5, 0.45, 0.35)</volume></shadowData>
+    </graphicData>
+    <thingCategories><li>Animals</li></thingCategories>
+  </ThingDef>
+
+  <!-- ============================================================
+       サーベルタイガー (Smilodon) - 牙を持つ実在の絶滅古代哺乳類の頂点捕食者。
+       特殊能力: 移動が速い、強力な牙 / 妊娠条件: 通常の交配
+       ============================================================ -->
+  <ThingDef ParentName="AnimalThingBase">
+    <defName>JP_Smilodon</defName>
+    <label>smilodon</label>
+    <description>長大な犬歯を持つ、実在の絶滅古代哺乳類の頂点捕食者。物陰から獲物との間合いを一気に詰め、牙を突き立てて仕留める単独行動の狩人。\n\nA real, now-extinct ice-age apex predator with elongated canine teeth. It closes the distance from cover in a burst of speed before driving its fangs into prey - a solitary hunter.</description>
+    <statBases>
+      <MoveSpeed>5.7</MoveSpeed>
+      <ComfyTemperatureMin>-25</ComfyTemperatureMin>
+      <ComfyTemperatureMax>35</ComfyTemperatureMax>
+      <ArmorRating_Sharp>0.08</ArmorRating_Sharp>
+      <Wildness>0.95</Wildness>
+    </statBases>
+    <race>
+      <body>QuadrupedAnimalWithPawsAndTail</body>
+      <baseBodySize>1.5</baseBodySize>
+      <baseHealthScale>1.5</baseHealthScale>
+      <baseHungerRate>0.7</baseHungerRate>
+      <foodType>CarnivoreAnimal</foodType>
+      <predator>true</predator>
+      <maxPreyBodySize>1.8</maxPreyBodySize>
+      <leatherDef>JP_Leather_AncientBeast</leatherDef>
+      <meatDef>JP_Meat_Smilodon</meatDef>
+      <manhunterOnDamageChance>0.40</manhunterOnDamageChance>
+      <manhunterOnTameFailChance>0.30</manhunterOnTameFailChance>
+      <trainability>Intermediate</trainability>
+      <herdAnimal>false</herdAnimal>
+      <canBePredatorPrey>true</canBePredatorPrey>
+      <hasGenders>true</hasGenders>
+      <lifeExpectancy>13</lifeExpectancy>
+      <lifeStageAges>
+        <li><def>AnimalBaby</def><minAge>0</minAge></li>
+        <li><def>AnimalJuvenile</def><minAge>0.25</minAge></li>
+        <li><def>AnimalAdult</def><minAge>0.7</minAge></li>
+      </lifeStageAges>
+    </race>
+    <comps>
+      <li Class="CompProperties_Shearable">
+        <woolDef>JP_Wool_AncientBeast</woolDef>
+        <shearIntervalDays>10</shearIntervalDays>
+        <woolAmount>24</woolAmount>
+      </li>
+    </comps>
+    <tools>
+      <li>
+        <label>saber fang</label>
+        <capacities><li>Stab</li></capacities>
+        <power>17</power>
+        <cooldownTime>2.0</cooldownTime>
+        <linkedBodyPartsGroup>Teeth</linkedBodyPartsGroup>
+      </li>
+      <li>
+        <label>claw</label>
+        <capacities><li>Scratch</li></capacities>
+        <power>9</power>
+        <cooldownTime>1.7</cooldownTime>
+        <linkedBodyPartsGroup>FrontLeftLeg</linkedBodyPartsGroup>
+      </li>
+      <li>
+        <label>claw</label>
+        <capacities><li>Scratch</li></capacities>
+        <power>9</power>
+        <cooldownTime>1.7</cooldownTime>
+        <linkedBodyPartsGroup>FrontRightLeg</linkedBodyPartsGroup>
+        <chanceFactor>0.7</chanceFactor>
+      </li>
+    </tools>
+    <graphicData>
+      <texPath>Things/Pawn/Animal/JP_Smilodon/JP_Smilodon</texPath>
+      <graphicClass>Graphic_Multi</graphicClass>
+      <drawSize>1.6</drawSize>
+      <shadowData><volume>(0.5, 0.4, 0.3)</volume></shadowData>
+    </graphicData>
+    <thingCategories><li>Animals</li></thingCategories>
+  </ThingDef>
+
+</Defs>

@@ -9,22 +9,25 @@
   <loadAfter>
     <li>sarg.alphaanimals</li>
   </loadAfter>
-  <description>自然発生する敵生物を19種追加するMODです。「妖怪」系(人型)と「古代種」系(獣・虫型)の2系統、マップの様々なバイオームに野生動物として出現します。
+  <description>自然発生する敵生物を23種追加するMODです。「妖怪」系(人型)と「古代種」系(獣・虫型)の2系統、マップの様々なバイオームに野生動物として出現します。
 
-【妖怪タイプ】猫又・妖狐・雪女・座敷童・天狗・鬼人・竜人
-【古代種タイプ(獣)】アダマンタイト・マンモス・ニホンオオカミ・エゾオオカミ・マゾタイロス
+【妖怪タイプ】猫又・妖狐・雪女・座敷童・天狗・鬼人・竜人・女郎蜘蛛
+【古代種タイプ(獣)】アダマンタイト・マンモス・ニホンオオカミ・エゾオオカミ・マゾタイロス・ケナガサイ・オオツノジカ・サーベルタイガー
 【古代種タイプ(虫)】メガネウラ・ティタノプテラ・プルモノスコルピウス・メガラクネ・アースロプレウラ・タイタノミルマ・アーキミラクリス
 
 - 毛(Wool): テイムして懐かせた個体を定期的に毛刈りすることで入手
 - 革・肉: 屠殺した死体から入手(通常の動物と同じ)
+- 肉は種族ごとに統一済み: 妖怪系(女郎蜘蛛を除く)は人肉、古代の虫型(女郎蜘蛛を含む)はバニラ標準の虫肉を使用
+- 皮・毛は種族ごとに統一済み: 妖怪系は全種共通で「妖怪の輝く革/毛」を使用
 - 昆虫種とアダマンタイトは卵生で、受精卵を孵化させて繁殖します
 - 座敷童はテイムすると、ごく稀に銀を産出します(Milkableコンポーネントを転用した実験的機能)
-- 妖狐・竜人は爪に炎を、雪女は爪に冷気を、プルモノスコルピウスは毒針に毒をまとい、通常攻撃に追加ダメージを与えます
+- 妖狐・竜人は爪に炎を、雪女は爪に冷気を、プルモノスコルピウス・女郎蜘蛛は毒牙/毒針に毒をまとい、通常攻撃に追加ダメージを与えます
+- ケナガサイ・オオツノジカ・サーベルタイガーは、氷河期に実在した(現在は絶滅した)古代哺乳類です
 
 【★ 設定シート】
-出現頻度・基本肉量・基本革量・基本毛量は Patches/Patch_CreatureSettings.xml の1ファイルに集約しています。
-モンスターごとに区切られたブロックの数値を書き換えるだけでバランス調整でき、ブロックを丸ごと削除/コメント
-アウトすればそのモンスターの自然出現だけを個別にOFFにできます(テイム・繁殖は引き続き可能)。
+出現頻度・基本肉量・基本革量・基本毛量・見た目の大きさ(drawSize)は Patches/Patch_CreatureSettings.xml の1ファイル
+に集約しています。モンスターごとに区切られたブロックの数値を書き換えるだけでバランス調整でき、ブロックを丸ごと
+削除/コメントアウトすればそのモンスターの自然出現だけを個別にOFFにできます(テイム・繁殖は引き続き可能)。
 
 キャラクター(NPCファクション)は含まれていません。純粋に野生の敵生物のみを追加するMODです。
 
@@ -39,9 +42,11 @@ Alpha Animalsと併用する場合は、任意で "sarg.alphaanimals" の後に�
 - 天狗の「超能力」は、能動的に発動できるアビリティとしての実装はできません(Royalty/Anomalyのアビリティシステムを使うにはC#が必要)。ステータス面での味付けに留めています。
 
 --- English ---
-Adds 19 naturally-spawning hostile creatures (7 yokai-type humanoids, 12 ancient-type beasts/insects) as wild animals across several vanilla biomes. Wool is obtained by shearing a tamed individual; leather and meat by butchering. All insect-type creatures plus the Adamantite Beast reproduce via eggs. Zashikiwarashi rarely produces silver when tamed (an experimental repurposing of the Milkable comp). Youko/Dragonkin claws carry fire damage, Yukionna's carry frost damage, Pulmonoscorpius's stinger carries toxic damage.
+Adds 23 naturally-spawning hostile creatures (8 yokai-type humanoids, 8 ancient-type beasts, 7 ancient-type insects) as wild animals across several vanilla biomes. Wool is obtained by shearing a tamed individual; leather and meat by butchering. All insect-type creatures plus the Adamantite Beast reproduce via eggs. Zashikiwarashi rarely produces silver when tamed (an experimental repurposing of the Milkable comp). Youko/Dragonkin claws carry fire damage, Yukionna's carry frost damage, Pulmonoscorpius's stinger and Jorogumo's fangs carry toxic damage. Woolly Rhino, Irish Elk and Smilodon are real, now-extinct ice-age mammals.
 
-All spawn rates and base meat/leather/wool yields are consolidated into a single settings sheet (Patches/Patch_CreatureSettings.xml), organized creature-by-creature with Japanese comments - edit the numbers to rebalance, or delete/comment out a creature's whole block to disable its natural spawning entirely (taming/breeding still works).
+Materials are unified by category: every yokai-type creature except Jorogumo yields human meat; Jorogumo and every ancient-type insect yield vanilla's standard insect meat (fleshType Insectoid, no separate meat item); every yokai-type creature shares the same "radiant hide"/"radiant fur" leather and wool.
+
+All spawn rates, base meat/leather/wool yields, and each creature's adult visual size (drawSize) are consolidated into a single settings sheet (Patches/Patch_CreatureSettings.xml), organized creature-by-creature with Japanese comments - edit the numbers to rebalance, or delete/comment out a creature's whole block to disable its natural spawning entirely (taming/breeding still works).
 
 This mod adds no NPC faction/characters - it is a pure wildlife/monster content mod. XML-only (no assembly/DLL). See the description above for two features that could not be implemented without a C# assembly (human-caretaker pregnancy bonus, active Tengu psychic ability) - both are documented in the README.
 
