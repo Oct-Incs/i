@@ -37,6 +37,9 @@
         <li><def>AnimalJuvenile</def><minAge>0.25</minAge></li>
         <li><def>AnimalAdult</def><minAge>0.7</minAge></li>
       </lifeStageAges>
+      <soundMeleeHitPawn>Pawn_Melee_SmallScratch_HitPawn</soundMeleeHitPawn>
+      <soundMeleeHitBuilding>Pawn_Melee_SmallScratch_HitBuilding</soundMeleeHitBuilding>
+      <soundMeleeMiss>Pawn_Melee_SmallScratch_Miss</soundMeleeMiss>
     </race>
     <comps>
       <li Class="CompProperties_Shearable">
@@ -106,6 +109,9 @@
         <li><def>AnimalJuvenile</def><minAge>0.25</minAge></li>
         <li><def>AnimalAdult</def><minAge>0.7</minAge></li>
       </lifeStageAges>
+      <soundMeleeHitPawn>Pawn_Melee_SmallScratch_HitPawn</soundMeleeHitPawn>
+      <soundMeleeHitBuilding>Pawn_Melee_SmallScratch_HitBuilding</soundMeleeHitBuilding>
+      <soundMeleeMiss>Pawn_Melee_SmallScratch_Miss</soundMeleeMiss>
     </race>
     <comps>
       <li Class="CompProperties_Shearable">
@@ -181,6 +187,9 @@
         <li><def>AnimalJuvenile</def><minAge>0.25</minAge></li>
         <li><def>AnimalAdult</def><minAge>0.7</minAge></li>
       </lifeStageAges>
+      <soundMeleeHitPawn>Pawn_Melee_SmallScratch_HitPawn</soundMeleeHitPawn>
+      <soundMeleeHitBuilding>Pawn_Melee_SmallScratch_HitBuilding</soundMeleeHitBuilding>
+      <soundMeleeMiss>Pawn_Melee_SmallScratch_Miss</soundMeleeMiss>
     </race>
     <comps>
       <li Class="CompProperties_Shearable">
@@ -254,6 +263,9 @@
         <li><def>AnimalJuvenile</def><minAge>0.25</minAge></li>
         <li><def>AnimalAdult</def><minAge>0.7</minAge></li>
       </lifeStageAges>
+      <soundMeleeHitPawn>Pawn_Melee_SmallScratch_HitPawn</soundMeleeHitPawn>
+      <soundMeleeHitBuilding>Pawn_Melee_SmallScratch_HitBuilding</soundMeleeHitBuilding>
+      <soundMeleeMiss>Pawn_Melee_SmallScratch_Miss</soundMeleeMiss>
     </race>
     <comps>
       <li Class="CompProperties_Shearable">
@@ -334,6 +346,9 @@
         <li><def>AnimalJuvenile</def><minAge>0.2</minAge></li>
         <li><def>AnimalAdult</def><minAge>0.6</minAge></li>
       </lifeStageAges>
+      <soundMeleeHitPawn>Pawn_Melee_SmallScratch_HitPawn</soundMeleeHitPawn>
+      <soundMeleeHitBuilding>Pawn_Melee_SmallScratch_HitBuilding</soundMeleeHitBuilding>
+      <soundMeleeMiss>Pawn_Melee_SmallScratch_Miss</soundMeleeMiss>
     </race>
     <comps>
       <li Class="CompProperties_Shearable">
@@ -403,6 +418,9 @@
         <li><def>AnimalJuvenile</def><minAge>0.2</minAge></li>
         <li><def>AnimalAdult</def><minAge>0.6</minAge></li>
       </lifeStageAges>
+      <soundMeleeHitPawn>Pawn_Melee_BigBash_HitPawn</soundMeleeHitPawn>
+      <soundMeleeHitBuilding>Pawn_Melee_BigBash_HitBuilding</soundMeleeHitBuilding>
+      <soundMeleeMiss>Pawn_Melee_BigBash_Miss</soundMeleeMiss>
     </race>
     <comps>
       <li Class="CompProperties_Shearable">
@@ -484,6 +502,9 @@
         <li><def>AnimalJuvenile</def><minAge>0.15</minAge></li>
         <li><def>AnimalAdult</def><minAge>0.5</minAge></li>
       </lifeStageAges>
+      <soundMeleeHitPawn>Pawn_Melee_BigBash_HitPawn</soundMeleeHitPawn>
+      <soundMeleeHitBuilding>Pawn_Melee_BigBash_HitBuilding</soundMeleeHitBuilding>
+      <soundMeleeMiss>Pawn_Melee_BigBash_Miss</soundMeleeMiss>
     </race>
     <comps>
       <li Class="CompProperties_Shearable">
@@ -546,7 +567,6 @@
       <predator>true</predator>
       <maxPreyBodySize>1.2</maxPreyBodySize>
       <leatherDef>JP_Leather_RareSpecies</leatherDef>
-      <fleshType>Insectoid</fleshType>
       <meatLabel>insect meat</meatLabel>
       <meatColor>(60,68,39)</meatColor>
       <manhunterOnDamageChance>0.30</manhunterOnDamageChance>
@@ -561,6 +581,9 @@
         <li><def>AnimalJuvenile</def><minAge>0.25</minAge></li>
         <li><def>AnimalAdult</def><minAge>0.7</minAge></li>
       </lifeStageAges>
+      <soundMeleeHitPawn>Pawn_Melee_SmallScratch_HitPawn</soundMeleeHitPawn>
+      <soundMeleeHitBuilding>Pawn_Melee_SmallScratch_HitBuilding</soundMeleeHitBuilding>
+      <soundMeleeMiss>Pawn_Melee_SmallScratch_Miss</soundMeleeMiss>
     </race>
     <comps>
       <li Class="CompProperties_Shearable">
@@ -576,6 +599,8 @@
         <power>8</power>
         <cooldownTime>1.7</cooldownTime>
         <linkedBodyPartsGroup>Teeth</linkedBodyPartsGroup>
+        <soundMeleeHit>Pawn_Melee_HumanBite_Hit</soundMeleeHit>
+        <soundMeleeMiss>Pawn_Melee_HumanBite_Miss</soundMeleeMiss>
         <extraMeleeDamages>
           <li><def>ToxicBite</def><amount>5</amount></li>
         </extraMeleeDamages>
