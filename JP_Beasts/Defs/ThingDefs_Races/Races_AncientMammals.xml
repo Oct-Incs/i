@@ -59,14 +59,14 @@
         <capacities><li>Blunt</li></capacities>
         <power>14</power>
         <cooldownTime>2.4</cooldownTime>
-        <linkedBodyPartsGroup>FrontLeftLeg</linkedBodyPartsGroup>
+        <linkedBodyPartsGroup>FrontLeftPaw</linkedBodyPartsGroup>
       </li>
       <li>
         <label>trample</label>
         <capacities><li>Blunt</li></capacities>
         <power>14</power>
         <cooldownTime>2.4</cooldownTime>
-        <linkedBodyPartsGroup>FrontRightLeg</linkedBodyPartsGroup>
+        <linkedBodyPartsGroup>FrontRightPaw</linkedBodyPartsGroup>
         <chanceFactor>0.7</chanceFactor>
       </li>
     </tools>
@@ -76,7 +76,6 @@
       <drawSize>2.4</drawSize>
       <shadowData><volume>(0.8, 0.5, 0.6)</volume></shadowData>
     </graphicData>
-    <thingCategories><li>Animals</li></thingCategories>
   </ThingDef>
 
   <!-- ============================================================
@@ -136,14 +135,14 @@
         <capacities><li>Blunt</li></capacities>
         <power>8</power>
         <cooldownTime>1.8</cooldownTime>
-        <linkedBodyPartsGroup>FrontLeftLeg</linkedBodyPartsGroup>
+        <linkedBodyPartsGroup>FrontLeftPaw</linkedBodyPartsGroup>
       </li>
       <li>
         <label>kick</label>
         <capacities><li>Blunt</li></capacities>
         <power>8</power>
         <cooldownTime>1.8</cooldownTime>
-        <linkedBodyPartsGroup>FrontRightLeg</linkedBodyPartsGroup>
+        <linkedBodyPartsGroup>FrontRightPaw</linkedBodyPartsGroup>
         <chanceFactor>0.7</chanceFactor>
       </li>
     </tools>
@@ -153,7 +152,6 @@
       <drawSize>1.7</drawSize>
       <shadowData><volume>(0.5, 0.45, 0.35)</volume></shadowData>
     </graphicData>
-    <thingCategories><li>Animals</li></thingCategories>
   </ThingDef>
 
   <!-- ============================================================
@@ -214,14 +212,14 @@
         <capacities><li>Scratch</li></capacities>
         <power>9</power>
         <cooldownTime>1.7</cooldownTime>
-        <linkedBodyPartsGroup>FrontLeftLeg</linkedBodyPartsGroup>
+        <linkedBodyPartsGroup>FrontLeftPaw</linkedBodyPartsGroup>
       </li>
       <li>
         <label>claw</label>
         <capacities><li>Scratch</li></capacities>
         <power>9</power>
         <cooldownTime>1.7</cooldownTime>
-        <linkedBodyPartsGroup>FrontRightLeg</linkedBodyPartsGroup>
+        <linkedBodyPartsGroup>FrontRightPaw</linkedBodyPartsGroup>
         <chanceFactor>0.7</chanceFactor>
       </li>
     </tools>
@@ -231,7 +229,6 @@
       <drawSize>1.6</drawSize>
       <shadowData><volume>(0.5, 0.4, 0.3)</volume></shadowData>
     </graphicData>
-    <thingCategories><li>Animals</li></thingCategories>
   </ThingDef>
 
 </Defs>

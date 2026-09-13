@@ -59,14 +59,14 @@
         <capacities><li>Scratch</li></capacities>
         <power>6</power>
         <cooldownTime>1.7</cooldownTime>
-        <linkedBodyPartsGroup>FrontLeftLeg</linkedBodyPartsGroup>
+        <linkedBodyPartsGroup>FrontLeftPaw</linkedBodyPartsGroup>
       </li>
       <li>
         <label>front claw</label>
         <capacities><li>Scratch</li></capacities>
         <power>6</power>
         <cooldownTime>1.7</cooldownTime>
-        <linkedBodyPartsGroup>FrontRightLeg</linkedBodyPartsGroup>
+        <linkedBodyPartsGroup>FrontRightPaw</linkedBodyPartsGroup>
         <chanceFactor>0.7</chanceFactor>
       </li>
     </tools>
@@ -76,7 +76,6 @@
       <drawSize>1.6</drawSize>
       <shadowData><volume>(0.45, 0.4, 0.3)</volume></shadowData>
     </graphicData>
-    <thingCategories><li>Animals</li></thingCategories>
   </ThingDef>
 
   <!-- ============================================================
@@ -137,14 +136,14 @@
         <capacities><li>Scratch</li></capacities>
         <power>7</power>
         <cooldownTime>1.7</cooldownTime>
-        <linkedBodyPartsGroup>FrontLeftLeg</linkedBodyPartsGroup>
+        <linkedBodyPartsGroup>FrontLeftPaw</linkedBodyPartsGroup>
       </li>
       <li>
         <label>front claw</label>
         <capacities><li>Scratch</li></capacities>
         <power>7</power>
         <cooldownTime>1.7</cooldownTime>
-        <linkedBodyPartsGroup>FrontRightLeg</linkedBodyPartsGroup>
+        <linkedBodyPartsGroup>FrontRightPaw</linkedBodyPartsGroup>
         <chanceFactor>0.7</chanceFactor>
       </li>
     </tools>
@@ -154,7 +153,6 @@
       <drawSize>1.75</drawSize>
       <shadowData><volume>(0.5, 0.4, 0.3)</volume></shadowData>
     </graphicData>
-    <thingCategories><li>Animals</li></thingCategories>
   </ThingDef>
 
   <!-- ============================================================
@@ -215,14 +213,14 @@
         <capacities><li>Blunt</li></capacities>
         <power>22</power>
         <cooldownTime>2.6</cooldownTime>
-        <linkedBodyPartsGroup>FrontLeftLeg</linkedBodyPartsGroup>
+        <linkedBodyPartsGroup>FrontLeftPaw</linkedBodyPartsGroup>
       </li>
       <li>
         <label>trample</label>
         <capacities><li>Blunt</li></capacities>
         <power>22</power>
         <cooldownTime>2.6</cooldownTime>
-        <linkedBodyPartsGroup>FrontRightLeg</linkedBodyPartsGroup>
+        <linkedBodyPartsGroup>FrontRightPaw</linkedBodyPartsGroup>
         <chanceFactor>0.7</chanceFactor>
       </li>
     </tools>
@@ -232,7 +230,6 @@
       <drawSize>3.4</drawSize>
       <shadowData><volume>(1.2, 0.6, 0.9)</volume></shadowData>
     </graphicData>
-    <thingCategories><li>Animals</li></thingCategories>
   </ThingDef>
 
   <!-- ============================================================
@@ -294,14 +291,14 @@
         <capacities><li>Blunt</li></capacities>
         <power>16</power>
         <cooldownTime>2.4</cooldownTime>
-        <linkedBodyPartsGroup>FrontLeftLeg</linkedBodyPartsGroup>
+        <linkedBodyPartsGroup>FrontLeftPaw</linkedBodyPartsGroup>
       </li>
       <li>
         <label>trample</label>
         <capacities><li>Blunt</li></capacities>
         <power>16</power>
         <cooldownTime>2.4</cooldownTime>
-        <linkedBodyPartsGroup>FrontRightLeg</linkedBodyPartsGroup>
+        <linkedBodyPartsGroup>FrontRightPaw</linkedBodyPartsGroup>
         <chanceFactor>0.7</chanceFactor>
       </li>
     </tools>
@@ -311,7 +308,6 @@
       <drawSize>2.8</drawSize>
       <shadowData><volume>(0.9, 0.5, 0.7)</volume></shadowData>
     </graphicData>
-    <thingCategories><li>Animals</li></thingCategories>
   </ThingDef>
 
   <!-- ============================================================
@@ -382,14 +378,14 @@
         <capacities><li>Scratch</li></capacities>
         <power>16</power>
         <cooldownTime>1.8</cooldownTime>
-        <linkedBodyPartsGroup>FrontLeftLeg</linkedBodyPartsGroup>
+        <linkedBodyPartsGroup>FrontLeftPaw</linkedBodyPartsGroup>
       </li>
       <li>
         <label>steel claw</label>
         <capacities><li>Scratch</li></capacities>
         <power>16</power>
         <cooldownTime>1.8</cooldownTime>
-        <linkedBodyPartsGroup>FrontRightLeg</linkedBodyPartsGroup>
+        <linkedBodyPartsGroup>FrontRightPaw</linkedBodyPartsGroup>
         <chanceFactor>0.7</chanceFactor>
       </li>
     </tools>
@@ -399,7 +395,6 @@
       <drawSize>3.0</drawSize>
       <shadowData><volume>(1.0, 0.5, 0.7)</volume></shadowData>
     </graphicData>
-    <thingCategories><li>Animals</li></thingCategories>
   </ThingDef>
 
   <!-- ============================================================
@@ -464,7 +459,7 @@
         <capacities><li>Scratch</li></capacities>
         <power>4</power>
         <cooldownTime>1.4</cooldownTime>
-        <linkedBodyPartsGroup>FrontLeftLeg</linkedBodyPartsGroup>
+        <linkedBodyPartsGroup>FrontLeftPaw</linkedBodyPartsGroup>
         <chanceFactor>0.6</chanceFactor>
       </li>
     </tools>
@@ -474,7 +469,6 @@
       <drawSize>0.7</drawSize>
       <shadowData><volume>(0.2, 0.3, 0.15)</volume></shadowData>
     </graphicData>
-    <thingCategories><li>Animals</li></thingCategories>
   </ThingDef>
 
   <!-- ============================================================
@@ -540,14 +534,14 @@
         <capacities><li>Scratch</li></capacities>
         <power>9</power>
         <cooldownTime>1.6</cooldownTime>
-        <linkedBodyPartsGroup>FrontLeftLeg</linkedBodyPartsGroup>
+        <linkedBodyPartsGroup>FrontLeftPaw</linkedBodyPartsGroup>
       </li>
       <li>
         <label>raptorial claw</label>
         <capacities><li>Scratch</li></capacities>
         <power>9</power>
         <cooldownTime>1.6</cooldownTime>
-        <linkedBodyPartsGroup>FrontRightLeg</linkedBodyPartsGroup>
+        <linkedBodyPartsGroup>FrontRightPaw</linkedBodyPartsGroup>
         <chanceFactor>0.7</chanceFactor>
       </li>
     </tools>
@@ -557,7 +551,6 @@
       <drawSize>1.5</drawSize>
       <shadowData><volume>(0.45, 0.4, 0.3)</volume></shadowData>
     </graphicData>
-    <thingCategories><li>Animals</li></thingCategories>
   </ThingDef>
 
 </Defs>
