@@ -64,7 +64,7 @@
       <xpath>Defs/ThingDef[defName="JP_JapaneseWolf"]/statBases</xpath>
       <value>
         <MeatAmount>213</MeatAmount>
-        <LeatherAmount>30</LeatherAmount>
+        <LeatherAmount>75</LeatherAmount>
       </value>
     </match>
   </Operation>
@@ -74,7 +74,7 @@
     <xpath>Defs/ThingDef[defName="JP_JapaneseWolf"]/comps/li[@Class="CompProperties_Shearable"]/woolAmount</xpath>
     <match Class="PatchOperationReplace">
       <xpath>Defs/ThingDef[defName="JP_JapaneseWolf"]/comps/li[@Class="CompProperties_Shearable"]/woolAmount</xpath>
-      <value><woolAmount>20</woolAmount></value>
+      <value><woolAmount>44</woolAmount></value>
     </match>
   </Operation>
 
@@ -83,7 +83,7 @@
     <xpath>Defs/PawnKindDef[defName="JP_JapaneseWolf"]/lifeStages/li[3]/bodyGraphicData/drawSize</xpath>
     <match Class="PatchOperationReplace">
       <xpath>Defs/PawnKindDef[defName="JP_JapaneseWolf"]/lifeStages/li[3]/bodyGraphicData/drawSize</xpath>
-      <value><drawSize>1.6</drawSize></value>
+      <value><drawSize>2.88</drawSize></value>
     </match>
   </Operation>
 
@@ -110,7 +110,7 @@
       <xpath>Defs/ThingDef[defName="JP_EzoWolf"]/statBases</xpath>
       <value>
         <MeatAmount>225</MeatAmount>
-        <LeatherAmount>32</LeatherAmount>
+        <LeatherAmount>80</LeatherAmount>
       </value>
     </match>
   </Operation>
@@ -120,7 +120,7 @@
     <xpath>Defs/ThingDef[defName="JP_EzoWolf"]/comps/li[@Class="CompProperties_Shearable"]/woolAmount</xpath>
     <match Class="PatchOperationReplace">
       <xpath>Defs/ThingDef[defName="JP_EzoWolf"]/comps/li[@Class="CompProperties_Shearable"]/woolAmount</xpath>
-      <value><woolAmount>26</woolAmount></value>
+      <value><woolAmount>57</woolAmount></value>
     </match>
   </Operation>
 
@@ -129,7 +129,7 @@
     <xpath>Defs/PawnKindDef[defName="JP_EzoWolf"]/lifeStages/li[3]/bodyGraphicData/drawSize</xpath>
     <match Class="PatchOperationReplace">
       <xpath>Defs/PawnKindDef[defName="JP_EzoWolf"]/lifeStages/li[3]/bodyGraphicData/drawSize</xpath>
-      <value><drawSize>1.75</drawSize></value>
+      <value><drawSize>3.15</drawSize></value>
     </match>
   </Operation>
 
@@ -163,7 +163,7 @@
       <xpath>Defs/ThingDef[defName="JP_Mammoth"]/statBases</xpath>
       <value>
         <MeatAmount>275</MeatAmount>
-        <LeatherAmount>40</LeatherAmount>
+        <LeatherAmount>100</LeatherAmount>
       </value>
     </match>
   </Operation>
@@ -173,7 +173,7 @@
     <xpath>Defs/ThingDef[defName="JP_Mammoth"]/comps/li[@Class="CompProperties_Shearable"]/woolAmount</xpath>
     <match Class="PatchOperationReplace">
       <xpath>Defs/ThingDef[defName="JP_Mammoth"]/comps/li[@Class="CompProperties_Shearable"]/woolAmount</xpath>
-      <value><woolAmount>65</woolAmount></value>
+      <value><woolAmount>163</woolAmount></value>
     </match>
   </Operation>
 
@@ -182,7 +182,7 @@
     <xpath>Defs/PawnKindDef[defName="JP_Mammoth"]/lifeStages/li[3]/bodyGraphicData/drawSize</xpath>
     <match Class="PatchOperationReplace">
       <xpath>Defs/PawnKindDef[defName="JP_Mammoth"]/lifeStages/li[3]/bodyGraphicData/drawSize</xpath>
-      <value><drawSize>3.4</drawSize></value>
+      <value><drawSize>6.8</drawSize></value>
     </match>
   </Operation>
 
@@ -216,7 +216,7 @@
       <xpath>Defs/ThingDef[defName="JP_Mazotairos"]/statBases</xpath>
       <value>
         <MeatAmount>263</MeatAmount>
-        <LeatherAmount>38</LeatherAmount>
+        <LeatherAmount>95</LeatherAmount>
       </value>
     </match>
   </Operation>
@@ -226,7 +226,7 @@
     <xpath>Defs/ThingDef[defName="JP_Mazotairos"]/comps/li[@Class="CompProperties_Shearable"]/woolAmount</xpath>
     <match Class="PatchOperationReplace">
       <xpath>Defs/ThingDef[defName="JP_Mazotairos"]/comps/li[@Class="CompProperties_Shearable"]/woolAmount</xpath>
-      <value><woolAmount>40</woolAmount></value>
+      <value><woolAmount>88</woolAmount></value>
     </match>
   </Operation>
 
@@ -235,7 +235,7 @@
     <xpath>Defs/PawnKindDef[defName="JP_Mazotairos"]/lifeStages/li[3]/bodyGraphicData/drawSize</xpath>
     <match Class="PatchOperationReplace">
       <xpath>Defs/PawnKindDef[defName="JP_Mazotairos"]/lifeStages/li[3]/bodyGraphicData/drawSize</xpath>
-      <value><drawSize>2.8</drawSize></value>
+      <value><drawSize>4.2</drawSize></value>
     </match>
   </Operation>
 
@@ -262,7 +262,7 @@
       <xpath>Defs/ThingDef[defName="JP_AdamantiteBeast"]/statBases</xpath>
       <value>
         <MeatAmount>250</MeatAmount>
-        <LeatherAmount>45</LeatherAmount>
+        <LeatherAmount>113</LeatherAmount>
       </value>
     </match>
   </Operation>
@@ -272,7 +272,7 @@
     <xpath>Defs/ThingDef[defName="JP_AdamantiteBeast"]/comps/li[@Class="CompProperties_Shearable"]/woolAmount</xpath>
     <match Class="PatchOperationReplace">
       <xpath>Defs/ThingDef[defName="JP_AdamantiteBeast"]/comps/li[@Class="CompProperties_Shearable"]/woolAmount</xpath>
-      <value><woolAmount>10</woolAmount></value>
+      <value><woolAmount>20</woolAmount></value>
     </match>
   </Operation>
 
@@ -281,7 +281,7 @@
     <xpath>Defs/PawnKindDef[defName="JP_AdamantiteBeast"]/lifeStages/li[3]/bodyGraphicData/drawSize</xpath>
     <match Class="PatchOperationReplace">
       <xpath>Defs/PawnKindDef[defName="JP_AdamantiteBeast"]/lifeStages/li[3]/bodyGraphicData/drawSize</xpath>
-      <value><drawSize>3</drawSize></value>
+      <value><drawSize>6</drawSize></value>
     </match>
   </Operation>
 
@@ -308,7 +308,7 @@
       <xpath>Defs/ThingDef[defName="JP_WoollyRhino"]/statBases</xpath>
       <value>
         <MeatAmount>238</MeatAmount>
-        <LeatherAmount>38</LeatherAmount>
+        <LeatherAmount>95</LeatherAmount>
       </value>
     </match>
   </Operation>
@@ -318,7 +318,7 @@
     <xpath>Defs/ThingDef[defName="JP_WoollyRhino"]/comps/li[@Class="CompProperties_Shearable"]/woolAmount</xpath>
     <match Class="PatchOperationReplace">
       <xpath>Defs/ThingDef[defName="JP_WoollyRhino"]/comps/li[@Class="CompProperties_Shearable"]/woolAmount</xpath>
-      <value><woolAmount>55</woolAmount></value>
+      <value><woolAmount>138</woolAmount></value>
     </match>
   </Operation>
 
@@ -327,7 +327,7 @@
     <xpath>Defs/PawnKindDef[defName="JP_WoollyRhino"]/lifeStages/li[3]/bodyGraphicData/drawSize</xpath>
     <match Class="PatchOperationReplace">
       <xpath>Defs/PawnKindDef[defName="JP_WoollyRhino"]/lifeStages/li[3]/bodyGraphicData/drawSize</xpath>
-      <value><drawSize>2.4</drawSize></value>
+      <value><drawSize>3.6</drawSize></value>
     </match>
   </Operation>
 
@@ -361,7 +361,7 @@
       <xpath>Defs/ThingDef[defName="JP_IrishElk"]/statBases</xpath>
       <value>
         <MeatAmount>188</MeatAmount>
-        <LeatherAmount>26</LeatherAmount>
+        <LeatherAmount>65</LeatherAmount>
       </value>
     </match>
   </Operation>
@@ -371,7 +371,7 @@
     <xpath>Defs/ThingDef[defName="JP_IrishElk"]/comps/li[@Class="CompProperties_Shearable"]/woolAmount</xpath>
     <match Class="PatchOperationReplace">
       <xpath>Defs/ThingDef[defName="JP_IrishElk"]/comps/li[@Class="CompProperties_Shearable"]/woolAmount</xpath>
-      <value><woolAmount>30</woolAmount></value>
+      <value><woolAmount>66</woolAmount></value>
     </match>
   </Operation>
 
@@ -380,7 +380,7 @@
     <xpath>Defs/PawnKindDef[defName="JP_IrishElk"]/lifeStages/li[3]/bodyGraphicData/drawSize</xpath>
     <match Class="PatchOperationReplace">
       <xpath>Defs/PawnKindDef[defName="JP_IrishElk"]/lifeStages/li[3]/bodyGraphicData/drawSize</xpath>
-      <value><drawSize>1.7</drawSize></value>
+      <value><drawSize>2.55</drawSize></value>
     </match>
   </Operation>
 
@@ -414,7 +414,7 @@
       <xpath>Defs/ThingDef[defName="JP_Smilodon"]/statBases</xpath>
       <value>
         <MeatAmount>175</MeatAmount>
-        <LeatherAmount>24</LeatherAmount>
+        <LeatherAmount>60</LeatherAmount>
       </value>
     </match>
   </Operation>
@@ -424,7 +424,7 @@
     <xpath>Defs/ThingDef[defName="JP_Smilodon"]/comps/li[@Class="CompProperties_Shearable"]/woolAmount</xpath>
     <match Class="PatchOperationReplace">
       <xpath>Defs/ThingDef[defName="JP_Smilodon"]/comps/li[@Class="CompProperties_Shearable"]/woolAmount</xpath>
-      <value><woolAmount>24</woolAmount></value>
+      <value><woolAmount>53</woolAmount></value>
     </match>
   </Operation>
 
@@ -433,7 +433,7 @@
     <xpath>Defs/PawnKindDef[defName="JP_Smilodon"]/lifeStages/li[3]/bodyGraphicData/drawSize</xpath>
     <match Class="PatchOperationReplace">
       <xpath>Defs/PawnKindDef[defName="JP_Smilodon"]/lifeStages/li[3]/bodyGraphicData/drawSize</xpath>
-      <value><drawSize>1.6</drawSize></value>
+      <value><drawSize>2.4</drawSize></value>
     </match>
   </Operation>
 
@@ -467,7 +467,7 @@
       <xpath>Defs/ThingDef[defName="JP_Meganeura"]/statBases</xpath>
       <value>
         <MeatAmount>113</MeatAmount>
-        <LeatherAmount>15</LeatherAmount>
+        <LeatherAmount>38</LeatherAmount>
       </value>
     </match>
   </Operation>
@@ -477,7 +477,7 @@
     <xpath>Defs/PawnKindDef[defName="JP_Meganeura"]/lifeStages/li[3]/bodyGraphicData/drawSize</xpath>
     <match Class="PatchOperationReplace">
       <xpath>Defs/PawnKindDef[defName="JP_Meganeura"]/lifeStages/li[3]/bodyGraphicData/drawSize</xpath>
-      <value><drawSize>0.7</drawSize></value>
+      <value><drawSize>1.05</drawSize></value>
     </match>
   </Operation>
 
@@ -511,7 +511,7 @@
       <xpath>Defs/ThingDef[defName="JP_Titanoptera"]/statBases</xpath>
       <value>
         <MeatAmount>163</MeatAmount>
-        <LeatherAmount>22</LeatherAmount>
+        <LeatherAmount>55</LeatherAmount>
       </value>
     </match>
   </Operation>
@@ -521,7 +521,7 @@
     <xpath>Defs/PawnKindDef[defName="JP_Titanoptera"]/lifeStages/li[3]/bodyGraphicData/drawSize</xpath>
     <match Class="PatchOperationReplace">
       <xpath>Defs/PawnKindDef[defName="JP_Titanoptera"]/lifeStages/li[3]/bodyGraphicData/drawSize</xpath>
-      <value><drawSize>1.5</drawSize></value>
+      <value><drawSize>2.25</drawSize></value>
     </match>
   </Operation>
 
@@ -555,7 +555,7 @@
       <xpath>Defs/ThingDef[defName="JP_Arthropleura"]/statBases</xpath>
       <value>
         <MeatAmount>163</MeatAmount>
-        <LeatherAmount>25</LeatherAmount>
+        <LeatherAmount>63</LeatherAmount>
       </value>
     </match>
   </Operation>
@@ -565,7 +565,7 @@
     <xpath>Defs/PawnKindDef[defName="JP_Arthropleura"]/lifeStages/li[3]/bodyGraphicData/drawSize</xpath>
     <match Class="PatchOperationReplace">
       <xpath>Defs/PawnKindDef[defName="JP_Arthropleura"]/lifeStages/li[3]/bodyGraphicData/drawSize</xpath>
-      <value><drawSize>1.9</drawSize></value>
+      <value><drawSize>2.85</drawSize></value>
     </match>
   </Operation>
 
@@ -599,7 +599,7 @@
       <xpath>Defs/ThingDef[defName="JP_Pulmonoscorpius"]/statBases</xpath>
       <value>
         <MeatAmount>150</MeatAmount>
-        <LeatherAmount>22</LeatherAmount>
+        <LeatherAmount>55</LeatherAmount>
       </value>
     </match>
   </Operation>
@@ -609,7 +609,7 @@
     <xpath>Defs/PawnKindDef[defName="JP_Pulmonoscorpius"]/lifeStages/li[3]/bodyGraphicData/drawSize</xpath>
     <match Class="PatchOperationReplace">
       <xpath>Defs/PawnKindDef[defName="JP_Pulmonoscorpius"]/lifeStages/li[3]/bodyGraphicData/drawSize</xpath>
-      <value><drawSize>1.7</drawSize></value>
+      <value><drawSize>2.55</drawSize></value>
     </match>
   </Operation>
 
@@ -636,7 +636,7 @@
       <xpath>Defs/ThingDef[defName="JP_Megarachne"]/statBases</xpath>
       <value>
         <MeatAmount>138</MeatAmount>
-        <LeatherAmount>18</LeatherAmount>
+        <LeatherAmount>45</LeatherAmount>
       </value>
     </match>
   </Operation>
@@ -646,7 +646,7 @@
     <xpath>Defs/PawnKindDef[defName="JP_Megarachne"]/lifeStages/li[3]/bodyGraphicData/drawSize</xpath>
     <match Class="PatchOperationReplace">
       <xpath>Defs/PawnKindDef[defName="JP_Megarachne"]/lifeStages/li[3]/bodyGraphicData/drawSize</xpath>
-      <value><drawSize>1.3</drawSize></value>
+      <value><drawSize>1.95</drawSize></value>
     </match>
   </Operation>
 
@@ -680,7 +680,7 @@
       <xpath>Defs/ThingDef[defName="JP_Titanomyrma"]/statBases</xpath>
       <value>
         <MeatAmount>88</MeatAmount>
-        <LeatherAmount>12</LeatherAmount>
+        <LeatherAmount>30</LeatherAmount>
       </value>
     </match>
   </Operation>
@@ -690,7 +690,7 @@
     <xpath>Defs/PawnKindDef[defName="JP_Titanomyrma"]/lifeStages/li[3]/bodyGraphicData/drawSize</xpath>
     <match Class="PatchOperationReplace">
       <xpath>Defs/PawnKindDef[defName="JP_Titanomyrma"]/lifeStages/li[3]/bodyGraphicData/drawSize</xpath>
-      <value><drawSize>0.9</drawSize></value>
+      <value><drawSize>1.35</drawSize></value>
     </match>
   </Operation>
 
@@ -731,7 +731,7 @@
       <xpath>Defs/ThingDef[defName="JP_Archimylacris"]/statBases</xpath>
       <value>
         <MeatAmount>50</MeatAmount>
-        <LeatherAmount>8</LeatherAmount>
+        <LeatherAmount>20</LeatherAmount>
       </value>
     </match>
   </Operation>
@@ -741,7 +741,7 @@
     <xpath>Defs/PawnKindDef[defName="JP_Archimylacris"]/lifeStages/li[3]/bodyGraphicData/drawSize</xpath>
     <match Class="PatchOperationReplace">
       <xpath>Defs/PawnKindDef[defName="JP_Archimylacris"]/lifeStages/li[3]/bodyGraphicData/drawSize</xpath>
-      <value><drawSize>0.6</drawSize></value>
+      <value><drawSize>0.9</drawSize></value>
     </match>
   </Operation>
 
@@ -775,7 +775,7 @@
       <xpath>Defs/ThingDef[defName="JP_Nekomata"]/statBases</xpath>
       <value>
         <MeatAmount>200</MeatAmount>
-        <LeatherAmount>28</LeatherAmount>
+        <LeatherAmount>70</LeatherAmount>
       </value>
     </match>
   </Operation>
@@ -785,7 +785,7 @@
     <xpath>Defs/ThingDef[defName="JP_Nekomata"]/comps/li[@Class="CompProperties_Shearable"]/woolAmount</xpath>
     <match Class="PatchOperationReplace">
       <xpath>Defs/ThingDef[defName="JP_Nekomata"]/comps/li[@Class="CompProperties_Shearable"]/woolAmount</xpath>
-      <value><woolAmount>25</woolAmount></value>
+      <value><woolAmount>50</woolAmount></value>
     </match>
   </Operation>
 
@@ -828,7 +828,7 @@
       <xpath>Defs/ThingDef[defName="JP_Youko"]/statBases</xpath>
       <value>
         <MeatAmount>195</MeatAmount>
-        <LeatherAmount>27</LeatherAmount>
+        <LeatherAmount>68</LeatherAmount>
       </value>
     </match>
   </Operation>
@@ -838,7 +838,7 @@
     <xpath>Defs/ThingDef[defName="JP_Youko"]/comps/li[@Class="CompProperties_Shearable"]/woolAmount</xpath>
     <match Class="PatchOperationReplace">
       <xpath>Defs/ThingDef[defName="JP_Youko"]/comps/li[@Class="CompProperties_Shearable"]/woolAmount</xpath>
-      <value><woolAmount>22</woolAmount></value>
+      <value><woolAmount>44</woolAmount></value>
     </match>
   </Operation>
 
@@ -874,7 +874,7 @@
       <xpath>Defs/ThingDef[defName="JP_Yukionna"]/statBases</xpath>
       <value>
         <MeatAmount>200</MeatAmount>
-        <LeatherAmount>28</LeatherAmount>
+        <LeatherAmount>70</LeatherAmount>
       </value>
     </match>
   </Operation>
@@ -884,7 +884,7 @@
     <xpath>Defs/ThingDef[defName="JP_Yukionna"]/comps/li[@Class="CompProperties_Shearable"]/woolAmount</xpath>
     <match Class="PatchOperationReplace">
       <xpath>Defs/ThingDef[defName="JP_Yukionna"]/comps/li[@Class="CompProperties_Shearable"]/woolAmount</xpath>
-      <value><woolAmount>22</woolAmount></value>
+      <value><woolAmount>44</woolAmount></value>
     </match>
   </Operation>
 
@@ -920,7 +920,7 @@
       <xpath>Defs/ThingDef[defName="JP_Zashikiwarashi"]/statBases</xpath>
       <value>
         <MeatAmount>150</MeatAmount>
-        <LeatherAmount>20</LeatherAmount>
+        <LeatherAmount>50</LeatherAmount>
       </value>
     </match>
   </Operation>
@@ -930,7 +930,7 @@
     <xpath>Defs/ThingDef[defName="JP_Zashikiwarashi"]/comps/li[@Class="CompProperties_Shearable"]/woolAmount</xpath>
     <match Class="PatchOperationReplace">
       <xpath>Defs/ThingDef[defName="JP_Zashikiwarashi"]/comps/li[@Class="CompProperties_Shearable"]/woolAmount</xpath>
-      <value><woolAmount>15</woolAmount></value>
+      <value><woolAmount>30</woolAmount></value>
     </match>
   </Operation>
 
@@ -973,7 +973,7 @@
       <xpath>Defs/ThingDef[defName="JP_Tengu"]/statBases</xpath>
       <value>
         <MeatAmount>213</MeatAmount>
-        <LeatherAmount>30</LeatherAmount>
+        <LeatherAmount>75</LeatherAmount>
       </value>
     </match>
   </Operation>
@@ -983,7 +983,7 @@
     <xpath>Defs/ThingDef[defName="JP_Tengu"]/comps/li[@Class="CompProperties_Shearable"]/woolAmount</xpath>
     <match Class="PatchOperationReplace">
       <xpath>Defs/ThingDef[defName="JP_Tengu"]/comps/li[@Class="CompProperties_Shearable"]/woolAmount</xpath>
-      <value><woolAmount>25</woolAmount></value>
+      <value><woolAmount>50</woolAmount></value>
     </match>
   </Operation>
 
@@ -1026,7 +1026,7 @@
       <xpath>Defs/ThingDef[defName="JP_Oni"]/statBases</xpath>
       <value>
         <MeatAmount>238</MeatAmount>
-        <LeatherAmount>35</LeatherAmount>
+        <LeatherAmount>88</LeatherAmount>
       </value>
     </match>
   </Operation>
@@ -1036,7 +1036,7 @@
     <xpath>Defs/ThingDef[defName="JP_Oni"]/comps/li[@Class="CompProperties_Shearable"]/woolAmount</xpath>
     <match Class="PatchOperationReplace">
       <xpath>Defs/ThingDef[defName="JP_Oni"]/comps/li[@Class="CompProperties_Shearable"]/woolAmount</xpath>
-      <value><woolAmount>30</woolAmount></value>
+      <value><woolAmount>60</woolAmount></value>
     </match>
   </Operation>
 
@@ -1086,7 +1086,7 @@
       <xpath>Defs/ThingDef[defName="JP_Dragonkin"]/statBases</xpath>
       <value>
         <MeatAmount>250</MeatAmount>
-        <LeatherAmount>40</LeatherAmount>
+        <LeatherAmount>100</LeatherAmount>
       </value>
     </match>
   </Operation>
@@ -1096,7 +1096,7 @@
     <xpath>Defs/ThingDef[defName="JP_Dragonkin"]/comps/li[@Class="CompProperties_Shearable"]/woolAmount</xpath>
     <match Class="PatchOperationReplace">
       <xpath>Defs/ThingDef[defName="JP_Dragonkin"]/comps/li[@Class="CompProperties_Shearable"]/woolAmount</xpath>
-      <value><woolAmount>28</woolAmount></value>
+      <value><woolAmount>56</woolAmount></value>
     </match>
   </Operation>
 
@@ -1139,7 +1139,7 @@
       <xpath>Defs/ThingDef[defName="JP_Jorogumo"]/statBases</xpath>
       <value>
         <MeatAmount>138</MeatAmount>
-        <LeatherAmount>24</LeatherAmount>
+        <LeatherAmount>60</LeatherAmount>
       </value>
     </match>
   </Operation>
@@ -1149,7 +1149,7 @@
     <xpath>Defs/ThingDef[defName="JP_Jorogumo"]/comps/li[@Class="CompProperties_Shearable"]/woolAmount</xpath>
     <match Class="PatchOperationReplace">
       <xpath>Defs/ThingDef[defName="JP_Jorogumo"]/comps/li[@Class="CompProperties_Shearable"]/woolAmount</xpath>
-      <value><woolAmount>24</woolAmount></value>
+      <value><woolAmount>48</woolAmount></value>
     </match>
   </Operation>
 
