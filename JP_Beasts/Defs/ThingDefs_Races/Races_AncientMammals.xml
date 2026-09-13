@@ -15,7 +15,7 @@
       <ComfyTemperatureMax>25</ComfyTemperatureMax>
       <ArmorRating_Sharp>0.25</ArmorRating_Sharp>
       <ArmorRating_Blunt>0.20</ArmorRating_Blunt>
-      <Wildness>0.9</Wildness>
+      <Wildness>0.93</Wildness>
     </statBases>
     <race>
       <body>QuadrupedAnimalWithPawsAndTail</body>
@@ -101,7 +101,7 @@
       <ComfyTemperatureMin>-35</ComfyTemperatureMin>
       <ComfyTemperatureMax>30</ComfyTemperatureMax>
       <ArmorRating_Sharp>0.03</ArmorRating_Sharp>
-      <Wildness>0.95</Wildness>
+      <Wildness>0.93</Wildness>
     </statBases>
     <race>
       <body>QuadrupedAnimalWithPawsAndTail</body>
@@ -187,7 +187,7 @@
       <ComfyTemperatureMin>-25</ComfyTemperatureMin>
       <ComfyTemperatureMax>35</ComfyTemperatureMax>
       <ArmorRating_Sharp>0.08</ArmorRating_Sharp>
-      <Wildness>0.95</Wildness>
+      <Wildness>0.93</Wildness>
     </statBases>
     <race>
       <body>QuadrupedAnimalWithPawsAndTail</body>
