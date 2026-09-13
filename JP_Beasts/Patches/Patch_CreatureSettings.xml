@@ -1,0 +1,782 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+
+  <!-- ============================================================
+       JP_Beasts 設定シート (Creature Settings Sheet)
+       ============================================================
+       このファイル1つで、モンスターごとの下記パラメータを編集できます:
+         1) 出現頻度 commonality タグの数値 - バイオームごとの野生出現の重み
+         2) 基本肉量 MeatAmount タグの数値  - 屠殺で得られる肉の基礎量
+         3) 基本革量 LeatherAmount タグの数値 - 屠殺で得られる革の基礎量
+         4) 基本毛量 woolAmount タグの数値  - テイム後の毛刈りで得られる毛の量
+
+       【出現を完全にOFFにしたい場合】
+       対象モンスターの「出現頻度」ブロック全体(見出しコメントから
+       次の見出しコメントの手前まで)を削除するか、XMLコメントで囲んで
+       ください。それだけでそのモンスターは一切自然出現しなくなります
+       (テイムして繁殖させることは引き続き可能です)。
+
+       【数値だけ変えたい場合】
+       各タグの数値部分だけを書き換えて保存すれば、次回ゲーム起動時から
+       反映されます。値は他MODとの相対的な重みなので上限はありません。
+       自由に増減してください。
+
+       【肉/革の仕組みについて】
+       MeatAmount/LeatherAmount は「体格1.0あたりの基礎量」で、実際の量は
+       個体の体格(baseBodySize)を掛けた値になります(体格はDefs/ThingDefs_Races/
+       内で定義・バニラのAnimalThingBaseの既定値は肉90・革30相当)。
+       ============================================================ -->
+
+  <!-- ==================== ニホンオオカミ (JP_JapaneseWolf) - 出現頻度 ==================== -->
+  <Operation Class="PatchOperationConditional">
+    <xpath>Defs/BiomeDef[defName="TemperateForest"]/animalCommonalities</xpath>
+    <match Class="PatchOperationAdd">
+      <xpath>Defs/BiomeDef[defName="TemperateForest"]/animalCommonalities</xpath>
+      <value><li><animal>JP_JapaneseWolf</animal><commonality>4</commonality></li></value>
+    </match>
+  </Operation>
+  <Operation Class="PatchOperationConditional">
+    <xpath>Defs/BiomeDef[defName="BorealForest"]/animalCommonalities</xpath>
+    <match Class="PatchOperationAdd">
+      <xpath>Defs/BiomeDef[defName="BorealForest"]/animalCommonalities</xpath>
+      <value><li><animal>JP_JapaneseWolf</animal><commonality>5.6</commonality></li></value>
+    </match>
+  </Operation>
+  <Operation Class="PatchOperationConditional">
+    <xpath>Defs/BiomeDef[defName="Tundra"]/animalCommonalities</xpath>
+    <match Class="PatchOperationAdd">
+      <xpath>Defs/BiomeDef[defName="Tundra"]/animalCommonalities</xpath>
+      <value><li><animal>JP_JapaneseWolf</animal><commonality>3.2</commonality></li></value>
+    </match>
+  </Operation>
+
+  <!-- 基本肉量・革量: ニホンオオカミ -->
+  <Operation Class="PatchOperationConditional">
+    <xpath>Defs/ThingDef[defName="JP_JapaneseWolf"]/statBases</xpath>
+    <match Class="PatchOperationAdd">
+      <xpath>Defs/ThingDef[defName="JP_JapaneseWolf"]/statBases</xpath>
+      <value>
+        <MeatAmount>85</MeatAmount>
+        <LeatherAmount>30</LeatherAmount>
+      </value>
+    </match>
+  </Operation>
+
+  <!-- 基本毛量(テイム後の毛刈り): ニホンオオカミ -->
+  <Operation Class="PatchOperationConditional">
+    <xpath>Defs/ThingDef[defName="JP_JapaneseWolf"]/comps/li[@Class="CompProperties_Shearable"]/woolAmount</xpath>
+    <match Class="PatchOperationReplace">
+      <xpath>Defs/ThingDef[defName="JP_JapaneseWolf"]/comps/li[@Class="CompProperties_Shearable"]/woolAmount</xpath>
+      <value><woolAmount>20</woolAmount></value>
+    </match>
+  </Operation>
+
+  <!-- ==================== エゾオオカミ (JP_EzoWolf) - 出現頻度 ==================== -->
+  <Operation Class="PatchOperationConditional">
+    <xpath>Defs/BiomeDef[defName="BorealForest"]/animalCommonalities</xpath>
+    <match Class="PatchOperationAdd">
+      <xpath>Defs/BiomeDef[defName="BorealForest"]/animalCommonalities</xpath>
+      <value><li><animal>JP_EzoWolf</animal><commonality>4.8</commonality></li></value>
+    </match>
+  </Operation>
+  <Operation Class="PatchOperationConditional">
+    <xpath>Defs/BiomeDef[defName="Tundra"]/animalCommonalities</xpath>
+    <match Class="PatchOperationAdd">
+      <xpath>Defs/BiomeDef[defName="Tundra"]/animalCommonalities</xpath>
+      <value><li><animal>JP_EzoWolf</animal><commonality>4</commonality></li></value>
+    </match>
+  </Operation>
+
+  <!-- 基本肉量・革量: エゾオオカミ -->
+  <Operation Class="PatchOperationConditional">
+    <xpath>Defs/ThingDef[defName="JP_EzoWolf"]/statBases</xpath>
+    <match Class="PatchOperationAdd">
+      <xpath>Defs/ThingDef[defName="JP_EzoWolf"]/statBases</xpath>
+      <value>
+        <MeatAmount>90</MeatAmount>
+        <LeatherAmount>32</LeatherAmount>
+      </value>
+    </match>
+  </Operation>
+
+  <!-- 基本毛量(テイム後の毛刈り): エゾオオカミ -->
+  <Operation Class="PatchOperationConditional">
+    <xpath>Defs/ThingDef[defName="JP_EzoWolf"]/comps/li[@Class="CompProperties_Shearable"]/woolAmount</xpath>
+    <match Class="PatchOperationReplace">
+      <xpath>Defs/ThingDef[defName="JP_EzoWolf"]/comps/li[@Class="CompProperties_Shearable"]/woolAmount</xpath>
+      <value><woolAmount>26</woolAmount></value>
+    </match>
+  </Operation>
+
+  <!-- ==================== マンモス (JP_Mammoth) - 出現頻度 ==================== -->
+  <Operation Class="PatchOperationConditional">
+    <xpath>Defs/BiomeDef[defName="Tundra"]/animalCommonalities</xpath>
+    <match Class="PatchOperationAdd">
+      <xpath>Defs/BiomeDef[defName="Tundra"]/animalCommonalities</xpath>
+      <value><li><animal>JP_Mammoth</animal><commonality>2</commonality></li></value>
+    </match>
+  </Operation>
+  <Operation Class="PatchOperationConditional">
+    <xpath>Defs/BiomeDef[defName="BorealForest"]/animalCommonalities</xpath>
+    <match Class="PatchOperationAdd">
+      <xpath>Defs/BiomeDef[defName="BorealForest"]/animalCommonalities</xpath>
+      <value><li><animal>JP_Mammoth</animal><commonality>1.6</commonality></li></value>
+    </match>
+  </Operation>
+  <Operation Class="PatchOperationConditional">
+    <xpath>Defs/BiomeDef[defName="ExtremeDesert"]/animalCommonalities</xpath>
+    <match Class="PatchOperationAdd">
+      <xpath>Defs/BiomeDef[defName="ExtremeDesert"]/animalCommonalities</xpath>
+      <value><li><animal>JP_Mammoth</animal><commonality>1.2</commonality></li></value>
+    </match>
+  </Operation>
+
+  <!-- 基本肉量・革量: マンモス -->
+  <Operation Class="PatchOperationConditional">
+    <xpath>Defs/ThingDef[defName="JP_Mammoth"]/statBases</xpath>
+    <match Class="PatchOperationAdd">
+      <xpath>Defs/ThingDef[defName="JP_Mammoth"]/statBases</xpath>
+      <value>
+        <MeatAmount>110</MeatAmount>
+        <LeatherAmount>40</LeatherAmount>
+      </value>
+    </match>
+  </Operation>
+
+  <!-- 基本毛量(テイム後の毛刈り): マンモス -->
+  <Operation Class="PatchOperationConditional">
+    <xpath>Defs/ThingDef[defName="JP_Mammoth"]/comps/li[@Class="CompProperties_Shearable"]/woolAmount</xpath>
+    <match Class="PatchOperationReplace">
+      <xpath>Defs/ThingDef[defName="JP_Mammoth"]/comps/li[@Class="CompProperties_Shearable"]/woolAmount</xpath>
+      <value><woolAmount>65</woolAmount></value>
+    </match>
+  </Operation>
+
+  <!-- ==================== マゾタイロス (JP_Mazotairos) - 出現頻度 ==================== -->
+  <Operation Class="PatchOperationConditional">
+    <xpath>Defs/BiomeDef[defName="AridShrubland"]/animalCommonalities</xpath>
+    <match Class="PatchOperationAdd">
+      <xpath>Defs/BiomeDef[defName="AridShrubland"]/animalCommonalities</xpath>
+      <value><li><animal>JP_Mazotairos</animal><commonality>1.6</commonality></li></value>
+    </match>
+  </Operation>
+  <Operation Class="PatchOperationConditional">
+    <xpath>Defs/BiomeDef[defName="Desert"]/animalCommonalities</xpath>
+    <match Class="PatchOperationAdd">
+      <xpath>Defs/BiomeDef[defName="Desert"]/animalCommonalities</xpath>
+      <value><li><animal>JP_Mazotairos</animal><commonality>1.2</commonality></li></value>
+    </match>
+  </Operation>
+  <Operation Class="PatchOperationConditional">
+    <xpath>Defs/BiomeDef[defName="TropicalRainforest"]/animalCommonalities</xpath>
+    <match Class="PatchOperationAdd">
+      <xpath>Defs/BiomeDef[defName="TropicalRainforest"]/animalCommonalities</xpath>
+      <value><li><animal>JP_Mazotairos</animal><commonality>1.2</commonality></li></value>
+    </match>
+  </Operation>
+
+  <!-- 基本肉量・革量: マゾタイロス -->
+  <Operation Class="PatchOperationConditional">
+    <xpath>Defs/ThingDef[defName="JP_Mazotairos"]/statBases</xpath>
+    <match Class="PatchOperationAdd">
+      <xpath>Defs/ThingDef[defName="JP_Mazotairos"]/statBases</xpath>
+      <value>
+        <MeatAmount>105</MeatAmount>
+        <LeatherAmount>38</LeatherAmount>
+      </value>
+    </match>
+  </Operation>
+
+  <!-- 基本毛量(テイム後の毛刈り): マゾタイロス -->
+  <Operation Class="PatchOperationConditional">
+    <xpath>Defs/ThingDef[defName="JP_Mazotairos"]/comps/li[@Class="CompProperties_Shearable"]/woolAmount</xpath>
+    <match Class="PatchOperationReplace">
+      <xpath>Defs/ThingDef[defName="JP_Mazotairos"]/comps/li[@Class="CompProperties_Shearable"]/woolAmount</xpath>
+      <value><woolAmount>40</woolAmount></value>
+    </match>
+  </Operation>
+
+  <!-- ==================== アダマンタイト (JP_AdamantiteBeast) - 出現頻度 ==================== -->
+  <Operation Class="PatchOperationConditional">
+    <xpath>Defs/BiomeDef[defName="ExtremeDesert"]/animalCommonalities</xpath>
+    <match Class="PatchOperationAdd">
+      <xpath>Defs/BiomeDef[defName="ExtremeDesert"]/animalCommonalities</xpath>
+      <value><li><animal>JP_AdamantiteBeast</animal><commonality>0.16</commonality></li></value>
+    </match>
+  </Operation>
+  <Operation Class="PatchOperationConditional">
+    <xpath>Defs/BiomeDef[defName="Tundra"]/animalCommonalities</xpath>
+    <match Class="PatchOperationAdd">
+      <xpath>Defs/BiomeDef[defName="Tundra"]/animalCommonalities</xpath>
+      <value><li><animal>JP_AdamantiteBeast</animal><commonality>0.16</commonality></li></value>
+    </match>
+  </Operation>
+
+  <!-- 基本肉量・革量: アダマンタイト -->
+  <Operation Class="PatchOperationConditional">
+    <xpath>Defs/ThingDef[defName="JP_AdamantiteBeast"]/statBases</xpath>
+    <match Class="PatchOperationAdd">
+      <xpath>Defs/ThingDef[defName="JP_AdamantiteBeast"]/statBases</xpath>
+      <value>
+        <MeatAmount>100</MeatAmount>
+        <LeatherAmount>45</LeatherAmount>
+      </value>
+    </match>
+  </Operation>
+
+  <!-- 基本毛量(テイム後の毛刈り): アダマンタイト -->
+  <Operation Class="PatchOperationConditional">
+    <xpath>Defs/ThingDef[defName="JP_AdamantiteBeast"]/comps/li[@Class="CompProperties_Shearable"]/woolAmount</xpath>
+    <match Class="PatchOperationReplace">
+      <xpath>Defs/ThingDef[defName="JP_AdamantiteBeast"]/comps/li[@Class="CompProperties_Shearable"]/woolAmount</xpath>
+      <value><woolAmount>10</woolAmount></value>
+    </match>
+  </Operation>
+
+  <!-- ==================== メガネウラ (JP_Meganeura) - 出現頻度 ==================== -->
+  <Operation Class="PatchOperationConditional">
+    <xpath>Defs/BiomeDef[defName="TropicalSwamp"]/animalCommonalities</xpath>
+    <match Class="PatchOperationAdd">
+      <xpath>Defs/BiomeDef[defName="TropicalSwamp"]/animalCommonalities</xpath>
+      <value><li><animal>JP_Meganeura</animal><commonality>2.4</commonality></li></value>
+    </match>
+  </Operation>
+  <Operation Class="PatchOperationConditional">
+    <xpath>Defs/BiomeDef[defName="TemperateSwamp"]/animalCommonalities</xpath>
+    <match Class="PatchOperationAdd">
+      <xpath>Defs/BiomeDef[defName="TemperateSwamp"]/animalCommonalities</xpath>
+      <value><li><animal>JP_Meganeura</animal><commonality>2</commonality></li></value>
+    </match>
+  </Operation>
+  <Operation Class="PatchOperationConditional">
+    <xpath>Defs/BiomeDef[defName="TropicalRainforest"]/animalCommonalities</xpath>
+    <match Class="PatchOperationAdd">
+      <xpath>Defs/BiomeDef[defName="TropicalRainforest"]/animalCommonalities</xpath>
+      <value><li><animal>JP_Meganeura</animal><commonality>1.6</commonality></li></value>
+    </match>
+  </Operation>
+
+  <!-- 基本肉量・革量: メガネウラ -->
+  <Operation Class="PatchOperationConditional">
+    <xpath>Defs/ThingDef[defName="JP_Meganeura"]/statBases</xpath>
+    <match Class="PatchOperationAdd">
+      <xpath>Defs/ThingDef[defName="JP_Meganeura"]/statBases</xpath>
+      <value>
+        <MeatAmount>45</MeatAmount>
+        <LeatherAmount>15</LeatherAmount>
+      </value>
+    </match>
+  </Operation>
+
+  <!-- ==================== ティタノプテラ (JP_Titanoptera) - 出現頻度 ==================== -->
+  <Operation Class="PatchOperationConditional">
+    <xpath>Defs/BiomeDef[defName="TropicalRainforest"]/animalCommonalities</xpath>
+    <match Class="PatchOperationAdd">
+      <xpath>Defs/BiomeDef[defName="TropicalRainforest"]/animalCommonalities</xpath>
+      <value><li><animal>JP_Titanoptera</animal><commonality>1.2</commonality></li></value>
+    </match>
+  </Operation>
+  <Operation Class="PatchOperationConditional">
+    <xpath>Defs/BiomeDef[defName="TropicalSwamp"]/animalCommonalities</xpath>
+    <match Class="PatchOperationAdd">
+      <xpath>Defs/BiomeDef[defName="TropicalSwamp"]/animalCommonalities</xpath>
+      <value><li><animal>JP_Titanoptera</animal><commonality>1.2</commonality></li></value>
+    </match>
+  </Operation>
+  <Operation Class="PatchOperationConditional">
+    <xpath>Defs/BiomeDef[defName="AridShrubland"]/animalCommonalities</xpath>
+    <match Class="PatchOperationAdd">
+      <xpath>Defs/BiomeDef[defName="AridShrubland"]/animalCommonalities</xpath>
+      <value><li><animal>JP_Titanoptera</animal><commonality>0.8</commonality></li></value>
+    </match>
+  </Operation>
+
+  <!-- 基本肉量・革量: ティタノプテラ -->
+  <Operation Class="PatchOperationConditional">
+    <xpath>Defs/ThingDef[defName="JP_Titanoptera"]/statBases</xpath>
+    <match Class="PatchOperationAdd">
+      <xpath>Defs/ThingDef[defName="JP_Titanoptera"]/statBases</xpath>
+      <value>
+        <MeatAmount>65</MeatAmount>
+        <LeatherAmount>22</LeatherAmount>
+      </value>
+    </match>
+  </Operation>
+
+  <!-- ==================== 猫又 (JP_Nekomata) - 出現頻度 ==================== -->
+  <Operation Class="PatchOperationConditional">
+    <xpath>Defs/BiomeDef[defName="TemperateForest"]/animalCommonalities</xpath>
+    <match Class="PatchOperationAdd">
+      <xpath>Defs/BiomeDef[defName="TemperateForest"]/animalCommonalities</xpath>
+      <value><li><animal>JP_Nekomata</animal><commonality>1.4</commonality></li></value>
+    </match>
+  </Operation>
+  <Operation Class="PatchOperationConditional">
+    <xpath>Defs/BiomeDef[defName="TemperateSwamp"]/animalCommonalities</xpath>
+    <match Class="PatchOperationAdd">
+      <xpath>Defs/BiomeDef[defName="TemperateSwamp"]/animalCommonalities</xpath>
+      <value><li><animal>JP_Nekomata</animal><commonality>1.4</commonality></li></value>
+    </match>
+  </Operation>
+  <Operation Class="PatchOperationConditional">
+    <xpath>Defs/BiomeDef[defName="TropicalRainforest"]/animalCommonalities</xpath>
+    <match Class="PatchOperationAdd">
+      <xpath>Defs/BiomeDef[defName="TropicalRainforest"]/animalCommonalities</xpath>
+      <value><li><animal>JP_Nekomata</animal><commonality>1.2</commonality></li></value>
+    </match>
+  </Operation>
+
+  <!-- 基本肉量・革量: 猫又 -->
+  <Operation Class="PatchOperationConditional">
+    <xpath>Defs/ThingDef[defName="JP_Nekomata"]/statBases</xpath>
+    <match Class="PatchOperationAdd">
+      <xpath>Defs/ThingDef[defName="JP_Nekomata"]/statBases</xpath>
+      <value>
+        <MeatAmount>80</MeatAmount>
+        <LeatherAmount>28</LeatherAmount>
+      </value>
+    </match>
+  </Operation>
+
+  <!-- 基本毛量(テイム後の毛刈り): 猫又 -->
+  <Operation Class="PatchOperationConditional">
+    <xpath>Defs/ThingDef[defName="JP_Nekomata"]/comps/li[@Class="CompProperties_Shearable"]/woolAmount</xpath>
+    <match Class="PatchOperationReplace">
+      <xpath>Defs/ThingDef[defName="JP_Nekomata"]/comps/li[@Class="CompProperties_Shearable"]/woolAmount</xpath>
+      <value><woolAmount>25</woolAmount></value>
+    </match>
+  </Operation>
+
+  <!-- ==================== 妖狐 (JP_Youko) - 出現頻度 ==================== -->
+  <Operation Class="PatchOperationConditional">
+    <xpath>Defs/BiomeDef[defName="TemperateForest"]/animalCommonalities</xpath>
+    <match Class="PatchOperationAdd">
+      <xpath>Defs/BiomeDef[defName="TemperateForest"]/animalCommonalities</xpath>
+      <value><li><animal>JP_Youko</animal><commonality>1.2</commonality></li></value>
+    </match>
+  </Operation>
+  <Operation Class="PatchOperationConditional">
+    <xpath>Defs/BiomeDef[defName="AridShrubland"]/animalCommonalities</xpath>
+    <match Class="PatchOperationAdd">
+      <xpath>Defs/BiomeDef[defName="AridShrubland"]/animalCommonalities</xpath>
+      <value><li><animal>JP_Youko</animal><commonality>1.4</commonality></li></value>
+    </match>
+  </Operation>
+  <Operation Class="PatchOperationConditional">
+    <xpath>Defs/BiomeDef[defName="Desert"]/animalCommonalities</xpath>
+    <match Class="PatchOperationAdd">
+      <xpath>Defs/BiomeDef[defName="Desert"]/animalCommonalities</xpath>
+      <value><li><animal>JP_Youko</animal><commonality>1.2</commonality></li></value>
+    </match>
+  </Operation>
+
+  <!-- 基本肉量・革量: 妖狐 -->
+  <Operation Class="PatchOperationConditional">
+    <xpath>Defs/ThingDef[defName="JP_Youko"]/statBases</xpath>
+    <match Class="PatchOperationAdd">
+      <xpath>Defs/ThingDef[defName="JP_Youko"]/statBases</xpath>
+      <value>
+        <MeatAmount>78</MeatAmount>
+        <LeatherAmount>27</LeatherAmount>
+      </value>
+    </match>
+  </Operation>
+
+  <!-- 基本毛量(テイム後の毛刈り): 妖狐 -->
+  <Operation Class="PatchOperationConditional">
+    <xpath>Defs/ThingDef[defName="JP_Youko"]/comps/li[@Class="CompProperties_Shearable"]/woolAmount</xpath>
+    <match Class="PatchOperationReplace">
+      <xpath>Defs/ThingDef[defName="JP_Youko"]/comps/li[@Class="CompProperties_Shearable"]/woolAmount</xpath>
+      <value><woolAmount>22</woolAmount></value>
+    </match>
+  </Operation>
+
+  <!-- ==================== 雪女 (JP_Yukionna) - 出現頻度 ==================== -->
+  <Operation Class="PatchOperationConditional">
+    <xpath>Defs/BiomeDef[defName="Tundra"]/animalCommonalities</xpath>
+    <match Class="PatchOperationAdd">
+      <xpath>Defs/BiomeDef[defName="Tundra"]/animalCommonalities</xpath>
+      <value><li><animal>JP_Yukionna</animal><commonality>1.6</commonality></li></value>
+    </match>
+  </Operation>
+  <Operation Class="PatchOperationConditional">
+    <xpath>Defs/BiomeDef[defName="BorealForest"]/animalCommonalities</xpath>
+    <match Class="PatchOperationAdd">
+      <xpath>Defs/BiomeDef[defName="BorealForest"]/animalCommonalities</xpath>
+      <value><li><animal>JP_Yukionna</animal><commonality>1.2</commonality></li></value>
+    </match>
+  </Operation>
+
+  <!-- 基本肉量・革量: 雪女 -->
+  <Operation Class="PatchOperationConditional">
+    <xpath>Defs/ThingDef[defName="JP_Yukionna"]/statBases</xpath>
+    <match Class="PatchOperationAdd">
+      <xpath>Defs/ThingDef[defName="JP_Yukionna"]/statBases</xpath>
+      <value>
+        <MeatAmount>80</MeatAmount>
+        <LeatherAmount>28</LeatherAmount>
+      </value>
+    </match>
+  </Operation>
+
+  <!-- 基本毛量(テイム後の毛刈り): 雪女 -->
+  <Operation Class="PatchOperationConditional">
+    <xpath>Defs/ThingDef[defName="JP_Yukionna"]/comps/li[@Class="CompProperties_Shearable"]/woolAmount</xpath>
+    <match Class="PatchOperationReplace">
+      <xpath>Defs/ThingDef[defName="JP_Yukionna"]/comps/li[@Class="CompProperties_Shearable"]/woolAmount</xpath>
+      <value><woolAmount>22</woolAmount></value>
+    </match>
+  </Operation>
+
+  <!-- ==================== 座敷童 (JP_Zashikiwarashi) - 出現頻度 ==================== -->
+  <Operation Class="PatchOperationConditional">
+    <xpath>Defs/BiomeDef[defName="TemperateForest"]/animalCommonalities</xpath>
+    <match Class="PatchOperationAdd">
+      <xpath>Defs/BiomeDef[defName="TemperateForest"]/animalCommonalities</xpath>
+      <value><li><animal>JP_Zashikiwarashi</animal><commonality>0.6</commonality></li></value>
+    </match>
+  </Operation>
+  <Operation Class="PatchOperationConditional">
+    <xpath>Defs/BiomeDef[defName="BorealForest"]/animalCommonalities</xpath>
+    <match Class="PatchOperationAdd">
+      <xpath>Defs/BiomeDef[defName="BorealForest"]/animalCommonalities</xpath>
+      <value><li><animal>JP_Zashikiwarashi</animal><commonality>0.4</commonality></li></value>
+    </match>
+  </Operation>
+
+  <!-- 基本肉量・革量: 座敷童 -->
+  <Operation Class="PatchOperationConditional">
+    <xpath>Defs/ThingDef[defName="JP_Zashikiwarashi"]/statBases</xpath>
+    <match Class="PatchOperationAdd">
+      <xpath>Defs/ThingDef[defName="JP_Zashikiwarashi"]/statBases</xpath>
+      <value>
+        <MeatAmount>60</MeatAmount>
+        <LeatherAmount>20</LeatherAmount>
+      </value>
+    </match>
+  </Operation>
+
+  <!-- 基本毛量(テイム後の毛刈り): 座敷童 -->
+  <Operation Class="PatchOperationConditional">
+    <xpath>Defs/ThingDef[defName="JP_Zashikiwarashi"]/comps/li[@Class="CompProperties_Shearable"]/woolAmount</xpath>
+    <match Class="PatchOperationReplace">
+      <xpath>Defs/ThingDef[defName="JP_Zashikiwarashi"]/comps/li[@Class="CompProperties_Shearable"]/woolAmount</xpath>
+      <value><woolAmount>15</woolAmount></value>
+    </match>
+  </Operation>
+
+  <!-- ==================== 天狗 (JP_Tengu) - 出現頻度 ==================== -->
+  <Operation Class="PatchOperationConditional">
+    <xpath>Defs/BiomeDef[defName="BorealForest"]/animalCommonalities</xpath>
+    <match Class="PatchOperationAdd">
+      <xpath>Defs/BiomeDef[defName="BorealForest"]/animalCommonalities</xpath>
+      <value><li><animal>JP_Tengu</animal><commonality>0.6</commonality></li></value>
+    </match>
+  </Operation>
+  <Operation Class="PatchOperationConditional">
+    <xpath>Defs/BiomeDef[defName="TemperateForest"]/animalCommonalities</xpath>
+    <match Class="PatchOperationAdd">
+      <xpath>Defs/BiomeDef[defName="TemperateForest"]/animalCommonalities</xpath>
+      <value><li><animal>JP_Tengu</animal><commonality>0.6</commonality></li></value>
+    </match>
+  </Operation>
+  <Operation Class="PatchOperationConditional">
+    <xpath>Defs/BiomeDef[defName="Tundra"]/animalCommonalities</xpath>
+    <match Class="PatchOperationAdd">
+      <xpath>Defs/BiomeDef[defName="Tundra"]/animalCommonalities</xpath>
+      <value><li><animal>JP_Tengu</animal><commonality>0.4</commonality></li></value>
+    </match>
+  </Operation>
+
+  <!-- 基本肉量・革量: 天狗 -->
+  <Operation Class="PatchOperationConditional">
+    <xpath>Defs/ThingDef[defName="JP_Tengu"]/statBases</xpath>
+    <match Class="PatchOperationAdd">
+      <xpath>Defs/ThingDef[defName="JP_Tengu"]/statBases</xpath>
+      <value>
+        <MeatAmount>85</MeatAmount>
+        <LeatherAmount>30</LeatherAmount>
+      </value>
+    </match>
+  </Operation>
+
+  <!-- 基本毛量(テイム後の毛刈り): 天狗 -->
+  <Operation Class="PatchOperationConditional">
+    <xpath>Defs/ThingDef[defName="JP_Tengu"]/comps/li[@Class="CompProperties_Shearable"]/woolAmount</xpath>
+    <match Class="PatchOperationReplace">
+      <xpath>Defs/ThingDef[defName="JP_Tengu"]/comps/li[@Class="CompProperties_Shearable"]/woolAmount</xpath>
+      <value><woolAmount>25</woolAmount></value>
+    </match>
+  </Operation>
+
+  <!-- ==================== 鬼人 (JP_Oni) - 出現頻度 ==================== -->
+  <Operation Class="PatchOperationConditional">
+    <xpath>Defs/BiomeDef[defName="AridShrubland"]/animalCommonalities</xpath>
+    <match Class="PatchOperationAdd">
+      <xpath>Defs/BiomeDef[defName="AridShrubland"]/animalCommonalities</xpath>
+      <value><li><animal>JP_Oni</animal><commonality>0.6</commonality></li></value>
+    </match>
+  </Operation>
+  <Operation Class="PatchOperationConditional">
+    <xpath>Defs/BiomeDef[defName="ExtremeDesert"]/animalCommonalities</xpath>
+    <match Class="PatchOperationAdd">
+      <xpath>Defs/BiomeDef[defName="ExtremeDesert"]/animalCommonalities</xpath>
+      <value><li><animal>JP_Oni</animal><commonality>0.8</commonality></li></value>
+    </match>
+  </Operation>
+  <Operation Class="PatchOperationConditional">
+    <xpath>Defs/BiomeDef[defName="Tundra"]/animalCommonalities</xpath>
+    <match Class="PatchOperationAdd">
+      <xpath>Defs/BiomeDef[defName="Tundra"]/animalCommonalities</xpath>
+      <value><li><animal>JP_Oni</animal><commonality>0.6</commonality></li></value>
+    </match>
+  </Operation>
+
+  <!-- 基本肉量・革量: 鬼人 -->
+  <Operation Class="PatchOperationConditional">
+    <xpath>Defs/ThingDef[defName="JP_Oni"]/statBases</xpath>
+    <match Class="PatchOperationAdd">
+      <xpath>Defs/ThingDef[defName="JP_Oni"]/statBases</xpath>
+      <value>
+        <MeatAmount>95</MeatAmount>
+        <LeatherAmount>35</LeatherAmount>
+      </value>
+    </match>
+  </Operation>
+
+  <!-- 基本毛量(テイム後の毛刈り): 鬼人 -->
+  <Operation Class="PatchOperationConditional">
+    <xpath>Defs/ThingDef[defName="JP_Oni"]/comps/li[@Class="CompProperties_Shearable"]/woolAmount</xpath>
+    <match Class="PatchOperationReplace">
+      <xpath>Defs/ThingDef[defName="JP_Oni"]/comps/li[@Class="CompProperties_Shearable"]/woolAmount</xpath>
+      <value><woolAmount>30</woolAmount></value>
+    </match>
+  </Operation>
+
+  <!-- ==================== 竜人 (JP_Dragonkin) - 出現頻度 ==================== -->
+  <Operation Class="PatchOperationConditional">
+    <xpath>Defs/BiomeDef[defName="TropicalRainforest"]/animalCommonalities</xpath>
+    <match Class="PatchOperationAdd">
+      <xpath>Defs/BiomeDef[defName="TropicalRainforest"]/animalCommonalities</xpath>
+      <value><li><animal>JP_Dragonkin</animal><commonality>0.32</commonality></li></value>
+    </match>
+  </Operation>
+  <Operation Class="PatchOperationConditional">
+    <xpath>Defs/BiomeDef[defName="ExtremeDesert"]/animalCommonalities</xpath>
+    <match Class="PatchOperationAdd">
+      <xpath>Defs/BiomeDef[defName="ExtremeDesert"]/animalCommonalities</xpath>
+      <value><li><animal>JP_Dragonkin</animal><commonality>0.32</commonality></li></value>
+    </match>
+  </Operation>
+  <Operation Class="PatchOperationConditional">
+    <xpath>Defs/BiomeDef[defName="Tundra"]/animalCommonalities</xpath>
+    <match Class="PatchOperationAdd">
+      <xpath>Defs/BiomeDef[defName="Tundra"]/animalCommonalities</xpath>
+      <value><li><animal>JP_Dragonkin</animal><commonality>0.32</commonality></li></value>
+    </match>
+  </Operation>
+  <Operation Class="PatchOperationConditional">
+    <xpath>Defs/BiomeDef[defName="BorealForest"]/animalCommonalities</xpath>
+    <match Class="PatchOperationAdd">
+      <xpath>Defs/BiomeDef[defName="BorealForest"]/animalCommonalities</xpath>
+      <value><li><animal>JP_Dragonkin</animal><commonality>0.32</commonality></li></value>
+    </match>
+  </Operation>
+
+  <!-- 基本肉量・革量: 竜人 -->
+  <Operation Class="PatchOperationConditional">
+    <xpath>Defs/ThingDef[defName="JP_Dragonkin"]/statBases</xpath>
+    <match Class="PatchOperationAdd">
+      <xpath>Defs/ThingDef[defName="JP_Dragonkin"]/statBases</xpath>
+      <value>
+        <MeatAmount>100</MeatAmount>
+        <LeatherAmount>40</LeatherAmount>
+      </value>
+    </match>
+  </Operation>
+
+  <!-- 基本毛量(テイム後の毛刈り): 竜人 -->
+  <Operation Class="PatchOperationConditional">
+    <xpath>Defs/ThingDef[defName="JP_Dragonkin"]/comps/li[@Class="CompProperties_Shearable"]/woolAmount</xpath>
+    <match Class="PatchOperationReplace">
+      <xpath>Defs/ThingDef[defName="JP_Dragonkin"]/comps/li[@Class="CompProperties_Shearable"]/woolAmount</xpath>
+      <value><woolAmount>28</woolAmount></value>
+    </match>
+  </Operation>
+
+  <!-- ==================== アースロプレウラ (JP_Arthropleura) - 出現頻度 ==================== -->
+  <Operation Class="PatchOperationConditional">
+    <xpath>Defs/BiomeDef[defName="TropicalRainforest"]/animalCommonalities</xpath>
+    <match Class="PatchOperationAdd">
+      <xpath>Defs/BiomeDef[defName="TropicalRainforest"]/animalCommonalities</xpath>
+      <value><li><animal>JP_Arthropleura</animal><commonality>1.2</commonality></li></value>
+    </match>
+  </Operation>
+  <Operation Class="PatchOperationConditional">
+    <xpath>Defs/BiomeDef[defName="TemperateForest"]/animalCommonalities</xpath>
+    <match Class="PatchOperationAdd">
+      <xpath>Defs/BiomeDef[defName="TemperateForest"]/animalCommonalities</xpath>
+      <value><li><animal>JP_Arthropleura</animal><commonality>1</commonality></li></value>
+    </match>
+  </Operation>
+  <Operation Class="PatchOperationConditional">
+    <xpath>Defs/BiomeDef[defName="TemperateSwamp"]/animalCommonalities</xpath>
+    <match Class="PatchOperationAdd">
+      <xpath>Defs/BiomeDef[defName="TemperateSwamp"]/animalCommonalities</xpath>
+      <value><li><animal>JP_Arthropleura</animal><commonality>1</commonality></li></value>
+    </match>
+  </Operation>
+
+  <!-- 基本肉量・革量: アースロプレウラ -->
+  <Operation Class="PatchOperationConditional">
+    <xpath>Defs/ThingDef[defName="JP_Arthropleura"]/statBases</xpath>
+    <match Class="PatchOperationAdd">
+      <xpath>Defs/ThingDef[defName="JP_Arthropleura"]/statBases</xpath>
+      <value>
+        <MeatAmount>65</MeatAmount>
+        <LeatherAmount>25</LeatherAmount>
+      </value>
+    </match>
+  </Operation>
+
+  <!-- ==================== プルモノスコルピウス (JP_Pulmonoscorpius) - 出現頻度 ==================== -->
+  <Operation Class="PatchOperationConditional">
+    <xpath>Defs/BiomeDef[defName="AridShrubland"]/animalCommonalities</xpath>
+    <match Class="PatchOperationAdd">
+      <xpath>Defs/BiomeDef[defName="AridShrubland"]/animalCommonalities</xpath>
+      <value><li><animal>JP_Pulmonoscorpius</animal><commonality>1</commonality></li></value>
+    </match>
+  </Operation>
+  <Operation Class="PatchOperationConditional">
+    <xpath>Defs/BiomeDef[defName="Desert"]/animalCommonalities</xpath>
+    <match Class="PatchOperationAdd">
+      <xpath>Defs/BiomeDef[defName="Desert"]/animalCommonalities</xpath>
+      <value><li><animal>JP_Pulmonoscorpius</animal><commonality>1.2</commonality></li></value>
+    </match>
+  </Operation>
+  <Operation Class="PatchOperationConditional">
+    <xpath>Defs/BiomeDef[defName="ExtremeDesert"]/animalCommonalities</xpath>
+    <match Class="PatchOperationAdd">
+      <xpath>Defs/BiomeDef[defName="ExtremeDesert"]/animalCommonalities</xpath>
+      <value><li><animal>JP_Pulmonoscorpius</animal><commonality>0.8</commonality></li></value>
+    </match>
+  </Operation>
+
+  <!-- 基本肉量・革量: プルモノスコルピウス -->
+  <Operation Class="PatchOperationConditional">
+    <xpath>Defs/ThingDef[defName="JP_Pulmonoscorpius"]/statBases</xpath>
+    <match Class="PatchOperationAdd">
+      <xpath>Defs/ThingDef[defName="JP_Pulmonoscorpius"]/statBases</xpath>
+      <value>
+        <MeatAmount>60</MeatAmount>
+        <LeatherAmount>22</LeatherAmount>
+      </value>
+    </match>
+  </Operation>
+
+  <!-- ==================== メガラクネ (JP_Megarachne) - 出現頻度 ==================== -->
+  <Operation Class="PatchOperationConditional">
+    <xpath>Defs/BiomeDef[defName="TropicalRainforest"]/animalCommonalities</xpath>
+    <match Class="PatchOperationAdd">
+      <xpath>Defs/BiomeDef[defName="TropicalRainforest"]/animalCommonalities</xpath>
+      <value><li><animal>JP_Megarachne</animal><commonality>1</commonality></li></value>
+    </match>
+  </Operation>
+  <Operation Class="PatchOperationConditional">
+    <xpath>Defs/BiomeDef[defName="TemperateForest"]/animalCommonalities</xpath>
+    <match Class="PatchOperationAdd">
+      <xpath>Defs/BiomeDef[defName="TemperateForest"]/animalCommonalities</xpath>
+      <value><li><animal>JP_Megarachne</animal><commonality>0.8</commonality></li></value>
+    </match>
+  </Operation>
+
+  <!-- 基本肉量・革量: メガラクネ -->
+  <Operation Class="PatchOperationConditional">
+    <xpath>Defs/ThingDef[defName="JP_Megarachne"]/statBases</xpath>
+    <match Class="PatchOperationAdd">
+      <xpath>Defs/ThingDef[defName="JP_Megarachne"]/statBases</xpath>
+      <value>
+        <MeatAmount>55</MeatAmount>
+        <LeatherAmount>18</LeatherAmount>
+      </value>
+    </match>
+  </Operation>
+
+  <!-- ==================== タイタノミルマ (JP_Titanomyrma) - 出現頻度 ==================== -->
+  <Operation Class="PatchOperationConditional">
+    <xpath>Defs/BiomeDef[defName="TropicalRainforest"]/animalCommonalities</xpath>
+    <match Class="PatchOperationAdd">
+      <xpath>Defs/BiomeDef[defName="TropicalRainforest"]/animalCommonalities</xpath>
+      <value><li><animal>JP_Titanomyrma</animal><commonality>1.6</commonality></li></value>
+    </match>
+  </Operation>
+  <Operation Class="PatchOperationConditional">
+    <xpath>Defs/BiomeDef[defName="TropicalSwamp"]/animalCommonalities</xpath>
+    <match Class="PatchOperationAdd">
+      <xpath>Defs/BiomeDef[defName="TropicalSwamp"]/animalCommonalities</xpath>
+      <value><li><animal>JP_Titanomyrma</animal><commonality>1.4</commonality></li></value>
+    </match>
+  </Operation>
+  <Operation Class="PatchOperationConditional">
+    <xpath>Defs/BiomeDef[defName="AridShrubland"]/animalCommonalities</xpath>
+    <match Class="PatchOperationAdd">
+      <xpath>Defs/BiomeDef[defName="AridShrubland"]/animalCommonalities</xpath>
+      <value><li><animal>JP_Titanomyrma</animal><commonality>1</commonality></li></value>
+    </match>
+  </Operation>
+
+  <!-- 基本肉量・革量: タイタノミルマ -->
+  <Operation Class="PatchOperationConditional">
+    <xpath>Defs/ThingDef[defName="JP_Titanomyrma"]/statBases</xpath>
+    <match Class="PatchOperationAdd">
+      <xpath>Defs/ThingDef[defName="JP_Titanomyrma"]/statBases</xpath>
+      <value>
+        <MeatAmount>35</MeatAmount>
+        <LeatherAmount>12</LeatherAmount>
+      </value>
+    </match>
+  </Operation>
+
+  <!-- ==================== アーキミラクリス (JP_Archimylacris) - 出現頻度 ==================== -->
+  <Operation Class="PatchOperationConditional">
+    <xpath>Defs/BiomeDef[defName="TemperateForest"]/animalCommonalities</xpath>
+    <match Class="PatchOperationAdd">
+      <xpath>Defs/BiomeDef[defName="TemperateForest"]/animalCommonalities</xpath>
+      <value><li><animal>JP_Archimylacris</animal><commonality>2</commonality></li></value>
+    </match>
+  </Operation>
+  <Operation Class="PatchOperationConditional">
+    <xpath>Defs/BiomeDef[defName="TemperateSwamp"]/animalCommonalities</xpath>
+    <match Class="PatchOperationAdd">
+      <xpath>Defs/BiomeDef[defName="TemperateSwamp"]/animalCommonalities</xpath>
+      <value><li><animal>JP_Archimylacris</animal><commonality>1.8</commonality></li></value>
+    </match>
+  </Operation>
+  <Operation Class="PatchOperationConditional">
+    <xpath>Defs/BiomeDef[defName="TropicalRainforest"]/animalCommonalities</xpath>
+    <match Class="PatchOperationAdd">
+      <xpath>Defs/BiomeDef[defName="TropicalRainforest"]/animalCommonalities</xpath>
+      <value><li><animal>JP_Archimylacris</animal><commonality>2</commonality></li></value>
+    </match>
+  </Operation>
+  <Operation Class="PatchOperationConditional">
+    <xpath>Defs/BiomeDef[defName="TropicalSwamp"]/animalCommonalities</xpath>
+    <match Class="PatchOperationAdd">
+      <xpath>Defs/BiomeDef[defName="TropicalSwamp"]/animalCommonalities</xpath>
+      <value><li><animal>JP_Archimylacris</animal><commonality>1.8</commonality></li></value>
+    </match>
+  </Operation>
+
+  <!-- 基本肉量・革量: アーキミラクリス -->
+  <Operation Class="PatchOperationConditional">
+    <xpath>Defs/ThingDef[defName="JP_Archimylacris"]/statBases</xpath>
+    <match Class="PatchOperationAdd">
+      <xpath>Defs/ThingDef[defName="JP_Archimylacris"]/statBases</xpath>
+      <value>
+        <MeatAmount>20</MeatAmount>
+        <LeatherAmount>8</LeatherAmount>
+      </value>
+    </match>
+  </Operation>
+
+</Patch>
