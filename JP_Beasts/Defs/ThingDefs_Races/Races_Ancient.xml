@@ -365,7 +365,7 @@
       <ArmorRating_Sharp>0.55</ArmorRating_Sharp>
       <ArmorRating_Blunt>0.45</ArmorRating_Blunt>
       <ArmorRating_Heat>0.35</ArmorRating_Heat>
-      <Wildness>1.0</Wildness>
+      <Wildness>0.99</Wildness>
     </statBases>
     <race>
       <body>QuadrupedAnimalWithPawsAndTail</body>
