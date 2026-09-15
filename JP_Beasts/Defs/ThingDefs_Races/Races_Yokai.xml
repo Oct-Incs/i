@@ -26,7 +26,7 @@
       <leatherDef>JP_Leather_RareSpecies</leatherDef>
       <meatDef>Meat_Human</meatDef>
       <manhunterOnDamageChance>0.00</manhunterOnDamageChance>
-      <manhunterOnTameFailChance>0.35</manhunterOnTameFailChance>
+      <manhunterOnTameFailChance>0.00</manhunterOnTameFailChance>
       <trainability>Intermediate</trainability>
       <herdAnimal>false</herdAnimal>
       <canBePredatorPrey>true</canBePredatorPrey>
@@ -98,7 +98,7 @@
       <leatherDef>JP_Leather_RareSpecies</leatherDef>
       <meatDef>Meat_Human</meatDef>
       <manhunterOnDamageChance>0.00</manhunterOnDamageChance>
-      <manhunterOnTameFailChance>0.35</manhunterOnTameFailChance>
+      <manhunterOnTameFailChance>0.00</manhunterOnTameFailChance>
       <trainability>Intermediate</trainability>
       <herdAnimal>false</herdAnimal>
       <canBePredatorPrey>true</canBePredatorPrey>
@@ -176,7 +176,7 @@
       <leatherDef>JP_Leather_RareSpecies</leatherDef>
       <meatDef>Meat_Human</meatDef>
       <manhunterOnDamageChance>0.00</manhunterOnDamageChance>
-      <manhunterOnTameFailChance>0.35</manhunterOnTameFailChance>
+      <manhunterOnTameFailChance>0.00</manhunterOnTameFailChance>
       <trainability>Intermediate</trainability>
       <herdAnimal>false</herdAnimal>
       <canBePredatorPrey>true</canBePredatorPrey>
@@ -253,7 +253,7 @@
       <leatherDef>JP_Leather_RareSpecies</leatherDef>
       <meatDef>Meat_Human</meatDef>
       <manhunterOnDamageChance>0.00</manhunterOnDamageChance>
-      <manhunterOnTameFailChance>0.15</manhunterOnTameFailChance>
+      <manhunterOnTameFailChance>0.00</manhunterOnTameFailChance>
       <trainability>Intermediate</trainability>
       <herdAnimal>false</herdAnimal>
       <canBePredatorPrey>true</canBePredatorPrey>
@@ -337,7 +337,7 @@
       <leatherDef>JP_Leather_RareSpecies</leatherDef>
       <meatDef>Meat_Human</meatDef>
       <manhunterOnDamageChance>0.35</manhunterOnDamageChance>
-      <manhunterOnTameFailChance>0.4</manhunterOnTameFailChance>
+      <manhunterOnTameFailChance>0.12</manhunterOnTameFailChance>
       <trainability>Intermediate</trainability>
       <herdAnimal>false</herdAnimal>
       <canBePredatorPrey>true</canBePredatorPrey>
@@ -410,7 +410,7 @@
       <leatherDef>JP_Leather_RareSpecies</leatherDef>
       <meatDef>Meat_Human</meatDef>
       <manhunterOnDamageChance>0.35</manhunterOnDamageChance>
-      <manhunterOnTameFailChance>0.45</manhunterOnTameFailChance>
+      <manhunterOnTameFailChance>0.12</manhunterOnTameFailChance>
       <trainability>Intermediate</trainability>
       <herdAnimal>false</herdAnimal>
       <canBePredatorPrey>true</canBePredatorPrey>
@@ -495,7 +495,7 @@
       <leatherDef>JP_Leather_RareSpecies</leatherDef>
       <meatDef>Meat_Human</meatDef>
       <manhunterOnDamageChance>0.35</manhunterOnDamageChance>
-      <manhunterOnTameFailChance>0.5</manhunterOnTameFailChance>
+      <manhunterOnTameFailChance>0.12</manhunterOnTameFailChance>
       <trainability>Intermediate</trainability>
       <herdAnimal>false</herdAnimal>
       <canBePredatorPrey>true</canBePredatorPrey>
@@ -575,7 +575,7 @@
       <meatLabel>insect meat</meatLabel>
       <meatColor>(60,68,39)</meatColor>
       <manhunterOnDamageChance>0.35</manhunterOnDamageChance>
-      <manhunterOnTameFailChance>0.40</manhunterOnTameFailChance>
+      <manhunterOnTameFailChance>0.12</manhunterOnTameFailChance>
       <trainability>Intermediate</trainability>
       <herdAnimal>false</herdAnimal>
       <canBePredatorPrey>true</canBePredatorPrey>
