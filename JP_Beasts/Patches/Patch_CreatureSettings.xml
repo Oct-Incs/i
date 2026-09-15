@@ -36,23 +36,23 @@
 
   <!-- ==================== ニホンオオカミ (JP_JapaneseWolf) - 出現頻度 ==================== -->
   <Operation Class="PatchOperationConditional">
-    <xpath>Defs/BiomeDef[defName="TemperateForest"]/animalCommonalities</xpath>
+    <xpath>Defs/BiomeDef[defName="TemperateForest"]/wildAnimals</xpath>
     <match Class="PatchOperationAdd">
-      <xpath>Defs/BiomeDef[defName="TemperateForest"]/animalCommonalities</xpath>
+      <xpath>Defs/BiomeDef[defName="TemperateForest"]/wildAnimals</xpath>
       <value><li><animal>JP_JapaneseWolf</animal><commonality>12</commonality></li></value>
     </match>
   </Operation>
   <Operation Class="PatchOperationConditional">
-    <xpath>Defs/BiomeDef[defName="BorealForest"]/animalCommonalities</xpath>
+    <xpath>Defs/BiomeDef[defName="BorealForest"]/wildAnimals</xpath>
     <match Class="PatchOperationAdd">
-      <xpath>Defs/BiomeDef[defName="BorealForest"]/animalCommonalities</xpath>
+      <xpath>Defs/BiomeDef[defName="BorealForest"]/wildAnimals</xpath>
       <value><li><animal>JP_JapaneseWolf</animal><commonality>16.8</commonality></li></value>
     </match>
   </Operation>
   <Operation Class="PatchOperationConditional">
-    <xpath>Defs/BiomeDef[defName="Tundra"]/animalCommonalities</xpath>
+    <xpath>Defs/BiomeDef[defName="Tundra"]/wildAnimals</xpath>
     <match Class="PatchOperationAdd">
-      <xpath>Defs/BiomeDef[defName="Tundra"]/animalCommonalities</xpath>
+      <xpath>Defs/BiomeDef[defName="Tundra"]/wildAnimals</xpath>
       <value><li><animal>JP_JapaneseWolf</animal><commonality>9.6</commonality></li></value>
     </match>
   </Operation>
@@ -89,16 +89,16 @@
 
   <!-- ==================== エゾオオカミ (JP_EzoWolf) - 出現頻度 ==================== -->
   <Operation Class="PatchOperationConditional">
-    <xpath>Defs/BiomeDef[defName="BorealForest"]/animalCommonalities</xpath>
+    <xpath>Defs/BiomeDef[defName="BorealForest"]/wildAnimals</xpath>
     <match Class="PatchOperationAdd">
-      <xpath>Defs/BiomeDef[defName="BorealForest"]/animalCommonalities</xpath>
+      <xpath>Defs/BiomeDef[defName="BorealForest"]/wildAnimals</xpath>
       <value><li><animal>JP_EzoWolf</animal><commonality>14.4</commonality></li></value>
     </match>
   </Operation>
   <Operation Class="PatchOperationConditional">
-    <xpath>Defs/BiomeDef[defName="Tundra"]/animalCommonalities</xpath>
+    <xpath>Defs/BiomeDef[defName="Tundra"]/wildAnimals</xpath>
     <match Class="PatchOperationAdd">
-      <xpath>Defs/BiomeDef[defName="Tundra"]/animalCommonalities</xpath>
+      <xpath>Defs/BiomeDef[defName="Tundra"]/wildAnimals</xpath>
       <value><li><animal>JP_EzoWolf</animal><commonality>12</commonality></li></value>
     </match>
   </Operation>
@@ -135,23 +135,23 @@
 
   <!-- ==================== マンモス (JP_Mammoth) - 出現頻度 ==================== -->
   <Operation Class="PatchOperationConditional">
-    <xpath>Defs/BiomeDef[defName="Tundra"]/animalCommonalities</xpath>
+    <xpath>Defs/BiomeDef[defName="Tundra"]/wildAnimals</xpath>
     <match Class="PatchOperationAdd">
-      <xpath>Defs/BiomeDef[defName="Tundra"]/animalCommonalities</xpath>
+      <xpath>Defs/BiomeDef[defName="Tundra"]/wildAnimals</xpath>
       <value><li><animal>JP_Mammoth</animal><commonality>6</commonality></li></value>
     </match>
   </Operation>
   <Operation Class="PatchOperationConditional">
-    <xpath>Defs/BiomeDef[defName="BorealForest"]/animalCommonalities</xpath>
+    <xpath>Defs/BiomeDef[defName="BorealForest"]/wildAnimals</xpath>
     <match Class="PatchOperationAdd">
-      <xpath>Defs/BiomeDef[defName="BorealForest"]/animalCommonalities</xpath>
+      <xpath>Defs/BiomeDef[defName="BorealForest"]/wildAnimals</xpath>
       <value><li><animal>JP_Mammoth</animal><commonality>4.8</commonality></li></value>
     </match>
   </Operation>
   <Operation Class="PatchOperationConditional">
-    <xpath>Defs/BiomeDef[defName="ExtremeDesert"]/animalCommonalities</xpath>
+    <xpath>Defs/BiomeDef[defName="ExtremeDesert"]/wildAnimals</xpath>
     <match Class="PatchOperationAdd">
-      <xpath>Defs/BiomeDef[defName="ExtremeDesert"]/animalCommonalities</xpath>
+      <xpath>Defs/BiomeDef[defName="ExtremeDesert"]/wildAnimals</xpath>
       <value><li><animal>JP_Mammoth</animal><commonality>3.6</commonality></li></value>
     </match>
   </Operation>
@@ -188,23 +188,23 @@
 
   <!-- ==================== マゾタイロス (JP_Mazotairos) - 出現頻度 ==================== -->
   <Operation Class="PatchOperationConditional">
-    <xpath>Defs/BiomeDef[defName="AridShrubland"]/animalCommonalities</xpath>
+    <xpath>Defs/BiomeDef[defName="AridShrubland"]/wildAnimals</xpath>
     <match Class="PatchOperationAdd">
-      <xpath>Defs/BiomeDef[defName="AridShrubland"]/animalCommonalities</xpath>
+      <xpath>Defs/BiomeDef[defName="AridShrubland"]/wildAnimals</xpath>
       <value><li><animal>JP_Mazotairos</animal><commonality>4.8</commonality></li></value>
     </match>
   </Operation>
   <Operation Class="PatchOperationConditional">
-    <xpath>Defs/BiomeDef[defName="Desert"]/animalCommonalities</xpath>
+    <xpath>Defs/BiomeDef[defName="Desert"]/wildAnimals</xpath>
     <match Class="PatchOperationAdd">
-      <xpath>Defs/BiomeDef[defName="Desert"]/animalCommonalities</xpath>
+      <xpath>Defs/BiomeDef[defName="Desert"]/wildAnimals</xpath>
       <value><li><animal>JP_Mazotairos</animal><commonality>3.6</commonality></li></value>
     </match>
   </Operation>
   <Operation Class="PatchOperationConditional">
-    <xpath>Defs/BiomeDef[defName="TropicalRainforest"]/animalCommonalities</xpath>
+    <xpath>Defs/BiomeDef[defName="TropicalRainforest"]/wildAnimals</xpath>
     <match Class="PatchOperationAdd">
-      <xpath>Defs/BiomeDef[defName="TropicalRainforest"]/animalCommonalities</xpath>
+      <xpath>Defs/BiomeDef[defName="TropicalRainforest"]/wildAnimals</xpath>
       <value><li><animal>JP_Mazotairos</animal><commonality>3.6</commonality></li></value>
     </match>
   </Operation>
@@ -241,16 +241,16 @@
 
   <!-- ==================== アダマンタイト (JP_AdamantiteBeast) - 出現頻度 ==================== -->
   <Operation Class="PatchOperationConditional">
-    <xpath>Defs/BiomeDef[defName="ExtremeDesert"]/animalCommonalities</xpath>
+    <xpath>Defs/BiomeDef[defName="ExtremeDesert"]/wildAnimals</xpath>
     <match Class="PatchOperationAdd">
-      <xpath>Defs/BiomeDef[defName="ExtremeDesert"]/animalCommonalities</xpath>
+      <xpath>Defs/BiomeDef[defName="ExtremeDesert"]/wildAnimals</xpath>
       <value><li><animal>JP_AdamantiteBeast</animal><commonality>0.48</commonality></li></value>
     </match>
   </Operation>
   <Operation Class="PatchOperationConditional">
-    <xpath>Defs/BiomeDef[defName="Tundra"]/animalCommonalities</xpath>
+    <xpath>Defs/BiomeDef[defName="Tundra"]/wildAnimals</xpath>
     <match Class="PatchOperationAdd">
-      <xpath>Defs/BiomeDef[defName="Tundra"]/animalCommonalities</xpath>
+      <xpath>Defs/BiomeDef[defName="Tundra"]/wildAnimals</xpath>
       <value><li><animal>JP_AdamantiteBeast</animal><commonality>0.48</commonality></li></value>
     </match>
   </Operation>
@@ -287,16 +287,16 @@
 
   <!-- ==================== ケナガサイ (JP_WoollyRhino) - 出現頻度 ==================== -->
   <Operation Class="PatchOperationConditional">
-    <xpath>Defs/BiomeDef[defName="Tundra"]/animalCommonalities</xpath>
+    <xpath>Defs/BiomeDef[defName="Tundra"]/wildAnimals</xpath>
     <match Class="PatchOperationAdd">
-      <xpath>Defs/BiomeDef[defName="Tundra"]/animalCommonalities</xpath>
+      <xpath>Defs/BiomeDef[defName="Tundra"]/wildAnimals</xpath>
       <value><li><animal>JP_WoollyRhino</animal><commonality>7.2</commonality></li></value>
     </match>
   </Operation>
   <Operation Class="PatchOperationConditional">
-    <xpath>Defs/BiomeDef[defName="BorealForest"]/animalCommonalities</xpath>
+    <xpath>Defs/BiomeDef[defName="BorealForest"]/wildAnimals</xpath>
     <match Class="PatchOperationAdd">
-      <xpath>Defs/BiomeDef[defName="BorealForest"]/animalCommonalities</xpath>
+      <xpath>Defs/BiomeDef[defName="BorealForest"]/wildAnimals</xpath>
       <value><li><animal>JP_WoollyRhino</animal><commonality>4.8</commonality></li></value>
     </match>
   </Operation>
@@ -333,23 +333,23 @@
 
   <!-- ==================== オオツノジカ (JP_IrishElk) - 出現頻度 ==================== -->
   <Operation Class="PatchOperationConditional">
-    <xpath>Defs/BiomeDef[defName="TemperateForest"]/animalCommonalities</xpath>
+    <xpath>Defs/BiomeDef[defName="TemperateForest"]/wildAnimals</xpath>
     <match Class="PatchOperationAdd">
-      <xpath>Defs/BiomeDef[defName="TemperateForest"]/animalCommonalities</xpath>
+      <xpath>Defs/BiomeDef[defName="TemperateForest"]/wildAnimals</xpath>
       <value><li><animal>JP_IrishElk</animal><commonality>7.2</commonality></li></value>
     </match>
   </Operation>
   <Operation Class="PatchOperationConditional">
-    <xpath>Defs/BiomeDef[defName="BorealForest"]/animalCommonalities</xpath>
+    <xpath>Defs/BiomeDef[defName="BorealForest"]/wildAnimals</xpath>
     <match Class="PatchOperationAdd">
-      <xpath>Defs/BiomeDef[defName="BorealForest"]/animalCommonalities</xpath>
+      <xpath>Defs/BiomeDef[defName="BorealForest"]/wildAnimals</xpath>
       <value><li><animal>JP_IrishElk</animal><commonality>6</commonality></li></value>
     </match>
   </Operation>
   <Operation Class="PatchOperationConditional">
-    <xpath>Defs/BiomeDef[defName="Tundra"]/animalCommonalities</xpath>
+    <xpath>Defs/BiomeDef[defName="Tundra"]/wildAnimals</xpath>
     <match Class="PatchOperationAdd">
-      <xpath>Defs/BiomeDef[defName="Tundra"]/animalCommonalities</xpath>
+      <xpath>Defs/BiomeDef[defName="Tundra"]/wildAnimals</xpath>
       <value><li><animal>JP_IrishElk</animal><commonality>3.6</commonality></li></value>
     </match>
   </Operation>
@@ -386,23 +386,23 @@
 
   <!-- ==================== サーベルタイガー (JP_Smilodon) - 出現頻度 ==================== -->
   <Operation Class="PatchOperationConditional">
-    <xpath>Defs/BiomeDef[defName="AridShrubland"]/animalCommonalities</xpath>
+    <xpath>Defs/BiomeDef[defName="AridShrubland"]/wildAnimals</xpath>
     <match Class="PatchOperationAdd">
-      <xpath>Defs/BiomeDef[defName="AridShrubland"]/animalCommonalities</xpath>
+      <xpath>Defs/BiomeDef[defName="AridShrubland"]/wildAnimals</xpath>
       <value><li><animal>JP_Smilodon</animal><commonality>3.6</commonality></li></value>
     </match>
   </Operation>
   <Operation Class="PatchOperationConditional">
-    <xpath>Defs/BiomeDef[defName="TemperateForest"]/animalCommonalities</xpath>
+    <xpath>Defs/BiomeDef[defName="TemperateForest"]/wildAnimals</xpath>
     <match Class="PatchOperationAdd">
-      <xpath>Defs/BiomeDef[defName="TemperateForest"]/animalCommonalities</xpath>
+      <xpath>Defs/BiomeDef[defName="TemperateForest"]/wildAnimals</xpath>
       <value><li><animal>JP_Smilodon</animal><commonality>3</commonality></li></value>
     </match>
   </Operation>
   <Operation Class="PatchOperationConditional">
-    <xpath>Defs/BiomeDef[defName="Desert"]/animalCommonalities</xpath>
+    <xpath>Defs/BiomeDef[defName="Desert"]/wildAnimals</xpath>
     <match Class="PatchOperationAdd">
-      <xpath>Defs/BiomeDef[defName="Desert"]/animalCommonalities</xpath>
+      <xpath>Defs/BiomeDef[defName="Desert"]/wildAnimals</xpath>
       <value><li><animal>JP_Smilodon</animal><commonality>3</commonality></li></value>
     </match>
   </Operation>
@@ -439,23 +439,23 @@
 
   <!-- ==================== メガネウラ (JP_Meganeura) - 出現頻度 ==================== -->
   <Operation Class="PatchOperationConditional">
-    <xpath>Defs/BiomeDef[defName="TropicalSwamp"]/animalCommonalities</xpath>
+    <xpath>Defs/BiomeDef[defName="TropicalSwamp"]/wildAnimals</xpath>
     <match Class="PatchOperationAdd">
-      <xpath>Defs/BiomeDef[defName="TropicalSwamp"]/animalCommonalities</xpath>
+      <xpath>Defs/BiomeDef[defName="TropicalSwamp"]/wildAnimals</xpath>
       <value><li><animal>JP_Meganeura</animal><commonality>7.2</commonality></li></value>
     </match>
   </Operation>
   <Operation Class="PatchOperationConditional">
-    <xpath>Defs/BiomeDef[defName="TemperateSwamp"]/animalCommonalities</xpath>
+    <xpath>Defs/BiomeDef[defName="TemperateSwamp"]/wildAnimals</xpath>
     <match Class="PatchOperationAdd">
-      <xpath>Defs/BiomeDef[defName="TemperateSwamp"]/animalCommonalities</xpath>
+      <xpath>Defs/BiomeDef[defName="TemperateSwamp"]/wildAnimals</xpath>
       <value><li><animal>JP_Meganeura</animal><commonality>6</commonality></li></value>
     </match>
   </Operation>
   <Operation Class="PatchOperationConditional">
-    <xpath>Defs/BiomeDef[defName="TropicalRainforest"]/animalCommonalities</xpath>
+    <xpath>Defs/BiomeDef[defName="TropicalRainforest"]/wildAnimals</xpath>
     <match Class="PatchOperationAdd">
-      <xpath>Defs/BiomeDef[defName="TropicalRainforest"]/animalCommonalities</xpath>
+      <xpath>Defs/BiomeDef[defName="TropicalRainforest"]/wildAnimals</xpath>
       <value><li><animal>JP_Meganeura</animal><commonality>4.8</commonality></li></value>
     </match>
   </Operation>
@@ -483,23 +483,23 @@
 
   <!-- ==================== ティタノプテラ (JP_Titanoptera) - 出現頻度 ==================== -->
   <Operation Class="PatchOperationConditional">
-    <xpath>Defs/BiomeDef[defName="TropicalRainforest"]/animalCommonalities</xpath>
+    <xpath>Defs/BiomeDef[defName="TropicalRainforest"]/wildAnimals</xpath>
     <match Class="PatchOperationAdd">
-      <xpath>Defs/BiomeDef[defName="TropicalRainforest"]/animalCommonalities</xpath>
+      <xpath>Defs/BiomeDef[defName="TropicalRainforest"]/wildAnimals</xpath>
       <value><li><animal>JP_Titanoptera</animal><commonality>3.6</commonality></li></value>
     </match>
   </Operation>
   <Operation Class="PatchOperationConditional">
-    <xpath>Defs/BiomeDef[defName="TropicalSwamp"]/animalCommonalities</xpath>
+    <xpath>Defs/BiomeDef[defName="TropicalSwamp"]/wildAnimals</xpath>
     <match Class="PatchOperationAdd">
-      <xpath>Defs/BiomeDef[defName="TropicalSwamp"]/animalCommonalities</xpath>
+      <xpath>Defs/BiomeDef[defName="TropicalSwamp"]/wildAnimals</xpath>
       <value><li><animal>JP_Titanoptera</animal><commonality>3.6</commonality></li></value>
     </match>
   </Operation>
   <Operation Class="PatchOperationConditional">
-    <xpath>Defs/BiomeDef[defName="AridShrubland"]/animalCommonalities</xpath>
+    <xpath>Defs/BiomeDef[defName="AridShrubland"]/wildAnimals</xpath>
     <match Class="PatchOperationAdd">
-      <xpath>Defs/BiomeDef[defName="AridShrubland"]/animalCommonalities</xpath>
+      <xpath>Defs/BiomeDef[defName="AridShrubland"]/wildAnimals</xpath>
       <value><li><animal>JP_Titanoptera</animal><commonality>2.4</commonality></li></value>
     </match>
   </Operation>
@@ -527,23 +527,23 @@
 
   <!-- ==================== アースロプレウラ (JP_Arthropleura) - 出現頻度 ==================== -->
   <Operation Class="PatchOperationConditional">
-    <xpath>Defs/BiomeDef[defName="TropicalRainforest"]/animalCommonalities</xpath>
+    <xpath>Defs/BiomeDef[defName="TropicalRainforest"]/wildAnimals</xpath>
     <match Class="PatchOperationAdd">
-      <xpath>Defs/BiomeDef[defName="TropicalRainforest"]/animalCommonalities</xpath>
+      <xpath>Defs/BiomeDef[defName="TropicalRainforest"]/wildAnimals</xpath>
       <value><li><animal>JP_Arthropleura</animal><commonality>3.6</commonality></li></value>
     </match>
   </Operation>
   <Operation Class="PatchOperationConditional">
-    <xpath>Defs/BiomeDef[defName="TemperateForest"]/animalCommonalities</xpath>
+    <xpath>Defs/BiomeDef[defName="TemperateForest"]/wildAnimals</xpath>
     <match Class="PatchOperationAdd">
-      <xpath>Defs/BiomeDef[defName="TemperateForest"]/animalCommonalities</xpath>
+      <xpath>Defs/BiomeDef[defName="TemperateForest"]/wildAnimals</xpath>
       <value><li><animal>JP_Arthropleura</animal><commonality>3</commonality></li></value>
     </match>
   </Operation>
   <Operation Class="PatchOperationConditional">
-    <xpath>Defs/BiomeDef[defName="TemperateSwamp"]/animalCommonalities</xpath>
+    <xpath>Defs/BiomeDef[defName="TemperateSwamp"]/wildAnimals</xpath>
     <match Class="PatchOperationAdd">
-      <xpath>Defs/BiomeDef[defName="TemperateSwamp"]/animalCommonalities</xpath>
+      <xpath>Defs/BiomeDef[defName="TemperateSwamp"]/wildAnimals</xpath>
       <value><li><animal>JP_Arthropleura</animal><commonality>3</commonality></li></value>
     </match>
   </Operation>
@@ -571,23 +571,23 @@
 
   <!-- ==================== プルモノスコルピウス (JP_Pulmonoscorpius) - 出現頻度 ==================== -->
   <Operation Class="PatchOperationConditional">
-    <xpath>Defs/BiomeDef[defName="AridShrubland"]/animalCommonalities</xpath>
+    <xpath>Defs/BiomeDef[defName="AridShrubland"]/wildAnimals</xpath>
     <match Class="PatchOperationAdd">
-      <xpath>Defs/BiomeDef[defName="AridShrubland"]/animalCommonalities</xpath>
+      <xpath>Defs/BiomeDef[defName="AridShrubland"]/wildAnimals</xpath>
       <value><li><animal>JP_Pulmonoscorpius</animal><commonality>3</commonality></li></value>
     </match>
   </Operation>
   <Operation Class="PatchOperationConditional">
-    <xpath>Defs/BiomeDef[defName="Desert"]/animalCommonalities</xpath>
+    <xpath>Defs/BiomeDef[defName="Desert"]/wildAnimals</xpath>
     <match Class="PatchOperationAdd">
-      <xpath>Defs/BiomeDef[defName="Desert"]/animalCommonalities</xpath>
+      <xpath>Defs/BiomeDef[defName="Desert"]/wildAnimals</xpath>
       <value><li><animal>JP_Pulmonoscorpius</animal><commonality>3.6</commonality></li></value>
     </match>
   </Operation>
   <Operation Class="PatchOperationConditional">
-    <xpath>Defs/BiomeDef[defName="ExtremeDesert"]/animalCommonalities</xpath>
+    <xpath>Defs/BiomeDef[defName="ExtremeDesert"]/wildAnimals</xpath>
     <match Class="PatchOperationAdd">
-      <xpath>Defs/BiomeDef[defName="ExtremeDesert"]/animalCommonalities</xpath>
+      <xpath>Defs/BiomeDef[defName="ExtremeDesert"]/wildAnimals</xpath>
       <value><li><animal>JP_Pulmonoscorpius</animal><commonality>2.4</commonality></li></value>
     </match>
   </Operation>
@@ -615,16 +615,16 @@
 
   <!-- ==================== メガラクネ (JP_Megarachne) - 出現頻度 ==================== -->
   <Operation Class="PatchOperationConditional">
-    <xpath>Defs/BiomeDef[defName="TropicalRainforest"]/animalCommonalities</xpath>
+    <xpath>Defs/BiomeDef[defName="TropicalRainforest"]/wildAnimals</xpath>
     <match Class="PatchOperationAdd">
-      <xpath>Defs/BiomeDef[defName="TropicalRainforest"]/animalCommonalities</xpath>
+      <xpath>Defs/BiomeDef[defName="TropicalRainforest"]/wildAnimals</xpath>
       <value><li><animal>JP_Megarachne</animal><commonality>3</commonality></li></value>
     </match>
   </Operation>
   <Operation Class="PatchOperationConditional">
-    <xpath>Defs/BiomeDef[defName="TemperateForest"]/animalCommonalities</xpath>
+    <xpath>Defs/BiomeDef[defName="TemperateForest"]/wildAnimals</xpath>
     <match Class="PatchOperationAdd">
-      <xpath>Defs/BiomeDef[defName="TemperateForest"]/animalCommonalities</xpath>
+      <xpath>Defs/BiomeDef[defName="TemperateForest"]/wildAnimals</xpath>
       <value><li><animal>JP_Megarachne</animal><commonality>2.4</commonality></li></value>
     </match>
   </Operation>
@@ -652,23 +652,23 @@
 
   <!-- ==================== タイタノミルマ (JP_Titanomyrma) - 出現頻度 ==================== -->
   <Operation Class="PatchOperationConditional">
-    <xpath>Defs/BiomeDef[defName="TropicalRainforest"]/animalCommonalities</xpath>
+    <xpath>Defs/BiomeDef[defName="TropicalRainforest"]/wildAnimals</xpath>
     <match Class="PatchOperationAdd">
-      <xpath>Defs/BiomeDef[defName="TropicalRainforest"]/animalCommonalities</xpath>
+      <xpath>Defs/BiomeDef[defName="TropicalRainforest"]/wildAnimals</xpath>
       <value><li><animal>JP_Titanomyrma</animal><commonality>4.8</commonality></li></value>
     </match>
   </Operation>
   <Operation Class="PatchOperationConditional">
-    <xpath>Defs/BiomeDef[defName="TropicalSwamp"]/animalCommonalities</xpath>
+    <xpath>Defs/BiomeDef[defName="TropicalSwamp"]/wildAnimals</xpath>
     <match Class="PatchOperationAdd">
-      <xpath>Defs/BiomeDef[defName="TropicalSwamp"]/animalCommonalities</xpath>
+      <xpath>Defs/BiomeDef[defName="TropicalSwamp"]/wildAnimals</xpath>
       <value><li><animal>JP_Titanomyrma</animal><commonality>4.2</commonality></li></value>
     </match>
   </Operation>
   <Operation Class="PatchOperationConditional">
-    <xpath>Defs/BiomeDef[defName="AridShrubland"]/animalCommonalities</xpath>
+    <xpath>Defs/BiomeDef[defName="AridShrubland"]/wildAnimals</xpath>
     <match Class="PatchOperationAdd">
-      <xpath>Defs/BiomeDef[defName="AridShrubland"]/animalCommonalities</xpath>
+      <xpath>Defs/BiomeDef[defName="AridShrubland"]/wildAnimals</xpath>
       <value><li><animal>JP_Titanomyrma</animal><commonality>3</commonality></li></value>
     </match>
   </Operation>
@@ -696,30 +696,30 @@
 
   <!-- ==================== アーキミラクリス (JP_Archimylacris) - 出現頻度 ==================== -->
   <Operation Class="PatchOperationConditional">
-    <xpath>Defs/BiomeDef[defName="TemperateForest"]/animalCommonalities</xpath>
+    <xpath>Defs/BiomeDef[defName="TemperateForest"]/wildAnimals</xpath>
     <match Class="PatchOperationAdd">
-      <xpath>Defs/BiomeDef[defName="TemperateForest"]/animalCommonalities</xpath>
+      <xpath>Defs/BiomeDef[defName="TemperateForest"]/wildAnimals</xpath>
       <value><li><animal>JP_Archimylacris</animal><commonality>6</commonality></li></value>
     </match>
   </Operation>
   <Operation Class="PatchOperationConditional">
-    <xpath>Defs/BiomeDef[defName="TemperateSwamp"]/animalCommonalities</xpath>
+    <xpath>Defs/BiomeDef[defName="TemperateSwamp"]/wildAnimals</xpath>
     <match Class="PatchOperationAdd">
-      <xpath>Defs/BiomeDef[defName="TemperateSwamp"]/animalCommonalities</xpath>
+      <xpath>Defs/BiomeDef[defName="TemperateSwamp"]/wildAnimals</xpath>
       <value><li><animal>JP_Archimylacris</animal><commonality>5.4</commonality></li></value>
     </match>
   </Operation>
   <Operation Class="PatchOperationConditional">
-    <xpath>Defs/BiomeDef[defName="TropicalRainforest"]/animalCommonalities</xpath>
+    <xpath>Defs/BiomeDef[defName="TropicalRainforest"]/wildAnimals</xpath>
     <match Class="PatchOperationAdd">
-      <xpath>Defs/BiomeDef[defName="TropicalRainforest"]/animalCommonalities</xpath>
+      <xpath>Defs/BiomeDef[defName="TropicalRainforest"]/wildAnimals</xpath>
       <value><li><animal>JP_Archimylacris</animal><commonality>6</commonality></li></value>
     </match>
   </Operation>
   <Operation Class="PatchOperationConditional">
-    <xpath>Defs/BiomeDef[defName="TropicalSwamp"]/animalCommonalities</xpath>
+    <xpath>Defs/BiomeDef[defName="TropicalSwamp"]/wildAnimals</xpath>
     <match Class="PatchOperationAdd">
-      <xpath>Defs/BiomeDef[defName="TropicalSwamp"]/animalCommonalities</xpath>
+      <xpath>Defs/BiomeDef[defName="TropicalSwamp"]/wildAnimals</xpath>
       <value><li><animal>JP_Archimylacris</animal><commonality>5.4</commonality></li></value>
     </match>
   </Operation>
@@ -747,23 +747,23 @@
 
   <!-- ==================== 猫又 (JP_Nekomata) - 出現頻度 ==================== -->
   <Operation Class="PatchOperationConditional">
-    <xpath>Defs/BiomeDef[defName="TemperateForest"]/animalCommonalities</xpath>
+    <xpath>Defs/BiomeDef[defName="TemperateForest"]/wildAnimals</xpath>
     <match Class="PatchOperationAdd">
-      <xpath>Defs/BiomeDef[defName="TemperateForest"]/animalCommonalities</xpath>
+      <xpath>Defs/BiomeDef[defName="TemperateForest"]/wildAnimals</xpath>
       <value><li><animal>JP_Nekomata</animal><commonality>4.2</commonality></li></value>
     </match>
   </Operation>
   <Operation Class="PatchOperationConditional">
-    <xpath>Defs/BiomeDef[defName="TemperateSwamp"]/animalCommonalities</xpath>
+    <xpath>Defs/BiomeDef[defName="TemperateSwamp"]/wildAnimals</xpath>
     <match Class="PatchOperationAdd">
-      <xpath>Defs/BiomeDef[defName="TemperateSwamp"]/animalCommonalities</xpath>
+      <xpath>Defs/BiomeDef[defName="TemperateSwamp"]/wildAnimals</xpath>
       <value><li><animal>JP_Nekomata</animal><commonality>4.2</commonality></li></value>
     </match>
   </Operation>
   <Operation Class="PatchOperationConditional">
-    <xpath>Defs/BiomeDef[defName="TropicalRainforest"]/animalCommonalities</xpath>
+    <xpath>Defs/BiomeDef[defName="TropicalRainforest"]/wildAnimals</xpath>
     <match Class="PatchOperationAdd">
-      <xpath>Defs/BiomeDef[defName="TropicalRainforest"]/animalCommonalities</xpath>
+      <xpath>Defs/BiomeDef[defName="TropicalRainforest"]/wildAnimals</xpath>
       <value><li><animal>JP_Nekomata</animal><commonality>3.6</commonality></li></value>
     </match>
   </Operation>
@@ -800,23 +800,23 @@
 
   <!-- ==================== 妖狐 (JP_Youko) - 出現頻度 ==================== -->
   <Operation Class="PatchOperationConditional">
-    <xpath>Defs/BiomeDef[defName="TemperateForest"]/animalCommonalities</xpath>
+    <xpath>Defs/BiomeDef[defName="TemperateForest"]/wildAnimals</xpath>
     <match Class="PatchOperationAdd">
-      <xpath>Defs/BiomeDef[defName="TemperateForest"]/animalCommonalities</xpath>
+      <xpath>Defs/BiomeDef[defName="TemperateForest"]/wildAnimals</xpath>
       <value><li><animal>JP_Youko</animal><commonality>3.6</commonality></li></value>
     </match>
   </Operation>
   <Operation Class="PatchOperationConditional">
-    <xpath>Defs/BiomeDef[defName="AridShrubland"]/animalCommonalities</xpath>
+    <xpath>Defs/BiomeDef[defName="AridShrubland"]/wildAnimals</xpath>
     <match Class="PatchOperationAdd">
-      <xpath>Defs/BiomeDef[defName="AridShrubland"]/animalCommonalities</xpath>
+      <xpath>Defs/BiomeDef[defName="AridShrubland"]/wildAnimals</xpath>
       <value><li><animal>JP_Youko</animal><commonality>4.2</commonality></li></value>
     </match>
   </Operation>
   <Operation Class="PatchOperationConditional">
-    <xpath>Defs/BiomeDef[defName="Desert"]/animalCommonalities</xpath>
+    <xpath>Defs/BiomeDef[defName="Desert"]/wildAnimals</xpath>
     <match Class="PatchOperationAdd">
-      <xpath>Defs/BiomeDef[defName="Desert"]/animalCommonalities</xpath>
+      <xpath>Defs/BiomeDef[defName="Desert"]/wildAnimals</xpath>
       <value><li><animal>JP_Youko</animal><commonality>3.6</commonality></li></value>
     </match>
   </Operation>
@@ -853,16 +853,16 @@
 
   <!-- ==================== 雪女 (JP_Yukionna) - 出現頻度 ==================== -->
   <Operation Class="PatchOperationConditional">
-    <xpath>Defs/BiomeDef[defName="Tundra"]/animalCommonalities</xpath>
+    <xpath>Defs/BiomeDef[defName="Tundra"]/wildAnimals</xpath>
     <match Class="PatchOperationAdd">
-      <xpath>Defs/BiomeDef[defName="Tundra"]/animalCommonalities</xpath>
+      <xpath>Defs/BiomeDef[defName="Tundra"]/wildAnimals</xpath>
       <value><li><animal>JP_Yukionna</animal><commonality>4.8</commonality></li></value>
     </match>
   </Operation>
   <Operation Class="PatchOperationConditional">
-    <xpath>Defs/BiomeDef[defName="BorealForest"]/animalCommonalities</xpath>
+    <xpath>Defs/BiomeDef[defName="BorealForest"]/wildAnimals</xpath>
     <match Class="PatchOperationAdd">
-      <xpath>Defs/BiomeDef[defName="BorealForest"]/animalCommonalities</xpath>
+      <xpath>Defs/BiomeDef[defName="BorealForest"]/wildAnimals</xpath>
       <value><li><animal>JP_Yukionna</animal><commonality>3.6</commonality></li></value>
     </match>
   </Operation>
@@ -899,16 +899,16 @@
 
   <!-- ==================== 座敷童 (JP_Zashikiwarashi) - 出現頻度 ==================== -->
   <Operation Class="PatchOperationConditional">
-    <xpath>Defs/BiomeDef[defName="TemperateForest"]/animalCommonalities</xpath>
+    <xpath>Defs/BiomeDef[defName="TemperateForest"]/wildAnimals</xpath>
     <match Class="PatchOperationAdd">
-      <xpath>Defs/BiomeDef[defName="TemperateForest"]/animalCommonalities</xpath>
+      <xpath>Defs/BiomeDef[defName="TemperateForest"]/wildAnimals</xpath>
       <value><li><animal>JP_Zashikiwarashi</animal><commonality>1.8</commonality></li></value>
     </match>
   </Operation>
   <Operation Class="PatchOperationConditional">
-    <xpath>Defs/BiomeDef[defName="BorealForest"]/animalCommonalities</xpath>
+    <xpath>Defs/BiomeDef[defName="BorealForest"]/wildAnimals</xpath>
     <match Class="PatchOperationAdd">
-      <xpath>Defs/BiomeDef[defName="BorealForest"]/animalCommonalities</xpath>
+      <xpath>Defs/BiomeDef[defName="BorealForest"]/wildAnimals</xpath>
       <value><li><animal>JP_Zashikiwarashi</animal><commonality>1.2</commonality></li></value>
     </match>
   </Operation>
@@ -945,23 +945,23 @@
 
   <!-- ==================== 天狗 (JP_Tengu) - 出現頻度 ==================== -->
   <Operation Class="PatchOperationConditional">
-    <xpath>Defs/BiomeDef[defName="BorealForest"]/animalCommonalities</xpath>
+    <xpath>Defs/BiomeDef[defName="BorealForest"]/wildAnimals</xpath>
     <match Class="PatchOperationAdd">
-      <xpath>Defs/BiomeDef[defName="BorealForest"]/animalCommonalities</xpath>
+      <xpath>Defs/BiomeDef[defName="BorealForest"]/wildAnimals</xpath>
       <value><li><animal>JP_Tengu</animal><commonality>1.8</commonality></li></value>
     </match>
   </Operation>
   <Operation Class="PatchOperationConditional">
-    <xpath>Defs/BiomeDef[defName="TemperateForest"]/animalCommonalities</xpath>
+    <xpath>Defs/BiomeDef[defName="TemperateForest"]/wildAnimals</xpath>
     <match Class="PatchOperationAdd">
-      <xpath>Defs/BiomeDef[defName="TemperateForest"]/animalCommonalities</xpath>
+      <xpath>Defs/BiomeDef[defName="TemperateForest"]/wildAnimals</xpath>
       <value><li><animal>JP_Tengu</animal><commonality>1.8</commonality></li></value>
     </match>
   </Operation>
   <Operation Class="PatchOperationConditional">
-    <xpath>Defs/BiomeDef[defName="Tundra"]/animalCommonalities</xpath>
+    <xpath>Defs/BiomeDef[defName="Tundra"]/wildAnimals</xpath>
     <match Class="PatchOperationAdd">
-      <xpath>Defs/BiomeDef[defName="Tundra"]/animalCommonalities</xpath>
+      <xpath>Defs/BiomeDef[defName="Tundra"]/wildAnimals</xpath>
       <value><li><animal>JP_Tengu</animal><commonality>1.2</commonality></li></value>
     </match>
   </Operation>
@@ -998,23 +998,23 @@
 
   <!-- ==================== 鬼人 (JP_Oni) - 出現頻度 ==================== -->
   <Operation Class="PatchOperationConditional">
-    <xpath>Defs/BiomeDef[defName="AridShrubland"]/animalCommonalities</xpath>
+    <xpath>Defs/BiomeDef[defName="AridShrubland"]/wildAnimals</xpath>
     <match Class="PatchOperationAdd">
-      <xpath>Defs/BiomeDef[defName="AridShrubland"]/animalCommonalities</xpath>
+      <xpath>Defs/BiomeDef[defName="AridShrubland"]/wildAnimals</xpath>
       <value><li><animal>JP_Oni</animal><commonality>1.8</commonality></li></value>
     </match>
   </Operation>
   <Operation Class="PatchOperationConditional">
-    <xpath>Defs/BiomeDef[defName="ExtremeDesert"]/animalCommonalities</xpath>
+    <xpath>Defs/BiomeDef[defName="ExtremeDesert"]/wildAnimals</xpath>
     <match Class="PatchOperationAdd">
-      <xpath>Defs/BiomeDef[defName="ExtremeDesert"]/animalCommonalities</xpath>
+      <xpath>Defs/BiomeDef[defName="ExtremeDesert"]/wildAnimals</xpath>
       <value><li><animal>JP_Oni</animal><commonality>2.4</commonality></li></value>
     </match>
   </Operation>
   <Operation Class="PatchOperationConditional">
-    <xpath>Defs/BiomeDef[defName="Tundra"]/animalCommonalities</xpath>
+    <xpath>Defs/BiomeDef[defName="Tundra"]/wildAnimals</xpath>
     <match Class="PatchOperationAdd">
-      <xpath>Defs/BiomeDef[defName="Tundra"]/animalCommonalities</xpath>
+      <xpath>Defs/BiomeDef[defName="Tundra"]/wildAnimals</xpath>
       <value><li><animal>JP_Oni</animal><commonality>1.8</commonality></li></value>
     </match>
   </Operation>
@@ -1051,30 +1051,30 @@
 
   <!-- ==================== 竜人 (JP_Dragonkin) - 出現頻度 ==================== -->
   <Operation Class="PatchOperationConditional">
-    <xpath>Defs/BiomeDef[defName="TropicalRainforest"]/animalCommonalities</xpath>
+    <xpath>Defs/BiomeDef[defName="TropicalRainforest"]/wildAnimals</xpath>
     <match Class="PatchOperationAdd">
-      <xpath>Defs/BiomeDef[defName="TropicalRainforest"]/animalCommonalities</xpath>
+      <xpath>Defs/BiomeDef[defName="TropicalRainforest"]/wildAnimals</xpath>
       <value><li><animal>JP_Dragonkin</animal><commonality>0.96</commonality></li></value>
     </match>
   </Operation>
   <Operation Class="PatchOperationConditional">
-    <xpath>Defs/BiomeDef[defName="ExtremeDesert"]/animalCommonalities</xpath>
+    <xpath>Defs/BiomeDef[defName="ExtremeDesert"]/wildAnimals</xpath>
     <match Class="PatchOperationAdd">
-      <xpath>Defs/BiomeDef[defName="ExtremeDesert"]/animalCommonalities</xpath>
+      <xpath>Defs/BiomeDef[defName="ExtremeDesert"]/wildAnimals</xpath>
       <value><li><animal>JP_Dragonkin</animal><commonality>0.96</commonality></li></value>
     </match>
   </Operation>
   <Operation Class="PatchOperationConditional">
-    <xpath>Defs/BiomeDef[defName="Tundra"]/animalCommonalities</xpath>
+    <xpath>Defs/BiomeDef[defName="Tundra"]/wildAnimals</xpath>
     <match Class="PatchOperationAdd">
-      <xpath>Defs/BiomeDef[defName="Tundra"]/animalCommonalities</xpath>
+      <xpath>Defs/BiomeDef[defName="Tundra"]/wildAnimals</xpath>
       <value><li><animal>JP_Dragonkin</animal><commonality>0.96</commonality></li></value>
     </match>
   </Operation>
   <Operation Class="PatchOperationConditional">
-    <xpath>Defs/BiomeDef[defName="BorealForest"]/animalCommonalities</xpath>
+    <xpath>Defs/BiomeDef[defName="BorealForest"]/wildAnimals</xpath>
     <match Class="PatchOperationAdd">
-      <xpath>Defs/BiomeDef[defName="BorealForest"]/animalCommonalities</xpath>
+      <xpath>Defs/BiomeDef[defName="BorealForest"]/wildAnimals</xpath>
       <value><li><animal>JP_Dragonkin</animal><commonality>0.96</commonality></li></value>
     </match>
   </Operation>
@@ -1111,23 +1111,23 @@
 
   <!-- ==================== 女郎蜘蛛 (JP_Jorogumo) - 出現頻度 ==================== -->
   <Operation Class="PatchOperationConditional">
-    <xpath>Defs/BiomeDef[defName="TemperateForest"]/animalCommonalities</xpath>
+    <xpath>Defs/BiomeDef[defName="TemperateForest"]/wildAnimals</xpath>
     <match Class="PatchOperationAdd">
-      <xpath>Defs/BiomeDef[defName="TemperateForest"]/animalCommonalities</xpath>
+      <xpath>Defs/BiomeDef[defName="TemperateForest"]/wildAnimals</xpath>
       <value><li><animal>JP_Jorogumo</animal><commonality>2.4</commonality></li></value>
     </match>
   </Operation>
   <Operation Class="PatchOperationConditional">
-    <xpath>Defs/BiomeDef[defName="TropicalRainforest"]/animalCommonalities</xpath>
+    <xpath>Defs/BiomeDef[defName="TropicalRainforest"]/wildAnimals</xpath>
     <match Class="PatchOperationAdd">
-      <xpath>Defs/BiomeDef[defName="TropicalRainforest"]/animalCommonalities</xpath>
+      <xpath>Defs/BiomeDef[defName="TropicalRainforest"]/wildAnimals</xpath>
       <value><li><animal>JP_Jorogumo</animal><commonality>2.4</commonality></li></value>
     </match>
   </Operation>
   <Operation Class="PatchOperationConditional">
-    <xpath>Defs/BiomeDef[defName="TemperateSwamp"]/animalCommonalities</xpath>
+    <xpath>Defs/BiomeDef[defName="TemperateSwamp"]/wildAnimals</xpath>
     <match Class="PatchOperationAdd">
-      <xpath>Defs/BiomeDef[defName="TemperateSwamp"]/animalCommonalities</xpath>
+      <xpath>Defs/BiomeDef[defName="TemperateSwamp"]/wildAnimals</xpath>
       <value><li><animal>JP_Jorogumo</animal><commonality>1.8</commonality></li></value>
     </match>
   </Operation>
