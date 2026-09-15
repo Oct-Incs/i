@@ -23,7 +23,7 @@
       <baseHungerRate>0.6</baseHungerRate>
       <foodType>CarnivoreAnimal</foodType>
       <predator>true</predator>
-      <maxPreyBodySize>1.4</maxPreyBodySize>
+      <maxPreyBodySize>0.6</maxPreyBodySize>
       <leatherDef>JP_Leather_AncientBeast</leatherDef>
       <meatDef>JP_Meat_JapaneseWolf</meatDef>
       <manhunterOnDamageChance>0.35</manhunterOnDamageChance>
@@ -110,7 +110,7 @@
       <baseHungerRate>0.65</baseHungerRate>
       <foodType>CarnivoreAnimal</foodType>
       <predator>true</predator>
-      <maxPreyBodySize>1.6</maxPreyBodySize>
+      <maxPreyBodySize>0.7</maxPreyBodySize>
       <leatherDef>JP_Leather_AncientBeast</leatherDef>
       <meatDef>JP_Meat_EzoWolf</meatDef>
       <manhunterOnDamageChance>0.35</manhunterOnDamageChance>
@@ -200,7 +200,7 @@
       <predator>false</predator>
       <leatherDef>JP_Leather_AncientBeast</leatherDef>
       <meatDef>JP_Meat_Mammoth</meatDef>
-      <manhunterOnDamageChance>0.5</manhunterOnDamageChance>
+      <manhunterOnDamageChance>0.00</manhunterOnDamageChance>
       <manhunterOnTameFailChance>0.3</manhunterOnTameFailChance>
       <trainability>Intermediate</trainability>
       <herdAnimal>false</herdAnimal>
@@ -288,7 +288,7 @@
       <predator>false</predator>
       <leatherDef>JP_Leather_AncientBeast</leatherDef>
       <meatDef>JP_Meat_Mazotairos</meatDef>
-      <manhunterOnDamageChance>0.4</manhunterOnDamageChance>
+      <manhunterOnDamageChance>0.00</manhunterOnDamageChance>
       <manhunterOnTameFailChance>0.3</manhunterOnTameFailChance>
       <trainability>Intermediate</trainability>
       <herdAnimal>false</herdAnimal>
@@ -374,10 +374,10 @@
       <baseHungerRate>1.0</baseHungerRate>
       <foodType>CarnivoreAnimal</foodType>
       <predator>true</predator>
-      <maxPreyBodySize>3.5</maxPreyBodySize>
+      <maxPreyBodySize>0.6</maxPreyBodySize>
       <leatherDef>JP_Leather_Adamantite</leatherDef>
       <meatDef>JP_Meat_Adamantite</meatDef>
-      <manhunterOnDamageChance>0.30</manhunterOnDamageChance>
+      <manhunterOnDamageChance>1.0</manhunterOnDamageChance>
       <manhunterOnTameFailChance>0.4</manhunterOnTameFailChance>
       <trainability>Intermediate</trainability>
       <herdAnimal>false</herdAnimal>
@@ -472,7 +472,7 @@
       <leatherDef>JP_Chitin_Ancient</leatherDef>
       <meatLabel>insect meat</meatLabel>
       <meatColor>(60,68,39)</meatColor>
-      <manhunterOnDamageChance>0.10</manhunterOnDamageChance>
+      <manhunterOnDamageChance>0.35</manhunterOnDamageChance>
       <manhunterOnTameFailChance>0.2</manhunterOnTameFailChance>
       <trainability>Intermediate</trainability>
       <herdAnimal>false</herdAnimal>
@@ -552,11 +552,11 @@
       <baseHungerRate>0.8</baseHungerRate>
       <foodType>CarnivoreAnimal</foodType>
       <predator>true</predator>
-      <maxPreyBodySize>1.6</maxPreyBodySize>
+      <maxPreyBodySize>0.6</maxPreyBodySize>
       <leatherDef>JP_Chitin_Ancient</leatherDef>
       <meatLabel>insect meat</meatLabel>
       <meatColor>(60,68,39)</meatColor>
-      <manhunterOnDamageChance>0.30</manhunterOnDamageChance>
+      <manhunterOnDamageChance>1.0</manhunterOnDamageChance>
       <manhunterOnTameFailChance>0.35</manhunterOnTameFailChance>
       <trainability>Intermediate</trainability>
       <herdAnimal>false</herdAnimal>

@@ -26,7 +26,7 @@
       <predator>false</predator>
       <leatherDef>JP_Leather_AncientBeast</leatherDef>
       <meatDef>JP_Meat_WoollyRhino</meatDef>
-      <manhunterOnDamageChance>0.40</manhunterOnDamageChance>
+      <manhunterOnDamageChance>0.00</manhunterOnDamageChance>
       <manhunterOnTameFailChance>0.25</manhunterOnTameFailChance>
       <trainability>Intermediate</trainability>
       <herdAnimal>false</herdAnimal>
@@ -112,7 +112,7 @@
       <predator>false</predator>
       <leatherDef>JP_Leather_AncientBeast</leatherDef>
       <meatDef>JP_Meat_IrishElk</meatDef>
-      <manhunterOnDamageChance>0.30</manhunterOnDamageChance>
+      <manhunterOnDamageChance>0.00</manhunterOnDamageChance>
       <manhunterOnTameFailChance>0.20</manhunterOnTameFailChance>
       <trainability>Intermediate</trainability>
       <herdAnimal>true</herdAnimal>
@@ -196,10 +196,10 @@
       <baseHungerRate>0.7</baseHungerRate>
       <foodType>CarnivoreAnimal</foodType>
       <predator>true</predator>
-      <maxPreyBodySize>1.8</maxPreyBodySize>
+      <maxPreyBodySize>0.7</maxPreyBodySize>
       <leatherDef>JP_Leather_AncientBeast</leatherDef>
       <meatDef>JP_Meat_Smilodon</meatDef>
-      <manhunterOnDamageChance>0.40</manhunterOnDamageChance>
+      <manhunterOnDamageChance>0.35</manhunterOnDamageChance>
       <manhunterOnTameFailChance>0.30</manhunterOnTameFailChance>
       <trainability>Intermediate</trainability>
       <herdAnimal>false</herdAnimal>
