@@ -39,21 +39,21 @@
     <xpath>Defs/BiomeDef[defName="TemperateForest"]/animalCommonalities</xpath>
     <match Class="PatchOperationAdd">
       <xpath>Defs/BiomeDef[defName="TemperateForest"]/animalCommonalities</xpath>
-      <value><li><animal>JP_JapaneseWolf</animal><commonality>4</commonality></li></value>
+      <value><li><animal>JP_JapaneseWolf</animal><commonality>12</commonality></li></value>
     </match>
   </Operation>
   <Operation Class="PatchOperationConditional">
     <xpath>Defs/BiomeDef[defName="BorealForest"]/animalCommonalities</xpath>
     <match Class="PatchOperationAdd">
       <xpath>Defs/BiomeDef[defName="BorealForest"]/animalCommonalities</xpath>
-      <value><li><animal>JP_JapaneseWolf</animal><commonality>5.6</commonality></li></value>
+      <value><li><animal>JP_JapaneseWolf</animal><commonality>16.8</commonality></li></value>
     </match>
   </Operation>
   <Operation Class="PatchOperationConditional">
     <xpath>Defs/BiomeDef[defName="Tundra"]/animalCommonalities</xpath>
     <match Class="PatchOperationAdd">
       <xpath>Defs/BiomeDef[defName="Tundra"]/animalCommonalities</xpath>
-      <value><li><animal>JP_JapaneseWolf</animal><commonality>3.2</commonality></li></value>
+      <value><li><animal>JP_JapaneseWolf</animal><commonality>9.6</commonality></li></value>
     </match>
   </Operation>
 
@@ -92,14 +92,14 @@
     <xpath>Defs/BiomeDef[defName="BorealForest"]/animalCommonalities</xpath>
     <match Class="PatchOperationAdd">
       <xpath>Defs/BiomeDef[defName="BorealForest"]/animalCommonalities</xpath>
-      <value><li><animal>JP_EzoWolf</animal><commonality>4.8</commonality></li></value>
+      <value><li><animal>JP_EzoWolf</animal><commonality>14.4</commonality></li></value>
     </match>
   </Operation>
   <Operation Class="PatchOperationConditional">
     <xpath>Defs/BiomeDef[defName="Tundra"]/animalCommonalities</xpath>
     <match Class="PatchOperationAdd">
       <xpath>Defs/BiomeDef[defName="Tundra"]/animalCommonalities</xpath>
-      <value><li><animal>JP_EzoWolf</animal><commonality>4</commonality></li></value>
+      <value><li><animal>JP_EzoWolf</animal><commonality>12</commonality></li></value>
     </match>
   </Operation>
 
@@ -138,21 +138,21 @@
     <xpath>Defs/BiomeDef[defName="Tundra"]/animalCommonalities</xpath>
     <match Class="PatchOperationAdd">
       <xpath>Defs/BiomeDef[defName="Tundra"]/animalCommonalities</xpath>
-      <value><li><animal>JP_Mammoth</animal><commonality>2</commonality></li></value>
+      <value><li><animal>JP_Mammoth</animal><commonality>6</commonality></li></value>
     </match>
   </Operation>
   <Operation Class="PatchOperationConditional">
     <xpath>Defs/BiomeDef[defName="BorealForest"]/animalCommonalities</xpath>
     <match Class="PatchOperationAdd">
       <xpath>Defs/BiomeDef[defName="BorealForest"]/animalCommonalities</xpath>
-      <value><li><animal>JP_Mammoth</animal><commonality>1.6</commonality></li></value>
+      <value><li><animal>JP_Mammoth</animal><commonality>4.8</commonality></li></value>
     </match>
   </Operation>
   <Operation Class="PatchOperationConditional">
     <xpath>Defs/BiomeDef[defName="ExtremeDesert"]/animalCommonalities</xpath>
     <match Class="PatchOperationAdd">
       <xpath>Defs/BiomeDef[defName="ExtremeDesert"]/animalCommonalities</xpath>
-      <value><li><animal>JP_Mammoth</animal><commonality>1.2</commonality></li></value>
+      <value><li><animal>JP_Mammoth</animal><commonality>3.6</commonality></li></value>
     </match>
   </Operation>
 
@@ -191,21 +191,21 @@
     <xpath>Defs/BiomeDef[defName="AridShrubland"]/animalCommonalities</xpath>
     <match Class="PatchOperationAdd">
       <xpath>Defs/BiomeDef[defName="AridShrubland"]/animalCommonalities</xpath>
-      <value><li><animal>JP_Mazotairos</animal><commonality>1.6</commonality></li></value>
+      <value><li><animal>JP_Mazotairos</animal><commonality>4.8</commonality></li></value>
     </match>
   </Operation>
   <Operation Class="PatchOperationConditional">
     <xpath>Defs/BiomeDef[defName="Desert"]/animalCommonalities</xpath>
     <match Class="PatchOperationAdd">
       <xpath>Defs/BiomeDef[defName="Desert"]/animalCommonalities</xpath>
-      <value><li><animal>JP_Mazotairos</animal><commonality>1.2</commonality></li></value>
+      <value><li><animal>JP_Mazotairos</animal><commonality>3.6</commonality></li></value>
     </match>
   </Operation>
   <Operation Class="PatchOperationConditional">
     <xpath>Defs/BiomeDef[defName="TropicalRainforest"]/animalCommonalities</xpath>
     <match Class="PatchOperationAdd">
       <xpath>Defs/BiomeDef[defName="TropicalRainforest"]/animalCommonalities</xpath>
-      <value><li><animal>JP_Mazotairos</animal><commonality>1.2</commonality></li></value>
+      <value><li><animal>JP_Mazotairos</animal><commonality>3.6</commonality></li></value>
     </match>
   </Operation>
 
@@ -244,14 +244,14 @@
     <xpath>Defs/BiomeDef[defName="ExtremeDesert"]/animalCommonalities</xpath>
     <match Class="PatchOperationAdd">
       <xpath>Defs/BiomeDef[defName="ExtremeDesert"]/animalCommonalities</xpath>
-      <value><li><animal>JP_AdamantiteBeast</animal><commonality>0.16</commonality></li></value>
+      <value><li><animal>JP_AdamantiteBeast</animal><commonality>0.48</commonality></li></value>
     </match>
   </Operation>
   <Operation Class="PatchOperationConditional">
     <xpath>Defs/BiomeDef[defName="Tundra"]/animalCommonalities</xpath>
     <match Class="PatchOperationAdd">
       <xpath>Defs/BiomeDef[defName="Tundra"]/animalCommonalities</xpath>
-      <value><li><animal>JP_AdamantiteBeast</animal><commonality>0.16</commonality></li></value>
+      <value><li><animal>JP_AdamantiteBeast</animal><commonality>0.48</commonality></li></value>
     </match>
   </Operation>
 
@@ -290,14 +290,14 @@
     <xpath>Defs/BiomeDef[defName="Tundra"]/animalCommonalities</xpath>
     <match Class="PatchOperationAdd">
       <xpath>Defs/BiomeDef[defName="Tundra"]/animalCommonalities</xpath>
-      <value><li><animal>JP_WoollyRhino</animal><commonality>2.4</commonality></li></value>
+      <value><li><animal>JP_WoollyRhino</animal><commonality>7.2</commonality></li></value>
     </match>
   </Operation>
   <Operation Class="PatchOperationConditional">
     <xpath>Defs/BiomeDef[defName="BorealForest"]/animalCommonalities</xpath>
     <match Class="PatchOperationAdd">
       <xpath>Defs/BiomeDef[defName="BorealForest"]/animalCommonalities</xpath>
-      <value><li><animal>JP_WoollyRhino</animal><commonality>1.6</commonality></li></value>
+      <value><li><animal>JP_WoollyRhino</animal><commonality>4.8</commonality></li></value>
     </match>
   </Operation>
 
@@ -336,21 +336,21 @@
     <xpath>Defs/BiomeDef[defName="TemperateForest"]/animalCommonalities</xpath>
     <match Class="PatchOperationAdd">
       <xpath>Defs/BiomeDef[defName="TemperateForest"]/animalCommonalities</xpath>
-      <value><li><animal>JP_IrishElk</animal><commonality>2.4</commonality></li></value>
+      <value><li><animal>JP_IrishElk</animal><commonality>7.2</commonality></li></value>
     </match>
   </Operation>
   <Operation Class="PatchOperationConditional">
     <xpath>Defs/BiomeDef[defName="BorealForest"]/animalCommonalities</xpath>
     <match Class="PatchOperationAdd">
       <xpath>Defs/BiomeDef[defName="BorealForest"]/animalCommonalities</xpath>
-      <value><li><animal>JP_IrishElk</animal><commonality>2</commonality></li></value>
+      <value><li><animal>JP_IrishElk</animal><commonality>6</commonality></li></value>
     </match>
   </Operation>
   <Operation Class="PatchOperationConditional">
     <xpath>Defs/BiomeDef[defName="Tundra"]/animalCommonalities</xpath>
     <match Class="PatchOperationAdd">
       <xpath>Defs/BiomeDef[defName="Tundra"]/animalCommonalities</xpath>
-      <value><li><animal>JP_IrishElk</animal><commonality>1.2</commonality></li></value>
+      <value><li><animal>JP_IrishElk</animal><commonality>3.6</commonality></li></value>
     </match>
   </Operation>
 
@@ -389,21 +389,21 @@
     <xpath>Defs/BiomeDef[defName="AridShrubland"]/animalCommonalities</xpath>
     <match Class="PatchOperationAdd">
       <xpath>Defs/BiomeDef[defName="AridShrubland"]/animalCommonalities</xpath>
-      <value><li><animal>JP_Smilodon</animal><commonality>1.2</commonality></li></value>
+      <value><li><animal>JP_Smilodon</animal><commonality>3.6</commonality></li></value>
     </match>
   </Operation>
   <Operation Class="PatchOperationConditional">
     <xpath>Defs/BiomeDef[defName="TemperateForest"]/animalCommonalities</xpath>
     <match Class="PatchOperationAdd">
       <xpath>Defs/BiomeDef[defName="TemperateForest"]/animalCommonalities</xpath>
-      <value><li><animal>JP_Smilodon</animal><commonality>1</commonality></li></value>
+      <value><li><animal>JP_Smilodon</animal><commonality>3</commonality></li></value>
     </match>
   </Operation>
   <Operation Class="PatchOperationConditional">
     <xpath>Defs/BiomeDef[defName="Desert"]/animalCommonalities</xpath>
     <match Class="PatchOperationAdd">
       <xpath>Defs/BiomeDef[defName="Desert"]/animalCommonalities</xpath>
-      <value><li><animal>JP_Smilodon</animal><commonality>1</commonality></li></value>
+      <value><li><animal>JP_Smilodon</animal><commonality>3</commonality></li></value>
     </match>
   </Operation>
 
@@ -442,21 +442,21 @@
     <xpath>Defs/BiomeDef[defName="TropicalSwamp"]/animalCommonalities</xpath>
     <match Class="PatchOperationAdd">
       <xpath>Defs/BiomeDef[defName="TropicalSwamp"]/animalCommonalities</xpath>
-      <value><li><animal>JP_Meganeura</animal><commonality>2.4</commonality></li></value>
+      <value><li><animal>JP_Meganeura</animal><commonality>7.2</commonality></li></value>
     </match>
   </Operation>
   <Operation Class="PatchOperationConditional">
     <xpath>Defs/BiomeDef[defName="TemperateSwamp"]/animalCommonalities</xpath>
     <match Class="PatchOperationAdd">
       <xpath>Defs/BiomeDef[defName="TemperateSwamp"]/animalCommonalities</xpath>
-      <value><li><animal>JP_Meganeura</animal><commonality>2</commonality></li></value>
+      <value><li><animal>JP_Meganeura</animal><commonality>6</commonality></li></value>
     </match>
   </Operation>
   <Operation Class="PatchOperationConditional">
     <xpath>Defs/BiomeDef[defName="TropicalRainforest"]/animalCommonalities</xpath>
     <match Class="PatchOperationAdd">
       <xpath>Defs/BiomeDef[defName="TropicalRainforest"]/animalCommonalities</xpath>
-      <value><li><animal>JP_Meganeura</animal><commonality>1.6</commonality></li></value>
+      <value><li><animal>JP_Meganeura</animal><commonality>4.8</commonality></li></value>
     </match>
   </Operation>
 
@@ -486,21 +486,21 @@
     <xpath>Defs/BiomeDef[defName="TropicalRainforest"]/animalCommonalities</xpath>
     <match Class="PatchOperationAdd">
       <xpath>Defs/BiomeDef[defName="TropicalRainforest"]/animalCommonalities</xpath>
-      <value><li><animal>JP_Titanoptera</animal><commonality>1.2</commonality></li></value>
+      <value><li><animal>JP_Titanoptera</animal><commonality>3.6</commonality></li></value>
     </match>
   </Operation>
   <Operation Class="PatchOperationConditional">
     <xpath>Defs/BiomeDef[defName="TropicalSwamp"]/animalCommonalities</xpath>
     <match Class="PatchOperationAdd">
       <xpath>Defs/BiomeDef[defName="TropicalSwamp"]/animalCommonalities</xpath>
-      <value><li><animal>JP_Titanoptera</animal><commonality>1.2</commonality></li></value>
+      <value><li><animal>JP_Titanoptera</animal><commonality>3.6</commonality></li></value>
     </match>
   </Operation>
   <Operation Class="PatchOperationConditional">
     <xpath>Defs/BiomeDef[defName="AridShrubland"]/animalCommonalities</xpath>
     <match Class="PatchOperationAdd">
       <xpath>Defs/BiomeDef[defName="AridShrubland"]/animalCommonalities</xpath>
-      <value><li><animal>JP_Titanoptera</animal><commonality>0.8</commonality></li></value>
+      <value><li><animal>JP_Titanoptera</animal><commonality>2.4</commonality></li></value>
     </match>
   </Operation>
 
@@ -530,21 +530,21 @@
     <xpath>Defs/BiomeDef[defName="TropicalRainforest"]/animalCommonalities</xpath>
     <match Class="PatchOperationAdd">
       <xpath>Defs/BiomeDef[defName="TropicalRainforest"]/animalCommonalities</xpath>
-      <value><li><animal>JP_Arthropleura</animal><commonality>1.2</commonality></li></value>
+      <value><li><animal>JP_Arthropleura</animal><commonality>3.6</commonality></li></value>
     </match>
   </Operation>
   <Operation Class="PatchOperationConditional">
     <xpath>Defs/BiomeDef[defName="TemperateForest"]/animalCommonalities</xpath>
     <match Class="PatchOperationAdd">
       <xpath>Defs/BiomeDef[defName="TemperateForest"]/animalCommonalities</xpath>
-      <value><li><animal>JP_Arthropleura</animal><commonality>1</commonality></li></value>
+      <value><li><animal>JP_Arthropleura</animal><commonality>3</commonality></li></value>
     </match>
   </Operation>
   <Operation Class="PatchOperationConditional">
     <xpath>Defs/BiomeDef[defName="TemperateSwamp"]/animalCommonalities</xpath>
     <match Class="PatchOperationAdd">
       <xpath>Defs/BiomeDef[defName="TemperateSwamp"]/animalCommonalities</xpath>
-      <value><li><animal>JP_Arthropleura</animal><commonality>1</commonality></li></value>
+      <value><li><animal>JP_Arthropleura</animal><commonality>3</commonality></li></value>
     </match>
   </Operation>
 
@@ -574,21 +574,21 @@
     <xpath>Defs/BiomeDef[defName="AridShrubland"]/animalCommonalities</xpath>
     <match Class="PatchOperationAdd">
       <xpath>Defs/BiomeDef[defName="AridShrubland"]/animalCommonalities</xpath>
-      <value><li><animal>JP_Pulmonoscorpius</animal><commonality>1</commonality></li></value>
+      <value><li><animal>JP_Pulmonoscorpius</animal><commonality>3</commonality></li></value>
     </match>
   </Operation>
   <Operation Class="PatchOperationConditional">
     <xpath>Defs/BiomeDef[defName="Desert"]/animalCommonalities</xpath>
     <match Class="PatchOperationAdd">
       <xpath>Defs/BiomeDef[defName="Desert"]/animalCommonalities</xpath>
-      <value><li><animal>JP_Pulmonoscorpius</animal><commonality>1.2</commonality></li></value>
+      <value><li><animal>JP_Pulmonoscorpius</animal><commonality>3.6</commonality></li></value>
     </match>
   </Operation>
   <Operation Class="PatchOperationConditional">
     <xpath>Defs/BiomeDef[defName="ExtremeDesert"]/animalCommonalities</xpath>
     <match Class="PatchOperationAdd">
       <xpath>Defs/BiomeDef[defName="ExtremeDesert"]/animalCommonalities</xpath>
-      <value><li><animal>JP_Pulmonoscorpius</animal><commonality>0.8</commonality></li></value>
+      <value><li><animal>JP_Pulmonoscorpius</animal><commonality>2.4</commonality></li></value>
     </match>
   </Operation>
 
@@ -618,14 +618,14 @@
     <xpath>Defs/BiomeDef[defName="TropicalRainforest"]/animalCommonalities</xpath>
     <match Class="PatchOperationAdd">
       <xpath>Defs/BiomeDef[defName="TropicalRainforest"]/animalCommonalities</xpath>
-      <value><li><animal>JP_Megarachne</animal><commonality>1</commonality></li></value>
+      <value><li><animal>JP_Megarachne</animal><commonality>3</commonality></li></value>
     </match>
   </Operation>
   <Operation Class="PatchOperationConditional">
     <xpath>Defs/BiomeDef[defName="TemperateForest"]/animalCommonalities</xpath>
     <match Class="PatchOperationAdd">
       <xpath>Defs/BiomeDef[defName="TemperateForest"]/animalCommonalities</xpath>
-      <value><li><animal>JP_Megarachne</animal><commonality>0.8</commonality></li></value>
+      <value><li><animal>JP_Megarachne</animal><commonality>2.4</commonality></li></value>
     </match>
   </Operation>
 
@@ -655,21 +655,21 @@
     <xpath>Defs/BiomeDef[defName="TropicalRainforest"]/animalCommonalities</xpath>
     <match Class="PatchOperationAdd">
       <xpath>Defs/BiomeDef[defName="TropicalRainforest"]/animalCommonalities</xpath>
-      <value><li><animal>JP_Titanomyrma</animal><commonality>1.6</commonality></li></value>
+      <value><li><animal>JP_Titanomyrma</animal><commonality>4.8</commonality></li></value>
     </match>
   </Operation>
   <Operation Class="PatchOperationConditional">
     <xpath>Defs/BiomeDef[defName="TropicalSwamp"]/animalCommonalities</xpath>
     <match Class="PatchOperationAdd">
       <xpath>Defs/BiomeDef[defName="TropicalSwamp"]/animalCommonalities</xpath>
-      <value><li><animal>JP_Titanomyrma</animal><commonality>1.4</commonality></li></value>
+      <value><li><animal>JP_Titanomyrma</animal><commonality>4.2</commonality></li></value>
     </match>
   </Operation>
   <Operation Class="PatchOperationConditional">
     <xpath>Defs/BiomeDef[defName="AridShrubland"]/animalCommonalities</xpath>
     <match Class="PatchOperationAdd">
       <xpath>Defs/BiomeDef[defName="AridShrubland"]/animalCommonalities</xpath>
-      <value><li><animal>JP_Titanomyrma</animal><commonality>1</commonality></li></value>
+      <value><li><animal>JP_Titanomyrma</animal><commonality>3</commonality></li></value>
     </match>
   </Operation>
 
@@ -699,28 +699,28 @@
     <xpath>Defs/BiomeDef[defName="TemperateForest"]/animalCommonalities</xpath>
     <match Class="PatchOperationAdd">
       <xpath>Defs/BiomeDef[defName="TemperateForest"]/animalCommonalities</xpath>
-      <value><li><animal>JP_Archimylacris</animal><commonality>2</commonality></li></value>
+      <value><li><animal>JP_Archimylacris</animal><commonality>6</commonality></li></value>
     </match>
   </Operation>
   <Operation Class="PatchOperationConditional">
     <xpath>Defs/BiomeDef[defName="TemperateSwamp"]/animalCommonalities</xpath>
     <match Class="PatchOperationAdd">
       <xpath>Defs/BiomeDef[defName="TemperateSwamp"]/animalCommonalities</xpath>
-      <value><li><animal>JP_Archimylacris</animal><commonality>1.8</commonality></li></value>
+      <value><li><animal>JP_Archimylacris</animal><commonality>5.4</commonality></li></value>
     </match>
   </Operation>
   <Operation Class="PatchOperationConditional">
     <xpath>Defs/BiomeDef[defName="TropicalRainforest"]/animalCommonalities</xpath>
     <match Class="PatchOperationAdd">
       <xpath>Defs/BiomeDef[defName="TropicalRainforest"]/animalCommonalities</xpath>
-      <value><li><animal>JP_Archimylacris</animal><commonality>2</commonality></li></value>
+      <value><li><animal>JP_Archimylacris</animal><commonality>6</commonality></li></value>
     </match>
   </Operation>
   <Operation Class="PatchOperationConditional">
     <xpath>Defs/BiomeDef[defName="TropicalSwamp"]/animalCommonalities</xpath>
     <match Class="PatchOperationAdd">
       <xpath>Defs/BiomeDef[defName="TropicalSwamp"]/animalCommonalities</xpath>
-      <value><li><animal>JP_Archimylacris</animal><commonality>1.8</commonality></li></value>
+      <value><li><animal>JP_Archimylacris</animal><commonality>5.4</commonality></li></value>
     </match>
   </Operation>
 
@@ -750,21 +750,21 @@
     <xpath>Defs/BiomeDef[defName="TemperateForest"]/animalCommonalities</xpath>
     <match Class="PatchOperationAdd">
       <xpath>Defs/BiomeDef[defName="TemperateForest"]/animalCommonalities</xpath>
-      <value><li><animal>JP_Nekomata</animal><commonality>1.4</commonality></li></value>
+      <value><li><animal>JP_Nekomata</animal><commonality>4.2</commonality></li></value>
     </match>
   </Operation>
   <Operation Class="PatchOperationConditional">
     <xpath>Defs/BiomeDef[defName="TemperateSwamp"]/animalCommonalities</xpath>
     <match Class="PatchOperationAdd">
       <xpath>Defs/BiomeDef[defName="TemperateSwamp"]/animalCommonalities</xpath>
-      <value><li><animal>JP_Nekomata</animal><commonality>1.4</commonality></li></value>
+      <value><li><animal>JP_Nekomata</animal><commonality>4.2</commonality></li></value>
     </match>
   </Operation>
   <Operation Class="PatchOperationConditional">
     <xpath>Defs/BiomeDef[defName="TropicalRainforest"]/animalCommonalities</xpath>
     <match Class="PatchOperationAdd">
       <xpath>Defs/BiomeDef[defName="TropicalRainforest"]/animalCommonalities</xpath>
-      <value><li><animal>JP_Nekomata</animal><commonality>1.2</commonality></li></value>
+      <value><li><animal>JP_Nekomata</animal><commonality>3.6</commonality></li></value>
     </match>
   </Operation>
 
@@ -803,21 +803,21 @@
     <xpath>Defs/BiomeDef[defName="TemperateForest"]/animalCommonalities</xpath>
     <match Class="PatchOperationAdd">
       <xpath>Defs/BiomeDef[defName="TemperateForest"]/animalCommonalities</xpath>
-      <value><li><animal>JP_Youko</animal><commonality>1.2</commonality></li></value>
+      <value><li><animal>JP_Youko</animal><commonality>3.6</commonality></li></value>
     </match>
   </Operation>
   <Operation Class="PatchOperationConditional">
     <xpath>Defs/BiomeDef[defName="AridShrubland"]/animalCommonalities</xpath>
     <match Class="PatchOperationAdd">
       <xpath>Defs/BiomeDef[defName="AridShrubland"]/animalCommonalities</xpath>
-      <value><li><animal>JP_Youko</animal><commonality>1.4</commonality></li></value>
+      <value><li><animal>JP_Youko</animal><commonality>4.2</commonality></li></value>
     </match>
   </Operation>
   <Operation Class="PatchOperationConditional">
     <xpath>Defs/BiomeDef[defName="Desert"]/animalCommonalities</xpath>
     <match Class="PatchOperationAdd">
       <xpath>Defs/BiomeDef[defName="Desert"]/animalCommonalities</xpath>
-      <value><li><animal>JP_Youko</animal><commonality>1.2</commonality></li></value>
+      <value><li><animal>JP_Youko</animal><commonality>3.6</commonality></li></value>
     </match>
   </Operation>
 
@@ -856,14 +856,14 @@
     <xpath>Defs/BiomeDef[defName="Tundra"]/animalCommonalities</xpath>
     <match Class="PatchOperationAdd">
       <xpath>Defs/BiomeDef[defName="Tundra"]/animalCommonalities</xpath>
-      <value><li><animal>JP_Yukionna</animal><commonality>1.6</commonality></li></value>
+      <value><li><animal>JP_Yukionna</animal><commonality>4.8</commonality></li></value>
     </match>
   </Operation>
   <Operation Class="PatchOperationConditional">
     <xpath>Defs/BiomeDef[defName="BorealForest"]/animalCommonalities</xpath>
     <match Class="PatchOperationAdd">
       <xpath>Defs/BiomeDef[defName="BorealForest"]/animalCommonalities</xpath>
-      <value><li><animal>JP_Yukionna</animal><commonality>1.2</commonality></li></value>
+      <value><li><animal>JP_Yukionna</animal><commonality>3.6</commonality></li></value>
     </match>
   </Operation>
 
@@ -902,14 +902,14 @@
     <xpath>Defs/BiomeDef[defName="TemperateForest"]/animalCommonalities</xpath>
     <match Class="PatchOperationAdd">
       <xpath>Defs/BiomeDef[defName="TemperateForest"]/animalCommonalities</xpath>
-      <value><li><animal>JP_Zashikiwarashi</animal><commonality>0.6</commonality></li></value>
+      <value><li><animal>JP_Zashikiwarashi</animal><commonality>1.8</commonality></li></value>
     </match>
   </Operation>
   <Operation Class="PatchOperationConditional">
     <xpath>Defs/BiomeDef[defName="BorealForest"]/animalCommonalities</xpath>
     <match Class="PatchOperationAdd">
       <xpath>Defs/BiomeDef[defName="BorealForest"]/animalCommonalities</xpath>
-      <value><li><animal>JP_Zashikiwarashi</animal><commonality>0.4</commonality></li></value>
+      <value><li><animal>JP_Zashikiwarashi</animal><commonality>1.2</commonality></li></value>
     </match>
   </Operation>
 
@@ -948,21 +948,21 @@
     <xpath>Defs/BiomeDef[defName="BorealForest"]/animalCommonalities</xpath>
     <match Class="PatchOperationAdd">
       <xpath>Defs/BiomeDef[defName="BorealForest"]/animalCommonalities</xpath>
-      <value><li><animal>JP_Tengu</animal><commonality>0.6</commonality></li></value>
+      <value><li><animal>JP_Tengu</animal><commonality>1.8</commonality></li></value>
     </match>
   </Operation>
   <Operation Class="PatchOperationConditional">
     <xpath>Defs/BiomeDef[defName="TemperateForest"]/animalCommonalities</xpath>
     <match Class="PatchOperationAdd">
       <xpath>Defs/BiomeDef[defName="TemperateForest"]/animalCommonalities</xpath>
-      <value><li><animal>JP_Tengu</animal><commonality>0.6</commonality></li></value>
+      <value><li><animal>JP_Tengu</animal><commonality>1.8</commonality></li></value>
     </match>
   </Operation>
   <Operation Class="PatchOperationConditional">
     <xpath>Defs/BiomeDef[defName="Tundra"]/animalCommonalities</xpath>
     <match Class="PatchOperationAdd">
       <xpath>Defs/BiomeDef[defName="Tundra"]/animalCommonalities</xpath>
-      <value><li><animal>JP_Tengu</animal><commonality>0.4</commonality></li></value>
+      <value><li><animal>JP_Tengu</animal><commonality>1.2</commonality></li></value>
     </match>
   </Operation>
 
@@ -1001,21 +1001,21 @@
     <xpath>Defs/BiomeDef[defName="AridShrubland"]/animalCommonalities</xpath>
     <match Class="PatchOperationAdd">
       <xpath>Defs/BiomeDef[defName="AridShrubland"]/animalCommonalities</xpath>
-      <value><li><animal>JP_Oni</animal><commonality>0.6</commonality></li></value>
+      <value><li><animal>JP_Oni</animal><commonality>1.8</commonality></li></value>
     </match>
   </Operation>
   <Operation Class="PatchOperationConditional">
     <xpath>Defs/BiomeDef[defName="ExtremeDesert"]/animalCommonalities</xpath>
     <match Class="PatchOperationAdd">
       <xpath>Defs/BiomeDef[defName="ExtremeDesert"]/animalCommonalities</xpath>
-      <value><li><animal>JP_Oni</animal><commonality>0.8</commonality></li></value>
+      <value><li><animal>JP_Oni</animal><commonality>2.4</commonality></li></value>
     </match>
   </Operation>
   <Operation Class="PatchOperationConditional">
     <xpath>Defs/BiomeDef[defName="Tundra"]/animalCommonalities</xpath>
     <match Class="PatchOperationAdd">
       <xpath>Defs/BiomeDef[defName="Tundra"]/animalCommonalities</xpath>
-      <value><li><animal>JP_Oni</animal><commonality>0.6</commonality></li></value>
+      <value><li><animal>JP_Oni</animal><commonality>1.8</commonality></li></value>
     </match>
   </Operation>
 
@@ -1054,28 +1054,28 @@
     <xpath>Defs/BiomeDef[defName="TropicalRainforest"]/animalCommonalities</xpath>
     <match Class="PatchOperationAdd">
       <xpath>Defs/BiomeDef[defName="TropicalRainforest"]/animalCommonalities</xpath>
-      <value><li><animal>JP_Dragonkin</animal><commonality>0.32</commonality></li></value>
+      <value><li><animal>JP_Dragonkin</animal><commonality>0.96</commonality></li></value>
     </match>
   </Operation>
   <Operation Class="PatchOperationConditional">
     <xpath>Defs/BiomeDef[defName="ExtremeDesert"]/animalCommonalities</xpath>
     <match Class="PatchOperationAdd">
       <xpath>Defs/BiomeDef[defName="ExtremeDesert"]/animalCommonalities</xpath>
-      <value><li><animal>JP_Dragonkin</animal><commonality>0.32</commonality></li></value>
+      <value><li><animal>JP_Dragonkin</animal><commonality>0.96</commonality></li></value>
     </match>
   </Operation>
   <Operation Class="PatchOperationConditional">
     <xpath>Defs/BiomeDef[defName="Tundra"]/animalCommonalities</xpath>
     <match Class="PatchOperationAdd">
       <xpath>Defs/BiomeDef[defName="Tundra"]/animalCommonalities</xpath>
-      <value><li><animal>JP_Dragonkin</animal><commonality>0.32</commonality></li></value>
+      <value><li><animal>JP_Dragonkin</animal><commonality>0.96</commonality></li></value>
     </match>
   </Operation>
   <Operation Class="PatchOperationConditional">
     <xpath>Defs/BiomeDef[defName="BorealForest"]/animalCommonalities</xpath>
     <match Class="PatchOperationAdd">
       <xpath>Defs/BiomeDef[defName="BorealForest"]/animalCommonalities</xpath>
-      <value><li><animal>JP_Dragonkin</animal><commonality>0.32</commonality></li></value>
+      <value><li><animal>JP_Dragonkin</animal><commonality>0.96</commonality></li></value>
     </match>
   </Operation>
 
@@ -1114,21 +1114,21 @@
     <xpath>Defs/BiomeDef[defName="TemperateForest"]/animalCommonalities</xpath>
     <match Class="PatchOperationAdd">
       <xpath>Defs/BiomeDef[defName="TemperateForest"]/animalCommonalities</xpath>
-      <value><li><animal>JP_Jorogumo</animal><commonality>0.8</commonality></li></value>
+      <value><li><animal>JP_Jorogumo</animal><commonality>2.4</commonality></li></value>
     </match>
   </Operation>
   <Operation Class="PatchOperationConditional">
     <xpath>Defs/BiomeDef[defName="TropicalRainforest"]/animalCommonalities</xpath>
     <match Class="PatchOperationAdd">
       <xpath>Defs/BiomeDef[defName="TropicalRainforest"]/animalCommonalities</xpath>
-      <value><li><animal>JP_Jorogumo</animal><commonality>0.8</commonality></li></value>
+      <value><li><animal>JP_Jorogumo</animal><commonality>2.4</commonality></li></value>
     </match>
   </Operation>
   <Operation Class="PatchOperationConditional">
     <xpath>Defs/BiomeDef[defName="TemperateSwamp"]/animalCommonalities</xpath>
     <match Class="PatchOperationAdd">
       <xpath>Defs/BiomeDef[defName="TemperateSwamp"]/animalCommonalities</xpath>
-      <value><li><animal>JP_Jorogumo</animal><commonality>0.6</commonality></li></value>
+      <value><li><animal>JP_Jorogumo</animal><commonality>1.8</commonality></li></value>
     </match>
   </Operation>
 
