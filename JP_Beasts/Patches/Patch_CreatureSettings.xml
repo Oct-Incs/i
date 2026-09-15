@@ -182,7 +182,7 @@
     <xpath>Defs/PawnKindDef[defName="JP_Mammoth"]/lifeStages/li[3]/bodyGraphicData/drawSize</xpath>
     <match Class="PatchOperationReplace">
       <xpath>Defs/PawnKindDef[defName="JP_Mammoth"]/lifeStages/li[3]/bodyGraphicData/drawSize</xpath>
-      <value><drawSize>6.8</drawSize></value>
+      <value><drawSize>5.78</drawSize></value>
     </match>
   </Operation>
 
@@ -281,7 +281,7 @@
     <xpath>Defs/PawnKindDef[defName="JP_AdamantiteBeast"]/lifeStages/li[3]/bodyGraphicData/drawSize</xpath>
     <match Class="PatchOperationReplace">
       <xpath>Defs/PawnKindDef[defName="JP_AdamantiteBeast"]/lifeStages/li[3]/bodyGraphicData/drawSize</xpath>
-      <value><drawSize>6</drawSize></value>
+      <value><drawSize>5.1</drawSize></value>
     </match>
   </Operation>
 
