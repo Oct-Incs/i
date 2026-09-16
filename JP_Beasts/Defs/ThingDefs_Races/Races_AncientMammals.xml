@@ -195,8 +195,7 @@
       <baseHealthScale>1.5</baseHealthScale>
       <baseHungerRate>0.7</baseHungerRate>
       <foodType>CarnivoreAnimal</foodType>
-      <predator>true</predator>
-      <maxPreyBodySize>0.7</maxPreyBodySize>
+      <predator>false</predator>
       <leatherDef>JP_Leather_AncientBeast</leatherDef>
       <meatDef>JP_Meat_Smilodon</meatDef>
       <manhunterOnDamageChance>0.35</manhunterOnDamageChance>

@@ -22,8 +22,7 @@
       <baseHealthScale>1.2</baseHealthScale>
       <baseHungerRate>0.6</baseHungerRate>
       <foodType>CarnivoreAnimal</foodType>
-      <predator>true</predator>
-      <maxPreyBodySize>0.6</maxPreyBodySize>
+      <predator>false</predator>
       <leatherDef>JP_Leather_AncientBeast</leatherDef>
       <meatDef>JP_Meat_JapaneseWolf</meatDef>
       <manhunterOnDamageChance>0.35</manhunterOnDamageChance>
@@ -109,8 +108,7 @@
       <baseHealthScale>1.4</baseHealthScale>
       <baseHungerRate>0.65</baseHungerRate>
       <foodType>CarnivoreAnimal</foodType>
-      <predator>true</predator>
-      <maxPreyBodySize>0.7</maxPreyBodySize>
+      <predator>false</predator>
       <leatherDef>JP_Leather_AncientBeast</leatherDef>
       <meatDef>JP_Meat_EzoWolf</meatDef>
       <manhunterOnDamageChance>0.35</manhunterOnDamageChance>
@@ -373,8 +371,7 @@
       <baseHealthScale>3.2</baseHealthScale>
       <baseHungerRate>1.0</baseHungerRate>
       <foodType>CarnivoreAnimal</foodType>
-      <predator>true</predator>
-      <maxPreyBodySize>0.6</maxPreyBodySize>
+      <predator>false</predator>
       <leatherDef>JP_Leather_Adamantite</leatherDef>
       <meatDef>JP_Meat_Adamantite</meatDef>
       <manhunterOnDamageChance>1.0</manhunterOnDamageChance>
@@ -467,8 +464,7 @@
       <baseHealthScale>0.4</baseHealthScale>
       <baseHungerRate>0.3</baseHungerRate>
       <foodType>CarnivoreAnimal</foodType>
-      <predator>true</predator>
-      <maxPreyBodySize>0.3</maxPreyBodySize>
+      <predator>false</predator>
       <leatherDef>JP_Chitin_Ancient</leatherDef>
       <meatLabel>insect meat</meatLabel>
       <meatColor>(60,68,39)</meatColor>
@@ -551,8 +547,7 @@
       <baseHealthScale>1.6</baseHealthScale>
       <baseHungerRate>0.8</baseHungerRate>
       <foodType>CarnivoreAnimal</foodType>
-      <predator>true</predator>
-      <maxPreyBodySize>0.6</maxPreyBodySize>
+      <predator>false</predator>
       <leatherDef>JP_Chitin_Ancient</leatherDef>
       <meatLabel>insect meat</meatLabel>
       <meatColor>(60,68,39)</meatColor>
