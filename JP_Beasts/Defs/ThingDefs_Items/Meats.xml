@@ -277,6 +277,17 @@
     <thingCategories>
       <li>MeatRaw</li>
     </thingCategories>
+    <!-- specialThoughtDirect/AsIngredient above only control the base
+         (non-Ideology) mood thought. Ideology's own food-preference
+         precepts (e.g. "Insect Meat: Loved/Despised") identify insect
+         meat through a separate root-level tag, independent of
+         defName/source race - without it, this item would keep firing
+         the plain aversion thought even for a pawn whose ideoligion
+         loves insect meat. MayRequire keeps this harmless without the
+         Ideology DLC installed. -->
+    <mergeCompatibilityTags MayRequire="Ludeon.RimWorld.Ideology">
+      <li MayRequire="Ludeon.RimWorld.Ideology">InsectMeat</li>
+    </mergeCompatibilityTags>
   </ThingDef>
 
   <ThingDef ParentName="OrganicProductBase">
