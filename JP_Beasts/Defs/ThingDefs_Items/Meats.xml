@@ -261,6 +261,12 @@
       <preferability>DesperateOnly</preferability>
       <ingestEffect>EatMeat</ingestEffect>
       <ingestSound>RawMeat_Eat</ingestSound>
+      <!-- Without these, the game has no way to know this counts as
+           "insect meat" for mood purposes - it would just be treated as
+           ordinary meat with no aversion penalty. These two vanilla
+           ThoughtDefs are the same ones vanilla insectoid meat uses. -->
+      <specialThoughtDirect>AteInsectMeatDirect</specialThoughtDirect>
+      <specialThoughtAsIngredient>AteInsectMeatAsIngredient</specialThoughtAsIngredient>
     </ingestible>
     <comps>
       <li Class="CompProperties_Rottable">
