@@ -25,8 +25,7 @@
       <foodType>VegetarianAnimal</foodType>
       <predator>false</predator>
       <leatherDef>JP_Chitin_Ancient</leatherDef>
-      <meatLabel>insect meat</meatLabel>
-      <meatColor>(60,68,39)</meatColor>
+      <meatDef>JP_Meat_Insect</meatDef>
       <manhunterOnDamageChance>1.0</manhunterOnDamageChance>
       <manhunterOnTameFailChance>0.28</manhunterOnTameFailChance>
       <trainability>Intermediate</trainability>
@@ -116,8 +115,7 @@
       <foodType>CarnivoreAnimal</foodType>
       <predator>false</predator>
       <leatherDef>JP_Chitin_Ancient</leatherDef>
-      <meatLabel>insect meat</meatLabel>
-      <meatColor>(60,68,39)</meatColor>
+      <meatDef>JP_Meat_Insect</meatDef>
       <manhunterOnDamageChance>1.0</manhunterOnDamageChance>
       <manhunterOnTameFailChance>0.28</manhunterOnTameFailChance>
       <trainability>Intermediate</trainability>
@@ -210,8 +208,7 @@
       <foodType>CarnivoreAnimal</foodType>
       <predator>false</predator>
       <leatherDef>JP_Chitin_Ancient</leatherDef>
-      <meatLabel>insect meat</meatLabel>
-      <meatColor>(60,68,39)</meatColor>
+      <meatDef>JP_Meat_Insect</meatDef>
       <manhunterOnDamageChance>0.35</manhunterOnDamageChance>
       <manhunterOnTameFailChance>0.12</manhunterOnTameFailChance>
       <trainability>Intermediate</trainability>
@@ -301,8 +298,7 @@
       <foodType>OmnivoreAnimal</foodType>
       <predator>false</predator>
       <leatherDef>JP_Chitin_Ancient</leatherDef>
-      <meatLabel>insect meat</meatLabel>
-      <meatColor>(60,68,39)</meatColor>
+      <meatDef>JP_Meat_Insect</meatDef>
       <manhunterOnDamageChance>0.35</manhunterOnDamageChance>
       <manhunterOnTameFailChance>0.12</manhunterOnTameFailChance>
       <trainability>Intermediate</trainability>
@@ -376,8 +372,7 @@
       <foodType>OmnivoreAnimal</foodType>
       <predator>false</predator>
       <leatherDef>JP_Chitin_Ancient</leatherDef>
-      <meatLabel>insect meat</meatLabel>
-      <meatColor>(60,68,39)</meatColor>
+      <meatDef>JP_Meat_Insect</meatDef>
       <manhunterOnDamageChance>0.35</manhunterOnDamageChance>
       <manhunterOnTameFailChance>0.12</manhunterOnTameFailChance>
       <trainability>Intermediate</trainability>
