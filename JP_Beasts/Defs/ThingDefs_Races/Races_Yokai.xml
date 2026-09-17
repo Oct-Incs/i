@@ -31,7 +31,7 @@
       <herdAnimal>false</herdAnimal>
       <canBePredatorPrey>true</canBePredatorPrey>
       <hasGenders>true</hasGenders>
-      <gestationPeriodDays>12</gestationPeriodDays>
+      <gestationPeriodDays>7</gestationPeriodDays>
       <lifeExpectancy>25</lifeExpectancy>
       <lifeStageAges>
         <li><def>AnimalBaby</def><minAge>0</minAge></li>
@@ -104,7 +104,7 @@
       <herdAnimal>false</herdAnimal>
       <canBePredatorPrey>true</canBePredatorPrey>
       <hasGenders>true</hasGenders>
-      <gestationPeriodDays>12</gestationPeriodDays>
+      <gestationPeriodDays>7</gestationPeriodDays>
       <lifeExpectancy>25</lifeExpectancy>
       <lifeStageAges>
         <li><def>AnimalBaby</def><minAge>0</minAge></li>
@@ -183,7 +183,7 @@
       <herdAnimal>false</herdAnimal>
       <canBePredatorPrey>true</canBePredatorPrey>
       <hasGenders>true</hasGenders>
-      <gestationPeriodDays>14</gestationPeriodDays>
+      <gestationPeriodDays>8</gestationPeriodDays>
       <lifeExpectancy>25</lifeExpectancy>
       <lifeStageAges>
         <li><def>AnimalBaby</def><minAge>0</minAge></li>
@@ -261,7 +261,7 @@
       <herdAnimal>false</herdAnimal>
       <canBePredatorPrey>true</canBePredatorPrey>
       <hasGenders>true</hasGenders>
-      <gestationPeriodDays>10</gestationPeriodDays>
+      <gestationPeriodDays>6</gestationPeriodDays>
       <lifeExpectancy>25</lifeExpectancy>
       <lifeStageAges>
         <li><def>AnimalBaby</def><minAge>0</minAge></li>
@@ -345,7 +345,7 @@
       <herdAnimal>false</herdAnimal>
       <canBePredatorPrey>true</canBePredatorPrey>
       <hasGenders>true</hasGenders>
-      <gestationPeriodDays>16</gestationPeriodDays>
+      <gestationPeriodDays>9</gestationPeriodDays>
       <lifeExpectancy>30</lifeExpectancy>
       <lifeStageAges>
         <li><def>AnimalBaby</def><minAge>0</minAge></li>
@@ -418,7 +418,7 @@
       <herdAnimal>false</herdAnimal>
       <canBePredatorPrey>true</canBePredatorPrey>
       <hasGenders>true</hasGenders>
-      <gestationPeriodDays>25</gestationPeriodDays>
+      <gestationPeriodDays>12</gestationPeriodDays>
       <lifeExpectancy>30</lifeExpectancy>
       <lifeStageAges>
         <li><def>AnimalBaby</def><minAge>0</minAge></li>
@@ -503,7 +503,7 @@
       <herdAnimal>false</herdAnimal>
       <canBePredatorPrey>true</canBePredatorPrey>
       <hasGenders>true</hasGenders>
-      <gestationPeriodDays>22</gestationPeriodDays>
+      <gestationPeriodDays>18</gestationPeriodDays>
       <lifeExpectancy>40</lifeExpectancy>
       <lifeStageAges>
         <li><def>AnimalBaby</def><minAge>0</minAge></li>
@@ -582,7 +582,7 @@
       <herdAnimal>false</herdAnimal>
       <canBePredatorPrey>true</canBePredatorPrey>
       <hasGenders>true</hasGenders>
-      <gestationPeriodDays>13</gestationPeriodDays>
+      <gestationPeriodDays>7</gestationPeriodDays>
       <lifeExpectancy>25</lifeExpectancy>
       <lifeStageAges>
         <li><def>AnimalBaby</def><minAge>0</minAge></li>
