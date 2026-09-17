@@ -31,6 +31,7 @@
       <herdAnimal>true</herdAnimal>
       <canBePredatorPrey>true</canBePredatorPrey>
       <hasGenders>true</hasGenders>
+      <gestationPeriodDays>14</gestationPeriodDays>
       <lifeExpectancy>11</lifeExpectancy>
       <lifeStageAges>
         <li><def>AnimalBaby</def><minAge>0</minAge></li>
@@ -117,6 +118,7 @@
       <herdAnimal>true</herdAnimal>
       <canBePredatorPrey>true</canBePredatorPrey>
       <hasGenders>true</hasGenders>
+      <gestationPeriodDays>16</gestationPeriodDays>
       <lifeExpectancy>12</lifeExpectancy>
       <lifeStageAges>
         <li><def>AnimalBaby</def><minAge>0</minAge></li>
@@ -204,6 +206,7 @@
       <herdAnimal>false</herdAnimal>
       <canBePredatorPrey>true</canBePredatorPrey>
       <hasGenders>true</hasGenders>
+      <gestationPeriodDays>30</gestationPeriodDays>
       <lifeExpectancy>14</lifeExpectancy>
       <lifeStageAges>
         <li><def>AnimalBaby</def><minAge>0</minAge></li>
@@ -292,6 +295,7 @@
       <herdAnimal>false</herdAnimal>
       <canBePredatorPrey>true</canBePredatorPrey>
       <hasGenders>true</hasGenders>
+      <gestationPeriodDays>24</gestationPeriodDays>
       <lifeExpectancy>16</lifeExpectancy>
       <lifeStageAges>
         <li><def>AnimalBaby</def><minAge>0</minAge></li>
@@ -380,6 +384,7 @@
       <herdAnimal>false</herdAnimal>
       <canBePredatorPrey>true</canBePredatorPrey>
       <hasGenders>true</hasGenders>
+      <gestationPeriodDays>20</gestationPeriodDays>
       <lifeExpectancy>25</lifeExpectancy>
       <lifeStageAges>
         <li><def>AnimalBaby</def><minAge>0</minAge></li>
@@ -474,6 +479,7 @@
       <herdAnimal>false</herdAnimal>
       <canBePredatorPrey>true</canBePredatorPrey>
       <hasGenders>true</hasGenders>
+      <gestationPeriodDays>6</gestationPeriodDays>
       <lifeExpectancy>4</lifeExpectancy>
       <lifeStageAges>
         <li><def>AnimalBaby</def><minAge>0</minAge></li>
@@ -557,6 +563,7 @@
       <herdAnimal>false</herdAnimal>
       <canBePredatorPrey>true</canBePredatorPrey>
       <hasGenders>true</hasGenders>
+      <gestationPeriodDays>10</gestationPeriodDays>
       <lifeExpectancy>8</lifeExpectancy>
       <lifeStageAges>
         <li><def>AnimalBaby</def><minAge>0</minAge></li>
