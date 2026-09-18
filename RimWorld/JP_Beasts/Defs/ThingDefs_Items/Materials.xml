@@ -1,0 +1,180 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+
+  <!-- ============================================================
+       毛 (Wool) - テイムして懐かせた個体から、定期的な毛刈り
+       (CompProperties_Shearable) で入手する。生きた個体からのみ得られる。
+       ============================================================ -->
+
+  <ThingDef ParentName="WoolBase">
+    <defName>JP_Wool_AncientBeast</defName>
+    <label>ancient beast bristle</label>
+    <description>マンモスやニホンオオカミなど、古代種の獣をテイムして定期的に刈り取ることで得られる剛毛。保温性に優れる紡績素材。\n\nCoarse bristle sheared periodically from a tamed ancient-type beast (mammoth, wolf, etc). A warm textile material.</description>
+    <graphicData>
+      <texPath>Things/Item/Resource/Leather/JP_Wool_AncientBeast</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <color>(90, 74, 56)</color>
+    </graphicData>
+    <statBases>
+      <MarketValue>3.2</MarketValue>
+      <StuffPower_Insulation_Cold>28</StuffPower_Insulation_Cold>
+      <StuffPower_Insulation_Heat>8</StuffPower_Insulation_Heat>
+    </statBases>
+    <stuffProps>
+      <color>(90, 74, 56)</color>
+      <commonality>0.05</commonality>
+    </stuffProps>
+  </ThingDef>
+
+  <ThingDef ParentName="WoolBase">
+    <defName>JP_Wool_RareSpecies</defName>
+    <label>radiant fur of a rare species</label>
+    <description>猫又や妖狐、鬼人、竜人といった稀種をテイムして定期的に刈り取ることで得られる、うっすらと輝く毛。妖しい気配を纏った紡績素材。\n\nA faintly luminous fur sheared periodically from a tamed rare yokai-like species. A textile material carrying a strange presence.</description>
+    <graphicData>
+      <texPath>Things/Item/Resource/Leather/JP_Wool_RareSpecies</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <color>(160, 130, 205)</color>
+    </graphicData>
+    <statBases>
+      <MarketValue>8.0</MarketValue>
+      <StuffPower_Insulation_Cold>20</StuffPower_Insulation_Cold>
+      <StuffPower_Insulation_Heat>6</StuffPower_Insulation_Heat>
+    </statBases>
+    <stuffProps>
+      <color>(160, 130, 205)</color>
+      <commonality>0.03</commonality>
+      <statFactors>
+        <Beauty>1.4</Beauty>
+      </statFactors>
+    </stuffProps>
+  </ThingDef>
+
+  <ThingDef ParentName="WoolBase">
+    <defName>JP_Wool_Adamantite</defName>
+    <label>sky steel tuft</label>
+    <description>アダマンタイトをテイムして定期的に刈り取ることで得られる金属質の体毛「スカイスチール」。軽いのに驚くほど硬い、極めて稀な紡績素材。\n\nA metallic tuft sheared periodically from a tamed adamantite beast, known as "sky steel". Surprisingly hard for its light weight; an extremely rare textile material.</description>
+    <graphicData>
+      <texPath>Things/Item/Resource/Leather/JP_Wool_Adamantite</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <color>(190, 205, 220)</color>
+    </graphicData>
+    <statBases>
+      <MarketValue>24</MarketValue>
+      <StuffPower_Insulation_Cold>15</StuffPower_Insulation_Cold>
+      <StuffPower_Insulation_Heat>15</StuffPower_Insulation_Heat>
+    </statBases>
+    <stuffProps>
+      <color>(190, 205, 220)</color>
+      <commonality>0.005</commonality>
+    </stuffProps>
+  </ThingDef>
+
+  <!-- ============================================================
+       革 (Leather) - 屠殺 (butcher) した死体から得られる。
+       通常の革と同じくStuffとしてあらゆる革製レシピに使用可能。
+       ============================================================ -->
+
+  <ThingDef ParentName="LeatherBase">
+    <defName>JP_Leather_AncientBeast</defName>
+    <label>ancient beast hide</label>
+    <description>古代種の獣を屠殺すると得られる厚革。分厚く保温性に優れ、他の革と同様にあらゆる革製装備のクラフト素材として使える。\n\nA thick hide obtained by butchering an ancient-type beast. Warmer and tougher than common leather, and usable in any leather crafting recipe like other leathers.</description>
+    <graphicData>
+      <texPath>Things/Item/Resource/Leather/JP_Leather_AncientBeast</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <color>(70, 56, 40)</color>
+    </graphicData>
+    <statBases>
+      <MarketValue>7.5</MarketValue>
+      <StuffPower_Armor_Sharp>1.30</StuffPower_Armor_Sharp>
+      <StuffPower_Armor_Blunt>1.15</StuffPower_Armor_Blunt>
+      <StuffPower_Insulation_Cold>32</StuffPower_Insulation_Cold>
+      <StuffPower_Insulation_Heat>10</StuffPower_Insulation_Heat>
+    </statBases>
+    <stuffProps>
+      <color>(70, 56, 40)</color>
+      <commonality>0.04</commonality>
+      <statFactors>
+        <MaxHitPoints>1.3</MaxHitPoints>
+      </statFactors>
+    </stuffProps>
+  </ThingDef>
+
+  <ThingDef ParentName="LeatherBase">
+    <defName>JP_Leather_RareSpecies</defName>
+    <label>radiant hide</label>
+    <description>稀種を屠殺すると得られる、淡く光沢を放つ革。軽量ながら並の革より頑丈で、美しい仕上がりを持つ。\n\nA hide obtained by butchering a rare species, keeping a faint sheen. Lighter than common leather yet tougher, and pleasing to look at.</description>
+    <graphicData>
+      <texPath>Things/Item/Resource/Leather/JP_Leather_RareSpecies</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <color>(150, 120, 200)</color>
+    </graphicData>
+    <statBases>
+      <MarketValue>15</MarketValue>
+      <StuffPower_Armor_Sharp>1.45</StuffPower_Armor_Sharp>
+      <StuffPower_Armor_Blunt>1.20</StuffPower_Armor_Blunt>
+      <StuffPower_Insulation_Cold>22</StuffPower_Insulation_Cold>
+      <StuffPower_Insulation_Heat>8</StuffPower_Insulation_Heat>
+    </statBases>
+    <stuffProps>
+      <color>(150, 120, 200)</color>
+      <commonality>0.02</commonality>
+      <statFactors>
+        <Beauty>1.6</Beauty>
+        <MaxHitPoints>1.2</MaxHitPoints>
+      </statFactors>
+    </stuffProps>
+  </ThingDef>
+
+  <ThingDef ParentName="LeatherBase">
+    <defName>JP_Leather_Adamantite</defName>
+    <label>adamantite hardhide</label>
+    <description>アダマンタイトを屠殺すると得られる硬革。金属のような硬さを持ちながら革として加工でき、最高クラスの防御力を誇る。\n\nA hide obtained by butchering an adamantite beast. Metal-hard yet still workable as leather, offering top-tier protection.</description>
+    <graphicData>
+      <texPath>Things/Item/Resource/Leather/JP_Leather_Adamantite</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <color>(150, 165, 180)</color>
+    </graphicData>
+    <statBases>
+      <MarketValue>38</MarketValue>
+      <StuffPower_Armor_Sharp>1.90</StuffPower_Armor_Sharp>
+      <StuffPower_Armor_Blunt>1.60</StuffPower_Armor_Blunt>
+      <StuffPower_Armor_Heat>1.40</StuffPower_Armor_Heat>
+      <StuffPower_Insulation_Cold>25</StuffPower_Insulation_Cold>
+      <StuffPower_Insulation_Heat>18</StuffPower_Insulation_Heat>
+    </statBases>
+    <stuffProps>
+      <color>(150, 165, 180)</color>
+      <commonality>0.005</commonality>
+      <statFactors>
+        <MaxHitPoints>1.8</MaxHitPoints>
+        <Mass>1.3</Mass>
+      </statFactors>
+    </stuffProps>
+  </ThingDef>
+
+  <ThingDef ParentName="LeatherBase">
+    <defName>JP_Chitin_Ancient</defName>
+    <label>ancient insect chitin</label>
+    <description>メガネウラやティタノプテラなど、巨大な古代の虫を屠殺すると得られる硬い甲殻。革として加工でき、鋭い刃を良く防ぐ。\n\nHard chitin obtained by butchering a giant ancient insect (a Meganeura or Titanoptera). Workable as leather, and effective at turning aside sharp blades.</description>
+    <graphicData>
+      <texPath>Things/Item/Resource/Leather/JP_Chitin_Ancient</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <color>(90, 100, 60)</color>
+    </graphicData>
+    <statBases>
+      <MarketValue>6.0</MarketValue>
+      <StuffPower_Armor_Sharp>1.50</StuffPower_Armor_Sharp>
+      <StuffPower_Armor_Blunt>0.85</StuffPower_Armor_Blunt>
+      <StuffPower_Insulation_Cold>10</StuffPower_Insulation_Cold>
+      <StuffPower_Insulation_Heat>10</StuffPower_Insulation_Heat>
+    </statBases>
+    <stuffProps>
+      <color>(90, 100, 60)</color>
+      <commonality>0.03</commonality>
+      <statFactors>
+        <MaxHitPoints>1.4</MaxHitPoints>
+      </statFactors>
+    </stuffProps>
+  </ThingDef>
+
+</Defs>

@@ -1,0 +1,325 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+
+  <!-- ParentName="OrganicProductBase" is the vanilla abstract used for raw
+       meat items (no shared "MeatBase" abstract exists). The usual meat
+       fields (ingestible/rottable/nutrition/thingCategories) are defined
+       directly, matching vanilla raw meat behavior. All obtained by
+       butchering the creature's corpse. -->
+
+  <ThingDef ParentName="OrganicProductBase">
+    <defName>JP_Meat_Mammoth</defName>
+    <label>mammoth meat</label>
+    <description>マンモスの肉。並の家畜肉より脂が乗っており、量も多い。\n\nMeat from a mammoth. Richer and more plentiful than ordinary livestock meat.</description>
+    <graphicData>
+      <texPath>Things/Item/Resource/Meat/JP_Meat_Mammoth</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <statBases>
+      <Nutrition>0.05</Nutrition>
+      <Flammability>0.5</Flammability>
+      <FoodPoisonChanceFixedHuman>0.02</FoodPoisonChanceFixedHuman>
+      <Mass>0.05</Mass>
+      <MarketValue>2.4</MarketValue>
+    </statBases>
+    <ingestible>
+      <foodType>Meat</foodType>
+      <preferability>DesperateOnly</preferability>
+      <ingestEffect>EatMeat</ingestEffect>
+      <ingestSound>RawMeat_Eat</ingestSound>
+    </ingestible>
+    <comps>
+      <li Class="CompProperties_Rottable">
+        <daysToRotStart>4</daysToRotStart>
+        <rotDestroys>true</rotDestroys>
+      </li>
+    </comps>
+    <thingCategories>
+      <li>MeatRaw</li>
+    </thingCategories>
+  </ThingDef>
+
+  <ThingDef ParentName="OrganicProductBase">
+    <defName>JP_Meat_JapaneseWolf</defName>
+    <label>Japanese wolf meat</label>
+    <description>ニホンオオカミの肉。野生の獣肉らしい引き締まった味わい。\n\nMeat from a Japanese wolf. Lean and gamey, as expected of a wild predator.</description>
+    <graphicData>
+      <texPath>Things/Item/Resource/Meat/JP_Meat_JapaneseWolf</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <statBases>
+      <Nutrition>0.05</Nutrition>
+      <Flammability>0.5</Flammability>
+      <FoodPoisonChanceFixedHuman>0.02</FoodPoisonChanceFixedHuman>
+      <Mass>0.05</Mass>
+      <MarketValue>1.7</MarketValue>
+    </statBases>
+    <ingestible>
+      <foodType>Meat</foodType>
+      <preferability>DesperateOnly</preferability>
+      <ingestEffect>EatMeat</ingestEffect>
+      <ingestSound>RawMeat_Eat</ingestSound>
+    </ingestible>
+    <comps>
+      <li Class="CompProperties_Rottable">
+        <daysToRotStart>4</daysToRotStart>
+        <rotDestroys>true</rotDestroys>
+      </li>
+    </comps>
+    <thingCategories>
+      <li>MeatRaw</li>
+    </thingCategories>
+  </ThingDef>
+
+  <ThingDef ParentName="OrganicProductBase">
+    <defName>JP_Meat_EzoWolf</defName>
+    <label>Ezo wolf meat</label>
+    <description>エゾオオカミの肉。ニホンオオカミよりも脂が乗り、量も多い。\n\nMeat from an Ezo wolf. Fattier and more plentiful than Japanese wolf meat.</description>
+    <graphicData>
+      <texPath>Things/Item/Resource/Meat/JP_Meat_EzoWolf</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <statBases>
+      <Nutrition>0.05</Nutrition>
+      <Flammability>0.5</Flammability>
+      <FoodPoisonChanceFixedHuman>0.02</FoodPoisonChanceFixedHuman>
+      <Mass>0.05</Mass>
+      <MarketValue>1.9</MarketValue>
+    </statBases>
+    <ingestible>
+      <foodType>Meat</foodType>
+      <preferability>DesperateOnly</preferability>
+      <ingestEffect>EatMeat</ingestEffect>
+      <ingestSound>RawMeat_Eat</ingestSound>
+    </ingestible>
+    <comps>
+      <li Class="CompProperties_Rottable">
+        <daysToRotStart>4</daysToRotStart>
+        <rotDestroys>true</rotDestroys>
+      </li>
+    </comps>
+    <thingCategories>
+      <li>MeatRaw</li>
+    </thingCategories>
+  </ThingDef>
+
+  <ThingDef ParentName="OrganicProductBase">
+    <defName>JP_Meat_Adamantite</defName>
+    <label>adamantite flesh</label>
+    <description>アダマンタイトの肉。金属質の獣でありながら食用可能な肉を持つ、不思議な生物の残滓。ほのかに金属じみた味がする。\n\nFlesh from an adamantite beast. Strange remains of a metallic creature that nonetheless yields edible meat, with a faint metallic tang.</description>
+    <graphicData>
+      <texPath>Things/Item/Resource/Meat/JP_Meat_Adamantite</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <statBases>
+      <Nutrition>0.05</Nutrition>
+      <Flammability>0.0</Flammability>
+      <FoodPoisonChanceFixedHuman>0.02</FoodPoisonChanceFixedHuman>
+      <Mass>0.05</Mass>
+      <MarketValue>2.0</MarketValue>
+    </statBases>
+    <ingestible>
+      <foodType>Meat</foodType>
+      <preferability>DesperateOnly</preferability>
+      <ingestEffect>EatMeat</ingestEffect>
+      <ingestSound>RawMeat_Eat</ingestSound>
+    </ingestible>
+    <comps>
+      <li Class="CompProperties_Rottable">
+        <daysToRotStart>6</daysToRotStart>
+        <rotDestroys>true</rotDestroys>
+      </li>
+    </comps>
+    <thingCategories>
+      <li>MeatRaw</li>
+    </thingCategories>
+  </ThingDef>
+
+  <ThingDef ParentName="OrganicProductBase">
+    <defName>JP_Meat_Mazotairos</defName>
+    <label>mazotairos meat</label>
+    <description>マゾタイロスの肉。硬く筋張っているが、量は非常に多い。\n\nMeat from a mazotairos. Tough and sinewy, but very plentiful.</description>
+    <graphicData>
+      <texPath>Things/Item/Resource/Meat/JP_Meat_Mazotairos</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <statBases>
+      <Nutrition>0.05</Nutrition>
+      <Flammability>0.5</Flammability>
+      <FoodPoisonChanceFixedHuman>0.02</FoodPoisonChanceFixedHuman>
+      <Mass>0.05</Mass>
+      <MarketValue>2.1</MarketValue>
+    </statBases>
+    <ingestible>
+      <foodType>Meat</foodType>
+      <preferability>DesperateOnly</preferability>
+      <ingestEffect>EatMeat</ingestEffect>
+      <ingestSound>RawMeat_Eat</ingestSound>
+    </ingestible>
+    <comps>
+      <li Class="CompProperties_Rottable">
+        <daysToRotStart>4</daysToRotStart>
+        <rotDestroys>true</rotDestroys>
+      </li>
+    </comps>
+    <thingCategories>
+      <li>MeatRaw</li>
+    </thingCategories>
+  </ThingDef>
+
+  <ThingDef ParentName="OrganicProductBase">
+    <defName>JP_Meat_WoollyRhino</defName>
+    <label>woolly rhino meat</label>
+    <description>ケナガサイの肉。脂が厚く、非常食にすれば長く持つ。\n\nMeat from a woolly rhinoceros. Thickly marbled with fat; keeps well as emergency rations.</description>
+    <graphicData>
+      <texPath>Things/Item/Resource/Meat/JP_Meat_WoollyRhino</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <statBases>
+      <Nutrition>0.05</Nutrition>
+      <Flammability>0.5</Flammability>
+      <FoodPoisonChanceFixedHuman>0.02</FoodPoisonChanceFixedHuman>
+      <Mass>0.05</Mass>
+      <MarketValue>2.0</MarketValue>
+    </statBases>
+    <ingestible>
+      <foodType>Meat</foodType>
+      <preferability>DesperateOnly</preferability>
+      <ingestEffect>EatMeat</ingestEffect>
+      <ingestSound>RawMeat_Eat</ingestSound>
+    </ingestible>
+    <comps>
+      <li Class="CompProperties_Rottable">
+        <daysToRotStart>4</daysToRotStart>
+        <rotDestroys>true</rotDestroys>
+      </li>
+    </comps>
+    <thingCategories>
+      <li>MeatRaw</li>
+    </thingCategories>
+  </ThingDef>
+
+  <ThingDef ParentName="OrganicProductBase">
+    <defName>JP_Meat_IrishElk</defName>
+    <label>Irish elk meat</label>
+    <description>オオツノジカの肉。臭みが少なく食べやすい赤身肉。\n\nMeat from an Irish elk. Lean red meat with little gaminess, easy to eat.</description>
+    <graphicData>
+      <texPath>Things/Item/Resource/Meat/JP_Meat_IrishElk</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <statBases>
+      <Nutrition>0.05</Nutrition>
+      <Flammability>0.5</Flammability>
+      <FoodPoisonChanceFixedHuman>0.02</FoodPoisonChanceFixedHuman>
+      <Mass>0.05</Mass>
+      <MarketValue>1.8</MarketValue>
+    </statBases>
+    <ingestible>
+      <foodType>Meat</foodType>
+      <preferability>DesperateOnly</preferability>
+      <ingestEffect>EatMeat</ingestEffect>
+      <ingestSound>RawMeat_Eat</ingestSound>
+    </ingestible>
+    <comps>
+      <li Class="CompProperties_Rottable">
+        <daysToRotStart>4</daysToRotStart>
+        <rotDestroys>true</rotDestroys>
+      </li>
+    </comps>
+    <thingCategories>
+      <li>MeatRaw</li>
+    </thingCategories>
+  </ThingDef>
+
+  <!-- 共有アイテム: 虫肉 (insect meat)。古代昆虫7種 + 女郎蜘蛛の計8種が
+       全てこの1つの実在アイテムを meatDef として直接参照する。
+       (以前は meatLabel/meatColor のみで見た目だけ「insect meat」に
+       偽装していたが、meatDef を明示的に設定しないと RimWorld は
+       ThingDefGenerator_Meat 経由でモンスターごとに別々の暗黙のアイテムを
+       自動生成してしまい、ラベルは同じでも在庫上は別物として扱われ、
+       スタックがマージされない・調理材料リストに別々に並ぶ、という不具合が
+       発生していた。バニラのメガスパイダー/メガスカラブ/スペロピードが
+       全て同じ Meat_Megaspider を meatDef として共有しているのと同じ方式。) -->
+  <ThingDef ParentName="OrganicProductBase">
+    <defName>JP_Meat_Insect</defName>
+    <label>insect meat</label>
+    <description>古代の巨大昆虫から得られる肉。独特の匂いがあり、人間は好んで食べないが、食料としては十分に使える。\n\nMeat harvested from giant ancient insects. It has a distinctive smell that people find unappetizing, but it is perfectly usable as food.</description>
+    <graphicData>
+      <texPath>Things/Item/Resource/Meat/JP_Meat_JapaneseWolf</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <color>(60,68,39)</color>
+    </graphicData>
+    <statBases>
+      <Nutrition>0.05</Nutrition>
+      <Flammability>0.5</Flammability>
+      <FoodPoisonChanceFixedHuman>0.02</FoodPoisonChanceFixedHuman>
+      <Mass>0.05</Mass>
+      <MarketValue>1.6</MarketValue>
+    </statBases>
+    <ingestible>
+      <foodType>Meat</foodType>
+      <preferability>DesperateOnly</preferability>
+      <ingestEffect>EatMeat</ingestEffect>
+      <ingestSound>RawMeat_Eat</ingestSound>
+      <!-- Without these, the game has no way to know this counts as
+           "insect meat" for mood purposes - it would just be treated as
+           ordinary meat with no aversion penalty. These two vanilla
+           ThoughtDefs are the same ones vanilla insectoid meat uses. -->
+      <specialThoughtDirect>AteInsectMeatDirect</specialThoughtDirect>
+      <specialThoughtAsIngredient>AteInsectMeatAsIngredient</specialThoughtAsIngredient>
+    </ingestible>
+    <comps>
+      <li Class="CompProperties_Rottable">
+        <daysToRotStart>4</daysToRotStart>
+        <rotDestroys>true</rotDestroys>
+      </li>
+    </comps>
+    <thingCategories>
+      <li>MeatRaw</li>
+    </thingCategories>
+    <!-- specialThoughtDirect/AsIngredient above only control the base
+         (non-Ideology) mood thought. Ideology's own food-preference
+         precepts (e.g. "Insect Meat: Loved/Despised") identify insect
+         meat through a separate root-level tag, independent of
+         defName/source race - without it, this item would keep firing
+         the plain aversion thought even for a pawn whose ideoligion
+         loves insect meat. MayRequire keeps this harmless without the
+         Ideology DLC installed. -->
+    <mergeCompatibilityTags MayRequire="Ludeon.RimWorld.Ideology">
+      <li MayRequire="Ludeon.RimWorld.Ideology">InsectMeat</li>
+    </mergeCompatibilityTags>
+  </ThingDef>
+
+  <ThingDef ParentName="OrganicProductBase">
+    <defName>JP_Meat_Smilodon</defName>
+    <label>smilodon meat</label>
+    <description>サーベルタイガーの肉。捕食者の肉らしく硬めだが、量はそれなりに多い。\n\nMeat from a smilodon. Tougher than herbivore meat, as expected of a predator, but reasonably plentiful.</description>
+    <graphicData>
+      <texPath>Things/Item/Resource/Meat/JP_Meat_Smilodon</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <statBases>
+      <Nutrition>0.05</Nutrition>
+      <Flammability>0.5</Flammability>
+      <FoodPoisonChanceFixedHuman>0.02</FoodPoisonChanceFixedHuman>
+      <Mass>0.05</Mass>
+      <MarketValue>1.9</MarketValue>
+    </statBases>
+    <ingestible>
+      <foodType>Meat</foodType>
+      <preferability>DesperateOnly</preferability>
+      <ingestEffect>EatMeat</ingestEffect>
+      <ingestSound>RawMeat_Eat</ingestSound>
+    </ingestible>
+    <comps>
+      <li Class="CompProperties_Rottable">
+        <daysToRotStart>4</daysToRotStart>
+        <rotDestroys>true</rotDestroys>
+      </li>
+    </comps>
+    <thingCategories>
+      <li>MeatRaw</li>
+    </thingCategories>
+  </ThingDef>
+
+</Defs>

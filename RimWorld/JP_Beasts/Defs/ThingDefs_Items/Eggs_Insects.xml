@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+
+  <!-- ================ Arthropleura ================ -->
+  <ThingDef ParentName="EggFertBase">
+    <defName>JP_Egg_ArthropleuraFert</defName>
+    <label>arthropleura egg (fert.)</label>
+    <description>アースロプレウラの受精卵。うまくいけばアースロプレウラの幼体が孵化する。\n\nA fertilized arthropleura egg. Given time, it should hatch into a young arthropleura.</description>
+    <tradeability>None</tradeability>
+    <statBases><MarketValue>7</MarketValue><Mass>0.3</Mass></statBases>
+    <graphicData>
+      <texPath>Things/Item/Resource/Egg/JP_Egg_Arthropleura</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <color>(110, 130, 90)</color>
+    </graphicData>
+    <comps>
+      <li Class="CompProperties_Hatcher">
+        <hatcherDaystoHatch>12</hatcherDaystoHatch>
+        <hatcherPawn>JP_Arthropleura</hatcherPawn>
+      </li>
+    </comps>
+  </ThingDef>
+  <ThingDef ParentName="EggUnfertBase">
+    <defName>JP_Egg_ArthropleuraUnfert</defName>
+    <label>arthropleura egg (unfert.)</label>
+    <description>アースロプレウラの未受精卵。孵化はしないが、食用・売却用として扱える。\n\nAn unfertilized arthropleura egg. It won't hatch, but can be eaten or sold.</description>
+    <graphicData>
+      <texPath>Things/Item/Resource/Egg/JP_Egg_Arthropleura</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <color>(110, 130, 90)</color>
+    </graphicData>
+    <tradeability>Sellable</tradeability>
+    <statBases><MarketValue>7</MarketValue><Mass>0.3</Mass></statBases>
+  </ThingDef>
+
+  <!-- ================ Pulmonoscorpius ================ -->
+  <ThingDef ParentName="EggFertBase">
+    <defName>JP_Egg_PulmonoscorpiusFert</defName>
+    <label>pulmonoscorpius egg (fert.)</label>
+    <description>プルモノスコルピウスの受精卵。うまくいけばプルモノスコルピウスの幼体が孵化する。\n\nA fertilized pulmonoscorpius egg. Given time, it should hatch into a young pulmonoscorpius.</description>
+    <tradeability>None</tradeability>
+    <statBases><MarketValue>8</MarketValue><Mass>0.25</Mass></statBases>
+    <graphicData>
+      <texPath>Things/Item/Resource/Egg/JP_Egg_Pulmonoscorpius</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <color>(150, 110, 70)</color>
+    </graphicData>
+    <comps>
+      <li Class="CompProperties_Hatcher">
+        <hatcherDaystoHatch>9</hatcherDaystoHatch>
+        <hatcherPawn>JP_Pulmonoscorpius</hatcherPawn>
+      </li>
+    </comps>
+  </ThingDef>
+  <ThingDef ParentName="EggUnfertBase">
+    <defName>JP_Egg_PulmonoscorpiusUnfert</defName>
+    <label>pulmonoscorpius egg (unfert.)</label>
+    <description>プルモノスコルピウスの未受精卵。孵化はしないが、食用・売却用として扱える。\n\nAn unfertilized pulmonoscorpius egg. It won't hatch, but can be eaten or sold.</description>
+    <graphicData>
+      <texPath>Things/Item/Resource/Egg/JP_Egg_Pulmonoscorpius</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <color>(150, 110, 70)</color>
+    </graphicData>
+    <tradeability>Sellable</tradeability>
+    <statBases><MarketValue>8</MarketValue><Mass>0.25</Mass></statBases>
+  </ThingDef>
+
+  <!-- ================ Megarachne ================ -->
+  <ThingDef ParentName="EggFertBase">
+    <defName>JP_Egg_MegarachneFert</defName>
+    <label>megarachne egg (fert.)</label>
+    <description>メガラクネの受精卵。うまくいけばメガラクネの幼体が孵化する。\n\nA fertilized megarachne egg. Given time, it should hatch into a young megarachne.</description>
+    <tradeability>None</tradeability>
+    <statBases><MarketValue>6</MarketValue><Mass>0.2</Mass></statBases>
+    <graphicData>
+      <texPath>Things/Item/Resource/Egg/JP_Egg_Megarachne</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <color>(70, 60, 80)</color>
+    </graphicData>
+    <comps>
+      <li Class="CompProperties_Hatcher">
+        <hatcherDaystoHatch>8</hatcherDaystoHatch>
+        <hatcherPawn>JP_Megarachne</hatcherPawn>
+      </li>
+    </comps>
+  </ThingDef>
+  <ThingDef ParentName="EggUnfertBase">
+    <defName>JP_Egg_MegarachneUnfert</defName>
+    <label>megarachne egg (unfert.)</label>
+    <description>メガラクネの未受精卵。孵化はしないが、食用・売却用として扱える。\n\nAn unfertilized megarachne egg. It won't hatch, but can be eaten or sold.</description>
+    <graphicData>
+      <texPath>Things/Item/Resource/Egg/JP_Egg_Megarachne</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <color>(70, 60, 80)</color>
+    </graphicData>
+    <tradeability>Sellable</tradeability>
+    <statBases><MarketValue>6</MarketValue><Mass>0.2</Mass></statBases>
+  </ThingDef>
+
+  <!-- ================ Titanomyrma ================ -->
+  <ThingDef ParentName="EggFertBase">
+    <defName>JP_Egg_TitanomyrmaFert</defName>
+    <label>titanomyrma egg (fert.)</label>
+    <description>タイタノミルマの受精卵。うまくいけばタイタノミルマの幼体が孵化する。\n\nA fertilized titanomyrma egg. Given time, it should hatch into a young titanomyrma.</description>
+    <tradeability>None</tradeability>
+    <statBases><MarketValue>4</MarketValue><Mass>0.1</Mass></statBases>
+    <graphicData>
+      <texPath>Things/Item/Resource/Egg/JP_Egg_Titanomyrma</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <color>(140, 90, 50)</color>
+    </graphicData>
+    <comps>
+      <li Class="CompProperties_Hatcher">
+        <hatcherDaystoHatch>5</hatcherDaystoHatch>
+        <hatcherPawn>JP_Titanomyrma</hatcherPawn>
+      </li>
+    </comps>
+  </ThingDef>
+  <ThingDef ParentName="EggUnfertBase">
+    <defName>JP_Egg_TitanomyrmaUnfert</defName>
+    <label>titanomyrma egg (unfert.)</label>
+    <description>タイタノミルマの未受精卵。孵化はしないが、食用・売却用として扱える。\n\nAn unfertilized titanomyrma egg. It won't hatch, but can be eaten or sold.</description>
+    <graphicData>
+      <texPath>Things/Item/Resource/Egg/JP_Egg_Titanomyrma</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <color>(140, 90, 50)</color>
+    </graphicData>
+    <tradeability>Sellable</tradeability>
+    <statBases><MarketValue>4</MarketValue><Mass>0.1</Mass></statBases>
+  </ThingDef>
+
+  <!-- ================ Archimylacris ================ -->
+  <ThingDef ParentName="EggFertBase">
+    <defName>JP_Egg_ArchimylacrisFert</defName>
+    <label>archimylacris egg (fert.)</label>
+    <description>アーキミラクリスの受精卵。うまくいけばアーキミラクリスの幼体が孵化する。\n\nA fertilized archimylacris egg. Given time, it should hatch into a young archimylacris.</description>
+    <tradeability>None</tradeability>
+    <statBases><MarketValue>2.5</MarketValue><Mass>0.05</Mass></statBases>
+    <graphicData>
+      <texPath>Things/Item/Resource/Egg/JP_Egg_Archimylacris</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <color>(90, 70, 55)</color>
+    </graphicData>
+    <comps>
+      <li Class="CompProperties_Hatcher">
+        <hatcherDaystoHatch>3</hatcherDaystoHatch>
+        <hatcherPawn>JP_Archimylacris</hatcherPawn>
+      </li>
+    </comps>
+  </ThingDef>
+  <ThingDef ParentName="EggUnfertBase">
+    <defName>JP_Egg_ArchimylacrisUnfert</defName>
+    <label>archimylacris egg (unfert.)</label>
+    <description>アーキミラクリスの未受精卵。孵化はしないが、食用・売却用として扱える。\n\nAn unfertilized archimylacris egg. It won't hatch, but can be eaten or sold.</description>
+    <graphicData>
+      <texPath>Things/Item/Resource/Egg/JP_Egg_Archimylacris</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <color>(90, 70, 55)</color>
+    </graphicData>
+    <tradeability>Sellable</tradeability>
+    <statBases><MarketValue>2.5</MarketValue><Mass>0.05</Mass></statBases>
+  </ThingDef>
+
+</Defs>
