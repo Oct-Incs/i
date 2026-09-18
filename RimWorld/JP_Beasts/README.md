@@ -62,7 +62,7 @@ RimWorld **1.6** 向けの XML-only MOD です。自然発生する敵生物(野
 | ニホンオオカミ | `JP_JapaneseWolf` | 移動が速い、大型 | 80 |
 | オオツノジカ | `JP_IrishElk` | 移動が速い、群れ(実在の絶滅古代哺乳類)(※注5) | 70 |
 
-### 古代種タイプ - 虫 (chitin系、毛なし。全て卵生。肉はバニラ標準の虫肉に統一(※注4))
+### 古代種タイプ - 虫 (chitin系、毛なし。全て卵生。肉は本MOD独自の共有アイテムに統一(※注4))
 
 | 生物 | defName | 特殊能力 | combatPower |
 |---|---|---|---|
@@ -89,10 +89,14 @@ RimWorld **1.6** 向けの XML-only MOD です。自然発生する敵生物(野
 アーキミラクリス=実在の巨大ゴキブリ属がモチーフ)。
 
 (※注4) 女郎蜘蛛・古代の虫型7種(メガネウラ/ティタノプテラ/プルモノスコルピウス/メガラクネ/
-アースロプレウラ/タイタノミルマ/アーキミラクリス)は、専用の `meatDef` を持たず `<meatDef>` タグ自体を
-省略しています。これによりバニラの標準の生肉アイテム(メガスパイダー等バニラの昆虫種と全く同じ実体)が
-使われ、`<fleshType>Insectoid</fleshType>` と `<meatLabel>insect meat</meatLabel>` の指定でラベル・分類だけ
-「虫肉」として扱われます(バニラのメガスパイダー/メガスカラブ/スペロピードと同じ仕組みです)。
+アースロプレウラ/タイタノミルマ/アーキミラクリス)は、8種共通で本MOD独自の `JP_Meat_Insect`
+(`Defs/ThingDefs_Items/Meats.xml`)を `meatDef` として直接参照しています。当初は `fleshType`+`meatLabel`
+だけでバニラの虫肉を装う実装でしたが、これだと `ThingDefGenerator_Meat` 経由でモンスターごとに別々の
+暗黙アイテムが自動生成されてしまい、ラベルが同じでもスタックがマージされない・忌避ムードや
+Ideologyの食の好み信条に反応しないという不具合があったため、実在の共有アイテムを明示的に持つ
+現在の方式に変更しています(バニラのメガスパイダー/メガスカラブ/スペロピードが同じ `Meat_Megaspider`
+を共有しているのと同じ仕組みですが、`JP_Meat_Insect` はバニラのそれとは別の本MOD独自アイテムです。
+バニラ昆虫の肉とは在庫上マージされません)。
 
 (※注5) ケナガサイ・オオツノジカ・サーベルタイガーは、氷河期に実在したが現在は絶滅した古代哺乳類が
 モチーフです。素材(毛・革)は他の古代種(獣)と同じ系統(`JP_Wool_AncientBeast`/`JP_Leather_AncientBeast`)
@@ -104,8 +108,8 @@ RimWorld **1.6** 向けの XML-only MOD です。自然発生する敵生物(野
   生きた個体からのみ得られ、死体からは得られません(昆虫種は毛なし)。
 - **革 (Leather)**: 種族の `leatherDef` として設定。**屠殺 (butcher)** した死体から入手。通常の革と同様、
   あらゆる革製レシピにそのまま使用可能。
-- **肉 (Meat)**: 種族ごとに `meatDef` (専用アイテム) か、`meatDef` を省略してバニラの標準の生肉を
-  そのまま使うか、のどちらかです(下表を参照)。**屠殺**した死体から入手。
+- **肉 (Meat)**: 種族ごとに専用の `meatDef` を持つか、複数種で本MOD独自の共有アイテムを
+  `meatDef` として参照するか、のどちらかです(下表を参照)。**屠殺**した死体から入手。
 
 毛・革・肉は種族ごとではなく、以下の系統で統一・共有されます:
 
@@ -113,9 +117,9 @@ RimWorld **1.6** 向けの XML-only MOD です。自然発生する敵生物(野
 |---|---|---|---|---|
 | 古代種(獣) | マンモス/ニホンオオカミ/エゾオオカミ/マゾタイロス/ケナガサイ/オオツノジカ/サーベルタイガー | `JP_Wool_AncientBeast`(古代種の剛毛) | `JP_Leather_AncientBeast`(古代種の厚革) | 各生物専用(7種、専用のMeat ThingDefを持つ) |
 | 妖怪(人型) | 猫又/妖狐/雪女/座敷童/天狗/鬼人/竜人 | `JP_Wool_RareSpecies`(稀種の輝毛) | `JP_Leather_RareSpecies`(稀種の輝革) | バニラ `Meat_Human`(人肉)で統一 |
-| 女郎蜘蛛 | 女郎蜘蛛(妖怪タイプだが正体は蜘蛛) | `JP_Wool_RareSpecies`(稀種の輝毛) | `JP_Leather_RareSpecies`(稀種の輝革) | バニラ標準の虫肉で統一(下記) |
+| 女郎蜘蛛 | 女郎蜘蛛(妖怪タイプだが正体は蜘蛛) | `JP_Wool_RareSpecies`(稀種の輝毛) | `JP_Leather_RareSpecies`(稀種の輝革) | `JP_Meat_Insect`で統一(下記、注4参照) |
 | アダマンタイト | アダマンタイト | `JP_Wool_Adamantite`(スカイスチール) | `JP_Leather_Adamantite`(アダマンタイトの硬革) | 専用(`JP_Meat_Adamantite`) |
-| 古代虫 | メガネウラ/ティタノプテラ/プルモノスコルピウス/メガラクネ/アースロプレウラ/タイタノミルマ/アーキミラクリス(毛なし) | - | `JP_Chitin_Ancient`(古代虫の甲殻) | バニラ標準の虫肉で統一(専用のMeat ThingDefは持たない、注4参照) |
+| 古代虫 | メガネウラ/ティタノプテラ/プルモノスコルピウス/メガラクネ/アースロプレウラ/タイタノミルマ/アーキミラクリス(毛なし) | - | `JP_Chitin_Ancient`(古代虫の甲殻) | `JP_Meat_Insect`で統一(女郎蜘蛛と共有、注4参照) |
 
 各生物の実際の肉量・革量・毛量は **設定シート(`Patches/Patch_CreatureSettings.xml`)で一括管理**しています
 (前述)。`MeatAmount`/`LeatherAmount` は「体格1.0あたりの基礎量」で、実際の産出量は個体の体格
@@ -161,8 +165,8 @@ packageId `sarg.alphaanimals`、1.5/1.6対応、Harmony + Vanilla Expanded Frame
 - **継承元Abstractが共通**: 両MODとも同じバニラの `AnimalThingBase` / `WoolBase` / `LeatherBase` /
   `OrganicProductBase` / `EggFertBase` / `EggUnfertBase` を継承しています(本MODの1.6対応フィールド名
   ―`Wildness`のStat化、`MeatBase`が存在しない件、`MeatAmount`/`LeatherAmount`がstatBases上のstatである件、
-  `CompProperties_Shearable`/`Milkable`/`EggLayer`の正確なフィールド名、虫肉が専用ThingDefではなく
-  `fleshType`+`meatLabel`によるラベル分けだけである件―は、稼働実績のあるAlpha Animalsの実装を参照して
+  `CompProperties_Shearable`/`Milkable`/`EggLayer`の正確なフィールド名、虫肉8種が`JP_Meat_Insect`という
+  本MOD独自の共有ThingDefを`meatDef`で明示参照している件―は、稼働実績のあるAlpha Animalsの実装を参照して
   検証しました)。そのため技術的な衝突リスクはありません。
 - **バイオーム出現パッチは加算方式**: 本MODは `PatchOperationAdd` で `BiomeDef` の `wildAnimals`
   リストに追記する方式です(ロード順に関係なく安全に積み重なります)。Alpha Animals自体はこの方式では
@@ -223,7 +227,7 @@ JP_Beasts/
 │   │   └── Races_Yokai.xml              … 妖怪8種(女郎蜘蛛を含む)
 │   ├── ThingDefs_Items/
 │   │   ├── Materials.xml                … 毛(Wool)・革(Leather)・甲殻(Chitin)
-│   │   ├── Meats.xml                    … 専用の肉(獣8種+アダマンタイト)
+│   │   ├── Meats.xml                    … 専用の肉(獣7種+アダマンタイト)+ 虫8種共有の`JP_Meat_Insect`
 │   │   └── Eggs.xml / Eggs_Insects.xml  … 卵生種の受精卵/未受精卵
 │   └── PawnKindDefs/
 │       ├── PawnKinds_Monsters.xml       … 妖怪8種+獣5種の個体設定

@@ -11,7 +11,7 @@ Checks:
   4. No leftover references to the old per-species insect meat defs that
      were deleted when insect meat was unified into JP_Meat_Insect.
   5. Shearable comp count vs. settings-sheet wool-patch count (a rough
-     parity check, not authoritative - see note below).
+     parity check, not authoritative).
 """
 import xml.etree.ElementTree as ET
 import glob, os, re, pathlib
@@ -100,10 +100,11 @@ else:
     print("No leftover references to deleted per-species insect meat defs.")
 
 # 6. Shearable comp count vs settings-sheet wool patch count.
-# NOTE: this has read 16 vs 17 since before this script was added to the
-# repo and nobody has chased down the 1-off discrepancy - it has never
-# correlated with an actual bug in this mod's history, but a future
-# session should not assume that's permanently safe to ignore.
+# Match only the per-creature comment ("基本毛量(...)"), not the sheet's
+# own header line, which documents the woolAmount tag using the same
+# substring ("基本毛量 woolAmount タグの数値") without the parenthesis.
+# That header match was previously counted here too, producing a
+# permanent 16-vs-17 off-by-one that was never an actual bug in the mod.
 shear_count = 0
 for f in xml_files:
     if "Patch_CreatureSettings" in f:
@@ -111,5 +112,7 @@ for f in xml_files:
     txt = open(f, encoding="utf-8").read()
     shear_count += txt.count('Class="CompProperties_Shearable"')
 patch_txt = open(f"{BASE}/Patches/Patch_CreatureSettings.xml", encoding="utf-8").read()
-wool_patch_count = patch_txt.count("基本毛量")
+wool_patch_count = patch_txt.count("基本毛量(")
 print(f"Shearable comps in race files: {shear_count}, wool patches in settings sheet: {wool_patch_count}")
+if shear_count != wool_patch_count:
+    print(f"  MISMATCH: investigate before committing (see gen_settings_patch.py CREATURES table).")
