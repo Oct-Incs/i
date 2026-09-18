@@ -26,8 +26,18 @@
   Arthropleura(アースロプレウラ) / Pulmonoscorpius(プルモノスコルピウス) /
   Megarachne(メガラクネ) / Titanomyrma(タイタノミルマ) / Archimylacris(アーキミラクリス)
 
-リポジトリ: `oct-incs/i` (GitHub)。開発ブランチ:
-`claude/rimworld-mod-characters-enemies-q47qgd`。MOD本体は `JP_Beasts/` 配下。
+リポジトリ: **`Oct-Incs/Mods`**(GitHubの表示名。旧名 `Oct-Incs/i` からリネーム
+済みで、旧URLへのアクセスは自動的にリダイレクトされる — ただし git remote の
+URLはリネーム後の名称に変更すると push が403で失敗することを確認済みなので、
+`origin` のURL文字列自体は古い名称のままにしておくこと。詳細はリポジトリ
+ルートの `README.md` を参照)。このMODはリポジトリの直下ではなく
+**`RimWorld/JP_Beasts/`** 配下にある(このリポジトリは複数ゲームのMODを
+格納する前提の構成になった。ルートの `README.md` に構成ルールがある)。
+開発は `main` ブランチが常に最新。以前は
+`claude/rimworld-mod-characters-enemies-q47qgd` というフィーチャーブランチで
+長期間作業しており、それが `main` に一度もマージされていなかったために
+別セッションがこのMODの存在に気づけない事故が起きた。今後は作業が一段落する
+たびに `main` へマージすること。
 
 ユーザーは日本語話者で、RimWorldにかなり詳しく、こちらの推測や説明の甘さを鋭く
 指摘してきます。生半可な回答は許されないと思って調査してください。
@@ -334,8 +344,10 @@ Thrumbo(20日、伝説級)。この実データに基づき、通常個体は6�
 
 ## 5. ファイル構成マップ
 
+パスはリポジトリルートから見て `RimWorld/JP_Beasts/` 配下(§1参照)。
+
 ```
-JP_Beasts/
+RimWorld/JP_Beasts/
   About/                          MOD メタデータ (About.xml)
   Defs/
     ThingDefs_Races/              23体の本体定義 (最重要・頻繁に編集)
