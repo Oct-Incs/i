@@ -288,6 +288,9 @@ ThingDefのルート階層に以下を追加することで対応:
 `MayRequire`属性により、Ideology DLCを持たない環境でも安全(この属性は
 DLC条件付きフィールドの標準的なXMLパターン)。
 
+**→ 3.15で訂正: 上記のXML配置(ThingDefのルート直下)は実際には間違っていた
+(実機のPlayer.logで確認済み)。詳細は3.15を参照。**
+
 ### 3.12 妖怪が妊娠しない・古代昆虫が産卵しない
 最初は「野生(未テイム)動物はRimWorld仕様上繁殖しない
 (`ThinkNode_ConditionalHasFaction`によりブロックされる)」という説明をしたが、
@@ -328,6 +331,45 @@ Mod一覧・Steam Workshopページに表示される説明文)の複数箇所�
 他MODとの互換性を判断してしまう恐れがあったため、該当箇所を全て現状の実装に合わせて修正した。
 コード自体に不具合はなく、ドキュメントの記述漏れ(実装変更時にREADME/Aboutの更新が漏れていた)
 が原因。
+
+### 3.15 `mergeCompatibilityTags`のXML配置が間違っており、起動のたびにXMLエラーが出ていた(3.11の訂正)
+3.14の全体レビュー後、ユーザーが実機でMODを起動したPlayer.logを提供してくれたことで発覚した、
+**実際に起動時エラーとして再現していた不具合**。ログの実際のエラー内容:
+
+```
+XML error: <mergeCompatibilityTags MayRequire="Ludeon.RimWorld.Ideology">...</mergeCompatibilityTags>
+doesn't correspond to any field in type ThingDef. Context: <ThingDef ...><defName>JP_Meat_Insect</defName>...
+```
+
+3.11で「ThingDefのルート階層に`mergeCompatibilityTags`を追加すればIdeologyの信条が反応する」と
+記録していたが、**このXML配置自体が誤りだった**。`mergeCompatibilityTags`は`ThingDef`直下の
+フィールドではなく、`<ingredient>`ブロック(`IngredientProperties`)の中に置く必要がある。
+実際のバニラのエラーメッセージ("doesn't correspond to any field in type ThingDef")がまさに
+この誤りを示しており、3.11時点でこれを「デコンパイル済みソースで検証済み」としていたのは
+不正確だった(おそらく検証が不十分だった)。
+
+このタグはXMLパース時に無効な位置にあったため黙って無視されるだけで、ゲームがクラッシュしたり
+他の項目の読み込みが壊れたりすることはなかったが、(1) 起動のたびにログにエラーが出続ける、
+(2) Ideologyの「Insect Meat: Loved/Despised」信条が`JP_Meat_Insect`を対象として一切認識しない
+(タグ自体が読み込まれていないため)、という二重の実害があった。
+
+正しい配置(RimWorldコミュニティの実例で確認- Hardcore Foods等の既存MODが同じ手法を使用):
+```xml
+<ingredient>
+  <mergeCompatibilityTags MayRequire="Ludeon.RimWorld.Ideology">
+    <li MayRequire="Ludeon.RimWorld.Ideology">InsectMeat</li>
+  </mergeCompatibilityTags>
+</ingredient>
+```
+`Defs/ThingDefs_Items/Meats.xml`の`JP_Meat_Insect`をこの形式に修正し、`validate.py`で
+XML整形式チェック済み。**この修正はまだユーザーによるPlayer.logでの再確認が取れていない。
+次回、起動ログに同じXMLエラーが再発していないか、また該当の信条を持つ入植者が実際に
+`JP_Meat_Insect`を食べてIdeologyの好意ムードが正しく発生するかを確認すること。**
+
+**教訓**: 「デコンパイル済みソースで検証した」という過去セッションの記述であっても、
+実際に実機のログで再現するまでは鵜呑みにしない。今回のように、フィールド名自体は
+正しくてもXML上の配置(親要素)を間違えるケースは、静かに無視されるだけでエラーにすら
+気づきにくい。
 
 ## 4. 現在の各パラメータの状態 (要点)
 

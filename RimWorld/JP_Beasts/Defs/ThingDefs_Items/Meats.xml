@@ -280,14 +280,21 @@
     <!-- specialThoughtDirect/AsIngredient above only control the base
          (non-Ideology) mood thought. Ideology's own food-preference
          precepts (e.g. "Insect Meat: Loved/Despised") identify insect
-         meat through a separate root-level tag, independent of
-         defName/source race - without it, this item would keep firing
-         the plain aversion thought even for a pawn whose ideoligion
-         loves insect meat. MayRequire keeps this harmless without the
-         Ideology DLC installed. -->
-    <mergeCompatibilityTags MayRequire="Ludeon.RimWorld.Ideology">
-      <li MayRequire="Ludeon.RimWorld.Ideology">InsectMeat</li>
-    </mergeCompatibilityTags>
+         meat through this tag, independent of defName/source race -
+         without it, this item would keep firing the plain aversion
+         thought even for a pawn whose ideoligion loves insect meat.
+         mergeCompatibilityTags belongs under <ingredient>, not at the
+         ThingDef root - placing it at the root (as an earlier version
+         of this file did) produced a real "doesn't correspond to any
+         field in type ThingDef" XML error on every game launch and
+         silently dropped the tag, so the Ideology precept never
+         actually recognized this item. MayRequire keeps this harmless
+         without the Ideology DLC installed. -->
+    <ingredient>
+      <mergeCompatibilityTags MayRequire="Ludeon.RimWorld.Ideology">
+        <li MayRequire="Ludeon.RimWorld.Ideology">InsectMeat</li>
+      </mergeCompatibilityTags>
+    </ingredient>
   </ThingDef>
 
   <ThingDef ParentName="OrganicProductBase">
